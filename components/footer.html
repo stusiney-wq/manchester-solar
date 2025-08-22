@@ -1,0 +1,135 @@
+<!-- MASTER FOOTER TEMPLATE - Gold Standard v2.1.3 -->
+<footer class="footer">
+    <div class="container">
+        <!-- Newsletter Signup -->
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <h3>Stay Updated with Manchester Solar News</h3>
+                <p>Monthly updates on grants, policies, and local solar insights for all Manchester property types.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <div class="newsletter-input-group">
+                        <input type="email" name="email" placeholder="Enter your email address" required class="newsletter-input">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                    <p class="newsletter-disclaimer">No spam. Unsubscribe anytime. Monthly solar news & Manchester energy updates.</p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Main Footer Content -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Manchester.solar</h4>
+                <p><strong>Manchester's trusted solar connection service.</strong> We connect homeowners and businesses with <strong>MCS certified specialists</strong> who understand Manchester's unique property challenges.</p>
+                
+                <div class="footer-contact">
+                    <p><strong>📞 0161 000 0000</strong></p>
+                    <p><strong>📧 hello@manchester.solar</strong></p>
+                    <p><strong>📍 Manchester, Greater Manchester</strong></p>
+                </div>
+                
+                <div class="footer-verify">
+                    <p><strong>Verify Our Standards:</strong></p>
+                    <a href="https://mcscertified.com/" target="_blank" rel="noopener">Check MCS Directory →</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/heritage-homes-solar-guide">Heritage Homes Solar</a></li>
+                    <li><a href="/commercial/">Commercial Solar</a></li>
+                    <li><a href="/planning-permission-guide">Planning Permission</a></li>
+                    <li><a href="/manchester-weather-performance">Weather Performance</a></li>
+                    <li><a href="/case-studies">Case Studies</a></li>
+                    <li><a href="/battery-storage">Battery Storage</a></li>
+                    <li><a href="/ev-charger-installation">EV Chargers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Service Areas</h4>
+                <ul>
+                    <li><strong>All Manchester Postcodes (M1–M99)</strong></li>
+                    <li><a href="/didsbury-solar">Didsbury & Chorlton</a></li>
+                    <li><a href="/sale-altrincham-solar">Sale & Altrincham</a></li>
+                    <li><a href="/stockport-solar">Stockport & Wilmslow</a></li>
+                    <li><a href="/oldham-rochdale-solar">Oldham & Rochdale</a></li>
+                    <li><a href="/bolton-bury-solar">Bolton & Bury</a></li>
+                    <li><a href="/wigan-leigh-solar">Wigan & Leigh</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quality Standards</h4>
+                <p>All partners verified:</p>
+                <ul>
+                    <li><strong>MCS certified</strong> (Microgeneration Certification)</li>
+                    <li><strong>RECC membership</strong> (Consumer Code)</li>
+                    <li><strong>NICEIC/NAPIT</strong> electrical certification</li>
+                    <li><strong>Local Manchester presence</strong> (not national contractors)</li>
+                    <li><strong>Heritage expertise</strong> (Victorian/Edwardian properties)</li>
+                    <li><strong>95%+ planning permission</strong> success rate</li>
+                </ul>
+                <div style="margin-top: var(--space-4);">
+                    <a href="https://mcscertified.com/" target="_blank" style="color: rgba(255, 255, 255, 0.8);">Verify MCS Standards →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 <strong>Manchester.solar</strong>. Part of the Solar Domain Empire.</p>
+            
+            <div class="footer-links">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/cookie-policy">Cookie Policy</a>
+                <a href="/accessibility">Accessibility</a>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+            
+            <div class="footer-update">
+                <p>Last updated: <time datetime="2025-01-15">January 15, 2025</time></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- GDPR Cookie Notice (if required) -->
+<div id="cookie-notice" class="cookie-notice" style="display: none;">
+    <div class="container">
+        <p>We use cookies to improve your experience and analyze website traffic. <a href="/cookie-policy">Learn more</a></p>
+        <button id="accept-cookies" class="btn btn-small">Accept</button>
+    </div>
+</div>
+
+<!-- Footer JavaScript -->
+<script>
+// Newsletter form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your newsletter signup logic here
+            console.log('Newsletter signup submitted');
+        });
+    }
+    
+    // Cookie notice handling
+    const cookieNotice = document.getElementById('cookie-notice');
+    const acceptCookies = document.getElementById('accept-cookies');
+    
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookieNotice.style.display = 'block';
+    }
+    
+    if (acceptCookies) {
+        acceptCookies.addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieNotice.style.display = 'none';
+        });
+    }
+});
+</script>

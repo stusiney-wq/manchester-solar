@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Layout Library - Modern Web Best Practices</title>
+    <style>
+        :root {
+            --solar-green: #22c55e;
+            --trust-blue: #3b82f6;
+            --neutral-900: #111827;
+            --neutral-800: #1f2937;
+            --neutral-700: #374151;
+            --neutral-600: #4b5563;
+            --neutral-300: #d1d5db;
+            --neutral-200: #e5e7eb;
+            --neutral-100: #f3f4f6;
+            --neutral-50: #f9fafb;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 1rem;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--neutral-50);
+            color: var(--neutral-700);
+            line-height: 1.6;
+        }
+        
+        .layout-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-8);
+        }
+        
+        .layout-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+            padding: var(--space-12);
+            background: linear-gradient(135deg, var(--solar-green), #16a34a);
+            color: white;
+            border-radius: var(--radius-xl);
+        }
+        
+        .layout-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: var(--space-4);
+        }
+        
+        .layout-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        .layout-category {
+            margin-bottom: var(--space-20);
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .category-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--solar-green);
+            margin-bottom: var(--space-8);
+            border-bottom: 3px solid var(--solar-green);
+            padding-bottom: var(--space-4);
+        }
+        
+        .layout-showcase {
+            margin-bottom: var(--space-12);
+            border: 2px dashed var(--neutral-300);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            background: var(--neutral-50);
+            position: relative;
+        }
+        
+        .layout-label {
+            position: absolute;
+            top: -12px;
+            left: var(--space-4);
+            background: var(--solar-green);
+            color: white;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .use-case {
+            position: absolute;
+            top: -12px;
+            right: var(--space-4);
+            background: var(--trust-blue);
+            color: white;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        /* Hero Layout Patterns */
+        .hero-fullscreen {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: var(--radius-xl);
+        }
+        
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-12);
+            align-items: center;
+            min-height: 500px;
+            background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
+            color: white;
+            padding: var(--space-12);
+            border-radius: var(--radius-xl);
+        }
+        
+        .hero-centered {
+            text-align: center;
+            padding: var(--space-20) var(--space-8);
+            background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
+            color: white;
+            border-radius: var(--radius-xl);
+        }
+        
+        /* Card Layout Patterns */
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            grid-auto-rows: auto;
+        }
+        
+        .card-grid-featured {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: var(--space-6);
+        }
+        
+        .featured-card {
+            grid-row: 1 / 3;
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: var(--space-4);
+        }
+        
+        .bento-item {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .bento-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        .bento-wide {
+            grid-column: span 2;
+        }
+        
+        .bento-tall {
+            grid-row: span 2;
+        }
+        
+        /* Content Layout Patterns */
+        .zigzag-layout {
+            display: grid;
+            gap: var(--space-16);
+        }
+        
+        .zigzag-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-12);
+            align-items: center;
+        }
+        
+        .zigzag-item:nth-child(even) .zigzag-content {
+            order: 2;
+        }
+        
+        .zigzag-item:nth-child(even) .zigzag-image {
+            order: 1;
+        }
+        
+        .timeline-layout {
+            position: relative;
+            padding-left: var(--space-12);
+        }
+        
+        .timeline-layout::before {
+            content: '';
+            position: absolute;
+            left: var(--space-6);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--solar-green);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-8);
+            background: white;
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: var(--space-6);
+            width: 12px;
+            height: 12px;
+            background: var(--solar-green);
+            border-radius: 50%;
+        }
+        
+        /* Layout Utilities */
+        .demo-box {
+            background: white;
+            border: 1px solid var(--neutral-200);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .demo-box:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .demo-box.image {
+            background: var(--neutral-300);
+            color: var(--neutral-600);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .demo-box.content {
+            text-align: left;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .demo-box.tall {
+            min-height: 300px;
+        }
+        
+        .demo-box.short {
+            min-height: 150px;
+        }
+        
+        .prompt-example {
+            background: var(--neutral-100);
+            border: 1px solid var(--neutral-300);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin-top: var(--space-6);
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+        
+        .prompt-label {
+            color: var(--solar-green);
+            font-weight: bold;
+        }
+        
+        .best-for {
+            background: var(--trust-blue);
+            color: white;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            margin-top: var(--space-4);
+            display: inline-block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-split,
+            .zigzag-item,
+            .card-grid-featured {
+                grid-template-columns: 1fr;
+            }
+            
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .bento-large,
+            .bento-wide {
+                grid-column: span 2;
+            }
+            
+            .bento-tall {
+                grid-row: span 1;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bento-large,
+            .bento-wide,
+            .bento-tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-container">
+        <div class="layout-header">
+            <h1 class="layout-title">Advanced Layout Library</h1>
+            <p class="layout-subtitle">Modern web best practices for Solar Domain Empire excellence</p>
+        </div>
+        
+        <!-- Hero Layout Patterns -->
+        <div class="layout-category">
+            <h2 class="category-title">🚀 Hero Layout Patterns</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">HERO-FULLSCREEN</div>
+                <div class="use-case">Landing Pages</div>
+                <div class="hero-fullscreen">
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 900; margin-bottom: 24px;">Solar Power Manchester</div>
+                        <div style="font-size: 1.25rem; margin-bottom: 32px; opacity: 0.9;">Transform your energy future with premium solar installation</div>
+                        <div style="display: flex; gap: 16px; justify-content: center;">
+                            <button style="background: var(--solar-green); color: white; padding: 16px 32px; border-radius: 25px; border: none; font-weight: 600;">Get Free Quote</button>
+                            <button style="background: transparent; color: white; padding: 16px 32px; border-radius: 25px; border: 2px solid white; font-weight: 600;">Watch Video</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "HERO-FULLSCREEN + Manchester YAML + dual CTA"
+                </div>
+                <div class="best-for">Best for: Premium landing pages, campaign pages, brand showcases</div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">HERO-SPLIT-CONTENT</div>
+                <div class="use-case">Homepage</div>
+                <div class="hero-split">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 16px;">Solar Panels in Manchester</div>
+                        <div style="font-size: 1.125rem; margin-bottom: 24px; opacity: 0.9;">Professional installation you can trust. Save £1,890+ annually with MCS-certified installers.</div>
+                        <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                            <span style="background: rgba(34, 197, 94, 0.2); color: var(--solar-green); padding: 6px 12px; border-radius: 15px; font-size: 0.875rem;">MCS Certified</span>
+                            <span style="background: rgba(34, 197, 94, 0.2); color: var(--solar-green); padding: 6px 12px; border-radius: 15px; font-size: 0.875rem;">0% VAT</span>
+                        </div>
+                        <button style="background: var(--solar-green); color: white; padding: 12px 24px; border-radius: 20px; border: none;">Get Manchester Quotes</button>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; text-align: center;">
+                        <div style="font-size: 1.5rem; margin-bottom: 16px;">Quick Calculator</div>
+                        <div style="display: grid; gap: 12px;">
+                            <input style="padding: 12px; border-radius: 8px; border: none;" placeholder="Roof size (m²)">
+                            <select style="padding: 12px; border-radius: 8px; border: none;">
+                                <option>Roof direction</option>
+                            </select>
+                            <button style="background: var(--solar-green); color: white; padding: 12px; border-radius: 8px; border: none;">Calculate Savings</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "HERO-SPLIT-CONTENT + Manchester YAML + calculator widget"
+                </div>
+                <div class="best-for">Best for: Homepage conversions, lead generation, interactive engagement</div>
+            </div>
+        </div>
+        
+        <!-- Advanced Card Layouts -->
+        <div class="layout-category">
+            <h2 class="category-title">🃏 Advanced Card Layouts</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">BENTO-GRID</div>
+                <div class="use-case">Features / Stats</div>
+                <div class="bento-grid">
+                    <div class="bento-item bento-large">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 900; color: var(--solar-green); margin-bottom: 12px;">£1,890</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">Average Annual Savings</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600);">Manchester households save significantly with solar panels, thanks to 3.8 peak sun hours daily.</div>
+                        </div>
+                    </div>
+                    <div class="bento-item">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 8px;">☀️</div>
+                            <div style="font-weight: 600;">Perfect Weather</div>
+                        </div>
+                    </div>
+                    <div class="bento-item">
+                        <div>
+                            <div style="font-size: 1.5rem; margin-bottom: 8px;">💰</div>
+                            <div style="font-weight: 600;">0% VAT</div>
+                        </div>
+                    </div>
+                    <div class="bento-item bento-wide">
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">Manchester Coverage</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600);">All postcodes: M1-M45 • Victorian homes specialist</div>
+                        </div>
+                    </div>
+                    <div class="bento-item">
+                        <div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--solar-green);">2,800+</div>
+                            <div style="font-size: 0.875rem;">Installations</div>
+                        </div>
+                    </div>
+                    <div class="bento-item">
+                        <div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--solar-green);">2038</div>
+                            <div style="font-size: 0.875rem;">Carbon Target</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "BENTO-GRID + Manchester stats YAML + featured savings highlight"
+                </div>
+                <div class="best-for">Best for: Dynamic dashboards, feature showcases, modern stats displays</div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">CARD-GRID-FEATURED</div>
+                <div class="use-case">Blog / Resources</div>
+                <div class="card-grid-featured">
+                    <div class="featured-card">
+                        <div style="text-align: left;">
+                            <div style="background: var(--neutral-300); height: 200px; border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: var(--neutral-600);">Featured Article Image</div>
+                            <div style="background: var(--solar-green); color: white; padding: 4px 12px; border-radius: 10px; font-size: 0.75rem; display: inline-block; margin-bottom: 12px;">FEATURED</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;">Manchester Solar Grants 2025: £2,000 Available</div>
+                            <div style="color: var(--neutral-600); margin-bottom: 16px;">Manchester City Council announces new solar grant scheme offering up to £2,000 for eligible homeowners...</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600);">August 13, 2025 • 4 min read</div>
+                        </div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="text-align: left;">
+                            <div style="background: var(--neutral-300); height: 120px; border-radius: 6px; margin-bottom: 12px;"></div>
+                            <div style="font-weight: 600; margin-bottom: 8px; font-size: 0.875rem;">Planning Permission Guide</div>
+                            <div style="font-size: 0.75rem; color: var(--neutral-600);">Everything you need to know...</div>
+                        </div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="text-align: left;">
+                            <div style="background: var(--neutral-300); height: 120px; border-radius: 6px; margin-bottom: 12px;"></div>
+                            <div style="font-weight: 600; margin-bottom: 8px; font-size: 0.875rem;">Cost Calculator</div>
+                            <div style="font-size: 0.75rem; color: var(--neutral-600);">Estimate your savings...</div>
+                        </div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="text-align: left;">
+                            <div style="background: var(--neutral-300); height: 120px; border-radius: 6px; margin-bottom: 12px;"></div>
+                            <div style="font-weight: 600; margin-bottom: 8px; font-size: 0.875rem;">Installer Directory</div>
+                            <div style="font-size: 0.75rem; color: var(--neutral-600);">Find local experts...</div>
+                        </div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="text-align: left;">
+                            <div style="background: var(--neutral-300); height: 120px; border-radius: 6px; margin-bottom: 12px;"></div>
+                            <div style="font-weight: 600; margin-bottom: 8px; font-size: 0.875rem;">Case Studies</div>
+                            <div style="font-size: 0.75rem; color: var(--neutral-600);">Real installations...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "CARD-GRID-FEATURED + latest blog post + Manchester resources YAML"
+                </div>
+                <div class="best-for">Best for: Blog homepages, resource hubs, content showcases</div>
+            </div>
+        </div>
+        
+        <!-- Content Flow Patterns -->
+        <div class="layout-category">
+            <h2 class="category-title">📄 Content Flow Patterns</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">ZIGZAG-LAYOUT</div>
+                <div class="use-case">Benefits / Features</div>
+                <div class="zigzag-layout">
+                    <div class="zigzag-item">
+                        <div class="zigzag-content demo-box content">
+                            <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; color: var(--neutral-900);">Perfect for Manchester Weather</div>
+                            <div style="color: var(--neutral-600); margin-bottom: 16px;">Solar panels work efficiently in Manchester's climate. With 185 sunny days annually and 3.8 peak sun hours, your system generates substantial savings even on cloudy days.</div>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 8px 0; position: relative; padding-left: 24px;">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    Optimal for diffused light conditions
+                                </li>
+                                <li style="padding: 8px 0; position: relative; padding-left: 24px;">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    Cool temperatures improve efficiency
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zigzag-image demo-box image">
+                            Manchester Victorian House<br>with Solar Panels
+                        </div>
+                    </div>
+                    <div class="zigzag-item">
+                        <div class="zigzag-content demo-box content">
+                            <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; color: var(--neutral-900);">Substantial Financial Savings</div>
+                            <div style="color: var(--neutral-600); margin-bottom: 16px;">Manchester households save £1,890 annually on average. With 0% VAT until March 2027 and rising energy costs, solar delivers immediate value.</div>
+                            <div style="background: var(--solar-green); color: white; padding: 16px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 1.25rem; font-weight: 700;">7-9 Years</div>
+                                <div style="font-size: 0.875rem;">Typical Payback Period</div>
+                            </div>
+                        </div>
+                        <div class="zigzag-image demo-box image">
+                            Commercial Solar Array<br>Manchester Business District
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "ZIGZAG-LAYOUT + Manchester benefits YAML + alternating images"
+                </div>
+                <div class="best-for">Best for: Feature explanations, benefit showcases, storytelling</div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">TIMELINE-PROCESS</div>
+                <div class="use-case">Installation Steps</div>
+                <div class="timeline-layout">
+                    <div class="timeline-item">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="background: var(--solar-green); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 8px;">Initial Consultation</div>
+                                <div style="color: var(--neutral-600); margin-bottom: 8px;">Free home assessment and energy audit. We evaluate your roof, energy usage, and solar potential.</div>
+                                <div style="font-size: 0.875rem; color: var(--solar-green); font-weight: 600;">Duration: 1-2 hours</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="background: var(--solar-green); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 8px;">Custom Design & Quote</div>
+                                <div style="color: var(--neutral-600); margin-bottom: 8px;">Detailed system design with 3D modeling, energy production estimates, and comprehensive pricing.</div>
+                                <div style="font-size: 0.875rem; color: var(--solar-green); font-weight: 600;">Duration: 3-5 days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="background: var(--solar-green); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 700; font-size: 1.125rem; margin-bottom: 8px;">Professional Installation</div>
+                                <div style="color: var(--neutral-600); margin-bottom: 8px;">MCS-certified installation team completes your system with minimal disruption to your daily routine.</div>
+                                <div style="font-size: 0.875rem; color: var(--solar-green); font-weight: 600;">Duration: 1-2 days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "TIMELINE-PROCESS + Manchester installation steps YAML + duration data"
+                </div>
+                <div class="best-for">Best for: Process explanations, step-by-step guides, service workflows</div>
+            </div>
+        </div>
+        
+        <!-- Modern UI Patterns -->
+        <div class="layout-category">
+            <h2 class="category-title">✨ Modern UI Patterns</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">FLOATING-CARDS</div>
+                <div class="use-case">Stats / Features</div>
+                <div style="background: linear-gradient(135deg, var(--solar-green), #16a34a); padding: 64px 32px; border-radius: 16px; position: relative;">
+                    <div style="position: absolute; top: 32px; left: 32px; background: rgba(255,255,255,0.2); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.875rem;">Manchester Solar Network</div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px;">
+                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: var(--shadow-xl); text-align: center;">
+                            <div style="font-size: 2rem; font-weight: 900; color: var(--solar-green); margin-bottom: 8px;">3.8</div>
+                            <div style="font-weight: 600; color: var(--neutral-700);">Peak Sun Hours</div>
+                        </div>
+                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: var(--shadow-xl); text-align: center;">
+                            <div style="font-size: 2rem; font-weight: 900; color: var(--solar-green); margin-bottom: 8px;">£1,890</div>
+                            <div style="font-weight: 600; color: var(--neutral-700);">Annual Savings</div>
+                        </div>
+                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: var(--shadow-xl); text-align: center;">
+                            <div style="font-size: 2rem; font-weight: 900; color: var(--solar-green); margin-bottom: 8px;">2,800+</div>
+                            <div style="font-weight: 600; color: var(--neutral-700);">Installations</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "FLOATING-CARDS + gradient background + Manchester stats YAML"
+                </div>
+                <div class="best-for">Best for: Premium showcases, standout statistics, brand moments</div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">COMPARISON-TABLE</div>
+                <div class="use-case">Before/After</div>
+                <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <div style="background: var(--neutral-900); color: white; padding: 24px; text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: 700;">Before vs After Solar</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                        <div style="padding: 32px; text-align: center; border-right: 1px solid var(--neutral-200);">
+                            <div style="font-size: 1.25rem; font-weight: 700; color: #ef4444; margin-bottom: 16px;">❌ Before Solar</div>
+                            <div style="margin-bottom: 16px;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #ef4444;">£2,280</div>
+                                <div style="font-size: 0.875rem; color: var(--neutral-600);">Annual electricity bill</div>
+                            </div>
+                            <div style="margin-bottom: 16px;">
+                                <div style="font-size: 1.25rem; font-weight: 700; color: #ef4444;">3.2 tonnes</div>
+                                <div style="font-size: 0.875rem; color: var(--neutral-600);">CO₂ emissions yearly</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.25rem; font-weight: 700; color: #ef4444;">100%</div>
+                                <div style="font-size: 0.875rem; color: var(--neutral-600);">Grid dependent</div>
+                            </div>
+                        </div>
+                        <div style="padding: 32px; text-align: center;">
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--solar-green); margin-bottom: 16px;">✅ After Solar</div>
+                            <div style="margin-bottom: 16px;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: var(--solar-green);">£390</div>
+                                <div style="font-size: 0.875rem; color: var(--neutral-600);">Annual electricity bill</div>
+                            </div>
+                            <div style="margin-bottom: 16px;">
+                                <div style="font-size: 1.25rem; font-weight: 700; color: var(--solar-green);">0.8 tonnes</div>
+                                <div style="font-size: 0.875rem; color: var(--neutral-600);">CO₂ emissions yearly</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.25rem; font-weight: 700; color: var(--solar-green);">85%</div>
+                                <div style="font-size: 0.875rem; color: var(--neutral-600);">Energy independent</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "COMPARISON-TABLE + Manchester before/after YAML + savings highlight"
+                </div>
+                <div class="best-for">Best for: Value propositions, savings demonstrations, decision support</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

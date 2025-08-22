@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Domain Empire - Layout & Spacing System</title>
+    <style>
+        :root {
+            --solar-green: #22c55e;
+            --neutral-900: #111827;
+            --neutral-800: #1f2937;
+            --neutral-700: #374151;
+            --neutral-600: #4b5563;
+            --neutral-300: #d1d5db;
+            --neutral-200: #e5e7eb;
+            --neutral-100: #f3f4f6;
+            --neutral-50: #f9fafb;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 1rem;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--neutral-50);
+            color: var(--neutral-700);
+            line-height: 1.6;
+        }
+        
+        .layout-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-8);
+        }
+        
+        .layout-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+            padding: var(--space-12);
+            background: linear-gradient(135deg, var(--solar-green), #16a34a);
+            color: white;
+            border-radius: var(--radius-xl);
+        }
+        
+        .layout-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: var(--space-4);
+        }
+        
+        .layout-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        .layout-category {
+            margin-bottom: var(--space-20);
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .category-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--solar-green);
+            margin-bottom: var(--space-8);
+            border-bottom: 3px solid var(--solar-green);
+            padding-bottom: var(--space-4);
+        }
+        
+        .layout-showcase {
+            margin-bottom: var(--space-12);
+            border: 2px dashed var(--neutral-300);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            background: var(--neutral-50);
+            position: relative;
+        }
+        
+        .layout-label {
+            position: absolute;
+            top: -12px;
+            left: var(--space-4);
+            background: var(--solar-green);
+            color: white;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .spacing-info {
+            position: absolute;
+            top: var(--space-2);
+            right: var(--space-4);
+            background: var(--neutral-800);
+            color: white;
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        /* Grid Layouts */
+        .grid-1-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+        }
+        
+        .grid-2-col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-8);
+        }
+        
+        .grid-3-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+        
+        .grid-4-col {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-6);
+        }
+        
+        .grid-2-1 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-8);
+            align-items: center;
+        }
+        
+        .grid-1-2 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-8);
+            align-items: center;
+        }
+        
+        .grid-image-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-12);
+            align-items: center;
+        }
+        
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .grid-2-col,
+            .grid-3-col,
+            .grid-4-col,
+            .grid-2-1,
+            .grid-1-2,
+            .grid-image-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+            
+            .layout-container {
+                padding: var(--space-4);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .grid-3-col,
+            .grid-4-col {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-4);
+            }
+        }
+        
+        /* Demo Box Styles */
+        .demo-box {
+            background: white;
+            border: 1px solid var(--neutral-200);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .demo-box:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .demo-box.hero {
+            background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
+            color: white;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .demo-box.stat {
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .demo-box.image {
+            background: var(--neutral-300);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neutral-600);
+        }
+        
+        .demo-box.content {
+            text-align: left;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--solar-green);
+            margin-bottom: var(--space-2);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--neutral-600);
+            font-weight: 600;
+        }
+        
+        .content-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-4);
+        }
+        
+        .content-text {
+            color: var(--neutral-600);
+            margin-bottom: var(--space-4);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: var(--space-2) 0;
+            position: relative;
+            padding-left: var(--space-6);
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--solar-green);
+            font-weight: 700;
+        }
+        
+        .prompt-example {
+            background: var(--neutral-100);
+            border: 1px solid var(--neutral-300);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin-top: var(--space-6);
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+        
+        .prompt-label {
+            color: var(--solar-green);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-container">
+        <div class="layout-header">
+            <h1 class="layout-title">Perfect Spacing & Layout System</h1>
+            <p class="layout-subtitle">Every grid, every gap, every responsive breakpoint - Tesla-quality precision</p>
+        </div>
+        
+        <!-- 4-Column Layouts -->
+        <div class="layout-category">
+            <h2 class="category-title">📊 4-Column Layouts</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">GRID-4-STATS</div>
+                <div class="spacing-info">gap: 24px</div>
+                <div class="grid-4-col">
+                    <div class="demo-box stat">
+                        <div class="stat-number">3.8</div>
+                        <div class="stat-label">Peak Sun Hours</div>
+                    </div>
+                    <div class="demo-box stat">
+                        <div class="stat-number">£1,890</div>
+                        <div class="stat-label">Average Savings</div>
+                    </div>
+                    <div class="demo-box stat">
+                        <div class="stat-number">2,800+</div>
+                        <div class="stat-label">Local Installations</div>
+                    </div>
+                    <div class="demo-box stat">
+                        <div class="stat-number">2038</div>
+                        <div class="stat-label">Carbon Neutral</div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "GRID-4-STATS + Manchester stats YAML"
+                </div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">GRID-4-FEATURES</div>
+                <div class="spacing-info">gap: 24px</div>
+                <div class="grid-4-col">
+                    <div class="demo-box">
+                        <div style="font-size: 2rem; margin-bottom: 12px;">☀️</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Weather Perfect</div>
+                        <div style="font-size: 0.875rem; color: var(--neutral-600);">185 sunny days annually</div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="font-size: 2rem; margin-bottom: 12px;">💰</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Cost Savings</div>
+                        <div style="font-size: 0.875rem; color: var(--neutral-600);">0% VAT until 2027</div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="font-size: 2rem; margin-bottom: 12px;">🏠</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Home Suitable</div>
+                        <div style="font-size: 0.875rem; color: var(--neutral-600);">62% eligible properties</div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="font-size: 2rem; margin-bottom: 12px;">🌱</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Green Future</div>
+                        <div style="font-size: 0.875rem; color: var(--neutral-600);">Carbon neutral by 2038</div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "GRID-4-FEATURES + icons + Manchester benefits YAML"
+                </div>
+            </div>
+        </div>
+        
+        <!-- 2-Column Image Layouts -->
+        <div class="layout-category">
+            <h2 class="category-title">🖼️ 2-Column Image Layouts</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">IMAGE-LEFT-CONTENT-RIGHT</div>
+                <div class="spacing-info">gap: 48px</div>
+                <div class="grid-image-content">
+                    <div class="demo-box image">
+                        <div>Manchester Victorian House<br>Solar Installation</div>
+                    </div>
+                    <div class="demo-box content">
+                        <div class="content-title">Perfect for Manchester Weather</div>
+                        <div class="content-text">Solar panels work efficiently in Manchester's climate. With 185 sunny days annually and 3.8 peak sun hours, your system generates substantial savings even on cloudy days.</div>
+                        <ul class="feature-list">
+                            <li>Optimal for diffused light conditions</li>
+                            <li>Cool temperatures improve panel efficiency</li>
+                            <li>Rain naturally cleans your panels</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "IMAGE-LEFT-CONTENT-RIGHT + Manchester weather benefit YAML"
+                </div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">CONTENT-LEFT-IMAGE-RIGHT</div>
+                <div class="spacing-info">gap: 48px</div>
+                <div class="grid-image-content">
+                    <div class="demo-box content">
+                        <div class="content-title">Substantial Financial Savings</div>
+                        <div class="content-text">Manchester households save £1,890 annually on average. With 0% VAT until March 2027 and rising energy costs, solar delivers immediate and long-term value.</div>
+                        <ul class="feature-list">
+                            <li>Reduce bills by 70-90% year-round</li>
+                            <li>25-year performance warranty</li>
+                            <li>Increase property value by £9,000+</li>
+                        </ul>
+                    </div>
+                    <div class="demo-box image">
+                        <div>Commercial Solar Array<br>Manchester Business District</div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "CONTENT-LEFT-IMAGE-RIGHT + Manchester savings benefit YAML"
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3-Column Layouts -->
+        <div class="layout-category">
+            <h2 class="category-title">📋 3-Column Layouts</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">GRID-3-BENEFITS</div>
+                <div class="spacing-info">gap: 24px</div>
+                <div class="grid-3-col">
+                    <div class="demo-box">
+                        <div style="width: 48px; height: 48px; background: var(--solar-green); border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">☀️</div>
+                        <div style="font-weight: bold; font-size: 1.25rem; margin-bottom: 12px;">Weather Perfect</div>
+                        <div style="color: var(--neutral-600);">Manchester's climate is ideal for solar generation with consistent performance year-round.</div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="width: 48px; height: 48px; background: var(--solar-green); border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">💰</div>
+                        <div style="font-weight: bold; font-size: 1.25rem; margin-bottom: 12px;">Financial Benefits</div>
+                        <div style="color: var(--neutral-600);">Significant savings with 0% VAT, government incentives, and long-term energy cost reduction.</div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="width: 48px; height: 48px; background: var(--solar-green); border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">🌱</div>
+                        <div style="font-weight: bold; font-size: 1.25rem; margin-bottom: 12px;">Environmental Impact</div>
+                        <div style="color: var(--neutral-600);">Support Manchester's carbon neutral goals while reducing your personal environmental footprint.</div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "GRID-3-BENEFITS + circular icons + Manchester benefits YAML"
+                </div>
+            </div>
+        </div>
+        
+        <!-- Asymmetric Layouts -->
+        <div class="layout-category">
+            <h2 class="category-title">⚖️ Asymmetric Layouts</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">GRID-2-1-MAIN-SIDEBAR</div>
+                <div class="spacing-info">gap: 32px</div>
+                <div class="grid-2-1">
+                    <div class="demo-box">
+                        <div style="text-align: left; padding: 24px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 16px;">Main Content Area</div>
+                            <div style="color: var(--neutral-600); margin-bottom: 16px;">Detailed information about solar installations in Manchester, including technical specifications, cost breakdowns, and installation process.</div>
+                            <div style="color: var(--neutral-600);">This wider column contains the primary content that users are looking for, while the sidebar provides supporting information and calls-to-action.</div>
+                        </div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="text-align: left; padding: 16px;">
+                            <div style="font-weight: bold; margin-bottom: 12px;">Quick Quote</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600); margin-bottom: 12px;">Get instant estimate</div>
+                            <div style="background: var(--solar-green); color: white; padding: 8px 16px; border-radius: 20px; text-align: center; font-size: 0.875rem;">Start Quote</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "GRID-2-1-MAIN-SIDEBAR + Manchester content YAML + quote widget"
+                </div>
+            </div>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">GRID-1-2-SIDEBAR-MAIN</div>
+                <div class="spacing-info">gap: 32px</div>
+                <div class="grid-1-2">
+                    <div class="demo-box">
+                        <div style="text-align: left; padding: 16px;">
+                            <div style="font-weight: bold; margin-bottom: 12px;">Local Info</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600); margin-bottom: 8px;">☀️ 3.8 sun hours</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600); margin-bottom: 8px;">🏠 62% suitable homes</div>
+                            <div style="font-size: 0.875rem; color: var(--neutral-600); margin-bottom: 12px;">💰 £1,890 avg savings</div>
+                            <div style="background: var(--neutral-100); padding: 8px; border-radius: 6px; font-size: 0.75rem; text-align: center;">Manchester Council Support</div>
+                        </div>
+                    </div>
+                    <div class="demo-box">
+                        <div style="text-align: left; padding: 24px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 16px;">Installation Process</div>
+                            <div style="color: var(--neutral-600); margin-bottom: 16px;">Our MCS-certified installers follow a proven process to ensure your Manchester solar installation meets the highest standards.</div>
+                            <div style="color: var(--neutral-600);">From initial survey to final connection, we handle all aspects including council notifications and building regulations compliance.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-example">
+                    <span class="prompt-label">Prompt:</span> "GRID-1-2-SIDEBAR-MAIN + Manchester stats sidebar + process content YAML"
+                </div>
+            </div>
+        </div>
+        
+        <!-- Responsive Demo -->
+        <div class="layout-category">
+            <h2 class="category-title">📱 Responsive Behavior</h2>
+            
+            <div class="layout-showcase">
+                <div class="layout-label">AUTO-RESPONSIVE</div>
+                <div class="spacing-info">mobile-first</div>
+                <div style="background: var(--neutral-100); padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                    <div style="font-weight: bold; margin-bottom: 8px;">Automatic Breakpoints:</div>
+                    <div style="font-size: 0.875rem; color: var(--neutral-600);">
+                        📱 Mobile (< 640px): All grids become 1-column or 2-column max<br>
+                        💻 Tablet (640px - 768px): 3-column becomes 2-column, 4-column becomes 2-column<br>
+                        🖥️ Desktop (768px+): Full grid layouts with perfect spacing
+                    </div>
+                </div>
+                
+                <div class="grid-4-col">
+                    <div class="demo-box">Mobile: Stacks vertically</div>
+                    <div class="demo-box">Tablet: 2x2 grid</div>
+                    <div class="demo-box">Desktop: 1x4 row</div>
+                    <div class="demo-box">Perfect spacing always</div>
+                </div>
+                
+                <div class="prompt-example">
+                    <span class="prompt-label">Auto-Applied:</span> Every layout is mobile-first responsive with perfect Tesla-style spacing
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

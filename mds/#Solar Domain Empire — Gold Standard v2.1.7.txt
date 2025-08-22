@@ -1,0 +1,1268 @@
+# Solar Domain Empire — Gold Standard v2.1.7
+*(Fully Self-Contained Strategic Blueprint + Execution Pack + Manchester YAML + Production Upgrades + SGE Optimization + Template Governance + Dark Section Strategy)*
+
+---
+
+## Part 1 — Strategic Master Blueprint
+*(From: Solar Domain Empire – Gold Standard.txt)*
+
+Solar Domain Empire – Gold Standard Project Blueprint
+(Version 2.1.7 — August 2025 — Living Master Reference)
+
+## 0. Do Not Deviate Clause
+This document is the one source of truth for the Solar Domain Empire project.
+
+All AI/humans must follow this exactly unless given an explicit Change List.
+
+No feature creep without PM (Stuart's) approval.
+
+Keep structure, IDs, classes, design system, CSS governance, and branding intact.
+
+Any new fields, sections, or features must be added here and changelogged.
+
+## 1. Project Summary
+The Solar Domain Empire is a network of premium .solar websites — led by the hub FindSolar.solar — built to dominate local search for solar panel installations ethically and sustainably.
+
+Each city or region gets its own .solar site (e.g., Manchester.solar, Cambridge.solar) with:
+
+Exclusive installer partner.
+
+Dual-audience (residential & commercial) content.
+
+GDPR-compliant, no-spam lead forms.
+
+Geo-specific stats, grants, and council links.
+
+## 2. Purpose
+Connect homeowners & businesses with one vetted, MCS-certified installer per city.
+
+Deliver exclusive, high-quality leads with zero competition or reselling.
+
+Provide a stress-free, scalable business model for Stuart, the owner.
+
+## 3. Target Audiences
+Residential: homeowners, landlords, housing associations.
+
+Commercial: offices, warehouses, retail, agriculture, schools, community sites.
+
+## 4. USPs
+Exclusive, high-intent leads.
+
+GDPR-first — no spam, no resold data.
+
+Local-first content with real stats, grants, and planning links.
+
+Premium brand & UX (Octopus Energy × Tesla Solar feel).
+
+Proof & trust — badges, council links, source citations.
+
+Minimal owner workload via automation & templating.
+
+## 5. How It Works
+User searches for solar in their city.
+
+Lands on local .solar site with geo-specific content.
+
+Completes a short, trust-first quote form.
+
+Lead goes to that city's exclusive installer.
+
+## 6. Technology Stack
+Hub: WordPress (FindSolar.solar) — national SEO, installer recruitment, resources.
+
+Geo sites: Static HTML/CSS generated from one master template + per-city YAML.
+
+Automation: Build script outputs all cities; no design drift.
+
+Central CSS & assets: Shared via CDN, versioned.
+
+## 7. SEO & AI-Search Best Practice
+Semantic HTML, mobile-first CSS.
+
+FAQ/Website/WebPage schema.
+
+Answer-box summaries for AI Overviews.
+
+Local backlinks to councils & grants.
+
+Residential & commercial keywords per site.
+
+Regular freshness updates.
+
+## 8. User Value Beyond Form
+Resource Hub with local guides/checklists.
+
+Interactive calculators.
+
+Case notes & testimonials.
+
+## 9. Ethics
+Installer code of conduct.
+
+Lead quality guarantee.
+
+Transparent pricing.
+
+Visible data policy.
+
+## 10. Monetisation
+Lease/licence model.
+
+Monthly retainer + optional per-lead fee.
+
+Scalable to equity-grade asset.
+
+## 11. Owner Wellbeing
+Designed for minimal daily management.
+
+Easy onboarding of new cities.
+
+Centralised updates.
+
+## 12. Brand Guide
+Colours: Forest green (#1C4227), Solar yellow (#FFD347), soft grey background (#F9F9F9), dark text tones.
+
+Typography: Inter — scalable, modern, accessible.
+
+Layout: Grid-based, mobile-first.
+
+Imagery: Real installs, local relevance.
+
+Tone: GOV.UK clarity × Airbnb host friendliness.
+
+### 12.1 Brand Token System
+```css
+:root {
+  /* Primary Brand Colors */
+  --solar-green: #22c55e;
+  --trust-blue: #3b82f6;
+  --solar-yellow: #eab308;
+  
+  /* Neutral System */
+  --neutral-900: #111827;
+  --neutral-800: #1f2937;
+  --neutral-700: #374151;
+  --neutral-600: #4b5563;
+  --neutral-500: #6b7280;
+  --neutral-400: #9ca3af;
+  --neutral-300: #d1d5db;
+  --neutral-200: #e5e7eb;
+  --neutral-100: #f3f4f6;
+  --neutral-50: #f9fafb;
+  
+  /* Semantic Colors */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  
+  /* Typography */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  /* Spacing System */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Shadow System */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+```
+
+### 12.2 Brand Mix Guidelines
+**Tesla 60%:** Clean lines, premium feel, minimal interfaces, bold CTAs
+**Stripe 25%:** Clear typography, logical information hierarchy, trustworthy design
+**Apple 10%:** Subtle animations, attention to detail, accessible interactions
+**Airbnb 5%:** Friendly tone, human warmth, community feeling
+
+### 12.3 Component Design Standards
+- **Buttons:** 32px minimum height, pill-shaped (full border-radius), prominent shadows
+- **Cards:** Soft shadows, rounded corners (8px), clean white backgrounds
+- **Trust Badges:** Glassmorphism effect, subtle transparency
+- **Forms:** Clear labels, accessible focus states, validation feedback
+- **Icons:** 20-24px standard size, consistent stroke width
+
+### 12.4 Layout Principles
+- **Mobile-first:** Design for 320px minimum, scale up gracefully
+- **Grid System:** 12-column flexible grid with consistent gutters
+- **Vertical Rhythm:** Consistent spacing using --space tokens
+- **Typography Scale:** Harmonious size relationships across all text
+- **Color Hierarchy:** Primary actions in --solar-green, secondary in neutral tones
+
+### 12.5 Dark Section Strategy
+```yaml
+dark_sections:
+  usage_philosophy: "Strategic dark backgrounds for high-impact moments only"
+  frequency: "Maximum 1-2 sections per page to maintain impact"
+  brand_alignment: "Reinforces Tesla 60% premium aesthetic"
+  
+  approved_contexts:
+    primary: "Hero sections with strong imagery or video"
+    secondary: "Final CTA sections to create urgency"
+    tertiary: "Social proof/installer showcases for drama"
+    quaternary: "Trust/certification displays for premium feel"
+  
+  forbidden_contexts:
+    - "Form sections (maintain trust through light backgrounds)"
+    - "FAQ sections (readability priority)"
+    - "Resource sections (accessibility priority)"
+    - "Adjacent to other dark sections (visual overload)"
+  
+  design_principles:
+    - "Pure white text (#ffffff) for maximum contrast"
+    - "Solar green accents for CTAs maintain brand consistency"
+    - "Gradient backgrounds add depth without compromising readability"
+    - "Focus states must be highly visible (bright outlines)"
+```
+
+## 13. Components
+Hero (geo-tokenised headline, subhead, trust badges).
+
+Stats grid.
+
+Quote form (GDPR-compliant).
+
+Residential/commercial benefit blocks.
+
+FAQ block.
+
+Resource Hub cards.
+
+Footer with council/planning links.
+
+## 14. CSS Governance
+No inline CSS.
+
+One external style.css — version-controlled, central.
+
+CSS variables for brand tokens.
+
+Changes logged with version/date.
+
+### 14.1 Centralized Styling Enforcement
+*(Added 2025-08-10)*
+
+#### Summary
+All HTML must use **external CSS only**. Inline styles are strictly prohibited to ensure consistency, maintainability, and performance across all Solar Domain Empire sites.
+
+#### Requirements
+- **No inline styles** (`style="..."`) allowed in any HTML output
+- All styling must be applied via **CSS classes** defined in the master stylesheet
+- The HTML must include a `<link>` tag referencing the stylesheet, depending on environment:
+
+**Local Development:**
+```html
+<link rel="stylesheet" href="css/style.css">
+```
+
+**Production (CDN):**
+```html
+<link rel="stylesheet" href="https://cdn.solardomain.empire/css/style.css?v=2.1.7">
+```
+
+**Demo/Testing:**
+```html
+<!-- For inline demo purposes only - convert to external CSS for production -->
+<style>
+  /* Include full CSS token system here */
+</style>
+```
+
+#### Approved CSS Classes
+All styling must use these approved patterns following the brand token system defined in Section 12.1.
+
+### 14.2 Standard CSS Classes
+```css
+/* Layout Components */
+.container { /* Max-width container with padding */ }
+.grid { /* CSS Grid layout system */ }
+.card { /* Card container with shadow and borders */ }
+.section { /* Section spacing and background */ }
+
+/* Interactive Elements */
+.btn { /* Primary button styling */ }
+.btn-secondary { /* Secondary button variant */ }
+.btn-outline { /* Outline button variant */ }
+
+/* Brand Elements */
+.hero-badge { /* Trust badge styling */ }
+.trust-banner { /* Trust messaging section */ }
+.toggle-btn { /* Audience toggle buttons */ }
+.toggle-icon { /* SVG icons within toggle buttons */ }
+
+/* Content Blocks */
+.hero-title { /* Main page heading */ }
+.section-intro { /* Section introduction text */ }
+.faq-question { /* FAQ accordion questions */ }
+.faq-answer { /* FAQ accordion answers */ }
+```
+
+### 14.3 Dark Section CSS Standards
+```css
+/* Dark Section Tokens - Added: 2025-08-11 */
+:root {
+  --dark-primary: #111827;    /* var(--neutral-900) */
+  --dark-secondary: #1f2937;  /* var(--neutral-800) */
+  --dark-text: #ffffff;       /* Pure white text */
+  --dark-accent: #22c55e;     /* var(--solar-green) for CTAs */
+}
+
+/* Approved Dark Section Classes */
+.section-dark {
+  background: var(--dark-primary);
+  color: var(--dark-text);
+}
+
+.hero-dark {
+  background: linear-gradient(135deg, var(--dark-primary) 0%, var(--dark-secondary) 100%);
+  color: var(--dark-text);
+}
+
+.cta-dark {
+  background: var(--dark-secondary);
+  color: var(--dark-text);
+}
+
+.installer-section-dark {
+  background: var(--dark-primary);
+  color: var(--dark-text);
+}
+
+/* Dark Section Accessibility */
+.section-dark .btn,
+.hero-dark .btn,
+.cta-dark .btn {
+  background: var(--dark-accent);
+  color: var(--dark-primary);
+  border: 2px solid var(--dark-accent);
+}
+
+.section-dark .btn:focus,
+.hero-dark .btn:focus,
+.cta-dark .btn:focus {
+  outline: 3px solid var(--dark-text);
+  outline-offset: 2px;
+}
+
+/* Vetting - Added: 2025-08-11 (Quote Process components) */
+.vetting-category { background: transparent; border: 1px solid var(--neutral-200); border-radius: var(--radius-lg); padding: var(--space-6); }
+.section-dark .vetting-category { border-color: rgba(255,255,255,0.15); }
+.vetting-icon { width: 24px; height: 24px; margin-bottom: var(--space-2); display: inline-block; }
+```
+
+### Approved Class & Token Governance
+
+#### Adding New Approved Classes
+You may add new CSS classes as the project evolves, but only under the following rules:
+
+1. **Purpose:** New classes must have a clear, reusable purpose across `.solar` sites. Avoid one-off styles unless unavoidable.
+2. **Naming:** Use descriptive, functional names (e.g., `.trust-banner`, `.quote-form-wrapper`) — no vague terms (`.box1`, `.style2`).
+3. **Gold Standard Update:** Add each new class or config change to this master document in the **Class & Token Change Log** (date, purpose, usage).
+4. **CSS Governance:** Add new style rules to the end of `style.css` with a dated comment:
+   ```css
+   /* Added: YYYY-MM-DD – Class for testimonial carousel */
+   .testimonial-carousel { … }
+   ```
+5. **AI Alignment:** Once added, paste the updated Gold Standard into ChatGPT and Claude's instructions. Require them to re-confirm the update via the checklist before use.
+
+**New Approved Classes (2025-08-11)**
+- `.section-dark` — Primary dark section styling (neutral-900 bg, white text, AA+ contrast)
+- `.vetting-category` — Card styling for installer vetting categories (borders, spacing)
+- `.vetting-icon` — 24px icon container for vetting cards
+
+## 15. AI/Human Usage Rules
+Claude Safe Update Template:
+
+List only specific changes.
+
+Keep structure, IDs, classes, accessibility, .scroll-animate.
+
+All new styles at end of style.css.
+
+No unauthorised re-designs.
+
+No removal of fields or schema without PM approval.
+
+## 16. End Goal
+To create the UK's most trusted, ethical solar lead generation platform, staying ahead of AI-driven search trends while delivering a scalable, low-stress income model.
+
+## 17. Geo-Centric Data Model & Field Definitions (Living / Expandable)
+
+### 17.1 Per-City YAML File
+One file per site (e.g., /data/cities/manchester.yaml), containing all content, SEO, and toggles.
+
+```yaml
+site:
+  city_name: Manchester
+  region_name: Greater Manchester
+  slug: manchester
+  domain: "https://manchester.solar"
+  postcodes: "M1–M40"
+
+contact:
+  email_primary: "stuart@digitwebdesign.co.uk"
+  email_leads_to: "partner@installer.co.uk"
+  phone: ""
+
+local:
+  avg_sun_hours: "3.6–3.9"
+  irradiance_kwh_m2: "950–1050"
+  savings_low: 300
+  savings_high: 800
+  council_name: "Manchester City Council"
+  council_planning_url: "https://www.manchester.gov.uk/planning"
+  local_tariff_note: "Ask about current SEG rates via {{CITY_NAME}} suppliers."
+  grants_note: "Domestic installs typically qualify for 0% VAT in the UK."
+
+seo:
+  title: "Solar Panels {{CITY_NAME}} | Quotes, Savings & MCS Installers"
+  meta_description: "Get solar panel quotes in {{CITY_NAME}} — exclusive installer, no spam, GDPR-first."
+  updated_date: "10 August 2025"
+  enable_faq_schema: true
+  enable_website_schema: true
+  enable_webpage_schema: true
+
+content:
+  show_residential: true
+  show_commercial: true
+  residential_intro: "Clear guidance for homes in {{CITY_NAME}}."
+  commercial_intro: "Reduce OPEX for your {{CITY_NAME}} business."
+
+resources:
+  featured_guides:
+    - title: "Solar Costs in {{CITY_NAME}} (2025)"
+      slug: "solar-costs"
+      summary: "Typical system sizes, price ranges, and payback."
+      type: "article"
+      est_read: 6
+
+installer:
+  status: "Accepting 1 partner"
+  qual_requirements:
+    - "MCS certification"
+    - "RECC membership"
+    - "Public Liability Insurance (£5m+)"
+  lead_model: "Exclusive (one per city)"
+  pricing_model: "Fixed monthly + per-lead"
+  sla_response_hours: 24
+  lead_filters:
+    - "Domestic PV 3–8 kWp"
+    - "Battery add-ons welcome"
+  benefits:
+    - "Exclusive, high-intent enquiries"
+    - "Zero bidding wars"
+  cta_email: "stuart@digitwebdesign.co.uk"
+
+form:
+  action: "/lead/submit"
+  consent_text: "I agree to be contacted. We never resell data."
+  show_bill_field: true
+  show_notes_field: true
+
+features:
+  calculators_enabled: false
+  testimonials_enabled: false
+  case_notes_enabled: false
+
+optional_blocks:
+  testimonials: []
+  case_notes: []
+  hero_image: ""
+
+legal:
+  show_privacy_link: true
+  privacy_url: "/privacy/"
+  terms_url: "/terms/"
+
+brand_overrides:
+  enabled: false
+  custom_classes: []
+```
+
+### 17.2 Token Rules
+All tokens = {{TOKEN_NAME}}.
+
+City tokens from city.yaml.
+
+Defaults if missing; never output "undefined".
+
+### 17.2.1 Token Mapping — Vetting (Quote Process)
+- `{{CERT_REQUIRED_LIST}}` → Loop: `certifications.required[]` → outputs `<li>` per item
+- `{{CERT_WARRANTY_PANELS}}` → `certifications.warranties.panels` (years)
+- `{{CERT_WARRANTY_INVERTERS}}` → `certifications.warranties.inverters` (years)
+- `{{CERT_WARRANTY_WORKMANSHIP}}` → `certifications.warranties.workmanship` (years)
+- `{{CERT_WARRANTY_BATTERY_OPTIONAL}}` → Conditional `<li>` if `certifications.warranties.battery` exists
+- `{{CERT_INSURANCE_PUBLIC_MILLIONS}}` → `certifications.insurance.public_liability` converted to £M (int)
+- `{{CERT_INSURANCE_PRODUCT_MILLIONS}}` → `certifications.insurance.product_liability` converted to £M (int)
+- `{{INSTALLER_RESPONSE_TIME}}` → `market_intelligence.average_response_time`
+
+### 17.3 Schema Validation
+JSON Schema in /schema/city.schema.json ensures correctness before build. (See full schema in dev folder.)
+
+### 17.4 Data Governance
+AI never invents values.
+
+Any new field = update this section + changelog.
+
+This YAML = single source of truth per city.
+
+✅ This is the complete master reference — paste it at the start of every AI thread and into Notion as locked "Read-Only" so nothing drifts.
+
+---
+
+## **Section 18 — SEO & AI Search Optimization (v2.3 Upgrade)**  
+*(Added 2025-08-10)*  
+
+All pages must be optimized for both traditional search engines and AI-powered discovery platforms. This ensures visibility in organic search, AI Overviews, voice assistants, and rich results.
+
+### **18.1 Meta & Tag Requirements (Every Page)**
+```html
+<!-- Essential Meta Tags -->
+<title>Solar Panels [CITY] | Professional Installation | Free Quotes 2025</title>
+<meta name="description" content="[City-specific value proposition + CTA, under 160 chars]">
+<link rel="canonical" href="https://[city].solar/[page-path]">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="[Page title - city-specific]">
+<meta property="og:description" content="[Meta description content]">
+<meta property="og:image" content="https://[city].solar/images/og-image-[city].jpg">
+<meta property="og:url" content="https://[city].solar/[page-path]">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="[City] Solar">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[Page title - city-specific]">
+<meta name="twitter:description" content="[Meta description content]">
+<meta name="twitter:image" content="https://[city].solar/images/twitter-card-[city].jpg">
+```
+
+### **18.2 Schema Markup Standards**
+Include the following JSON-LD schema blocks where applicable:
+
+**Required for All Pages:**
+- **WebPage** - Basic page information
+- **Website** - Site-level data (ensure `dateModified` aligns with visible footer date)
+
+**Required for Homepage:**
+- **FAQPage** - Structured FAQ content
+- **LocalBusiness** - Installer/service area information
+- **Service** - Solar installation services
+
+**Optional Enhancements:**
+- **Product** - For solar systems or batteries
+- **BreadcrumbList** - Navigation clarity
+- **Organization** - Company information
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "[City] Solar Installation Services",
+  "description": "Professional solar panel installation in [City]",
+  "url": "https://[city].solar",
+  "telephone": "[Local installer phone]",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "[City]",
+    "addressRegion": "[Region]",
+    "addressCountry": "UK"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "[City]"
+  },
+  "serviceType": "Solar Panel Installation"
+}
+```
+
+### **18.3 Semantic HTML & Accessibility**
+```html
+<!-- Proper heading hierarchy -->
+<h1>Solar Panels in [City] — Home & Business Installers You Can Trust</h1>
+<h2>Why Choose Solar in [City]?</h2>
+<h3>Excellent Performance</h3>
+
+<!-- Image accessibility -->
+<img src="manchester-solar-installation.jpg" 
+     alt="Solar panels installed on Victorian terraced house in Manchester" 
+     loading="lazy">
+
+<!-- Interactive element accessibility -->
+<button class="faq-question" 
+        aria-expanded="false" 
+        aria-controls="faq-answer-1">
+  Do solar panels work well in [City]'s climate?
+</button>
+<div id="faq-answer-1" class="faq-answer" aria-hidden="true">
+  [Answer content]
+</div>
+
+<!-- Keyboard navigation support -->
+<a href="#quote-form" class="btn" tabindex="0">Get Free Quote</a>
+```
+
+#### **18.3.1 Standard Accessibility Requirements**
+```yaml
+accessibility_requirements:
+  standard: "WCAG 2.1 AA minimum"
+  testing: "Browser + screen reader validation"
+  implementation:
+    - "Proper heading hierarchy (H1-H6)"
+    - "Alt text for all images"
+    - "Keyboard navigation support"
+    - "Color contrast ratios >4.5:1"
+    - "Focus indicators on interactive elements"
+```
+
+#### **18.3.2 Interactive Element Standards**
+- **Touch Targets:** Minimum 48px for mobile accessibility
+- **Focus States:** Visible outline on all interactive elements
+- **Keyboard Navigation:** Full functionality without mouse
+- **Screen Reader Support:** ARIA labels and semantic markup
+- **Color Independence:** Information not conveyed by color alone
+
+#### **18.3.3 Dark Section Accessibility Requirements**
+```yaml
+dark_section_accessibility:
+  contrast_ratio: "4.5:1 minimum (WCAG AA)"
+  text_color: "Pure white (#ffffff) or very light only"
+  focus_indicators: "Bright outline required (3px solid white)"
+  button_contrast: "Maintain solar-green on dark for brand consistency"
+  testing: "Validate with screen readers and high contrast mode"
+  background_images: "Ensure text remains readable over any background imagery"
+  gradient_accessibility: "Test contrast at multiple points across gradients"
+```
+
+### **18.4 AI Overview Optimization**
+Write concise, authoritative answers (40–60 words) for FAQs and Benefits:
+
+**Example Optimized FAQ:**
+> **Q: Do solar panels work well in Manchester's climate?**  
+> **A:** Yes! Solar panels work efficiently in Manchester, generating electricity from **daylight rather than direct sunshine**. Manchester receives **3.8 peak sun hours daily** on average, sufficient for excellent solar performance. Even on cloudy days, modern panels continue producing clean energy.
+
+**AI Overview Best Practices:**
+- Use **bold keywords** for scanability
+- Include **bullet points** where helpful
+- Add **source citations**: "According to Manchester City Council..."
+- Prioritize **clarity, trust, and brevity**
+- Avoid fluff and filler content
+
+### **18.5 Voice Search Optimization**
+Phrase FAQs and Benefits to match spoken queries:
+
+**Voice-Optimized Questions:**
+- "How much can I save with solar in Manchester?"
+- "Do I need planning permission for solar panels?"
+- "What's the best solar installer near me?"
+- "How long do solar panels last?"
+
+**Natural Language Guidelines:**
+- Use **conversational tone**
+- Answer questions **directly and simply**
+- Avoid **jargon or technical phrasing**
+- Include **local context** naturally
+
+### **18.6 Keyword Strategy Per City**
+```yaml
+primary_keywords:
+  - "solar panels [CITY]"
+  - "[CITY] solar installation"
+  - "solar installers [CITY]"
+  - "[CITY] solar quotes"
+
+semantic_variants:
+  - "photovoltaic systems [CITY]"
+  - "PV installation [CITY]"
+  - "renewable energy [CITY]"
+  - "solar power [CITY]"
+
+long_tail_phrases:
+  - "solar panel grants in [CITY]"
+  - "best solar installer for Victorian homes [CITY]"
+  - "solar quotes near [POSTCODE] area"
+  - "commercial solar [CITY] cost"
+  - "solar panels for [LOCAL_AREA] homes"
+
+local_modifiers:
+  - "[CITY] solar specialists"
+  - "[REGION] solar experts"
+  - "MCS installers [CITY]"
+  - "[CITY] renewable energy"
+```
+
+**Integration Guidelines:**
+- Include keywords **naturally** in headings, subheads, and body copy
+- Use **city-specific terms** throughout content
+- Reference **local landmarks, areas, and postcodes**
+- Maintain **readability and user experience**
+
+### **18.7 Performance Targets**
+```yaml
+core_web_vitals:
+  LCP: "<2.5 seconds"    # Largest Contentful Paint
+  FID: "<100ms"          # First Input Delay  
+  CLS: "<0.1"           # Cumulative Layout Shift
+  
+pagespeed_scores:
+  mobile: ">85 (minimum)"
+  desktop: ">90 (target)"
+  
+seo_targets:
+  meta_title_length: "50-60 characters"
+  meta_description_length: "150-160 characters"
+  h1_keyword_inclusion: "Required"
+  internal_links: "3-5 per page minimum"
+```
+
+### **18.8 Local SEO Essentials**
+- **NAP Consistency:** Installer contact details across all mentions
+- **Geo-Tagging:** Images with local landmarks and proper alt text
+- **Local Content:** Council links, postcode coverage, climate data
+- **Service Area:** Clear geographic boundaries in schema markup
+- **Local Citations:** References to local government initiatives
+- **Regional Language:** Adapt terminology for local preferences
+
+---
+
+## **Section 19 — Technical Implementation**  
+*(Added 2025-08-10)*  
+
+### **19.1 Hosting & Infrastructure**
+```yaml
+hosting_requirements:
+  platform: "Static hosting (Netlify/Vercel/GitHub Pages)"
+  cdn: "Global content delivery network"
+  ssl: "Auto-renewing certificates per domain"
+  performance: "Edge caching, asset optimization"
+```
+
+### **19.2 Build Process**
+```yaml
+automation:
+  input: "City YAML + master template"
+  output: "Static HTML per city domain"
+  deployment: "Git push triggers rebuild"
+  testing: "Automated lighthouse checks"
+```
+
+### **19.3 Analytics & Tracking**
+```yaml
+analytics_stack:
+  primary: "Google Analytics 4"
+  conversions: "Form submissions, phone clicks, email clicks"
+  heatmaps: "Optional: Hotjar/Microsoft Clarity"
+  uptime: "StatusCake or similar monitoring"
+```
+
+### **19.4 Error Handling**
+```yaml
+error_management:
+  404_pages: "Custom with city navigation"
+  form_failures: "Clear error messages, retry options"
+  server_errors: "Graceful fallbacks"
+  offline: "Basic service worker for caching"
+```
+
+---
+
+## **Section 20 — Legal Compliance**  
+*(Added 2025-08-10)*  
+
+### **20.1 GDPR Requirements (Non-Negotiable)**
+```yaml
+gdpr_compliance:
+  consent:
+    forms: "Clear checkboxes, no pre-ticked options"
+    language: "Plain English explanation of data use"
+    withdrawal: "Easy unsubscribe/deletion process"
+  
+  data_retention:
+    leads: "Delete after 12 months if not converted"
+    analytics: "26 months maximum (GA4 default)"
+    backups: "Include in deletion schedules"
+  
+  documentation:
+    privacy_policy: "Required on every site"
+    terms_of_service: "Installer relationship clarity"
+    data_processing: "Agreements with installer partners"
+```
+
+### **20.2 Accessibility Standards**
+```yaml
+accessibility_requirements:
+  standard: "WCAG 2.1 AA minimum"
+  testing: "Browser + screen reader validation"
+  implementation:
+    - "Proper heading hierarchy (H1-H6)"
+    - "Alt text for all images"
+    - "Keyboard navigation support"
+    - "Color contrast ratios >4.5:1"
+    - "Focus indicators on interactive elements"
+```
+
+### **20.3 Cookie Management**
+```yaml
+cookie_policy:
+  essential_only: "No tracking without explicit consent"
+  banner: "Required for EU visitors"
+  categories: "Strictly necessary, Analytics, Marketing"
+  duration: "Clear expiry information"
+```
+
+---
+
+## **Section 21 — Operations Manual**  
+*(Added 2025-08-10)*  
+
+### **21.1 Lead Management System**
+```yaml
+lead_routing:
+  method: "Direct email forwarding to city installer"
+  backup: "Stuart receives copy of all leads"
+  response_sla: "24 hours maximum response time"
+  quality_tracking: "Monthly lead quality reports"
+  
+lead_qualification:
+  high_priority: "Monthly bill >£100, detached/semi-detached"
+  medium_priority: "Monthly bill £50-100, terraced houses"
+  low_priority: "Monthly bill <£50, flats/apartments"
+```
+
+### **21.2 Installer Onboarding**
+```yaml
+requirements:
+  certifications: ["MCS certification", "RECC membership"]
+  insurance: "Public liability £2M+, Product liability £6M+"
+  references: "3 recent customer testimonials"
+  trial_period: "3 months exclusive territory trial"
+  
+pricing_model:
+  monthly_fee: "Fixed retainer per city"
+  per_lead_fee: "Optional additional per qualified lead"
+  territory: "Exclusive rights per postcode area"
+```
+
+### **21.3 Quality Control Process**
+```yaml
+monitoring:
+  monthly_review: "Lead quality and response times"
+  customer_feedback: "Quarterly satisfaction surveys"
+  installer_performance: "Response time tracking"
+  website_performance: "Monthly analytics review"
+  
+improvement_cycle:
+  data_collection: "Monthly performance reports"
+  analysis: "Identify improvement opportunities"
+  implementation: "Update templates and processes"
+  measurement: "Track impact of changes"
+```
+
+### **21.4 Content Maintenance**
+```yaml
+update_schedule:
+  monthly: "Installation statistics, installer availability"
+  quarterly: "Pricing data, grant information"
+  annually: "Council links, regulatory changes"
+  ad_hoc: "New installer onboarding, policy updates"
+  
+content_review:
+  accuracy: "Verify all local data and links"
+  freshness: "Update 'last updated' dates"
+  performance: "Review based on analytics data"
+```
+
+---
+
+## **Section 22 — SGE & AI Overview Optimization**  
+*(Added 2025-08-11)*  
+
+The **Search Generative Experience (SGE)** and other AI-powered search layers (Bing Copilot, Perplexity, ChatGPT Search) are shifting how users discover and consume content. These AI systems summarise and synthesise trusted sources into instant answers. Our `.solar` sites must be optimised to be the **primary quoted source** in these overviews.
+
+### **22.1 SGE-Optimised Content Rules**
+- **40–60 word authoritative summaries** at the start of each section and FAQ answer.  
+- **Bold key terms** and figures for scanability (e.g., **3.8 peak sun hours**, **0% VAT until 2027**).  
+- **Direct answers first**, then context (inverted pyramid style).  
+- **Local references** (city name, landmarks, council) in early sentences.  
+- **Source-worthy phrasing** — neutral, factual, trustworthy.
+
+### **22.2 Schema for SGE**
+- Ensure **FAQPage**, **LocalBusiness**, **Service**, and **WebPage** schema are valid on every page.  
+- Mark up stats, benefits, and grants with **FAQ** and **HowTo** schema where relevant.  
+- Keep **JSON-LD structured data** clean and up to date.
+
+### **22.3 Link Earning for AI Confidence**
+- Link to **credible local sources** (e.g., council sites, GOV.UK) to boost trust.  
+- Use **descriptive anchor text** ("Manchester City Council solar planning guidance") instead of "click here."  
+- Reference sources in content: "According to Manchester City Council…"
+
+### **22.4 Formatting for AI Summaries**
+- Use **short bullet lists** for steps, benefits, or stats — these are lifted cleanly into SGE answer cards.  
+- Include **tables** for comparisons (e.g., savings by system size).  
+- Ensure headings are **question-focused** where possible ("Do solar panels work in Manchester?").
+- Use **HowTo schema** on /quote-process/ (5-step ordered list) for AI answer cards.
+
+### **22.5 Voice & Conversational Search**
+- Phrase key headings as **natural questions** users might speak.  
+- Keep answers **plain-language, non-technical**.  
+- Include **local context** in answers (weather, architecture, grid rates).
+
+### **22.6 Image & Media for SGE**
+- **Geo-tag images** and use descriptive alt text mentioning the city and installation type.  
+- Include at least one **hero image** suitable for rich cards and previews.  
+- Maintain **<150KB** image sizes for speed.
+
+### **22.7 Performance & Engagement Signals**
+- Maintain Core Web Vitals targets (Section 18.7).  
+- Reduce bounce rate with **clear CTAs** near top and mid-page.  
+- Use **sticky "Get a Quote" buttons** on mobile.
+
+### **22.8 SGE Tracking & Iteration**
+- Monitor AI Overview presence in Search Console (when rolled out).  
+- Track which sections/phrases are being quoted and **refine them for clarity and authority**.  
+- A/B test summary tone and structure for higher inclusion rates.
+
+---
+
+## **Section 23 — Template Governance Reference**  
+*(Added 2025-08-11)*  
+
+### **23.1 Source-to-Template Mapping**
+The file `template.yaml` is the canonical tokenized blueprint used to generate all new city configurations. It defines the complete structure, field logic, and content taxonomy for Solar Domain Empire city builds.
+
+The file `manchester.yaml` serves as the **master reference** that was used to create the template structure.
+
+### **23.2 Master Reference Protocol**
+```yaml
+hierarchy:
+  source: "manchester.yaml (Master Reference)"
+  template: "template.yaml v2.1.7 (Generated from Manchester)"
+  output: "[city].yaml (Generated from template + city data)"
+  
+governance:
+  manchester_changes: "Must be reflected in template.yaml"
+  template_changes: "Must be documented in Gold Standard"
+  structural_updates: "Require PM approval and version increment"
+  bidirectional_sync: "Manchester ↔ Template ↔ New Cities"
+```
+
+### **23.3 Required Header Documentation**
+
+**Manchester.yaml Header:**
+```yaml
+# Manchester Solar Domain Configuration
+# Solar Domain Empire — Manchester.solar
+# Last Updated: January 2025
+# ⚠️ Master Reference Notice:
+# This file was used to generate `template.yaml` v2.1.7.
+# All future city YAMLs (e.g. leeds.yaml, bristol.yaml) should follow the same structure, token logic, and field order.
+# Any changes to this file must be reflected in `template.yaml` and documented in Gold Standard v2.1.7+.
+```
+
+**Template.yaml Header:**
+```yaml
+# Solar Domain Empire — City Template v2.1.7
+# Generated from: manchester.yaml (Master Reference)
+# Last Updated: January 2025
+# 🔧 Template Usage Notice:
+# This tokenized template generates new city YAML files.
+# Structure, field order, and token logic derived from manchester.yaml.
+# All changes must be approved via Gold Standard governance process.
+```
+
+### **23.4 Template Usage Protocol**
+```yaml
+generation_process:
+  input: "template.yaml + city-specific data"
+  output: "[city].yaml (full configuration)"
+  validation: "Schema check + Gold Standard compliance"
+  deployment: "Static site generation + domain setup"
+```
+
+### **23.5 Token Standards**
+```yaml
+token_format: "(token_name)"
+required_tokens:
+  - "(city)" # Primary city name
+  - "(home_savings)" # Annual residential savings
+  - "(business_savings)" # Annual commercial savings
+  - "(peak_sun_hours)" # Local solar performance
+  - "(council_name)" # Local authority
+  
+conditional_tokens:
+  - "(neighbourhood_1)" # If multiple areas served
+  - "(installer_1.name)" # When installer data available
+  - "(carbon_target)" # If council has specific target
+```
+
+### **23.6 Quality Assurance**
+- **Never modify template structure** without updating Gold Standard
+- **All new cities** must use latest template version
+- **Token validation** required before site generation
+- **Manchester.yaml** remains the reference standard
+- **Version alignment** — Template version must match Gold Standard version
+
+### **23.7 Change Management Process**
+```yaml
+structural_changes:
+  1. "Update manchester.yaml with new structure"
+  2. "Reflect changes in template.yaml"
+  3. "Update Gold Standard documentation"
+  4. "Increment version numbers"
+  5. "Test with pilot city generation"
+  6. "Roll out to existing cities if needed"
+  
+field_additions:
+  1. "Add to manchester.yaml with real data"
+  2. "Add token to template.yaml"
+  3. "Document in Gold Standard Section 23"
+  4. "Update schema validation"
+  5. "Update build scripts"
+```
+
+### Component: Vetting Section (Dark)
+**Purpose:** High-trust display of installer standards on /quote-process/.
+**Rules:** Max one `.section-dark` per page; AA contrast; content from YAML tokens only.
+**Structure:**
+- `<section class="section-dark">`
+  - `.section-header` with `<h2>` + `.section-intro`
+  - `.grid.grid-3` of `.vetting-category.card` items
+**Accessibility:** Semantic headings; list markup for criteria; 48px targets; visible focus.
+
+---
+
+## **Page Type Templates**  
+*(Added 2025-08-10)*  
+
+In addition to the Homepage, other core page types follow their own best-practice section flows. These are versioned and updated centrally in this Gold Standard.
+
+### **About Us Page Flow**  
+1. Hero – Warm, human intro with location reference  
+2. Company Story – Why we exist, mission & values  
+3. Team Section – Photos/names/roles (trust-building)  
+4. Trust Signals – Certifications, partnerships, testimonials  
+5. CTA – Invite to get a quote or contact us  
+6. Footer  
+
+### **Contact Page Flow**  
+1. Hero – Clear "Get in touch" heading  
+2. Contact Methods – Phone, email, form (with GDPR compliance)  
+3. Map & Service Area – Local SEO benefit  
+4. Trust Reminder – "No spam, no pressure" message  
+5. Footer  
+
+### **Installer Info Page Flow**  
+1. Hero – Pitch for installers (exclusive leads, local authority)  
+2. Benefits – Why partner with us  
+3. Process – How onboarding works  
+4. Testimonials – Other installer feedback  
+5. CTA – Apply now form  
+6. Footer  
+
+---
+
+## **Section Order Change Protocol**  
+*(Updated 2025-08-10)*  
+
+**NEW OPTIMIZED HOMEPAGE SECTION ORDER:**  
+**Hero → Stats → Benefits → Social Proof/Installers → FAQ → Form → Resources → Footer**  
+
+This order follows proven conversion psychology and expert CRO best practices.  
+**Changes to this order are allowed only under the following process:**  
+
+1. **Test First:** Any proposed change must be A/B tested or trialled on a single staging/live site.  
+2. **Record Results:** Document the effect on conversion rate, bounce rate, SEO performance.  
+3. **PM Approval:** The Project Manager (Stuart) must approve any permanent change.  
+4. **Update Master:** If approved, update this Gold Standard to reflect the new order and rationale.  
+5. **Roll Out:** Apply change across all `.solar` sites and update AI project instructions.
+
+---
+
+## **MANDATORY: AI Change Log Protocol**  
+*(Added 2025-08-10)*  
+
+**ALL AI ASSISTANTS MUST FOLLOW THIS PROTOCOL — NO EXCEPTIONS**  
+
+At the end of every response where CSS, design, or functionality changes are made, you MUST include a **Change Log** section using this exact format:  
+
+```markdown
+## Change Log - [Project Name] v[Version]
+
+**Changes Made:**
+- [Date] | [Type] | [Name] | [Purpose] | [Usage Notes] | [Your AI Name]
+
+**For Gold Standard Update:**
+Copy this row to the Gold Standard Change Log table:
+| [Date] | [Type] | [Name] | [Purpose] | [Usage Notes] | [Your AI Name] |
+```
+
+**Change Types Include:**  
+- Class (new CSS class)  
+- CSS Fix (modification to existing styles)  
+- Update (path changes, version updates)  
+- Design (visual/layout decisions)  
+- Icons (icon implementations)  
+- Decision (design choices made)  
+- Feature (new functionality)  
+- Bug Fix (corrections)  
+
+**Example Output:**  
+```markdown
+## Change Log - Manchester.solar v2.1.7
+
+**Changes Made:**
+- 2025-08-10 | Class | `.toggle-btn` | Audience toggle buttons with icons | Hero section dual audience selector | Claude
+- 2025-08-10 | CSS Fix | `.hero-title` | Added explicit white color override | Fixes contrast on gradient background | Claude
+
+**For Gold Standard Update:**
+| 2025-08-10 | Class | `.toggle-btn` | Audience toggle buttons with icons | Hero section dual audience selector | Claude |
+```
+
+---
+
+### **Why This Matters**  
+- Prevents design drift across the Solar Domain Empire network  
+- Enables clear team collaboration and history tracking  
+- Protects quality by recording what works and what doesn't  
+- Speeds development by avoiding repeated experiments  
+- Maintains brand and UX consistency across all `.solar` sites  
+
+**Enforcement:**  
+- Any AI output without a change log when changes are made will be corrected immediately.  
+- The format must be exact for easy copy/paste into the Gold Standard table.  
+- Always include rationale and context, not just the change itself.  
+
+---
+
+### **Class & Token Change Log**  
+
+| Date       | Type     | Name/Class/Token   | Purpose | Usage Notes | Updated By |  
+|------------|----------|--------------------|---------|-------------|------------|  
+| 2025-08-11 | Feature  | Dark Section Strategy | Strategic dark backgrounds for premium feel | Max 1-2 per page, accessibility compliant | Claude |
+| 2025-08-11 | Class    | `.section-dark`    | Primary dark section styling | Background: neutral-900, white text | Claude |  
+| 2025-08-11 | Class    | `.hero-dark`       | Dark hero with gradient | Gradient from neutral-900 to neutral-800 | Claude |
+| 2025-08-11 | Class    | `.cta-dark`        | Dark CTA section | Background: neutral-800, urgency context | Claude |
+| 2025-08-11 | Class    | `.installer-section-dark` | Dark installer showcase | Premium social proof presentation | Claude |
+| 2025-08-11 | CSS Tokens | Dark section variables | --dark-primary, --dark-secondary, --dark-text, --dark-accent | Systematic dark theming | Claude |
+| 2025-08-11 | Update   | Version 2.1.7     | Added Section 12.5 — Dark Section Strategy | Formalizes dark section usage guidelines | Claude |
+| 2025-08-11 | Update   | Version 2.1.6     | Added Section 23 — Template Governance Reference | Formalizes manchester.yaml → template.yaml relationship | Claude |
+| 2025-08-11 | Update   | Version 2.1.5     | Added Section 22 — SGE & AI Overview Optimization | Enhances AI search presence | Stuart |
+| 2025-08-11 | Class | `.vetting-category`, `.vetting-icon` | Vetting card styling for dark section | Used on /quote-process/; pairs with `.section-dark` | GPT-5 |
+| 2025-08-11 | Tokens | Vetting token set (`{{CERT_*}}`, `{{INSTALLER_RESPONSE_TIME}}`) | Map vetting content directly from city YAML | For Quote Process templating; no hard-coded values | GPT-5 |
+| 2025-08-10 | Class    | `.trust-banner`    | Highlight trust messaging section | Use in Hero or Trust section | Claude |  
+| 2025-08-10 | Class    | `.toggle-btn`      | Audience toggle buttons with icons | Hero section dual audience selector | Claude |  
+| 2025-08-10 | Class    | `.toggle-icon`     | SVG icons within toggle buttons | 20x20px clean line icons, flex-shrink: 0 | Claude |  
+| 2025-08-10 | CSS Fix  | `.hero-title`      | Added explicit white color override | Fixes contrast on gradient background | Claude |  
+| 2025-08-10 | Update   | Local CSS path     | Changed from CDN to `css/style.css` | Local development setup | Stuart/Claude |  
+| 2025-08-10 | Design   | Toggle button colors | White active state vs Solar Yellow | Maintains CTA hierarchy, prevents competition | Stuart/Claude |  
+| 2025-08-10 | Icons    | Home/Business SVG icons | Clean line style 20x20px | Consistent stroke-width: 2px, currentColor | Claude |  
+| 2025-08-10 | Decision | Benefits section icons | Tested and removed | Kept section clean, text-focused | Stuart/Claude |
+
+---
+
+## **Flex Directive (Built-In Adaptability)**  
+*(Added 2025-08-10)*  
+
+To maintain elite quality while allowing creative adaptability, the AI may apply the following flex rules when context demands it:
+
+### **🎨 Creative Flexibility Guidelines**
+- **Layout Adjustment:** Loosen layout structure by up to 20% for storytelling, visual hierarchy, or emotional impact
+- **Local Enhancement:** Replace or enhance modules with locally relevant content (e.g., climate maps, council initiatives, landmark references)
+- **Visual Flourishes:** Introduce tasteful visual elements (e.g., SVG accents, subtle animations, iconography) that align with brand mix
+- **UX Priority:** Prioritize clarity and trust over strict modularity when user experience benefits
+- **Performance Balance:** Ensure creative additions don't compromise Core Web Vitals targets
+- **Dark Section Usage:** Apply dark sections strategically for high-impact moments following Section 12.5 guidelines
+
+### **✅ Approved Flex Examples**
+```yaml
+layout_flex:
+  hero_variations: "Local landmark backgrounds, seasonal adjustments, dark themes"
+  stats_presentation: "Climate-specific data visualizations"
+  benefit_ordering: "Reorder based on local priorities (e.g., Victorian homes)"
+  dark_implementation: "Strategic dark sections for premium feel"
+  
+content_enhancement:
+  local_integration: "Council solar initiatives, local success stories"
+  regional_terminology: "Northern vs Southern language preferences"
+  cultural_sensitivity: "Welsh language elements where appropriate"
+  
+visual_additions:
+  subtle_animations: "Card reveals, progress indicators, hover states"
+  iconography: "Weather icons, solar panel illustrations, local landmarks"
+  data_visualization: "Interactive charts, progress bars, comparison tables"
+  dark_theming: "Premium dark sections with proper contrast"
+```
+
+### **🚫 Flex Boundaries (Never Break)**
+- **Brand colors and typography** - CSS tokens remain sacred
+- **GDPR compliance** - Legal requirements are non-negotiable  
+- **Accessibility standards** - WCAG 2.1 AA minimum always (including dark section contrast)
+- **Core conversion flow** - Benefits → Trust → FAQ → Form structure
+- **Performance targets** - <2.5s load times, >85 mobile score
+- **Dark section limits** - Maximum 1-2 dark sections per page
+
+### **📝 Flex Documentation**
+**Always note any flex adjustments in the Change Log:**
+```
+## Change Log - [City] v[Version]
+**Flex Adjustments Made:**
+- Layout: Expanded hero by 15% to accommodate Manchester skyline imagery
+- Content: Added Manchester Climate Change Framework reference
+- Visual: Introduced subtle fade-in animations for trust badges
+- UX: Reordered benefits to prioritize Victorian housing relevance
+- Dark Theme: Applied dark installer section for premium social proof
+
+**Rationale:** Enhanced local authenticity while maintaining conversion psychology
+```
+
+This directive ensures **elite quality with human creativity** - preventing robotic templating while maintaining professional standards.
+
+---
+
+## Claude — Gold Standard v2.1.7 Confirmation Checklist
+
+Before starting any build, read the full **Solar Domain Empire — Gold Standard v2.1.7** and reply with:  
+
+✅ **Confirmation of Understanding**  
+- I have read and understood the Solar Domain Empire — Gold Standard v2.1.7.  
+- I will follow it exactly with no deviations, feature creep, or design drift without PM (Stuart) approval.  
+
+📋 **Key Rules I Will Follow:**  
+1. **Component Order:** Hero → Stats → Benefits → Social Proof/Installers → FAQ → Form → Resources → Footer.  
+2. **CSS Governance:** Only use defined tokens (`--solar-green`, etc.) and classes (`.btn`, `.card`, `.grid`, `.hero-badge`); no inline CSS; new styles at end of `style.css`.  
+3. **Brand Standards:** Tesla 60% / Stripe 25% / Apple 10% / Airbnb 5%; Inter typography (400/600/700/900); glassmorphism badges, soft shadows, 32px pill buttons; mobile-first.  
+4. **Dark Section Strategy:** Maximum 1-2 dark sections per page; use `.section-dark`, `.hero-dark`, `.cta-dark`, `.installer-section-dark` classes; maintain WCAG AA contrast (4.5:1).
+5. **YAML Data:** Use all city-specific data from embedded YAML; never invent values.  
+6. **SEO & Schema:** Include FAQ, Website, WebPage schema; semantic HTML; AI-optimized content (40-60 word answers); GDPR compliance.  
+7. **Accessibility:** Focus states, 48px+ touch targets, semantic markup, WCAG 2.1 AA standards (including dark section accessibility).
+8. **Performance:** Target <2.5s load times, >85 mobile PageSpeed, Core Web Vitals green.
+9. **SGE Optimization:** 40-60 word authoritative summaries, bold key terms, source-worthy phrasing for AI overviews.
+10. **Template Governance:** Follow manchester.yaml → template.yaml → new cities hierarchy; maintain version alignment.
+
+⏳ I will now wait for your specific request.

@@ -6211,3 +6211,10 @@ body {
   outline: 2px solid var(--solar-green);
   outline-offset: 2px;
 }
+
+/* Temporary mobile menu fix */
+@media (min-width: 769px) {
+  .mobile-icon {
+    display: none !important;
+  }
+}

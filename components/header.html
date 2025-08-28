@@ -1,38 +1,38 @@
-<!-- Performance Optimization Implementation for 10/10 Scores -->
-<!-- Target: LCP <2.0s, CLS <0.05, INP <150ms -->
+<!-- Utility Navigation (Cleaned Up) -->
+<nav class="utility-nav">
+    <div class="container">
+        <ul class="utility-nav-list">
+            <li><a href="/support" class="utility-nav-link">Support</a></li>
+            <li><a href="/installer-partner" class="utility-nav-link utility-nav-highlight">Are You an Installer?</a></li>
+        </ul>
+    </div>
+</nav>
 
-<!-- 1. CRITICAL RESOURCE PRIORITIZATION -->
-<head>
-    <!-- DNS and Connection Optimization -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Critical CSS - Inline for First Paint -->
-    <style>
-    /* Critical Path CSS - Above the Fold Only */
-    :root{--solar-green:#22c55e;--trust-blue:#3b82f6;--neutral-900:#0a0a0a;--neutral-0:#ffffff;--space-4:1rem;--space-6:1.5rem;--space-8:2rem;--space-16:4rem;--font-family:'Inter',system-ui,sans-serif;--radius-full:9999px;--transition-base:0.3s cubic-bezier(0.4,0,0.2,1)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--font-family);line-height:1.6;color:var(--neutral-900);background:var(--neutral-0)}
-    .container{max-width:1200px;margin:0 auto;padding:0 var(--space-4)}
-    .hero{background:linear-gradient(135deg,rgba(17,24,39,.9),rgba(31,41,55,.9));color:var(--neutral-0);padding:var(--space-16) 0;text-align:center;min-height:70vh;display:flex;align-items:center}
-    .hero-title{font-size:clamp(1.875rem,1.65rem + 1.125vw,2.25rem);font-weight:900;margin-bottom:var(--space-6);line-height:1.1;letter-spacing:-0.025em}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--space-4) var(--space-6);background:var(--solar-green);color:var(--neutral-0);text-decoration:none;font-weight:600;border-radius:var(--radius-full);border:none;cursor:pointer;transition:all var(--transition-base)}
-    .btn:hover{background:#16a34a;transform:translateY(-2px)}
-    .hero-badge{padding:var(--space-2) var(--space-4);background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);border-radius:var(--radius-full);color:var(--neutral-0);font-size:0.875rem;font-weight:600}
-    .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-    </style>
-    
-    <!-- Preload Critical Font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"></noscript>
-    
-    <!-- Preload Hero Background Image -->
-    <link rel="preload" href="images/manchester-hero-optimized.webp" as="image" type="image/webp" media="(min-width: 768px)">
-    <link rel="preload" href="images/manchester-hero-mobile.webp" as="image" type="image/webp" media="(max-width: 767px)">
-    
-    <!-- Non-Critical CSS with Media Queries -->
-    <link rel="stylesheet" href="css/styles.css?v=3.1.2" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/styles.css?v=3.1.2"></noscript>
-</head>
+<!-- Main Header -->
+<header class="site-header">
+    <div class="container">
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">Manchester.solar</span>
+        </a>
+        
+        <nav class="nav">
+            <div class="mobile-icon">
+                ☰
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/solar-for-manchester" class="nav-link">Solar for Manchester</a></li>
+                <li><a href="/residential" class="nav-link">Residential</a></li>
+                <li><a href="/commercial" class="nav-link">Commercial</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+                <!-- Smart Quote Button -->
+                <li><a href="#quote" class="btn" data-smart-quote="true">Get Quote</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

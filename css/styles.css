@@ -428,15 +428,19 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: var(--space-6);
-    letter-spacing: -0.025em;
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    /* Removed all the gradient/background-clip stuff */
-    animation: fadeInUp 1s var(--transition-tesla) 0.4s backwards;
+    font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+    margin-bottom: var(--space-6) !important;
+    letter-spacing: -0.025em !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    background: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: #ffffff !important;
+    animation: fadeInUp 1s var(--transition-tesla) 0.4s backwards !important;
 }
 
 .audience-toggle {

@@ -428,9 +428,15 @@ body {
 }
 
 .hero-title {
-    color: #ffffff; /* Clean white */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle depth shadow */
-    /* Keep all your other existing styles */
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: var(--space-6);
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Removed all the gradient/background-clip stuff */
+    animation: fadeInUp 1s var(--transition-tesla) 0.4s backwards;
 }
 
 .audience-toggle {

@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /
-
+Allow: /css/styles.css
 # Temporarily blocking all crawlers during development
+# Allow CSS access for technical audit only
 # Remove this file when ready to go live

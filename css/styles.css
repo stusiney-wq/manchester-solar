@@ -1757,20 +1757,95 @@ body {
   margin: 0;
 }
 
-/* ============================================ */
-/* FORM SECTION - ENHANCED WITH DARK BACKGROUND */
-/* ============================================ */
+<!-- COMPLETE FORM SECTION - Light Background with ALL Required Components -->
+<section class="form-section section" id="quote-form">
+    <div class="container">
+        <div class="form-wrapper">
+            <h2>Get Your Free Manchester Solar Assessment</h2>
+            <p class="form-intro">Start your journey to energy independence with a professional consultation from our Manchester property specialists.</p>
+            
+            <form class="solar-quote-form" action="/submit-quote" method="post" data-dashlane-rid="70f8ff56a9801ed6" data-dashlane-classification="identity">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="firstName" required="" data-dashlane-rid="3c043fc919c71973" data-dashlane-classification="name,first" data-kwimpalastatus="alive" data-kwimpalaid="1756391870259-0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="lastName" required="" data-dashlane-rid="95c090bbdba0ca59" data-dashlane-classification="name,last" data-kwimpalastatus="alive" data-kwimpalaid="1756391870259-1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required="" data-dashlane-rid="7b59da7202025810" data-dashlane-classification="email" data-kwimpalastatus="alive" data-kwimpalaid="1756391870259-2">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required="" data-dashlane-rid="629c06357ec2f46f" data-dashlane-classification="phone" data-kwimpalastatus="alive" data-kwimpalaid="1756391870259-3">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="postcode">Manchester Postcode *</label>
+                        <input type="text" id="postcode" name="postcode" placeholder="e.g. M1 5GD" required="" data-dashlane-rid="42004482b94056c3" data-dashlane-classification="address,zip" data-kwimpalastatus="alive" data-kwimpalaid="1756391870259-4">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" name="propertyType" data-dashlane-rid="1a516da86247f536" data-dashlane-classification="other">
+                            <option value="">Select property type</option>
+                            <option value="victorian-terraced">Victorian Terraced</option>
+                            <option value="victorian-semi">Victorian Semi-Detached</option>
+                            <option value="edwardian-semi">Edwardian Semi-Detached</option>
+                            <option value="modern-detached">Modern Detached</option>
+                            <option value="modern-semi">Modern Semi-Detached</option>
+                            <option value="apartment">Apartment/Flat</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthly-bill">Monthly Electricity Bill</label>
+                        <select id="monthly-bill" name="monthlyBill" data-dashlane-rid="14105e89b4a91112" data-dashlane-classification="other">
+                            <option value="">Select bill range</option>
+                            <option value="under-50">Under £50</option>
+                            <option value="50-100">£50 – £100</option>
+                            <option value="100-150">£100 – £150</option>
+                            <option value="150-200">£150 – £200</option>
+                            <option value="over-200">Over £200</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-consent-wrapper">
+                    <label class="checkbox-label" data-dashlane-label="true">
+                        <input type="checkbox" name="consent" required="" data-dashlane-rid="4c22d5bbdd643fea" data-dashlane-classification="consent,privacy_policy,terms">
+                        <span>I agree to be contacted about solar installation. We guarantee only one professional contact - no spam or reselling data. <a href="/privacy" class="link-accent">Privacy Policy</a></span>
+                    </label>
+                </div>
+                
+                <div class="form-submit-wrapper">
+                    <button type="submit" class="btn btn-large" data-dashlane-label="true" data-dashlane-rid="9e7486b980eccd93" data-dashlane-classification="other">Get My Free Assessment</button>
+                    
+                    <p class="form-disclaimer">
+                        ✓ MCS certified installer contact only<br>
+                        ✓ All Manchester property specialists<br>
+                        ✓ No obligation consultation
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
+<!-- Required CSS for Form Section (add to styles.css if not already present) -->
+<style>
+/* Form Section - Light Background Version */
 .form-section {
   background: var(--neutral-0);
   border-top: 1px solid var(--neutral-100);
-}
-
-/* Dark background version */
-.form-section.section-dark {
-  background: var(--neutral-900);
-  color: var(--neutral-0);
-  border-top: 1px solid var(--neutral-700);
+  padding: var(--space-16) 0;
 }
 
 .form-wrapper {
@@ -1793,24 +1868,12 @@ body {
   font-size: var(--font-size-lg);
 }
 
-/* Dark section heading and intro - WHITE on dark background */
-.form-section.section-dark .form-wrapper h2 {
-  color: var(--neutral-0);
-  margin-bottom: var(--space-6);
-}
-
-.form-section.section-dark .form-wrapper .form-intro {
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-8);
-}
-
-/* Form container - WHITE on dark background */
-.form-section.section-dark .solar-quote-form {
+.solar-quote-form {
   background: var(--neutral-0);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--neutral-200);
 }
 
 .form-grid {
@@ -1833,11 +1896,7 @@ body {
   font-weight: 600;
   margin-bottom: var(--space-2);
   color: var(--neutral-900);
-}
-
-/* Dark section form labels - DARK on white form */
-.form-section.section-dark .solar-quote-form label {
-  color: var(--neutral-700);
+  font-size: var(--font-size-sm);
 }
 
 .form-group input,
@@ -1847,19 +1906,11 @@ body {
   border: 1px solid var(--neutral-300);
   border-radius: var(--radius-md);
   font-size: var(--font-size-base);
-  font-family: inherit;
-  background: var(--neutral-0);
-  min-height: 48px;
-  transition: all 0.2s;
-}
-
-/* Enhanced input styling for dark section */
-.form-section.section-dark .form-group input,
-.form-section.section-dark .form-group select {
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--neutral-300);
+  font-family: var(--font-family);
   background: var(--neutral-0);
   color: var(--neutral-900);
+  min-height: 48px;
+  transition: all 0.2s ease;
 }
 
 .form-group input:focus,
@@ -1870,6 +1921,10 @@ body {
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
 }
 
+.form-consent-wrapper {
+  margin-bottom: var(--space-6);
+}
+
 .checkbox-label {
   display: flex;
   align-items: flex-start;
@@ -1877,16 +1932,53 @@ body {
   cursor: pointer;
   font-size: var(--font-size-sm);
   color: var(--neutral-700);
-}
-
-/* Dark section checkbox label - DARK on white form */
-.form-section.section-dark .solar-quote-form .checkbox-label span {
-  color: var(--neutral-700);
+  line-height: 1.5;
 }
 
 .checkbox-label input[type="checkbox"] {
   margin: 0;
   min-height: auto;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-submit-wrapper {
+  text-align: center;
+}
+
+.btn {
+  background: var(--solar-green);
+  color: var(--neutral-0);
+  border: none;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #16a34a;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn:focus {
+  outline: 3px solid rgba(34, 197, 94, 0.3);
+  outline-offset: 2px;
+}
+
+.btn-large {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--font-size-lg);
 }
 
 .form-disclaimer {
@@ -1894,32 +1986,16 @@ body {
   color: var(--neutral-600);
   margin-top: var(--space-4);
   text-align: center;
-}
-
-/* Dark section disclaimer - DARK on white form */
-.form-section.section-dark .solar-quote-form .form-disclaimer {
-  color: var(--neutral-600);
-}
-
-.form-consent-wrapper {
-  margin-bottom: var(--space-6);
-}
-
-.form-submit-wrapper {
-  text-align: center;
-}
-
-/* Button styling consistency */
-.form-section.section-dark .btn {
-  border-radius: var(--radius-full);
+  line-height: 1.6;
 }
 
 .link-accent {
   color: var(--solar-green);
+  text-decoration: underline;
 }
 
 .link-accent:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .link-accent:focus {
@@ -1928,15 +2004,34 @@ body {
   border-radius: var(--radius-sm);
 }
 
-/* Link accent color on white form */
-.form-section.section-dark .link-accent {
-  color: var(--solar-green);
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .solar-quote-form {
+    padding: var(--space-6);
+  }
+  
+  .form-wrapper h2 {
+    font-size: var(--font-size-2xl);
+  }
 }
 
-.form-section.section-dark .link-accent:hover {
-  text-decoration: underline;
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .form-group input,
+  .form-group select,
+  .btn {
+    transition: none;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
 }
-
+</style>
 /* ============================================ */
 /* NEWSLETTER SECTION */
 /* ============================================ */

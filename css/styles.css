@@ -428,12 +428,9 @@ body {
 }
 
 .hero-title {
-  font-size: var(--font-size-4xl);
-  font-weight: 900;
-  margin-bottom: var(--space-6);
-  line-height: 1.2;
-  color: var(--neutral-0);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* Clean white */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle depth shadow */
+    /* Keep all your other existing styles */
 }
 
 .audience-toggle {

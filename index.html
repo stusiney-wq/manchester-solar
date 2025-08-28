@@ -46,76 +46,42 @@
     <!-- Header loads here automatically -->
     <div id="header-container"></div>
 
-    <!-- MINIMAL TESLA UPGRADES: Keep your existing content + functionality -->
-<!-- Just enhancing what you already have, not replacing it -->
-
-<!-- Your existing hero section with MINIMAL Tesla styling -->
-<section class="hero section" id="hero">
-    <div class="container">
-        <div class="hero-content">
-            <!-- KEEP: Your dual-audience toggle (just add subtle styling) -->
-            <div class="audience-switch-container">
-                <div class="audience-switch">
-                    <input type="radio" id="homeowner-switch" name="audience" value="homeowner" checked>
-                    <input type="radio" id="business-switch" name="audience" value="business">
-                    <label for="homeowner-switch" class="switch-option" data-audience="homeowner">
-                        <span class="switch-icon">🏠</span>
-                        <span class="switch-text">Homeowners</span>
-                    </label>
-                    <label for="business-switch" class="switch-option" data-audience="business">
-                        <span class="switch-icon">🏢</span>
-                        <span class="switch-text">Businesses</span>
-                    </label>
-                    <div class="switch-slider"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <span class="hero-badge">✓ MCS Certified Partners Only</span>
+                    <span class="hero-badge">✓ All Property Type Specialists</span>
+                    <span class="hero-badge">✓ No Spam Guarantee</span>
                 </div>
-            </div>
-            
-            <!-- KEEP: Your existing badges (just subtle enhancement) -->
-            <div class="hero-badges">
-                <span class="hero-badge">🏠 All Property Types</span>
-                <span class="hero-badge">🛡️ No Spam Guarantee</span>
-                <span class="hero-badge">🏛️ Heritage Specialists</span>
-                <span class="hero-badge">⚡ MCS Certified Only</span>
-            </div>
-            
-            <!-- KEEP: Your existing titles -->
-            <h1 class="hero-title">Solar Works in Manchester—Even on Cloudy Days</h1>
-            
-            <!-- KEEP: Your homeowner/business dynamic content -->
-            <div class="audience-content active" id="homeowner-content">
-                <p class="hero-subtitle">Get connected with Manchester's most trusted solar installers. No spam, no pressure—just honest advice for your Victorian terrace, modern semi, or heritage property.</p>
-            </div>
-            
-            <div class="audience-content" id="business-content">
-                <p class="hero-subtitle">Meet MEES 2027 requirements while reducing operating costs. Our Manchester commercial specialists handle everything from warehouses to office buildings.</p>
-            </div>
-            
-            <!-- KEEP: Your existing buttons (just subtle glow) -->
-            <div class="hero-cta">
-                <button class="btn btn-primary btn-large">Get My Free Assessment</button>
-                <button class="btn btn-secondary btn-large">View Local Installations</button>
-            </div>
-            
-            <!-- KEEP: Your existing proof stats -->
-            <div class="hero-proof">
-                <div class="proof-stats">
-                    <div class="proof-item">
-                        <span class="proof-number">2,800+</span>
-                        <span class="proof-label">Manchester installations</span>
-                    </div>
-                    <div class="proof-item">
-                        <span class="proof-number">£1,890</span>
-                        <span class="proof-label">Average annual savings</span>
-                    </div>
-                    <div class="proof-item">
-                        <span class="proof-number">3.8h</span>
-                        <span class="proof-label">Peak sun hours daily</span>
-                    </div>
+                
+                <h1 class="hero-title">Navigate Manchester's roofs, weather concerns & SEG rates with local solar specialists</h1>
+                
+                <div class="audience-toggle">
+                    <button class="toggle-btn active" data-audience="homeowner">
+                        🏠 Homeowners
+                    </button>
+                    <button class="toggle-btn" data-audience="business">
+                        🏢 Businesses
+                    </button>
+                </div>
+                
+                <div class="audience-content active" id="homeowner-content">
+                    <p class="hero-subtext">Cut energy bills by £1,890+ annually across all Manchester property types. Our specialists understand local challenges from modern builds to heritage homes.</p>
+                </div>
+                
+                <div class="audience-content" id="business-content">
+                    <p class="hero-subtext">Reduce operational costs by 70% whilst strengthening your CSR credentials. Our commercial solar solutions deliver 15–25% ROI for Manchester businesses.</p>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#quote-form" class="btn btn-large">Get Your Free Assessment</a>
+                    <p class="trust-message">✓ Single professional contact only • No pressure sales • Heritage expertise</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- Priority 2: Tesla Premium Cards -->
 <section class="benefits section" id="benefits">

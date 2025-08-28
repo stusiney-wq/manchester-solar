@@ -1,311 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-GB" data-city="manchester">
+<!-- Performance Optimization Implementation for 10/10 Scores -->
+<!-- Target: LCP <2.0s, CLS <0.05, INP <150ms -->
+
+<!-- 1. CRITICAL RESOURCE PRIORITIZATION -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta -->
-    <title>Manchester Solar Panels | All Property Types | Manchester.solar</title>
-    <meta name="description" content="Navigate Manchester's roofs, weather and SEG rates with local solar specialists. MCS-certified installers. No spam guarantee.">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Manchester Solar Panels | All Property Types | Manchester.solar">
-    <meta property="og:description" content="Navigate Manchester's roofs, weather and SEG rates with local solar specialists. MCS-certified installers. No spam guarantee.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://manchester.solar">
-    <meta property="og:image" content="https://manchester.solar/images/manchester-solar-og.jpg">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Manchester Solar Panels | All Property Types">
-    <meta name="twitter:description" content="Navigate Manchester's roofs, weather and SEG rates with local solar specialists. MCS-certified installers. No spam guarantee.">
-    <meta name="twitter:image" content="https://manchester.solar/images/manchester-solar-og.jpg">
-    
-    <!-- ENHANCED SCHEMA: Organization + Service (Honest Model) + ChatGPT Improvements -->
-    
-    <!-- 1. WebSite Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://manchester.solar/#website",
-      "name": "Manchester.solar",
-      "url": "https://manchester.solar/",
-      "inLanguage": "en-GB",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://manchester.solar/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
-    <!-- 2. WebPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "https://manchester.solar/#webpage",
-      "url": "https://manchester.solar/",
-      "name": "Manchester Solar Panels | All Property Types | Manchester.solar",
-      "description": "Navigate Manchester's roofs, weather and SEG rates with local solar specialists. MCS-certified installers. No spam guarantee.",
-      "isPartOf": { "@id": "https://manchester.solar/#website" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://manchester.solar/images/manchester-solar-og.jpg",
-        "width": 1200,
-        "height": 630
-      },
-      "about": {
-        "@type": "Place",
-        "name": "Manchester",
-        "geo": {"@type": "GeoCoordinates","latitude":53.4808,"longitude":-2.2426}
-      },
-      "inLanguage": "en-GB"
-    }
-    </script>
-    
-    <!-- 3. Organization Schema (Enhanced with ChatGPT suggestions) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://manchester.solar/#organization",
-      "name": "Manchester.solar",
-      "alternateName": "Manchester Solar Panel Connection Service",
-      "url": "https://manchester.solar/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://manchester.solar/images/logo.png",
-        "width": 600,
-        "height": 200
-      },
-      "image": [
-        "https://manchester.solar/images/logo.png",
-        "https://manchester.solar/images/manchester-installations.jpg",
-        "https://manchester.solar/images/manchester-team.jpg"
-      ],
-      "sameAs": [
-        "https://www.facebook.com/manchestersolar",
-        "https://www.linkedin.com/company/manchestersolar",
-        "https://twitter.com/manchestersolar"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "GB",
-        "availableLanguage": ["en-GB"],
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "17:00"
-        }
-      }],
-      "knowsAbout": [
-        "solar panels", "battery storage", "SEG", "Smart Export Guarantee",
-        "inverter replacement", "EV charger integration", "solar financing",
-        "Victorian terrace solar", "Edwardian property solar", "heritage home solar",
-        "commercial solar Manchester", "planning permission", "conservation areas",
-        "MCS certification", "RECC standards", "NICEIC electrical work"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Stuart Siney"
-      },
-      "foundingDate": "2025",
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Greater Manchester",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 53.4808,
-          "longitude": -2.2426
-        }
-      }
-    }
-    </script>
-    
-    <!-- 4. Service Schema (Enhanced with YAML data) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://manchester.solar/#service",
-      "name": "Solar Panel Installation Connection Service Manchester",
-      "description": "We connect Manchester homeowners and businesses with vetted, MCS-certified solar installers. Serving all property types with specialist expertise in heritage homes.",
-      "provider": { "@id": "https://manchester.solar/#organization" },
-      "serviceType": "Solar energy installation connection",
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Greater Manchester"
-      },
-      "category": "Renewable energy",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Solar Installation Connection Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Residential Solar Installation",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Residential Solar Installation",
-              "description": "Solar panel installation for terraces, semis, detached homes, and flats (subject to suitability). Average savings £1,890 annually with 6.8 year payback period."
-            },
-            "price": "0",
-            "priceCurrency": "GBP",
-            "description": "Free, no-obligation assessment request"
-          },
-          {
-            "@type": "Offer",
-            "name": "Heritage Property Solar Installation",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Heritage Property Solar Installation", 
-              "description": "Specialist solar panel designs for Victorian and Edwardian properties with planning permission expertise and aesthetic integration."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Commercial Solar Installation",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Solar Installation",
-              "description": "Rooftop solar PV systems for Manchester businesses with 15-25% ROI and 70% operational cost reduction."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Battery Storage Integration",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Solar Battery Storage",
-              "description": "Battery storage systems to maximize solar energy usage and provide backup power during outages."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "EV Charger Integration", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Electric Vehicle Charger Installation",
-              "description": "EV charging points integrated with solar panel systems for sustainable vehicle charging."
-            }
-          }
-        ]
-      },
-      "potentialAction": {
-        "@type": "ContactAction",
-        "name": "Request a free solar assessment",
-        "target": "https://manchester.solar/#quote-form"
-      }
-    }
-    </script>
-    
-    <!-- 5. FAQ Schema (Enhanced with YAML data) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "@id": "https://manchester.solar/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do solar panels work in Manchester weather?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! Manchester receives 3.8 peak sun hours daily on average, which generates significant electricity. Solar panels work on daylight, not just direct sunlight, so they produce power even on cloudy days. Rain actually helps clean the panels for better performance. Manchester homeowners save an average of £1,890 annually with solar panels."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What property types can have solar panels installed in Manchester?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Solar panels can be installed on all Manchester property types including Victorian terraces, Edwardian semi-detached homes, modern builds, bungalows, and commercial properties. We have specialists for each property type, with particular expertise in heritage homes requiring planning permission and aesthetic considerations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much do solar panels cost in Manchester in 2025?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Solar panel costs vary by system size and roof complexity, typically £4,000-£12,000 for residential installations. With 0% VAT until March 2027 and Smart Export Guarantee payments, average Manchester installations save £1,890 annually with payback periods of 6.8 years. Over 2,800 Manchester homes already have solar installed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need planning permission for solar panels in Manchester?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most Manchester properties can install solar panels under permitted development rights. However, listed buildings, conservation areas, and some heritage properties may require planning permission. Our specialist installers have 95% success rate for complex planning applications and handle all requirements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are your partner installers MCS certified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, absolutely. We only connect customers with MCS-certified installers who also hold RECC membership and NICEIC/NAPIT electrical certifications. All partners are vetted for local Manchester experience, customer reviews above 4.8 stars, and commitment to no high-pressure sales tactics."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I add battery storage to my solar panel system?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, battery storage can be installed alongside solar panels or added to existing systems. Batteries allow you to store excess solar energy for use during evening hours or power outages, maximizing your solar investment and energy independence."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <!-- 6. BreadcrumbList Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "@id": "https://manchester.solar/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://manchester.solar/"
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://manchester.solar/">
-    
-    <!-- Hreflang -->
-    <link rel="alternate" hreflang="en-gb" href="https://manchester.solar/">
-    
-    <!-- Fonts -->
+    <!-- DNS and Connection Optimization -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- External CSS - Gold Standard v2.2.1 -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Critical CSS - Inline for First Paint -->
+    <style>
+    /* Critical Path CSS - Above the Fold Only */
+    :root{--solar-green:#22c55e;--trust-blue:#3b82f6;--neutral-900:#0a0a0a;--neutral-0:#ffffff;--space-4:1rem;--space-6:1.5rem;--space-8:2rem;--space-16:4rem;--font-family:'Inter',system-ui,sans-serif;--radius-full:9999px;--transition-base:0.3s cubic-bezier(0.4,0,0.2,1)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-family);line-height:1.6;color:var(--neutral-900);background:var(--neutral-0)}
+    .container{max-width:1200px;margin:0 auto;padding:0 var(--space-4)}
+    .hero{background:linear-gradient(135deg,rgba(17,24,39,.9),rgba(31,41,55,.9));color:var(--neutral-0);padding:var(--space-16) 0;text-align:center;min-height:70vh;display:flex;align-items:center}
+    .hero-title{font-size:clamp(1.875rem,1.65rem + 1.125vw,2.25rem);font-weight:900;margin-bottom:var(--space-6);line-height:1.1;letter-spacing:-0.025em}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--space-4) var(--space-6);background:var(--solar-green);color:var(--neutral-0);text-decoration:none;font-weight:600;border-radius:var(--radius-full);border:none;cursor:pointer;transition:all var(--transition-base)}
+    .btn:hover{background:#16a34a;transform:translateY(-2px)}
+    .hero-badge{padding:var(--space-2) var(--space-4);background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);border-radius:var(--radius-full);color:var(--neutral-0);font-size:0.875rem;font-weight:600}
+    .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+    </style>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- Preload Critical Font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"></noscript>
     
-    <!-- Technical SEO -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
+    <!-- Preload Hero Background Image -->
+    <link rel="preload" href="images/manchester-hero-optimized.webp" as="image" type="image/webp" media="(min-width: 768px)">
+    <link rel="preload" href="images/manchester-hero-mobile.webp" as="image" type="image/webp" media="(max-width: 767px)">
     
-    <!-- Optional Geo Meta -->
-    <meta name="geo.region" content="GB-MAN">
-    <meta name="geo.placename" content="Manchester">
-    <meta name="geo.position" content="53.4808;-2.2426">
-    <meta name="ICBM" content="53.4808, -2.2426">
+    <!-- Non-Critical CSS with Media Queries -->
+    <link rel="stylesheet" href="css/styles.css?v=3.1.2" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css?v=3.1.2"></noscript>
 </head>
 
 

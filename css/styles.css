@@ -6212,9 +6212,33 @@ body {
   outline-offset: 2px;
 }
 
-/* Temporary mobile menu fix */
-@media (min-width: 769px) {
+/* Remove the temporary fix with !important */
+
+/* Proper mobile menu solution */
+.mobile-icon {
+  display: none;
+  cursor: pointer;
+  font-size: var(--font-size-xl);
+  color: var(--neutral-700);
+  padding: var(--space-2);
+}
+
+@media (max-width: 768px) {
   .mobile-icon {
-    display: none !important;
+    display: block;
+  }
+  
+  .nav-list {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-list {
+    display: flex; /* Ensure nav list shows on desktop */
+  }
+  
+  .mobile-icon {
+    display: none;
   }
 }

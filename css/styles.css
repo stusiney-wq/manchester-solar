@@ -181,7 +181,7 @@ body {
 
 .utility-nav {
   background: var(--neutral-100);
-  padding: var(--space-2) 0;
+  padding: var(--space-4) 0; /* Even more padding */
   border-bottom: 1px solid var(--neutral-200);
   font-size: var(--font-size-sm);
 }

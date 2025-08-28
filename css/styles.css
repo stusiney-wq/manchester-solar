@@ -6185,3 +6185,8 @@ body {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
+
+/* Enhanced utilities - add to end of existing styles.css */
+.sr-only { /* screen reader only styles */ }
+.glass-card { /* glassmorphism effects */ }
+/* etc */

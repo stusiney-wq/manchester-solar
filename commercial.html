@@ -1,52 +1,52 @@
 <!DOCTYPE html>
-<html lang="en-GB" data-city="manchester">
+<html lang="en-GB" data-city="{{city.slug}}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta -->
-    <title>Manchester Commercial Solar - MEES Compliance, ESG & Government Funding | Manchester.solar</title>
-    <meta name="description" content="Avoid £150k MEES fines with commercial solar. Access £5B government funding, improve EPC ratings to C by 2027, B by 2030. Manchester's commercial solar compliance specialists.">
+    <title>{{city.display_name}} Commercial Solar - MEES Compliance, ESG & Government Funding | {{city.display_name}}.solar</title>
+    <meta name="description" content="Avoid £{{compliance.mees.max_fine_display}} MEES fines with commercial solar. Access £{{funding.total_available_display}} government funding, improve EPC ratings to C by {{compliance.mees.epc_c_target}}, B by {{compliance.mees.epc_b_target}}. {{city.display_name}}'s commercial solar compliance specialists.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Manchester Commercial Solar - MEES Compliance & ESG | Manchester.solar">
-    <meta property="og:description" content="Avoid £150k MEES fines with commercial solar. Access £5B government funding, improve EPC ratings, boost ESG scores. Manchester's commercial solar compliance specialists.">
+    <meta property="og:title" content="{{city.display_name}} Commercial Solar - MEES Compliance & ESG | {{city.display_name}}.solar">
+    <meta property="og:description" content="Avoid £{{compliance.mees.max_fine_display}} MEES fines with commercial solar. Access £{{funding.total_available_display}} government funding, improve EPC ratings, boost ESG scores. {{city.display_name}}'s commercial solar compliance specialists.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://manchester.solar/commercial">
-    <meta property="og:image" content="https://manchester.solar/images/manchester-commercial-solar-og.jpg">
+    <meta property="og:url" content="https://{{city.domain}}/commercial">
+    <meta property="og:image" content="https://{{city.domain}}/images/{{city.slug}}-commercial-solar-og.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Manchester Commercial Solar - MEES Compliance & ESG">
-    <meta name="twitter:description" content="Avoid £150k MEES fines with commercial solar. Access £5B government funding, improve EPC ratings, boost ESG scores. Manchester's commercial solar compliance specialists.">
-    <meta name="twitter:image" content="https://manchester.solar/images/manchester-commercial-solar-og.jpg">
+    <meta name="twitter:title" content="{{city.display_name}} Commercial Solar - MEES Compliance & ESG">
+    <meta name="twitter:description" content="Avoid £{{compliance.mees.max_fine_display}} MEES fines with commercial solar. Access £{{funding.total_available_display}} government funding, improve EPC ratings, boost ESG scores. {{city.display_name}}'s commercial solar compliance specialists.">
+    <meta name="twitter:image" content="https://{{city.domain}}/images/{{city.slug}}-commercial-solar-og.jpg">
     
     <!-- Geo Meta -->
-    <meta name="geo.region" content="GB-MAN">
-    <meta name="geo.placename" content="Manchester">
-    <meta name="geo.position" content="53.4808;-2.2426">
-    <meta name="ICBM" content="53.4808, -2.2426">
+    <meta name="geo.region" content="{{city.geo.region_code}}">
+    <meta name="geo.placename" content="{{city.display_name}}">
+    <meta name="geo.position" content="{{city.coordinates.latitude}};{{city.coordinates.longitude}}">
+    <meta name="ICBM" content="{{city.coordinates.latitude}}, {{city.coordinates.longitude}}">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://manchester.solar/commercial">
+    <link rel="canonical" href="https://{{city.domain}}/commercial">
     
     <!-- Hreflang -->
-    <link rel="alternate" hreflang="en-gb" href="https://manchester.solar/commercial">
+    <link rel="alternate" hreflang="en-gb" href="https://{{city.domain}}/commercial">
     
-    <!-- ENHANCED SCHEMA: Service + Organization + FAQ + LocalBusiness -->
+    <!-- v3.1 ENHANCED SCHEMA: WebSite + WebPage + Organization + Service + FAQPage -->
     
     <!-- 1. WebSite Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "@id": "https://manchester.solar/#website",
-      "name": "Manchester.solar",
-      "url": "https://manchester.solar/",
+      "@id": "https://{{city.domain}}/#website",
+      "name": "{{city.display_name}}.solar",
+      "url": "https://{{city.domain}}/",
       "inLanguage": "en-GB",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://manchester.solar/search?q={search_term_string}",
+        "target": "https://{{city.domain}}/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -57,21 +57,25 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://manchester.solar/commercial#webpage",
-      "url": "https://manchester.solar/commercial",
-      "name": "Manchester Commercial Solar - MEES Compliance, ESG & Government Funding",
-      "description": "Avoid £150k MEES fines with commercial solar. Access £5B government funding, improve EPC ratings to C by 2027, B by 2030. Manchester's commercial solar compliance specialists.",
-      "isPartOf": { "@id": "https://manchester.solar/#website" },
+      "@id": "https://{{city.domain}}/commercial#webpage",
+      "url": "https://{{city.domain}}/commercial",
+      "name": "{{city.display_name}} Commercial Solar - MEES Compliance, ESG & Government Funding",
+      "description": "Avoid £{{compliance.mees.max_fine_display}} MEES fines with commercial solar. Access £{{funding.total_available_display}} government funding, improve EPC ratings to C by {{compliance.mees.epc_c_target}}, B by {{compliance.mees.epc_b_target}}. {{city.display_name}}'s commercial solar compliance specialists.",
+      "isPartOf": { "@id": "https://{{city.domain}}/#website" },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://manchester.solar/images/manchester-commercial-solar-og.jpg",
+        "url": "https://{{city.domain}}/images/{{city.slug}}-commercial-solar-og.jpg",
         "width": 1200,
         "height": 630
       },
       "about": {
         "@type": "Place",
-        "name": "Greater Manchester",
-        "geo": {"@type": "GeoCoordinates","latitude":53.4808,"longitude":-2.2426}
+        "name": "{{city.region}}",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": {{city.coordinates.latitude}},
+          "longitude": {{city.coordinates.longitude}}
+        }
       },
       "inLanguage": "en-GB"
     }
@@ -82,13 +86,13 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "@id": "https://manchester.solar/#organization",
-      "name": "Manchester.solar",
-      "alternateName": "Manchester Commercial Solar Specialists",
-      "url": "https://manchester.solar/",
+      "@id": "https://{{city.domain}}/#organization",
+      "name": "{{city.display_name}}.solar",
+      "alternateName": "{{city.display_name}} Commercial Solar Specialists",
+      "url": "https://{{city.domain}}/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://manchester.solar/images/logo.png",
+        "url": "https://{{city.domain}}/images/{{city.slug}}-solar-logo.png",
         "width": 600,
         "height": 200
       },
@@ -106,11 +110,11 @@
       }],
       "areaServed": {
         "@type": "AdministrativeArea",
-        "name": "Greater Manchester",
+        "name": "{{city.region}}",
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 53.4808,
-          "longitude": -2.2426
+          "latitude": {{city.coordinates.latitude}},
+          "longitude": {{city.coordinates.longitude}}
         }
       },
       "knowsAbout": [
@@ -126,14 +130,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": "https://manchester.solar/commercial#service",
-      "name": "Commercial Solar Panel Installation Manchester",
-      "description": "MEES-compliant commercial solar installations for Manchester businesses. Improve EPC ratings, access government funding, enhance ESG credentials. Expert guidance on Enhanced Capital Allowances and net zero strategies.",
-      "provider": { "@id": "https://manchester.solar/#organization" },
+      "@id": "https://{{city.domain}}/commercial#service",
+      "name": "Commercial Solar Panel Installation {{city.display_name}}",
+      "description": "MEES-compliant commercial solar installations for {{city.display_name}} businesses. Improve EPC ratings, access government funding, enhance ESG credentials. Expert guidance on Enhanced Capital Allowances and net zero strategies.",
+      "provider": { "@id": "https://{{city.domain}}/#organization" },
       "serviceType": "Commercial solar energy installation",
       "areaServed": {
         "@type": "AdministrativeArea",
-        "name": "Greater Manchester"
+        "name": "{{city.region}}"
       },
       "category": "Commercial renewable energy",
       "hasOfferCatalog": {
@@ -146,7 +150,7 @@
             "itemOffered": {
               "@type": "Service", 
               "name": "MEES Compliance Solar Installation",
-              "description": "Solar installations to meet Minimum Energy Efficiency Standards and avoid £150k fines. Improve EPC ratings to required C by 2027, B by 2030."
+              "description": "Solar installations to meet Minimum Energy Efficiency Standards and avoid £{{compliance.mees.max_fine_display}} fines. Improve EPC ratings to required C by {{compliance.mees.epc_c_target}}, B by {{compliance.mees.epc_b_target}}."
             }
           },
           {
@@ -155,7 +159,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "ESG-Focused Solar Installation", 
-              "description": "Solar solutions designed to strengthen ESG credentials, reduce carbon footprint, and support net zero commitments for Manchester businesses."
+              "description": "Solar solutions designed to strengthen ESG credentials, reduce carbon footprint, and support net zero commitments for {{city.display_name}} businesses."
             }
           },
           {
@@ -164,7 +168,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Commercial Solar Funding Support",
-              "description": "Expert guidance on accessing £5B government funding, Enhanced Capital Allowances (130% tax relief), and other financial incentives."
+              "description": "Expert guidance on accessing £{{funding.total_available_display}} government funding, Enhanced Capital Allowances ({{funding.capital_allowances.percentage}}% tax relief), and other financial incentives."
             }
           }
         ]
@@ -172,7 +176,7 @@
       "potentialAction": {
         "@type": "ContactAction",
         "name": "Request commercial solar assessment",
-        "target": "https://manchester.solar/commercial#quote-form"
+        "target": "https://{{city.domain}}/commercial#quote-form"
       }
     }
     </script>
@@ -182,14 +186,14 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "@id": "https://manchester.solar/commercial#faq",
+      "@id": "https://{{city.domain}}/commercial#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "What is MEES and why does it matter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "MEES stands for Minimum Energy Efficiency Standards. UK law requires commercial buildings to meet a minimum EPC rating to be rented or sold. Properties below EPC E face fines up to £150,000, with targets rising to C by 2027 and B by 2030."
+            "text": "MEES stands for Minimum Energy Efficiency Standards. UK law requires commercial buildings to meet a minimum EPC rating to be rented or sold. Properties below EPC E face fines up to £{{compliance.mees.max_fine_display}}, with targets rising to C by {{compliance.mees.epc_c_target}} and B by {{compliance.mees.epc_b_target}}."
           }
         },
         {
@@ -197,7 +201,7 @@
           "name": "Can solar panels improve my EPC rating?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Solar panels can raise your EPC rating by 1—2 bands depending on system size and building efficiency. This helps meet current MEES requirements and future targets."
+            "text": "Yes. Solar panels can raise your EPC rating by {{compliance.epc.improvement_range}} bands depending on system size and building efficiency. This helps meet current MEES requirements and future targets."
           }
         },
         {
@@ -205,7 +209,7 @@
           "name": "What government funding is available for commercial solar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Businesses may qualify for 0% VAT (until March 2027), SEG payments, IETF grants, Warm Homes Plan (up to £30k), and council-backed LA Flex funding. We help you navigate eligibility and applications."
+            "text": "Businesses may qualify for {{vat.zero_rate}}% VAT (until {{vat.zero_rate_end}}), SEG payments, IETF grants, Warm Homes Plan (up to £{{funding.warm_homes.max_grant_display}}), and council-backed LA Flex funding. We help you navigate eligibility and applications."
           }
         },
         {
@@ -213,7 +217,7 @@
           "name": "What's the typical ROI for commercial solar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Commercial solar typically delivers 15-25% annual ROI with 4-8 year payback periods. High-energy businesses see the best returns, especially with government funding reducing upfront costs."
+            "text": "Commercial solar typically delivers {{economics.roi.commercial_range}}% annual ROI with {{economics.payback.commercial_range}} year payback periods. High-energy businesses see the best returns, especially with government funding reducing upfront costs."
           }
         }
       ]
@@ -225,19 +229,19 @@
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "@id": "https://manchester.solar/commercial#breadcrumb",
+      "@id": "https://{{city.domain}}/commercial#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://manchester.solar/"
+          "item": "https://{{city.domain}}/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Commercial Solar",
-          "item": "https://manchester.solar/commercial"
+          "item": "https://{{city.domain}}/commercial"
         }
       ]
     }
@@ -248,7 +252,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- External CSS - Gold Standard v2.2.1 -->
+    <!-- External CSS - Gold Standard v3.1 -->
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
@@ -260,89 +264,122 @@
     <meta name="googlebot" content="index, follow">
 </head>
 
-<body data-city="manchester">
-    <!-- Header Container for Dynamic Injection -->
-    <div id="header-container"></div>
+<body data-city="{{city.slug}}">
+    <!-- Utility Navigation -->
+    <nav class="utility-nav">
+        <div class="container">
+            <ul class="utility-nav-list">
+                <li><a href="/residential" class="utility-nav-link">Homeowners</a></li>
+                <li><a href="/commercial" class="utility-nav-link">Businesses</a></li>
+                <li><a href="/installers" class="utility-nav-link">Find Installers</a></li>
+                <li><a href="/contact" class="utility-nav-highlight">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">{{city.display_name}}.solar</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                    <li><a href="/solar-for-{{city.slug}}" class="nav-link">Solar for {{city.display_name}}</a></li>
+                    <li><a href="/residential" class="nav-link">Residential</a></li>
+                    <li><a href="/commercial" class="nav-link current">Commercial</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-icon">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Tesla Premium Impact (80%) + Local Warmth (20%) -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badges">
-                    <span class="hero-badge">🚨 Avoid £150k MEES Fines</span>
-                    <span class="hero-badge">💰 £5B Government Funding</span>
-                    <span class="hero-badge">📊 EPC C by 2027, B by 2030</span>
+                    <span class="hero-badge urgency-badge">Avoid £{{compliance.mees.max_fine_display}} MEES Fines</span>
+                    <span class="hero-badge">£{{funding.total_available_display}} Government Funding</span>
+                    <span class="hero-badge trust-indicator">EPC C by {{compliance.mees.epc_c_target}}, B by {{compliance.mees.epc_b_target}}</span>
                 </div>
                 
                 <h1 class="hero-title">Is Your EPC Rating Putting Your Lease at Risk?</h1>
-                <p class="hero-subtext">UK law requires commercial buildings to meet strict energy standards. Solar panels help you avoid £150k fines, access government funding, and meet ESG targets whilst saving up to 70% on energy costs.</p>
+                
+                <!-- v3.1: AI/SGE Optimized Summary -->
+                <div class="ai-summary">
+                    <p>{{city.display_name}} commercial properties must meet **minimum EPC E ratings** to avoid **£{{compliance.mees.max_fine_display}} fines**, with targets rising to **EPC C by {{compliance.mees.epc_c_target}}** and **B by {{compliance.mees.epc_b_target}}**. Solar installations help achieve compliance while accessing **£{{funding.total_available_display}} government funding** and saving **{{economics.savings.commercial_percentage}}% on energy costs**.</p>
+                </div>
+                
+                <p class="hero-subtext">UK law requires commercial buildings to meet strict energy standards. Solar panels help you avoid £{{compliance.mees.max_fine_display}} fines, access government funding, and meet ESG targets whilst saving up to {{economics.savings.commercial_percentage}}% on energy costs.</p>
                 
                 <div class="hero-cta">
-                    <a href="#quote-form" class="btn btn-large" data-smart-quote="true">Book Your Compliance & Funding Review</a>
-                    <p class="trust-message">✓ MEES compliance experts • Government funding specialists • ESG consultants</p>
+                    <a href="#quote-form" class="btn btn-large btn-tesla" data-smart-quote="true">Book Your Compliance & Funding Review</a>
+                    <p class="trust-message social-proof">MEES compliance experts • Government funding specialists • ESG consultants</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Legal Requirements & Funding Stats -->
+    <!-- Legal Requirements & Funding Stats - Stripe Clarity (70%) + Tesla Appeal (30%) -->
     <section class="stats-section section">
         <div class="container">
             <div class="grid grid-4">
-                <div class="stat-card">
-                    <span class="stat-number">£150k</span>
+                <div class="stat-card card-stripe">
+                    <span class="stat-number">£{{compliance.mees.max_fine_display}}</span>
                     <span class="stat-label">Maximum MEES Fine</span>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">£5B</span>
+                <div class="stat-card card-stripe">
+                    <span class="stat-number">£{{funding.total_available_display}}</span>
                     <span class="stat-label">Government Funding Available</span>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">2027</span>
+                <div class="stat-card card-stripe">
+                    <span class="stat-number">{{compliance.mees.epc_c_target}}</span>
                     <span class="stat-label">EPC C Target Date</span>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">0%</span>
-                    <span class="stat-label">VAT Until March 2027</span>
+                <div class="stat-card card-stripe">
+                    <span class="stat-number">{{vat.zero_rate}}%</span>
+                    <span class="stat-label">VAT Until {{vat.zero_rate_end}}</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MEES Compliance Section -->
+    <!-- MEES Compliance Section - Airbnb Warmth (50%) + Tesla (30%) + Apple Accessibility (20%) -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>What Is MEES and How Does Solar Help?</h2>
+                <h2 class="voice-heading">What Is MEES and How Does Solar Help?</h2>
                 <div class="section-divider-accent"></div>
-                <p class="section-intro">MEES (Minimum Energy Efficiency Standards) require commercial properties to meet a minimum EPC rating. If your EPC rating is below E, you could face fines up to £150,000—and future targets rise to B by 2030.</p>
+                <p class="section-intro">MEES (Minimum Energy Efficiency Standards) require commercial properties to meet a minimum EPC rating. If your EPC rating is below E, you could face fines up to £{{compliance.mees.max_fine_display}}—and future targets rise to B by {{compliance.mees.epc_b_target}}.</p>
             </div>
 
             <div class="grid grid-2">
-                <div class="card">
-                    <h3>⚖️ Legal Requirements</h3>
+                <div class="card card-airbnb">
+                    <h3>Legal Requirements</h3>
                     <ul class="sector-benefits">
                         <li><strong>Current:</strong> EPC rating E or above required</li>
-                        <li><strong>2027:</strong> EPC rating C target</li>
-                        <li><strong>2030:</strong> EPC rating B target</li>
-                        <li><strong>Penalties:</strong> Up to £150,000 fines for non-compliance</li>
+                        <li><strong>{{compliance.mees.epc_c_target}}:</strong> EPC rating C target</li>
+                        <li><strong>{{compliance.mees.epc_b_target}}:</strong> EPC rating B target</li>
+                        <li><strong>Penalties:</strong> Up to £{{compliance.mees.max_fine_display}} fines for non-compliance</li>
                     </ul>
                 </div>
 
-                <div class="card">
-                    <h3>✅ How Solar Helps</h3>
+                <div class="card card-airbnb">
+                    <h3>How Solar Helps</h3>
                     <ul class="sector-benefits">
-                        <li>EPC upgrades via solar panels (1-2 band improvement)</li>
+                        <li>EPC upgrades via solar panels ({{compliance.epc.improvement_range}} band improvement)</li>
                         <li>Full documentation for MEES and ESG reporting</li>
                         <li>Site assessments to identify retrofit opportunities</li>
-                        <li>Future-proof for 2027/2030 targets</li>
+                        <li>Future-proof for {{compliance.mees.epc_c_target}}/{{compliance.mees.epc_b_target}} targets</li>
                     </ul>
                 </div>
             </div>
 
             <div class="conversion-zone">
                 <p class="trust-line"><strong>Avoid legal penalties and protect your lease agreements</strong></p>
-                <a href="#quote-form" class="btn" data-smart-quote="true">Book a Compliance Consultation</a>
+                <a href="#quote-form" class="btn btn-stripe" data-smart-quote="true">Book a Compliance Consultation</a>
             </div>
         </div>
     </section>
@@ -351,37 +388,37 @@
     <section class="section funding-section">
         <div class="container">
             <div class="section-header">
-                <h2>Government Support for Going Solar</h2>
+                <h2 class="voice-heading">What Government Support Is Available for Going Solar?</h2>
                 <div class="section-divider-accent"></div>
-                <p class="section-intro">The UK government offers up to £5 billion in funding to help businesses reduce carbon emissions and improve energy efficiency.</p>
+                <p class="section-intro">The UK government offers up to £{{funding.total_available_display}} in funding to help businesses reduce carbon emissions and improve energy efficiency.</p>
             </div>
 
             <div class="funding-options">
                 <div class="funding-card">
-                    <div class="funding-icon">🏷</div>
-                    <h3>0% VAT</h3>
-                    <p>No VAT on solar panels and batteries until March 2027</p>
-                    <div class="funding-deadline">Deadline: March 2027</div>
+                    <div class="funding-icon">🏷️</div>
+                    <h3>{{vat.zero_rate}}% VAT</h3>
+                    <p>No VAT on solar panels and batteries until {{vat.zero_rate_end}}</p>
+                    <div class="funding-deadline">Deadline: {{vat.zero_rate_end}}</div>
                 </div>
 
                 <div class="funding-card">
                     <div class="funding-icon">📈</div>
                     <h3>Smart Export Guarantee</h3>
-                    <p>Get paid for surplus energy exported to the grid</p>
+                    <p>Get paid £{{funding.seg.rate_per_kwh_display}}/kWh for surplus energy exported to the grid</p>
                     <div class="funding-deadline">Available: Now</div>
                 </div>
 
                 <div class="funding-card">
                     <div class="funding-icon">🏭</div>
                     <h3>Industrial Energy Fund</h3>
-                    <p>IETF grants for high-energy-use sectors</p>
-                    <div class="funding-deadline">Available: 2025</div>
+                    <p>IETF grants up to £{{funding.ietf.max_grant_display}} for high-energy-use sectors</p>
+                    <div class="funding-deadline">Available: {{funding.ietf.availability_year}}</div>
                 </div>
 
                 <div class="funding-card">
                     <div class="funding-icon">🏠</div>
                     <h3>Warm Homes Plan</h3>
-                    <p>Up to £30,000 for eligible energy improvements</p>
+                    <p>Up to £{{funding.warm_homes.max_grant_display}} for eligible energy improvements</p>
                     <div class="funding-deadline">Available: Now</div>
                 </div>
             </div>
@@ -389,28 +426,28 @@
             <div class="funding-cta">
                 <h3>We Navigate the Funding Maze</h3>
                 <p class="funding-disclaimer">From eligibility checks to paperwork, we handle the process so you can focus on your business.</p>
-                <a href="#quote-form" class="btn" data-smart-quote="true">Book a Funding Consultation</a>
+                <a href="#quote-form" class="btn btn-stripe" data-smart-quote="true">Book a Funding Consultation</a>
             </div>
         </div>
     </section>
 
-    <!-- 🎬 ANIMATION 1: Business Cost Reduction Chart -->
+    <!-- Business Cost Reduction Chart Animation -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Transform Your Business Energy Costs</h2>
+                <h2 class="voice-heading">How Much Could Your {{city.display_name}} Business Save?</h2>
                 <div class="section-divider-accent"></div>
-                <p class="section-intro">See exactly how solar panels reduce your Manchester business operational costs</p>
+                <p class="section-intro">See exactly how solar panels reduce your {{city.display_name}} business operational costs</p>
             </div>
 
-            <div class="cost-reduction-animation animate-on-scroll">
-                <h3>Manchester Business Energy Transformation</h3>
+            <div class="cost-reduction-animation animate-on-scroll lazy-load">
+                <h3>{{city.display_name}} Business Energy Transformation</h3>
                 
                 <div class="cost-chart-container">
                     <div class="cost-bar before-bar">
                         <div class="bar-container">
                             <div class="bar-fill" id="beforeBar">
-                                <div class="bar-value">£3,200</div>
+                                <div class="bar-value">£{{economics.costs.commercial_before_display}}</div>
                             </div>
                         </div>
                         <div class="bar-label">Monthly Energy Costs<br><strong>BEFORE Solar</strong></div>
@@ -419,30 +456,30 @@
                     <div class="cost-bar after-bar">
                         <div class="bar-container">
                             <div class="bar-fill" id="afterBar">
-                                <div class="bar-value">£960</div>
+                                <div class="bar-value">£{{economics.costs.commercial_after_display}}</div>
                             </div>
                         </div>
                         <div class="bar-label">Monthly Energy Costs<br><strong>AFTER Solar + Funding</strong></div>
                     </div>
                 </div>
                 
-                <div class="savings-arrow" id="businessSavingsArrow">£26,880 Annual Business Savings</div>
+                <div class="savings-arrow" id="businessSavingsArrow">£{{economics.savings.commercial_annual_display}} Annual Business Savings</div>
                 
-                <p><strong>Average Manchester warehouse/office (50kW system)</strong> - After government funding and 0% VAT</p>
+                <p><strong>Average {{city.display_name}} warehouse/office ({{economics.system_size.commercial_typical}} system)</strong> - After government funding and {{vat.zero_rate}}% VAT</p>
             </div>
         </div>
     </section>
 
-    <!-- 🎬 ANIMATION 2: Business Type Tabs -->
+    <!-- Business Type Tabs Animation -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Who Benefits Most from Commercial Solar?</h2>
+                <h2 class="voice-heading">Which {{city.display_name}} Businesses Benefit Most from Commercial Solar?</h2>
                 <div class="section-divider-accent"></div>
                 <p class="section-intro">Our solar and battery systems help businesses meet legal requirements, unlock funding, and future-proof their assets</p>
             </div>
 
-            <div class="business-type-tabs animate-on-scroll">
+            <div class="business-type-tabs animate-on-scroll lazy-load">
                 <div class="tab-buttons">
                     <div class="tab-button active" data-tab="landlords">
                         🏢 Property Managers
@@ -451,7 +488,7 @@
                         🏭 Manufacturing
                     </div>
                     <div class="tab-button" data-tab="retail">
-                        🪐 Retail & Hospitality
+                        🏪 Retail & Hospitality
                     </div>
                     <div class="tab-button" data-tab="public">
                         🏥 Public Sector
@@ -463,15 +500,15 @@
                     <p>Improve EPC ratings, avoid MEES fines, and increase property value. Solar helps retain tenants and meet legal leasing requirements.</p>
                     <div class="business-metrics">
                         <div class="metric-item">
-                            <div class="metric-value">1-2 Bands</div>
+                            <div class="metric-value">{{compliance.epc.improvement_range}} Bands</div>
                             <div class="metric-label">EPC Improvement</div>
                         </div>
                         <div class="metric-item">
-                            <div class="metric-value">£150k</div>
+                            <div class="metric-value">£{{compliance.mees.max_fine_display}}</div>
                             <div class="metric-label">Fines Avoided</div>
                         </div>
                         <div class="metric-item">
-                            <div class="metric-value">15%+</div>
+                            <div class="metric-value">{{economics.property_value.improvement_percentage}}%+</div>
                             <div class="metric-label">Property Value Boost</div>
                         </div>
                     </div>
@@ -482,11 +519,11 @@
                     <p>Warehouses, manufacturers, and logistics hubs benefit from major energy savings and peak load control. Eligible for Industrial Energy Transformation Fund (IETF).</p>
                     <div class="business-metrics">
                         <div class="metric-item">
-                            <div class="metric-value">22-25%</div>
+                            <div class="metric-value">{{economics.roi.manufacturing_range}}%</div>
                             <div class="metric-label">Annual ROI</div>
                         </div>
                         <div class="metric-item">
-                            <div class="metric-value">80%</div>
+                            <div class="metric-value">{{economics.savings.manufacturing_percentage}}%</div>
                             <div class="metric-label">Cost Reduction</div>
                         </div>
                         <div class="metric-item">
@@ -501,11 +538,11 @@
                     <p>Hotels, gyms, and supermarkets use energy during peak solar hours. Solar improves ESG scores and brand reputation whilst reducing operational costs.</p>
                     <div class="business-metrics">
                         <div class="metric-item">
-                            <div class="metric-value">18-23%</div>
+                            <div class="metric-value">{{economics.roi.retail_range}}%</div>
                             <div class="metric-label">Annual ROI</div>
                         </div>
                         <div class="metric-item">
-                            <div class="metric-value">70%</div>
+                            <div class="metric-value">{{economics.savings.retail_percentage}}%</div>
                             <div class="metric-label">Cost Reduction</div>
                         </div>
                         <div class="metric-item">
@@ -528,7 +565,7 @@
                             <div class="metric-label">Target Support</div>
                         </div>
                         <div class="metric-item">
-                            <div class="metric-value">£30k</div>
+                            <div class="metric-value">£{{funding.warm_homes.max_grant_display}}</div>
                             <div class="metric-label">Grant Available</div>
                         </div>
                     </div>
@@ -541,7 +578,7 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Will Solar Panels Help Me Meet UK Green Requirements?</h2>
+                <h2 class="voice-heading">Will Solar Panels Help Me Meet UK Green Requirements?</h2>
                 <div class="section-divider-accent"></div>
                 <p class="section-intro">Solar panels are one of the most effective ways to meet UK commercial energy regulations</p>
             </div>
@@ -549,29 +586,37 @@
             <div class="grid grid-2">
                 <div class="enhanced-business-card">
                     <div class="business-header">
-                        <div class="business-icon">✅</div>
+                        <div class="business-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </div>
                         <div class="business-title">
                             <h3>Solar Directly Supports</h3>
                             <p class="business-subtitle">Proven Compliance Benefits</p>
                         </div>
                     </div>
-                    <ul class="sector-benefits">
-                        <li>MEES & EPC compliance (E now, C by 2027, B by 2030)</li>
+                    <ul class="solution-benefits">
+                        <li>MEES & EPC compliance (E now, C by {{compliance.mees.epc_c_target}}, B by {{compliance.mees.epc_b_target}})</li>
                         <li>Net Zero and ESG goals (Scope 2 emissions reduction)</li>
                         <li>SECR reporting (measurable energy and carbon data)</li>
-                        <li>Funding eligibility (0% VAT, SEG, grants)</li>
+                        <li>Funding eligibility ({{vat.zero_rate}}% VAT, SEG, grants)</li>
                     </ul>
                 </div>
 
                 <div class="enhanced-business-card">
                     <div class="business-header">
-                        <div class="business-icon">⚠️</div>
+                        <div class="business-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                            </svg>
+                        </div>
                         <div class="business-title">
                             <h3>Important to Know</h3>
                             <p class="business-subtitle">Honest Expert Advice</p>
                         </div>
                     </div>
-                    <ul class="sector-benefits">
+                    <ul class="solution-benefits">
                         <li>Battery storage improves efficiency but doesn't affect EPC directly</li>
                         <li>Older buildings may need additional upgrades to reach EPC B</li>
                         <li>We assess your full compliance pathway</li>
@@ -582,15 +627,15 @@
 
             <div class="conversion-zone">
                 <p class="trust-line"><strong>We provide honest assessments and complete compliance strategies</strong></p>
-                <a href="#quote-form" class="btn" data-smart-quote="true">Book a Compliance Consultation</a>
+                <a href="#quote-form" class="btn btn-stripe" data-smart-quote="true">Book a Compliance Consultation</a>
             </div>
         </div>
     </section>
 
-    <!-- 🎬 ANIMATION 3: 25-Year Business ROI Timeline -->
+    <!-- 25-Year Business ROI Timeline Animation -->
     <section class="section">
         <div class="container">
-            <div class="roi-timeline-animation animate-on-scroll">
+            <div class="roi-timeline-animation animate-on-scroll lazy-load">
                 <div class="timeline-header">
                     <h3>25-Year Business ROI Timeline</h3>
                     <p>Watch your investment transform into substantial long-term business savings</p>
@@ -612,35 +657,35 @@
                 </div>
 
                 <div class="total-savings">
-                    <div class="total-value">£850,000+</div>
-                    <p>Total 25-Year Business Savings (50kW System + Government Funding)</p>
+                    <div class="total-value">£{{economics.savings.commercial_25_year_display}}+</div>
+                    <p>Total 25-Year Business Savings ({{economics.system_size.commercial_typical}} System + Government Funding)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Strategic Benefits -->
+    <!-- Strategic Benefits - Tesla Premium (60%) + Airbnb Warmth (40%) -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Why Businesses Choose Solar + Battery</h2>
+                <h2 class="voice-heading">Why {{city.display_name}} Businesses Choose Solar + Battery</h2>
                 <div class="section-divider-accent"></div>
                 <p class="section-intro">Solar panels and battery systems offer financial, operational, and strategic advantages for commercial properties</p>
             </div>
             
             <div class="grid grid-3">
-                <div class="sector-card animate-on-scroll">
+                <div class="sector-card card-tesla animate-on-scroll lazy-load">
                     <div class="sector-icon">💰</div>
                     <h4>Financial Benefits</h4>
                     <ul class="sector-benefits">
-                        <li>Save up to 70% on electricity bills</li>
-                        <li>Earn SEG payments for exported energy</li>
+                        <li>Save up to {{economics.savings.commercial_percentage}}% on electricity bills</li>
+                        <li>Earn £{{funding.seg.rate_per_kwh_display}}/kWh SEG payments for exported energy</li>
                         <li>Reduce exposure to volatile energy prices</li>
-                        <li>Access government grants and 0% VAT</li>
+                        <li>Access government grants and {{vat.zero_rate}}% VAT</li>
                     </ul>
                 </div>
                 
-                <div class="sector-card animate-on-scroll">
+                <div class="sector-card card-tesla animate-on-scroll lazy-load">
                     <div class="sector-icon">🏢</div>
                     <h4>Operational Advantages</h4>
                     <ul class="sector-benefits">
@@ -651,7 +696,7 @@
                     </ul>
                 </div>
                 
-                <div class="sector-card animate-on-scroll">
+                <div class="sector-card card-tesla animate-on-scroll lazy-load">
                     <div class="sector-icon">📊</div>
                     <h4>Strategic Value</h4>
                     <ul class="sector-benefits">
@@ -665,11 +710,11 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section - Apple Accessibility (50%) + Airbnb Warmth (30%) + Stripe Clarity (20%) -->
     <section class="faq-section section">
         <div class="container">
             <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
+                <h2 class="voice-heading">Common {{city.display_name}} Commercial Solar Questions</h2>
                 <div class="section-divider-accent"></div>
                 <p class="section-intro">Expert answers to your commercial solar compliance questions</p>
             </div>
@@ -680,7 +725,7 @@
                         What is MEES and why does it matter?
                     </button>
                     <div class="faq-answer">
-                        <p>MEES stands for Minimum Energy Efficiency Standards. UK law requires commercial buildings to meet a minimum EPC rating to be rented or sold. <strong>Properties below EPC E face fines up to £150,000</strong>, with targets rising to C by 2027 and B by 2030.</p>
+                        <p>MEES stands for Minimum Energy Efficiency Standards. UK law requires commercial buildings to meet a minimum EPC rating to be rented or sold. **Properties below EPC E face fines up to £{{compliance.mees.max_fine_display}}**, with targets rising to C by {{compliance.mees.epc_c_target}} and B by {{compliance.mees.epc_b_target}}.</p>
                     </div>
                 </div>
 
@@ -689,7 +734,7 @@
                         Can solar panels improve my EPC rating?
                     </button>
                     <div class="faq-answer">
-                        <p><strong>Yes. Solar panels can raise your EPC rating by 1—2 bands</strong> depending on system size and building efficiency. This helps meet current MEES requirements and future targets.</p>
+                        <p><strong>Yes. Solar panels can raise your EPC rating by {{compliance.epc.improvement_range}} bands</strong> depending on system size and building efficiency. This helps meet current MEES requirements and future targets.</p>
                     </div>
                 </div>
 
@@ -698,7 +743,7 @@
                         What government funding is available for commercial solar?
                     </button>
                     <div class="faq-answer">
-                        <p>Businesses may qualify for <strong>0% VAT (until March 2027), SEG payments, IETF grants, Warm Homes Plan (up to £30k), and council-backed LA Flex funding</strong>. We help you navigate eligibility and applications.</p>
+                        <p>Businesses may qualify for <strong>{{vat.zero_rate}}% VAT (until {{vat.zero_rate_end}}), SEG payments, IETF grants, Warm Homes Plan (up to £{{funding.warm_homes.max_grant_display}}), and council-backed LA Flex funding</strong>. We help you navigate eligibility and applications.</p>
                     </div>
                 </div>
 
@@ -707,7 +752,7 @@
                         How does solar help with ESG and SECR reporting?
                     </button>
                     <div class="faq-answer">
-                        <p><strong>Solar reduces Scope 2 emissions (purchased electricity) and provides measurable data</strong> for annual energy and carbon reporting. Perfect for companies with 250+ employees, £36M+ turnover, or ESG commitments.</p>
+                        <p><strong>Solar reduces Scope 2 emissions (purchased electricity) and provides measurable data</strong> for annual energy and carbon reporting. Perfect for companies with {{compliance.secr.employee_threshold}}+ employees, £{{compliance.secr.turnover_threshold_display}}+ turnover, or ESG commitments.</p>
                     </div>
                 </div>
 
@@ -716,209 +761,246 @@
                         What's the typical ROI for commercial solar?
                     </button>
                     <div class="faq-answer">
-                        <p><strong>Commercial solar typically delivers 15-25% annual ROI with 4-8 year payback periods</strong>. High-energy businesses see the best returns, especially with government funding reducing upfront costs.</p>
+                        <p><strong>Commercial solar typically delivers {{economics.roi.commercial_range}}% annual ROI with {{economics.payback.commercial_range}} year payback periods</strong>. High-energy businesses see the best returns, especially with government funding reducing upfront costs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-   <!-- Updated Commercial Quote Form with Granyt Integration -->
-<section class="form-section section-dark" id="quote-form">
-    <div class="container">
-        <div class="form-wrapper">
-            <h2>Ready to Make Solar Work for Your Business?</h2>
-            <p class="form-intro">We help commercial property owners and managers navigate MEES compliance, access funding, and unlock strategic value through solar and battery systems.</p>
+    <!-- Commercial Quote Form - Stripe Clarity (70%) + Apple UX (20%) + Tesla Polish (10%) -->
+    <section class="form-section section-dark" id="quote-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Ready to Make Solar Work for Your Business?</h2>
+                <p class="form-intro">We help commercial property owners and managers navigate MEES compliance, access funding, and unlock strategic value through solar and battery systems.</p>
 
-            <div class="solar-quote-form">
-                <form action="#" method="POST" id="commercialQuoteForm">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="business-name">Business Name *</label>
-                            <input type="text" id="business-name" name="business_name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-name">Contact Name *</label>
-                            <input type="text" id="contact-name" name="contact_name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="business-type">Business Type *</label>
-                            <select id="business-type" name="business_type" required>
-                                <option value="">Select your business type</option>
-                                <option value="property-manager">Commercial Property Manager</option>
-                                <option value="manufacturing">Manufacturing/Industrial</option>
-                                <option value="retail">Retail/Hospitality</option>
-                                <option value="public-sector">Public Sector/Education</option>
-                                <option value="office">Office Building</option>
-                                <option value="warehouse">Warehouse/Distribution</option>
-                                <option value="healthcare">Healthcare</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="monthly-bill">Monthly Energy Bill *</label>
-                            <select id="monthly-bill" name="monthly_bill" required>
-                                <option value="">Select monthly energy cost</option>
-                                <option value="1000-2000">£1,000 - £2,000</option>
-                                <option value="2000-5000">£2,000 - £5,000</option>
-                                <option value="5000-10000">£5,000 - £10,000</option>
-                                <option value="10000-20000">£10,000 - £20,000</option>
-                                <option value="20000+">£20,000+</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="current-epc">Current EPC Rating (if known)</label>
-                            <select id="current-epc" name="current_epc">
-                                <option value="">Select if known</option>
-                                <option value="a">A - Excellent</option>
-                                <option value="b">B - Very Good</option>
-                                <option value="c">C - Good</option>
-                                <option value="d">D - Average</option>
-                                <option value="e">E - Below Average</option>
-                                <option value="f">F - Poor</option>
-                                <option value="g">G - Very Poor</option>
-                                <option value="unknown">Don't Know</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="postcode">Business Postcode *</label>
-                            <input type="text" id="postcode" name="postcode" placeholder="M1 1AA" required>
+                <div class="solar-quote-form">
+                    <form action="#" method="POST" id="commercialQuoteForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="business-name">Business Name *</label>
+                                <input type="text" id="business-name" name="business_name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-name">Contact Name *</label>
+                                <input type="text" id="contact-name" name="contact_name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-type">Business Type *</label>
+                                <select id="business-type" name="business_type" required>
+                                    <option value="">Select your business type</option>
+                                    <option value="property-manager">Commercial Property Manager</option>
+                                    <option value="manufacturing">Manufacturing/Industrial</option>
+                                    <option value="retail">Retail/Hospitality</option>
+                                    <option value="public-sector">Public Sector/Education</option>
+                                    <option value="office">Office Building</option>
+                                    <option value="warehouse">Warehouse/Distribution</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthly-bill">Monthly Energy Bill *</label>
+                                <select id="monthly-bill" name="monthly_bill" required>
+                                    <option value="">Select monthly energy cost</option>
+                                    <option value="1000-2000">£1,000 - £2,000</option>
+                                    <option value="2000-5000">£2,000 - £5,000</option>
+                                    <option value="5000-10000">£5,000 - £10,000</option>
+                                    <option value="10000-20000">£10,000 - £20,000</option>
+                                    <option value="20000+">£20,000+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="current-epc">Current EPC Rating (if known)</label>
+                                <select id="current-epc" name="current_epc">
+                                    <option value="">Select if known</option>
+                                    <option value="a">A - Excellent</option>
+                                    <option value="b">B - Very Good</option>
+                                    <option value="c">C - Good</option>
+                                    <option value="d">D - Average</option>
+                                    <option value="e">E - Below Average</option>
+                                    <option value="f">F - Poor</option>
+                                    <option value="g">G - Very Poor</option>
+                                    <option value="unknown">Don't Know</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="postcode">Business Postcode *</label>
+                                <input type="text" id="postcode" name="postcode" placeholder="{{city.postcode_prefix}}1 1AA" required>
+                            </div>
+
+                            <!-- v3.1 KEY ROUTING QUESTION -->
+                            <div class="form-group full-width">
+                                <label for="funding-preference">Funding Preference *</label>
+                                <select id="funding-preference" name="funding_preference" required>
+                                    <option value="">How would you prefer to fund your solar installation?</option>
+                                    <option value="funded-solution">Zero upfront cost - funded solar solution</option>
+                                    <option value="traditional-purchase">Traditional purchase with installer quotes</option>
+                                    <option value="not-sure">Not sure - need guidance</option>
+                                </select>
+                                <p>
+                                    <strong>Funded solutions:</strong> No upfront costs, energy savings from day one<br>
+                                    <strong>Traditional purchase:</strong> Own the system, access government grants
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- 🔑 KEY GRANYT ROUTING QUESTION -->
-                        <div class="form-group full-width">
-                            <label for="funding-preference">💼 Funding Preference *</label>
-                            <select id="funding-preference" name="funding_preference" required>
-                                <option value="">How would you prefer to fund your solar installation?</option>
-                                <option value="funded-solution">Zero upfront cost - funded solar solution</option>
-                                <option value="traditional-purchase">Traditional purchase with installer quotes</option>
-                                <option value="not-sure">Not sure - need guidance</option>
-                            </select>
-                            <p>
-                                <strong>Funded solutions:</strong> No upfront costs, energy savings from day one<br>
-                                <strong>Traditional purchase:</strong> Own the system, access government grants
-                            </p>
+                        <div class="form-consent-wrapper">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" required>
+                                <span>I agree to be contacted about commercial solar, MEES compliance, and funding options. We guarantee only one professional contact - no spam. <a href="/privacy" class="link-accent">Privacy Policy</a></span>
+                            </label>
                         </div>
-                    </div>
 
-                    <div class="form-consent-wrapper">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="consent" required>
-                            <span>I agree to be contacted about commercial solar, MEES compliance, and funding options. We guarantee only one professional contact - no spam. <a href="/privacy" class="link-accent">Privacy Policy</a></span>
-                        </label>
-                    </div>
+                        <!-- Dynamic Submit Button -->
+                        <div class="form-submit-wrapper">
+                            <button type="submit" class="btn btn-large btn-full-width" id="submitButton">
+                                Book Your Compliance & Funding Review
+                            </button>
+                        </div>
 
-                    <!-- Dynamic Submit Button -->
-                    <div class="form-submit-wrapper">
-                        <button type="submit" class="btn btn-large" id="submitButton">
-                            Book Your Compliance & Funding Review
-                        </button>
-                    </div>
-
-                    <!-- Hidden fields for tracking -->
-                    <input type="hidden" name="lead_source" value="manchester_commercial">
-                    <input type="hidden" name="utm_source" value="">
-                    <input type="hidden" name="utm_medium" value="">
-                    <input type="hidden" name="utm_campaign" value="">
-                    <input type="hidden" name="routing_path" value="" id="routingPath">
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 💼 FUNDED SOLAR CTA MODULE -->
-<section class="section">
-    <div class="container">
-        <div class="card">
-            <div>
-                <h3>💼 Looking for funded solar?</h3>
-                <p>
-                    We work with trusted UK finance partners to offer zero-cost commercial solar solutions.
-                </p>
-                
-                <div class="grid grid-3">
-                    <div>
-                        <div>£0</div>
-                        <div>Upfront Cost</div>
-                    </div>
-                    <div>
-                        <div>Day 1</div>
-                        <div>Energy Savings</div>
-                    </div>
-                    <div>
-                        <div>100%</div>
-                        <div>MEES Compliant</div>
-                    </div>
+                        <!-- Hidden fields for tracking -->
+                        <input type="hidden" name="lead_source" value="{{city.slug}}_commercial">
+                        <input type="hidden" name="utm_source" value="">
+                        <input type="hidden" name="utm_medium" value="">
+                        <input type="hidden" name="utm_campaign" value="">
+                        <input type="hidden" name="routing_path" value="" id="routingPath">
+                    </form>
                 </div>
-                
-                <a href="#funded-solar-options" class="btn" data-smart-quote="true">
-                    Explore Funded Options →
-                </a>
-                
-                <p>
-                    Trusted UK finance partners • Zero upfront investment • Full compliance support
-                </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Funded Solar CTA Module -->
+    <section class="section">
+        <div class="container">
+            <div class="card card-tesla">
+                <div>
+                    <h3>Looking for funded solar?</h3>
+                    <p>
+                        We work with trusted UK finance partners to offer zero-cost commercial solar solutions.
+                    </p>
+                    
+                    <div class="grid grid-3">
+                        <div>
+                            <div>£0</div>
+                            <div>Upfront Cost</div>
+                        </div>
+                        <div>
+                            <div>Day 1</div>
+                            <div>Energy Savings</div>
+                        </div>
+                        <div>
+                            <div>100%</div>
+                            <div>MEES Compliant</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#funded-solar-options" class="btn btn-tesla" data-smart-quote="true">
+                        Explore Funded Options
+                    </a>
+                    
+                    <p>
+                        Trusted UK finance partners • Zero upfront investment • Full compliance support
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Manchester.solar</h3>
-                    <p>Manchester's trusted commercial solar compliance specialists. We help businesses navigate MEES requirements, access government funding, and achieve ESG goals through strategic solar solutions.</p>
+                    <h3>{{city.display_name}}.solar</h3>
+                    <div class="footer-network">
+                        <p>Part of the <a href="/">Solar Domain Empire</a> - connecting quality installers with businesses across the UK.</p>
+                    </div>
+                    <p class="footer-description">{{city.display_name}}'s trusted commercial solar compliance specialists since {{company.founding_year}}. We help businesses navigate MEES requirements, access government funding, and achieve ESG goals through strategic solar solutions.</p>
+                    <div class="footer-contact">
+                        <p>Email: <a href="mailto:commercial@{{city.domain}}">commercial@{{city.domain}}</a></p>
+                        <p>Phone: {{company.phone_display}}</p>
+                        <p>Service Area: {{city.region}}</p>
+                    </div>
+                    <div class="footer-verify">
+                        <p><a href="/verify-installer">Verify an Installer</a></p>
+                    </div>
                 </div>
-                
+
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4>For Homeowners</h4>
+                    <ul>
+                        <li><a href="/residential">Residential Solar</a></li>
+                        <li><a href="/solar-for-{{city.slug}}">Solar for {{city.display_name}}</a></li>
+                        <li><a href="/government-funding">Government Funding</a></li>
+                        <li><a href="/contact">Get Free Quotes</a></li>
+                    </ul>
+
+                    <h4>For Businesses</h4>
                     <ul>
                         <li><a href="/commercial">Commercial Solar</a></li>
-                        <li><a href="/residential">Residential Solar</a></li>
-                        <li><a href="/heritage">Heritage Properties</a></li>
-                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/mees-compliance">MEES Compliance</a></li>
+                        <li><a href="/contact">Business Quotes</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
-                    <h4>Compliance</h4>
+                    <h4>{{city.display_name}} Areas</h4>
                     <ul>
-                        <li><a href="/mees">MEES Compliance</a></li>
-                        <li><a href="/epc">EPC Upgrades</a></li>
-                        <li><a href="/esg">ESG Reporting</a></li>
-                        <li><a href="/funding">Government Funding</a></li>
+                        {{#each city.areas}}
+                        <li><a href="/{{../city.slug}}/{{slug}}">{{name}}</a></li>
+                        {{/each}}
                     </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: commercial@manchester.solar<br>
-                    Phone: 0161 123 4567<br>
-                    Address: Manchester, UK</p>
+
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/installers">Our Installers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/blog">Solar Blog</a></li>
+                    </ul>
+
+                    <div class="footer-intelligence">
+                        <h4>Market Intelligence</h4>
+                        <ul>
+                            <li>{{market.mcs_installers}} MCS installers in {{city.region}}</li>
+                            <li>{{market.total_installations}}+ installations completed</li>
+                            <li>£{{economics.savings.commercial_annual_display}} average annual business savings</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Manchester.solar. All rights reserved.</p>
-                <p class="footer-update">Commercial Solar Compliance Specialists • Last updated: January 2025</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/cookies">Cookie Policy</a>
+                    <a href="/sitemap">Sitemap</a>
+                </div>
+                <div class="footer-credit">
+                    <p>&copy; {{current_year}} {{city.display_name}}.solar • Part of <a href="/">Solar Domain Empire</a></p>
+                </div>
+                <div class="footer-version">
+                    <p>v3.1 • Last updated: {{last_updated}}</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -950,7 +1032,7 @@
             </div>
             
             <div class="help-text">
-                <p>Not sure? <a href="mailto:hello@manchester.solar">Contact us</a> for guidance</p>
+                <p>Not sure? <a href="mailto:hello@{{city.domain}}">Contact us</a> for guidance</p>
             </div>
         </div>
     </div>
@@ -965,51 +1047,14 @@
         </div>
     </noscript>
 
-    <!-- Header Loader Script -->
-    <script src="js/header-loader.js"></script>
-
-    <!-- Core Scripts -->
-    <style>
-        /* Missing Mobile Navigation CSS - Fix for header display issue */
-        @media (max-width: 768px) {
-            .nav-list.mobile-open {
-                display: flex !important;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--neutral-0);
-                flex-direction: column;
-                padding: var(--space-4);
-                box-shadow: var(--shadow-lg);
-                border-top: 1px solid var(--neutral-200);
-                z-index: 1000;
-            }
-            
-            .nav-list.mobile-open li {
-                width: 100%;
-            }
-            
-            .nav-list.mobile-open .nav-link,
-            .nav-list.mobile-open .btn {
-                width: 100%;
-                text-align: center;
-                margin: var(--space-1) 0;
-            }
-        }
-    </style>
+    <!-- v3.1 Performance Optimization Script -->
     <script>
-        // 🎬 Animation Scripts
-        
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Lazy load animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
                     entry.target.classList.add('visible');
                     
                     // Trigger specific animations based on element
@@ -1023,11 +1068,9 @@
         }, observerOptions);
 
         // Observe all animation elements
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.animate-on-scroll, .lazy-load').forEach(el => observer.observe(el));
 
-        // 🎬 ANIMATION 1: Business Cost Reduction Chart
+        // Business Cost Reduction Chart Animation
         function animateCostReduction() {
             setTimeout(() => {
                 document.getElementById('beforeBar').style.height = '85%';
@@ -1042,30 +1085,24 @@
             }, 2500);
         }
 
-        // 🎬 ANIMATION 2: Business Type Tabs
+        // Business Type Tabs
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons and content
                 document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
                 
-                // Add active class to clicked button
                 button.classList.add('active');
                 
-                // Show corresponding content
                 const tabId = button.getAttribute('data-tab') + '-tab';
                 document.getElementById(tabId).classList.add('active');
             });
         });
 
-        // 🎬 ANIMATION 3: 25-Year Business ROI Timeline
+        // 25-Year Business ROI Timeline Animation
         function animateROITimeline() {
             const timelineBars = document.getElementById('timelineBars');
             
-            if (!timelineBars) {
-                console.log('Timeline bars container not found');
-                return;
-            }
+            if (!timelineBars) return;
             
             // Generate 25 bars for 25 years (adjusted for government funding)
             const savingsData = [
@@ -1090,7 +1127,6 @@
                     bar.classList.add('savings');
                 }
                 
-                // Start with 0% height
                 bar.style.height = '0%';
                 timelineBars.appendChild(bar);
             });
@@ -1101,22 +1137,22 @@
                 bars.forEach((bar, index) => {
                     setTimeout(() => {
                         const value = savingsData[index];
-                        const heightPercentage = Math.min(Math.abs(value) / 2500, 90); // Cap at 90% for visibility
+                        const heightPercentage = Math.min(Math.abs(value) / 2500, 90);
                         bar.style.height = heightPercentage + '%';
-                    }, index * 80); // Slightly faster stagger
+                    }, index * 80);
                 });
             }, 500);
             
-            // Show payback marker (faster with government funding)
+            // Show payback marker
             setTimeout(() => {
                 const paybackMarker = document.getElementById('paybackMarker');
                 if (paybackMarker) {
                     paybackMarker.style.opacity = '1';
                 }
-            }, 4000); // Longer delay to see all bars first
+            }, 4000);
         }
 
-        // 📄 FORM ROUTING LOGIC
+        // Form routing logic
         const form = document.getElementById('commercialQuoteForm');
         const fundingSelect = document.getElementById('funding-preference');
         const submitButton = document.getElementById('submitButton');
@@ -1170,16 +1206,19 @@
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const answer = button.nextElementSibling;
+                const item = button.closest('.faq-item');
                 const isOpen = answer.classList.contains('show');
                 
                 // Close all other FAQs
                 document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.remove('show'));
-                document.querySelectorAll('.faq-question').forEach(q => q.style.transform = 'none');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
                 
                 // Toggle current FAQ
                 if (!isOpen) {
                     answer.classList.add('show');
-                    button.style.transform = 'rotate(45deg)';
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
                 }
             });
         });
@@ -1213,10 +1252,23 @@
         document.querySelector('input[name="utm_source"]').value = urlParams.get('utm_source') || '';
         document.querySelector('input[name="utm_medium"]').value = urlParams.get('utm_medium') || '';
         document.querySelector('input[name="utm_campaign"]').value = urlParams.get('utm_campaign') || '';
-    </script>
 
-    <!-- Smart Quote Router -->
-    <script>
+        // v3.1: Conversion tracking
+        const trackConversion = (action) => {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: 'engagement',
+                    event_label: '{{city.slug}}_commercial'
+                });
+            }
+        };
+
+        // Track CTA clicks
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => trackConversion('cta_click'));
+        });
+
+        // Smart Quote Router Integration
         window.ManchesterQuoteRouter = (function() {
             'use strict';
             
@@ -1233,25 +1285,12 @@
                 }
             };
             
-            let currentPage = null;
+            let currentPage = 'commercial';
             let modalState = { isOpen: false };
             
             function init() {
-                detectCurrentPage();
                 bindEventListeners();
-                console.log('Manchester Quote Router initialized for:', currentPage);
-            }
-            
-            function detectCurrentPage() {
-                const path = window.location.pathname.toLowerCase();
-                
-                if (path.includes('residential') || path.includes('home')) {
-                    currentPage = 'residential';
-                } else if (path.includes('commercial') || path.includes('business')) {
-                    currentPage = 'commercial';
-                } else {
-                    currentPage = 'neutral';
-                }
+                console.log('Quote Router initialized for commercial page');
             }
             
             function bindEventListeners() {
@@ -1266,68 +1305,13 @@
                 if (!button) return;
                 
                 event.preventDefault();
-                console.log('Smart quote button clicked, current page:', currentPage);
                 
-                if (currentPage === 'neutral') {
-                    showPropertyChooser();
-                } else if (currentPage === 'residential') {
-                    selectPropertyType('residential');
-                } else if (currentPage === 'commercial') {
-                    selectPropertyType('commercial');
-                } else {
-                    showPropertyChooser();
-                }
-            }
-            
-            function showPropertyChooser() {
-                const modal = document.querySelector(config.selectors.modal);
-                if (!modal) {
-                    console.warn('Quote modal not found - redirecting to residential');
-                    window.location.href = config.routes.residential;
-                    return;
-                }
-                
-                modal.classList.add('active');
-                modalState.isOpen = true;
-                document.body.style.overflow = 'hidden';
-                
-                setTimeout(() => {
-                    const firstCard = modal.querySelector(config.selectors.propertyCards);
-                    if (firstCard) {
-                        firstCard.focus();
-                    }
-                }, 100);
-            }
-            
-            function closePropertyChooser() {
-                const modal = document.querySelector(config.selectors.modal);
-                if (!modal) return;
-                
-                modal.classList.remove('active');
-                modalState.isOpen = false;
-                document.body.style.overflow = '';
-            }
-            
-            function selectPropertyType(propertyType) {
-                console.log('Property type selected:', propertyType);
-                
-                if (modalState.isOpen) {
-                    closePropertyChooser();
-                }
-                
-                const targetUrl = propertyType === 'residential' 
-                    ? config.routes.residential 
-                    : config.routes.commercial;
-                    
-                if (window.location.pathname.includes(propertyType)) {
-                    scrollToQuoteForm();
-                } else {
-                    window.location.href = targetUrl;
-                }
+                // On commercial page, go directly to commercial form
+                scrollToQuoteForm();
             }
             
             function scrollToQuoteForm() {
-                const form = document.querySelector('#quote-form') || document.querySelector('.quote-form');
+                const form = document.querySelector('#quote-form');
                 
                 if (form) {
                     const headerOffset = 80;
@@ -1340,7 +1324,7 @@
                     });
                     
                     setTimeout(() => {
-                        const firstInput = form.querySelector('input:not([type="hidden"]), select');
+                        const firstInput = form.querySelector('input:not([type="hidden"])');
                         if (firstInput) {
                             firstInput.focus();
                         }
@@ -1353,8 +1337,17 @@
                 if (!modal || !modalState.isOpen) return;
                 
                 if (event.target.matches(config.selectors.modalClose) || event.target === modal) {
-                    closePropertyChooser();
+                    closeModal();
                 }
+            }
+            
+            function closeModal() {
+                const modal = document.querySelector(config.selectors.modal);
+                if (!modal) return;
+                
+                modal.classList.remove('active');
+                modalState.isOpen = false;
+                document.body.style.overflow = '';
             }
             
             function handlePropertyCardClick(event) {
@@ -1362,25 +1355,27 @@
                 if (!card) return;
                 
                 const propertyType = card.getAttribute('data-type');
-                if (propertyType) {
-                    selectPropertyType(propertyType);
+                if (propertyType === 'residential') {
+                    window.location.href = config.routes.residential;
+                } else if (propertyType === 'commercial') {
+                    closeModal();
+                    scrollToQuoteForm();
                 }
             }
             
             function handleEscapeKey(event) {
                 if (event.key === 'Escape' && modalState.isOpen) {
-                    closePropertyChooser();
+                    closeModal();
                 }
             }
             
             return {
                 init: init,
-                showPropertyChooser: showPropertyChooser,
-                closePropertyChooser: closePropertyChooser,
-                selectPropertyType: selectPropertyType
+                scrollToQuoteForm: scrollToQuoteForm
             };
         })();
 
+        // Initialize when DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
             ManchesterQuoteRouter.init();
         });

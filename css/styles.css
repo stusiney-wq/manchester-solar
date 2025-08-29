@@ -751,3 +751,67 @@ body {
     --neutral-100: #4b5563;
   }
 }
+
+/* ============================================ */
+/* SECTION ALIGNMENT VARIANTS - Add to styles.css */
+/* ============================================ */
+
+/* CENTERED (Default - already works) */
+.section-header-center {
+  text-align: center;
+}
+
+.section-header-center .section-intro {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-header-center .section-divider {
+  margin: var(--space-4) auto;
+}
+
+/* LEFT ALIGNED */
+.section-header-left {
+  text-align: left;
+}
+
+.section-header-left .section-intro {
+  max-width: 600px;
+  margin: 0;
+}
+
+.section-header-left .section-divider {
+  margin: var(--space-4) 0;
+}
+
+/* RIGHT ALIGNED */
+.section-header-right {
+  text-align: right;
+}
+
+.section-header-right .section-intro {
+  max-width: 600px;
+  margin-left: auto;
+}
+
+.section-header-right .section-divider {
+  margin: var(--space-4) 0 var(--space-4) auto;
+}
+
+/* Mobile: All alignments become centered for readability */
+@media (max-width: 768px) {
+  .section-header-left,
+  .section-header-right {
+    text-align: center;
+  }
+  
+  .section-header-left .section-intro,
+  .section-header-right .section-intro {
+    margin: 0 auto;
+  }
+  
+  .section-header-left .section-divider,
+  .section-header-right .section-divider {
+    margin: var(--space-4) auto;
+  }
+}

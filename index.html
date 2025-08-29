@@ -144,8 +144,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
+    <!-- Performance: Preload hero image -->
+    <link rel="preload" as="image" href="images/manchester-solar-hero.webp" fetchpriority="high">
+    
     <!-- Gold Standard v3.1 Compliant CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Accessibility: Skip link styles -->
+    <style>
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: var(--solar-green);
+        color: var(--neutral-0);
+        padding: 8px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        z-index: 1000;
+        transition: top 0.3s;
+    }
+    
+    .skip-link:focus {
+        top: 6px;
+    }
+    
+    .form-mobile-reassurance {
+        font-size: var(--font-size-sm);
+        color: var(--neutral-600);
+        margin: var(--space-2) 0;
+        text-align: center;
+        font-weight: 500;
+    }
+    
+    @media (min-width: 768px) {
+        .form-mobile-reassurance {
+            display: none;
+        }
+    }
+    </style>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -163,519 +201,528 @@
 </head>
 
 <body data-city="manchester">
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
     <!-- Header loads here automatically -->
     <div id="header-container"></div>
 
-    <!-- SECTION 1: HERO - YAML Values Applied -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="hero-badge">✓ MCS Certified Partners Only</span>
-                    <span class="hero-badge">✓ All Property Type Specialists</span>
-                    <span class="hero-badge">✓ No Spam Guarantee</span>
-                </div>
-                
-                <h1 class="hero-title">Solar Panels in Manchester – Home & Business Installers You Can Trust</h1>
-                
-                <div class="audience-toggle">
-                    <button class="toggle-btn active" data-audience="homeowner">
-                        🏠 Homeowners
-                    </button>
-                    <button class="toggle-btn" data-audience="business">
-                        🏢 Businesses
-                    </button>
-                </div>
-                
-                <div class="audience-content active" id="homeowner-content">
-                    <p class="hero-subtext">Save £1,890+ per year with professional solar installation in Manchester. Join 2,800+ local families already cutting energy bills.</p>
-                </div>
-                
-                <div class="audience-content" id="business-content">
-                    <p class="hero-subtext">Reduce business energy costs by £4,200+ annually in Manchester. Professional commercial solar with guaranteed ROI.</p>
-                </div>
-                
-                <div class="hero-cta">
-                    <a href="#quote-form" class="btn btn-large">Get Free Manchester Quotes</a>
-                    <p class="trust-message">MCS certified • No pressure sales • Professional service only</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: STATS - YAML Driven -->
-    <section class="stats-section section">
-        <div class="container">
-            <div class="grid grid-4">
-                <div class="stat-card">
-                    <span class="stat-number">3.8</span>
-                    <span class="stat-label">Peak Sun Hours Daily</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">£1,890</span>
-                    <span class="stat-label">Average Annual Savings</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">2,800+</span>
-                    <span class="stat-label">Manchester Installations</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">6.8 years</span>
-                    <span class="stat-label">Average Payback Period</span>
+    <!-- Main content wrapper -->
+    <main id="main-content">
+        <!-- SECTION 1: HERO - YAML Values Applied -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="hero-badge">✓ MCS Certified Partners Only</span>
+                        <span class="hero-badge">✓ All Property Type Specialists</span>
+                        <span class="hero-badge">✓ No Spam Guarantee</span>
+                    </div>
+                    
+                    <h1 class="hero-title">Solar Panels in Manchester – Home & Business Installers You Can Trust</h1>
+                    
+                    <div class="audience-toggle">
+                        <button class="toggle-btn active" data-audience="homeowner" aria-label="View information for homeowners">
+                            <span aria-hidden="true">🏠</span> Homeowners
+                        </button>
+                        <button class="toggle-btn" data-audience="business" aria-label="View information for businesses">
+                            <span aria-hidden="true">🏢</span> Businesses
+                        </button>
+                    </div>
+                    
+                    <div class="audience-content active" id="homeowner-content">
+                        <p class="hero-subtext">Save £1,890+ per year with professional solar installation in Manchester. Join 2,800+ local families already cutting energy bills.</p>
+                    </div>
+                    
+                    <div class="audience-content" id="business-content">
+                        <p class="hero-subtext">Reduce business energy costs by £4,200+ annually in Manchester. Professional commercial solar with guaranteed ROI.</p>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#quote-form" class="btn btn-large" aria-label="Get your free solar assessment in Manchester - no spam guarantee">Get Free Manchester Quotes</a>
+                        <p class="trust-message">MCS certified • No pressure sales • Professional service only</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION 3: GOVERNMENT FUNDING - YAML Enhanced -->
-    <section class="funding-section section">
-        <div class="container">
-            <div class="funding-banner">
-                <div class="funding-badge">Government Funding Available</div>
-                <h2 class="funding-title">£6,000–£10,000 Free Solar Funding for Manchester Homes</h2>
-                <p class="funding-subtitle">Free solar panels + energy upgrades for eligible properties</p>
+        <!-- SECTION 2: STATS - YAML Driven -->
+        <section class="stats-section section">
+            <div class="container">
+                <div class="grid grid-4">
+                    <div class="stat-card">
+                        <span class="stat-number">3.8</span>
+                        <span class="stat-label">Peak Sun Hours Daily</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">£1,890</span>
+                        <span class="stat-label">Average Annual Savings</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">2,800+</span>
+                        <span class="stat-label">Manchester Installations</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">6.8 years</span>
+                        <span class="stat-label">Average Payback Period</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: GOVERNMENT FUNDING - YAML Enhanced -->
+        <section class="funding-section section">
+            <div class="container">
+                <div class="funding-banner">
+                    <div class="funding-badge">Government Funding Available</div>
+                    <h2 class="funding-title">£6,000–£10,000 Free Solar Funding for Manchester Homes</h2>
+                    <p class="funding-subtitle">Free solar panels + energy upgrades for eligible properties</p>
+                    
+                    <div class="funding-options">
+                        <div class="funding-card">
+                            <div class="funding-icon" aria-hidden="true">🏠</div>
+                            <h3>ECO4 & LA Flex</h3>
+                            <p>Free solar + energy upgrades for homes with:</p>
+                            <ul class="funding-criteria">
+                                <li>EPC rating D-G</li>
+                                <li>Household income under £31,000</li>
+                            </ul>
+                            <p class="funding-deadline">Active until March 2026</p>
+                        </div>
+                        
+                        <div class="funding-card">
+                            <div class="funding-icon" aria-hidden="true">💰</div>
+                            <h3>Interest-Free Solar Loans</h3>
+                            <p>Borrow up to £10,000 at 0% interest through:</p>
+                            <ul class="funding-criteria">
+                                <li>Manchester City Council's HELP scheme</li>
+                                <li>Via Care & Repair Manchester</li>
+                            </ul>
+                            <p class="funding-deadline">Check eligibility today</p>
+                        </div>
+                    </div>
+                    
+                    <div class="funding-cta">
+                        <a href="#quote-form" class="btn btn-large" aria-label="Check your eligibility for free solar funding in Manchester">Check Your Eligibility</a>
+                        <p class="funding-disclaimer">Eligibility criteria apply. Our installer will check your qualification during the free survey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: BENEFITS - YAML Integrated -->
+        <section class="who-we-help section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete Solar Solutions for All Manchester Properties</h2>
+                    <div class="section-divider-accent"></div>
+                    <p class="section-intro">From Victorian terraces to modern businesses, we deliver specialized solar solutions with complete service support.</p>
+                </div>
                 
-                <div class="funding-options">
-                    <div class="funding-card">
-                        <div class="funding-icon">🏠</div>
-                        <h3>ECO4 & LA Flex</h3>
-                        <p>Free solar + energy upgrades for homes with:</p>
-                        <ul class="funding-criteria">
-                            <li>EPC rating D-G</li>
-                            <li>Household income under £31,000</li>
+                <div class="grid grid-2">
+                    <!-- Homeowner Benefits - YAML Enhanced -->
+                    <div class="enhanced-homeowner-card">
+                        <div class="homeowner-header">
+                            <div class="homeowner-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                                </svg>
+                            </div>
+                            <div class="homeowner-title">
+                                <h3>Manchester Homeowners</h3>
+                                <p class="homeowner-subtitle">All Property Types Welcome</p>
+                            </div>
+                        </div>
+                        
+                        <p class="homeowner-description">Achieve energy independence across all Manchester property types. Our specialists understand the unique challenges from modern builds to heritage properties.</p>
+                        
+                        <div class="savings-highlights">
+                            <div class="savings-item">
+                                <span class="savings-number">£1,890</span>
+                                <span class="savings-label">Annual Savings</span>
+                            </div>
+                            <div class="savings-item">
+                                <span class="savings-number">25%</span>
+                                <span class="savings-label">Home Value Increase</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="homeowner-benefits">
+                            <li>Manchester's 3.8 peak sun hours daily provide excellent solar performance</li>
+                            <li>Take advantage of 0% VAT until 2027 - saving hundreds more</li>
+                            <li>Support Manchester's 2038 carbon neutral target</li>
+                            <li>Join 2,800+ Manchester residents already saving money</li>
+                            <li>Perfect for Manchester's Victorian terraces and modern developments</li>
                         </ul>
-                        <p class="funding-deadline">Active until March 2026</p>
                     </div>
                     
-                    <div class="funding-card">
-                        <div class="funding-icon">💰</div>
-                        <h3>Interest-Free Solar Loans</h3>
-                        <p>Borrow up to £10,000 at 0% interest through:</p>
-                        <ul class="funding-criteria">
-                            <li>Manchester City Council's HELP scheme</li>
-                            <li>Via Care & Repair Manchester</li>
+                    <!-- Business Benefits - YAML Enhanced -->
+                    <div class="enhanced-business-card">
+                        <div class="business-header">
+                            <div class="business-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                                </svg>
+                            </div>
+                            <div class="business-title">
+                                <h3>Manchester Businesses</h3>
+                                <p class="business-subtitle">Commercial Solar Solutions</p>
+                            </div>
+                        </div>
+                        
+                        <p class="homeowner-description">Reduce operational costs whilst demonstrating environmental leadership. Our commercial solutions deliver immediate impact on your bottom line.</p>
+                        
+                        <div class="roi-highlights">
+                            <div class="roi-item">
+                                <span class="roi-number">70%</span>
+                                <span class="roi-label">Cost Reduction</span>
+                            </div>
+                            <div class="roi-item">
+                                <span class="roi-number">15–25%</span>
+                                <span class="roi-label">Annual ROI</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="homeowner-benefits">
+                            <li>Enhanced Capital Allowances (130% tax relief)</li>
+                            <li>Predictable energy costs for 25+ years</li>
+                            <li>Battery storage and EV charger integration</li>
+                            <li>Support Manchester's 2038 carbon neutral target</li>
+                            <li>Complete maintenance and monitoring support</li>
                         </ul>
-                        <p class="funding-deadline">Check eligibility today</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: TRUST - YAML Installer Integration -->
+        <section class="installer-section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Carefully Vetted Manchester Installer Network</h2>
+                    <p class="section-intro">Unlike lead farms with dozens of random installers, we partner with a small network of 2-3 premium Manchester specialists</p>
                 </div>
                 
-                <div class="funding-cta">
-                    <a href="#quote-form" class="btn btn-large">Check Your Eligibility</a>
-                    <p class="funding-disclaimer">Eligibility criteria apply. Our installer will check your qualification during the free survey.</p>
+                <div class="installer-selection-card">
+                    <div class="selection-intro">
+                        <h3 class="selection-title">Choice Without Chaos - Quality Without Spam</h3>
+                        <p class="selection-description">Most quote services work with anyone willing to pay fees. We maintain a small, exclusive network of Manchester's finest solar specialists.</p>
+                    </div>
+
+                    <!-- Featured Installers - YAML Driven -->
+                    <div class="featured-installers">
+                        <h4>Meet Our Vetted Manchester Solar Specialists</h4>
+                        <div class="grid grid-3">
+                            <div class="installer-card card">
+                                <div class="installer-header">
+                                    <h5>Solar Manchester Ltd</h5>
+                                    <div class="installer-rating">
+                                        <span class="rating-stars" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+                                        <span class="rating-score">4.9/5 (127 reviews)</span>
+                                    </div>
+                                </div>
+                                <div class="installer-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">340+</span>
+                                        <span class="stat-label">Installations</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">8 years</span>
+                                        <span class="stat-label">Manchester Experience</span>
+                                    </div>
+                                </div>
+                                <div class="installer-specialties">
+                                    <h6>Specialties:</h6>
+                                    <ul>
+                                        <li>Residential</li>
+                                        <li>Victorian terraces</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="installer-card card">
+                                <div class="installer-header">
+                                    <h5>Green Solutions NW</h5>
+                                    <div class="installer-rating">
+                                        <span class="rating-stars" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+                                        <span class="rating-score">4.8/5 (89 reviews)</span>
+                                    </div>
+                                </div>
+                                <div class="installer-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">280+</span>
+                                        <span class="stat-label">Installations</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">6 years</span>
+                                        <span class="stat-label">Manchester Experience</span>
+                                    </div>
+                                </div>
+                                <div class="installer-specialties">
+                                    <h6>Specialties:</h6>
+                                    <ul>
+                                        <li>Commercial</li>
+                                        <li>Battery storage</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="installer-card card">
+                                <div class="installer-header">
+                                    <h5>EcoSolar Manchester</h5>
+                                    <div class="installer-rating">
+                                        <span class="rating-stars" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+                                        <span class="rating-score">4.7/5 (156 reviews)</span>
+                                    </div>
+                                </div>
+                                <div class="installer-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">420+</span>
+                                        <span class="stat-label">Installations</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">10 years</span>
+                                        <span class="stat-label">Manchester Experience</span>
+                                    </div>
+                                </div>
+                                <div class="installer-specialties">
+                                    <h6>Specialties:</h6>
+                                    <ul>
+                                        <li>Large residential</li>
+                                        <li>EV charging</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="installers-disclaimer">
+                            <p>All installers are MCS-certified, RECC members, and maintain comprehensive insurance. Customer reviews independently verified through Trustpilot and Google Reviews.</p>
+                        </div>
+                    </div>
+
+                    <div class="selection-benefits">
+                        <h4>Why a Small Vetted Network is Better for You</h4>
+                        <div class="grid grid-2">
+                            <div class="benefit-item">
+                                <div class="benefit-icon" aria-hidden="true">🎯</div>
+                                <div class="benefit-content">
+                                    <h5>Real Choice, Not Chaos</h5>
+                                    <p>2-3 carefully selected options vs dozens of random installers competing aggressively for your business.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon" aria-hidden="true">🏠</div>
+                                <div class="benefit-content">
+                                    <h5>Local Manchester Specialists</h5>
+                                    <p>Each installer knows Manchester inside out - weather, planning, property types, and local challenges.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon" aria-hidden="true">👥</div>
+                                <div class="benefit-content">
+                                    <h5>Community Accountability</h5>
+                                    <p>Local reputation to protect - they can't hide behind big brand names or disappear after installation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon" aria-hidden="true">⚖️</div>
+                                <div class="benefit-content">
+                                    <h5>Competitive Fairness</h5>
+                                    <p>Healthy competition ensures fair pricing without the aggressive bidding wars of lead farms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selection-requirements">
+                        <h4>Simple, Transparent Process</h4>
+                        <div class="grid grid-3">
+                            <div class="step-card">
+                                <div class="step-number">01</div>
+                                <h3>Tell us about your property</h3>
+                                <p>Quick online form covering your Manchester postcode, property type, and energy usage. Takes 2 minutes to complete.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-number">02</div>
+                                <h3>Receive your tailored proposal</h3>
+                                <p>Our local installer visits your property, surveys your roof, and provides a detailed quote with savings projections.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-number">03</div>
+                                <h3>Install & aftercare</h3>
+                                <p>Professional installation typically completed in 1-2 days, with ongoing monitoring and maintenance support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="selection-promise">
+                        <div class="promise-content">
+                            <h4>Our Network Standards</h4>
+                            <p>Every installer in our Manchester network meets rigorous standards that go beyond basic certification requirements.</p>
+                            
+                            <div class="promise-points">
+                                <div class="promise-point">
+                                    <span class="promise-icon">✓</span>
+                                    <span>MCS certified with 5+ years Manchester experience</span>
+                                </div>
+                                <div class="promise-point">
+                                    <span class="promise-icon">✓</span>
+                                    <span>RECC membership and comprehensive insurance</span>
+                                </div>
+                                <div class="promise-point">
+                                    <span class="promise-icon">✓</span>
+                                    <span>Comprehensive insurance (£2M public liability)</span>
+                                </div>
+                                <div class="promise-point">
+                                    <span class="promise-icon">✓</span>
+                                    <span>Heritage property planning expertise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="selection-cta">
+                        <p class="cta-text">Ready to work with Manchester's finest solar specialists?</p>
+                        <a href="#quote-form" class="btn btn-large btn-outline-white" aria-label="Start your solar journey with Manchester's vetted installers">Start Your Solar Journey</a>
+                        <p class="cta-disclaimer">MCS standards • No spam • Fair pricing</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION 4: BENEFITS - YAML Integrated -->
-    <section class="who-we-help section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Complete Solar Solutions for All Manchester Properties</h2>
-                <div class="section-divider-accent"></div>
-                <p class="section-intro">From Victorian terraces to modern businesses, we deliver specialized solar solutions with complete service support.</p>
-            </div>
-            
-            <div class="grid grid-2">
-                <!-- Homeowner Benefits - YAML Enhanced -->
-                <div class="enhanced-homeowner-card">
-                    <div class="homeowner-header">
-                        <div class="homeowner-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                        </div>
-                        <div class="homeowner-title">
-                            <h3>Manchester Homeowners</h3>
-                            <p class="homeowner-subtitle">All Property Types Welcome</p>
-                        </div>
-                    </div>
-                    
-                    <p class="homeowner-description">Achieve energy independence across all Manchester property types. Our specialists understand the unique challenges from modern builds to heritage properties.</p>
-                    
-                    <div class="savings-highlights">
-                        <div class="savings-item">
-                            <span class="savings-number">£1,890</span>
-                            <span class="savings-label">Annual Savings</span>
-                        </div>
-                        <div class="savings-item">
-                            <span class="savings-number">25%</span>
-                            <span class="savings-label">Home Value Increase</span>
-                        </div>
-                    </div>
-                    
-                    <ul class="homeowner-benefits">
-                        <li>Manchester's 3.8 peak sun hours daily provide excellent solar performance</li>
-                        <li>Take advantage of 0% VAT until 2027 - saving hundreds more</li>
-                        <li>Support Manchester's 2038 carbon neutral target</li>
-                        <li>Join 2,800+ Manchester residents already saving money</li>
-                        <li>Perfect for Manchester's Victorian terraces and modern developments</li>
-                    </ul>
+        <!-- SECTION 6: FAQ - AI-Optimized YAML Integration -->
+        <section class="faq-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="section-divider-accent"></div>
                 </div>
                 
-                <!-- Business Benefits - YAML Enhanced -->
-                <div class="enhanced-business-card">
-                    <div class="business-header">
-                        <div class="business-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
-                            </svg>
-                        </div>
-                        <div class="business-title">
-                            <h3>Manchester Businesses</h3>
-                            <p class="business-subtitle">Commercial Solar Solutions</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" data-faq="1" aria-expanded="false" aria-controls="faq-1">
+                            Do solar panels work well in Manchester's climate?
+                        </button>
+                        <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-question-1">
+                            <p><strong>Solar panels work excellently in Manchester</strong> despite cloudy weather. Solar panels work efficiently in Manchester, generating electricity from daylight rather than direct sunshine. Manchester receives 3.8 peak sun hours daily on average, which is sufficient for excellent solar performance. Even on cloudy days, modern panels continue producing clean energy. Key performance data: <strong>3.8 peak sun hours daily</strong>, <strong>2,800+ local installations</strong>, <strong>£1,890 average annual savings</strong>.</p>
                         </div>
                     </div>
                     
-                    <p class="homeowner-description">Reduce operational costs whilst demonstrating environmental leadership. Our commercial solutions deliver immediate impact on your bottom line.</p>
-                    
-                    <div class="roi-highlights">
-                        <div class="roi-item">
-                            <span class="roi-number">70%</span>
-                            <span class="roi-label">Cost Reduction</span>
-                        </div>
-                        <div class="roi-item">
-                            <span class="roi-number">15–25%</span>
-                            <span class="roi-label">Annual ROI</span>
+                    <div class="faq-item">
+                        <button class="faq-question" data-faq="2" aria-expanded="false" aria-controls="faq-2">
+                            How much do solar panels cost in Manchester?
+                        </button>
+                        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-question-2">
+                            <p><strong>Manchester solar installations cost £4,000-£8,000</strong> for typical homes. Solar panel costs in Manchester typically range from £4,000-£8,000 for residential installations. The exact price depends on your roof size, energy usage, and chosen system. With 0% VAT until 2027 and average savings of £1,890 per year, most Manchester homeowners see payback in 6-8 years. Key performance data: <strong>3.8 peak sun hours daily</strong>, <strong>2,800+ local installations</strong>, <strong>£1,890 average annual savings</strong>.</p>
                         </div>
                     </div>
                     
-                    <ul class="homeowner-benefits">
-                        <li>Enhanced Capital Allowances (130% tax relief)</li>
-                        <li>Predictable energy costs for 25+ years</li>
-                        <li>Battery storage and EV charger integration</li>
-                        <li>Support Manchester's 2038 carbon neutral target</li>
-                        <li>Complete maintenance and monitoring support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: TRUST - YAML Installer Integration -->
-    <section class="installer-section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Carefully Vetted Manchester Installer Network</h2>
-                <p class="section-intro">Unlike lead farms with dozens of random installers, we partner with a small network of 2-3 premium Manchester specialists</p>
-            </div>
-            
-            <div class="installer-selection-card">
-                <div class="selection-intro">
-                    <h3 class="selection-title">Choice Without Chaos - Quality Without Spam</h3>
-                    <p class="selection-description">Most quote services work with anyone willing to pay fees. We maintain a small, exclusive network of Manchester's finest solar specialists.</p>
-                </div>
-
-                <!-- Featured Installers - YAML Driven -->
-                <div class="featured-installers">
-                    <h4>Meet Our Vetted Manchester Solar Specialists</h4>
-                    <div class="grid grid-3">
-                        <div class="installer-card card">
-                            <div class="installer-header">
-                                <h5>Solar Manchester Ltd</h5>
-                                <div class="installer-rating">
-                                    <span class="rating-stars">⭐⭐⭐⭐⭐</span>
-                                    <span class="rating-score">4.9/5 (127 reviews)</span>
-                                </div>
-                            </div>
-                            <div class="installer-stats">
-                                <div class="stat-item">
-                                    <span class="stat-number">340+</span>
-                                    <span class="stat-label">Installations</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">8 years</span>
-                                    <span class="stat-label">Manchester Experience</span>
-                                </div>
-                            </div>
-                            <div class="installer-specialties">
-                                <h6>Specialties:</h6>
-                                <ul>
-                                    <li>Residential</li>
-                                    <li>Victorian terraces</li>
-                                </ul>
-                            </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-faq="3" aria-expanded="false" aria-controls="faq-3">
+                            Do I need planning permission for solar panels in Manchester?
+                        </button>
+                        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-question-3">
+                            <p><strong>Most Manchester properties don't need planning permission</strong> for solar installations. Most residential solar installations in Manchester don't require planning permission under Permitted Development Rights. However, listed buildings, conservation areas, or certain property types may need approval. Our MCS installers will check requirements and handle any necessary applications. Key performance data: <strong>3.8 peak sun hours daily</strong>, <strong>2,800+ local installations</strong>, <strong>£1,890 average annual savings</strong>.</p>
                         </div>
-
-                        <div class="installer-card card">
-                            <div class="installer-header">
-                                <h5>Green Solutions NW</h5>
-                                <div class="installer-rating">
-                                    <span class="rating-stars">⭐⭐⭐⭐⭐</span>
-                                    <span class="rating-score">4.8/5 (89 reviews)</span>
-                                </div>
-                            </div>
-                            <div class="installer-stats">
-                                <div class="stat-item">
-                                    <span class="stat-number">280+</span>
-                                    <span class="stat-label">Installations</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">6 years</span>
-                                    <span class="stat-label">Manchester Experience</span>
-                                </div>
-                            </div>
-                            <div class="installer-specialties">
-                                <h6>Specialties:</h6>
-                                <ul>
-                                    <li>Commercial</li>
-                                    <li>Battery storage</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="installer-card card">
-                            <div class="installer-header">
-                                <h5>EcoSolar Manchester</h5>
-                                <div class="installer-rating">
-                                    <span class="rating-stars">⭐⭐⭐⭐⭐</span>
-                                    <span class="rating-score">4.7/5 (156 reviews)</span>
-                                </div>
-                            </div>
-                            <div class="installer-stats">
-                                <div class="stat-item">
-                                    <span class="stat-number">420+</span>
-                                    <span class="stat-label">Installations</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">10 years</span>
-                                    <span class="stat-label">Manchester Experience</span>
-                                </div>
-                            </div>
-                            <div class="installer-specialties">
-                                <h6>Specialties:</h6>
-                                <ul>
-                                    <li>Large residential</li>
-                                    <li>EV charging</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="installers-disclaimer">
-                        <p>All installers are MCS-certified, RECC members, and maintain comprehensive insurance. Customer reviews independently verified through Trustpilot and Google Reviews.</p>
-                    </div>
-                </div>
-
-                <div class="selection-benefits">
-                    <h4>Why a Small Vetted Network is Better for You</h4>
-                    <div class="grid grid-2">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🎯</div>
-                            <div class="benefit-content">
-                                <h5>Real Choice, Not Chaos</h5>
-                                <p>2-3 carefully selected options vs dozens of random installers competing aggressively for your business.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🏠</div>
-                            <div class="benefit-content">
-                                <h5>Local Manchester Specialists</h5>
-                                <p>Each installer knows Manchester inside out - weather, planning, property types, and local challenges.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">👥</div>
-                            <div class="benefit-content">
-                                <h5>Community Accountability</h5>
-                                <p>Local reputation to protect - they can't hide behind big brand names or disappear after installation.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">⚖️</div>
-                            <div class="benefit-content">
-                                <h5>Competitive Fairness</h5>
-                                <p>Healthy competition ensures fair pricing without the aggressive bidding wars of lead farms.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="selection-requirements">
-                    <h4>Simple, Transparent Process</h4>
-                    <div class="grid grid-3">
-                        <div class="step-card">
-                            <div class="step-number">01</div>
-                            <h3>Tell us about your property</h3>
-                            <p>Quick online form covering your Manchester postcode, property type, and energy usage. Takes 2 minutes to complete.</p>
-                        </div>
-                        
-                        <div class="step-card">
-                            <div class="step-number">02</div>
-                            <h3>Receive your tailored proposal</h3>
-                            <p>Our local installer visits your property, surveys your roof, and provides a detailed quote with savings projections.</p>
-                        </div>
-                        
-                        <div class="step-card">
-                            <div class="step-number">03</div>
-                            <h3>Install & aftercare</h3>
-                            <p>Professional installation typically completed in 1-2 days, with ongoing monitoring and maintenance support.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="selection-promise">
-                    <div class="promise-content">
-                        <h4>Our Network Standards</h4>
-                        <p>Every installer in our Manchester network meets rigorous standards that go beyond basic certification requirements.</p>
-                        
-                        <div class="promise-points">
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>MCS certified with 5+ years Manchester experience</span>
-                            </div>
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>RECC membership and comprehensive insurance</span>
-                            </div>
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>Comprehensive insurance (£2M public liability)</span>
-                            </div>
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>Heritage property planning expertise</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="selection-cta">
-                    <p class="cta-text">Ready to work with Manchester's finest solar specialists?</p>
-                    <a href="#quote-form" class="btn btn-large btn-outline-white">Start Your Solar Journey</a>
-                    <p class="cta-disclaimer">MCS standards • No spam • Fair pricing</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: FAQ - AI-Optimized YAML Integration -->
-    <section class="faq-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <div class="section-divider-accent"></div>
-            </div>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question" data-faq="1">
-                        Do solar panels work well in Manchester's climate?
-                    </button>
-                    <div class="faq-answer" id="faq-1">
-                        <p><strong>Solar panels work excellently in Manchester</strong> despite cloudy weather. Solar panels work efficiently in Manchester, generating electricity from daylight rather than direct sunshine. Manchester receives 3.8 peak sun hours daily on average, which is sufficient for excellent solar performance. Even on cloudy days, modern panels continue producing clean energy. Key performance data: <strong>3.8 peak sun hours daily</strong>, <strong>2,800+ local installations</strong>, <strong>£1,890 average annual savings</strong>.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" data-faq="2">
-                        How much do solar panels cost in Manchester?
-                    </button>
-                    <div class="faq-answer" id="faq-2">
-                        <p><strong>Manchester solar installations cost £4,000-£8,000</strong> for typical homes. Solar panel costs in Manchester typically range from £4,000-£8,000 for residential installations. The exact price depends on your roof size, energy usage, and chosen system. With 0% VAT until 2027 and average savings of £1,890 per year, most Manchester homeowners see payback in 6-8 years. Key performance data: <strong>3.8 peak sun hours daily</strong>, <strong>2,800+ local installations</strong>, <strong>£1,890 average annual savings</strong>.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" data-faq="3">
-                        Do I need planning permission for solar panels in Manchester?
-                    </button>
-                    <div class="faq-answer" id="faq-3">
-                        <p><strong>Most Manchester properties don't need planning permission</strong> for solar installations. Most residential solar installations in Manchester don't require planning permission under Permitted Development Rights. However, listed buildings, conservation areas, or certain property types may need approval. Our MCS installers will check requirements and handle any necessary applications. Key performance data: <strong>3.8 peak sun hours daily</strong>, <strong>2,800+ local installations</strong>, <strong>£1,890 average annual savings</strong>.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION 7: FORM - YAML Enhanced -->
-    <section class="form-section section" id="quote-form">
-        <div class="container">
-            <div class="form-wrapper">
-                <h2>Get Your Free Manchester Solar Assessment</h2>
-                <p class="form-intro">Start your journey to energy independence with a professional consultation from our Manchester property specialists.</p>
-                
-                <form class="solar-quote-form" netlify name="manchester-solar-quotes" action="/submit-quote" method="post">
-                    <input type="hidden" name="city" value="Manchester">
-                    <input type="hidden" name="source" value="manchester.solar">
+        <!-- SECTION 7: FORM - YAML Enhanced -->
+        <section class="form-section section" id="quote-form">
+            <div class="container">
+                <div class="form-wrapper">
+                    <h2>Get Your Free Manchester Solar Assessment</h2>
+                    <p class="form-intro">Start your journey to energy independence with a professional consultation from our Manchester property specialists.</p>
                     
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="first-name">First Name *</label>
-                            <input type="text" id="first-name" name="firstName" required>
+                    <form class="solar-quote-form" netlify name="manchester-solar-quotes" action="/submit-quote" method="post">
+                        <input type="hidden" name="city" value="Manchester">
+                        <input type="hidden" name="source" value="manchester.solar">
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="firstName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="lastName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="postcode">Manchester Postcode *</label>
+                                <input type="text" id="postcode" name="postcode" placeholder="e.g. M1 5GD" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type" name="propertyType">
+                                    <option value="">Select property type</option>
+                                    <option value="detached">Detached</option>
+                                    <option value="semi_detached">Semi Detached</option>
+                                    <option value="terraced">Terraced</option>
+                                    <option value="bungalow">Bungalow</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthly-bill">Monthly Electricity Bill</label>
+                                <select id="monthly-bill" name="monthlyBill">
+                                    <option value="">Select bill range</option>
+                                    <option value="under-50">Under £50</option>
+                                    <option value="50-100">£50 – £100</option>
+                                    <option value="100-150">£100 – £150</option>
+                                    <option value="150-200">£150 – £200</option>
+                                    <option value="over-200">Over £200</option>
+                                </select>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="last-name">Last Name *</label>
-                            <input type="text" id="last-name" name="lastName" required>
+                        <div class="form-consent-wrapper">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" required>
+                                <span>I agree to be contacted about solar installation. We guarantee only one professional contact - no spam or reselling data. <a href="/privacy" class="link-accent">Privacy Policy</a></span>
+                            </label>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="form-submit-wrapper">
+                            <button type="submit" class="btn btn-large" aria-label="Submit your Manchester solar assessment request - single professional contact only">Get Free Manchester Quotes</button>
+                            
+                            <!-- Mobile reassurance placement -->
+                            <p class="form-mobile-reassurance">No spam, no obligation - single professional contact only</p>
+                            
+                            <p class="form-disclaimer">
+                                ✓ MCS certified installer contact only<br>
+                                ✓ All Manchester property specialists<br>
+                                ✓ No obligation consultation
+                            </p>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="postcode">Manchester Postcode *</label>
-                            <input type="text" id="postcode" name="postcode" placeholder="e.g. M1 5GD" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="property-type">Property Type</label>
-                            <select id="property-type" name="propertyType">
-                                <option value="">Select property type</option>
-                                <option value="detached">Detached</option>
-                                <option value="semi_detached">Semi Detached</option>
-                                <option value="terraced">Terraced</option>
-                                <option value="bungalow">Bungalow</option>
-                                <option value="flat">Flat</option>
-                                <option value="commercial">Commercial</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="monthly-bill">Monthly Electricity Bill</label>
-                            <select id="monthly-bill" name="monthlyBill">
-                                <option value="">Select bill range</option>
-                                <option value="under-50">Under £50</option>
-                                <option value="50-100">£50 – £100</option>
-                                <option value="100-150">£100 – £150</option>
-                                <option value="150-200">£150 – £200</option>
-                                <option value="over-200">Over £200</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-consent-wrapper">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="consent" required>
-                            <span>I agree to be contacted about solar installation. We guarantee only one professional contact - no spam or reselling data. <a href="/privacy" class="link-accent">Privacy Policy</a></span>
-                        </label>
-                    </div>
-                    
-                    <div class="form-submit-wrapper">
-                        <button type="submit" class="btn btn-large">Get Free Manchester Quotes</button>
-                        
-                        <p class="form-disclaimer">
-                            ✓ MCS certified installer contact only<br>
-                            ✓ All Manchester property specialists<br>
-                            ✓ No obligation consultation
-                        </p>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- SECTION 8: FOOTER - YAML Enhanced -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <!-- Newsletter Signup -->
             <div class="newsletter-section">
@@ -685,8 +732,9 @@
                 </div>
                 <form class="newsletter-form" netlify name="manchester-newsletter" action="/newsletter-signup" method="post">
                     <div class="newsletter-input-group">
-                        <input type="email" name="email" placeholder="Enter your email address" required class="newsletter-input">
-                        <button type="submit" class="newsletter-btn">Stay Updated</button>
+                        <label for="newsletter-email" class="sr-only">Email address for newsletter</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required class="newsletter-input">
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe to Manchester solar newsletter">Stay Updated</button>
                     </div>
                     <p class="newsletter-disclaimer">✓ Monthly updates only • Unsubscribe anytime • We never sell your data</p>
                 </form>
@@ -781,11 +829,15 @@
                     const audience = this.dataset.audience;
                     
                     // Remove active class from all buttons and content
-                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    toggleButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
                     audienceContents.forEach(content => content.classList.remove('active'));
                     
                     // Add active class to clicked button and corresponding content
                     this.classList.add('active');
+                    this.setAttribute('aria-pressed', 'true');
                     document.getElementById(audience + '-content').classList.add('active');
                 });
             });
@@ -800,17 +852,21 @@
                     const isOpen = answer.classList.contains('show');
                     
                     // Close all FAQ answers
-                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                    document.querySelectorAll('.faq-answer').forEach((ans, index) => {
                         ans.classList.remove('show');
+                        document.querySelectorAll('.faq-question')[index].setAttribute('aria-expanded', 'false');
                     });
                     
                     // Open clicked FAQ if it wasn't already open
                     if (!isOpen) {
                         answer.classList.add('show');
+                        this.setAttribute('aria-expanded', 'true');
                     }
                 });
             });
         });
     </script>
+
+    <script src="js/header-loader.js"></script>
 </body>
 </html>

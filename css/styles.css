@@ -114,7 +114,17 @@ body {
 }
 
 .section {
-  padding: var(--space-16) 0;
+  padding: var(--section-padding-y) 0;
+  background: var(--neutral-0);
+}
+
+.section-compact {
+  padding: var(--section-padding-compact) 0;
+  background: var(--neutral-0);
+}
+
+.section-large {
+  padding: var(--section-padding-large) 0;
   background: var(--neutral-0);
 }
 

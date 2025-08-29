@@ -6185,3 +6185,417 @@ body {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
+
+/* ============================================ */
+/* MISSING CSS CLASSES - ADD TO STYLES.CSS */
+/* Solar Domain Empire - Gold Standard v3.1 */
+/* ============================================ */
+
+/* Enhanced Homeowner Card - Referenced in HTML but missing from CSS */
+.enhanced-homeowner-card {
+  background: linear-gradient(135deg, var(--neutral-0) 0%, #fefffe 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.enhanced-homeowner-card:hover {
+  box-shadow: 0 12px 40px rgba(34, 197, 94, 0.15);
+  transform: translateY(-2px);
+}
+
+.enhanced-homeowner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--solar-green) 0%, var(--solar-yellow) 100%);
+}
+
+.homeowner-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.homeowner-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px -4px rgba(34, 197, 94, 0.3);
+}
+
+.homeowner-icon svg {
+  color: var(--neutral-0);
+}
+
+.homeowner-title {
+  flex: 1;
+}
+
+.enhanced-homeowner-card h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-2);
+  color: var(--neutral-900);
+  letter-spacing: -0.025em;
+}
+
+.homeowner-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--solar-green);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.homeowner-description {
+  color: var(--neutral-700);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.savings-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background: rgba(34, 197, 94, 0.04);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(34, 197, 94, 0.1);
+}
+
+.savings-item {
+  text-align: center;
+}
+
+.savings-number {
+  font-size: var(--font-size-2xl);
+  font-weight: 900;
+  color: var(--solar-green);
+  margin-bottom: var(--space-2);
+  line-height: 1;
+  display: block;
+}
+
+.savings-label {
+  font-size: var(--font-size-xs);
+  color: var(--neutral-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.homeowner-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.homeowner-benefits li {
+  padding: var(--space-3) 0;
+  color: var(--neutral-700);
+  position: relative;
+  padding-left: var(--space-8);
+  border-bottom: 1px solid var(--neutral-100);
+  font-weight: 500;
+}
+
+.homeowner-benefits li:last-child {
+  border-bottom: none;
+}
+
+.homeowner-benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+  border-radius: 50%;
+}
+
+.homeowner-benefits li::after {
+  content: '✓';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+}
+
+/* Enhanced Business Card - Referenced in HTML but missing from CSS */
+.enhanced-business-card {
+  background: linear-gradient(135deg, var(--neutral-0) 0%, #fafbfc 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.enhanced-business-card:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.enhanced-business-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--trust-blue) 0%, var(--solar-green) 100%);
+}
+
+.business-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.business-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--trust-blue) 0%, #1e40af 100%);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px -4px rgba(59, 130, 246, 0.3);
+}
+
+.business-icon svg {
+  color: var(--neutral-0);
+}
+
+.business-title {
+  flex: 1;
+}
+
+.enhanced-business-card h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-2);
+  color: var(--neutral-900);
+  letter-spacing: -0.025em;
+}
+
+.business-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--trust-blue);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.roi-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background: rgba(59, 130, 246, 0.04);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.roi-item {
+  text-align: center;
+}
+
+.roi-number {
+  font-size: var(--font-size-2xl);
+  font-weight: 900;
+  color: var(--trust-blue);
+  margin-bottom: var(--space-2);
+  line-height: 1;
+  display: block;
+}
+
+.roi-label {
+  font-size: var(--font-size-xs);
+  color: var(--neutral-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Featured Installers Section - Referenced in HTML but missing from CSS */
+.featured-installers {
+  margin: var(--space-8) 0;
+}
+
+.featured-installers h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--neutral-0);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.installers-disclaimer {
+  margin-top: var(--space-6);
+  text-align: center;
+}
+
+.installers-disclaimer p {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Installer Card - Referenced in HTML but missing from CSS */
+.installer-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.installer-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+  transform: translateY(-2px);
+}
+
+.installer-header {
+  margin-bottom: var(--space-4);
+}
+
+.installer-header h5 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--neutral-0);
+  margin-bottom: var(--space-2);
+}
+
+.installer-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.rating-stars {
+  color: var(--solar-yellow);
+  font-size: var(--font-size-sm);
+}
+
+.rating-score {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.installer-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item .stat-number {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--solar-green);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.stat-item .stat-label {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.installer-specialties {
+  margin-top: var(--space-4);
+}
+
+.installer-specialties h6 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--neutral-0);
+  margin-bottom: var(--space-2);
+}
+
+.installer-specialties ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.installer-specialties li {
+  padding: var(--space-1) 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-sm);
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.installer-specialties li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--solar-green);
+  font-weight: 700;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .savings-highlights,
+  .roi-highlights {
+    grid-template-columns: 1fr;
+  }
+  
+  .homeowner-header,
+  .business-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .enhanced-business-card,
+  .enhanced-homeowner-card {
+    padding: var(--space-6);
+  }
+  
+  .installer-stats {
+    grid-template-columns: 1fr;
+  }
+}

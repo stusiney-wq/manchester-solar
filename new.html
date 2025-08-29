@@ -78,10 +78,10 @@
                     </div>
                     
                     <!-- AI-Optimized Main Headline -->
-                    <h1 class="hero-title">Solar Panels Manchester - Save £1,890+ Annually</h1>
+                    <h1 class="hero-title">Solar Panels {{city.display_name}} - Save £{{economics.savings.homeowner_annual}}+ Annually</h1>
                     
                     <!-- AI/SGE Optimized Subtext -->
-                    <p class="hero-subtitle">Professional installation you can trust. Manchester homeowners save <strong>£1,890+ annually</strong> with <strong>3.8 peak sun hours daily</strong>. <strong>62% of properties suitable</strong> - perfect for Victorian terraces and Manchester's climate.</p>
+                    <p class="hero-subtitle">Professional installation you can trust. {{city.display_name}} homeowners save <strong>£{{economics.savings.homeowner_annual}}+ annually</strong> with <strong>{{solar.peak_sun_hours}} peak sun hours daily</strong>. <strong>{{demographics.homeowners}}% of properties suitable</strong> - perfect for Victorian terraces and {{city.display_name}}'s climate.</p>
                     
                     <!-- Call to Action Buttons -->
                     <div class="hero-actions">
@@ -97,15 +97,35 @@
             </div>
         </section>
 
-        <!-- STATS SECTION - Ready for content -->
+        <!-- STATS SECTION - YAML Data Driven + AI/SEO Optimized -->
         <section id="stats" class="section">
             <div class="container">
-                <!-- Stats content will go here -->
-                <div style="text-align: center; padding: 2rem 0;">
-                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Stats Section Ready</h2>
-                    <p style="margin-bottom: 2rem; color: var(--neutral-600);">This is where your Manchester stats will go</p>
-                    <div style="background: var(--neutral-100); padding: 1rem; border-radius: 8px;">
-                        <p><strong>Ready for:</strong> 4-column grid with peak sun hours, savings, installations, carbon neutral</p>
+                <div class="section-header section-header-center">
+                    <h2>{{city.display_name}} Solar Statistics</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-intro">Real data from <strong>{{market.total_installations}}+ local installations</strong> and weather patterns across {{city.region}}. **{{solar.peak_sun_hours}} peak sun hours daily** makes solar highly effective in our climate.</p>
+                </div>
+                
+                <div class="grid-4">
+                    <div class="card text-center">
+                        <div class="stat-number">{{solar.peak_sun_hours}}</div>
+                        <div class="stat-label">Peak Sun Hours Daily</div>
+                        <div class="stat-description">Optimal solar generation even on cloudy {{city.display_name}} days</div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="stat-number">£{{economics.savings.homeowner_annual}}</div>
+                        <div class="stat-label">Average Annual Savings</div>
+                        <div class="stat-description">Based on typical {{city.display_name}} household energy usage</div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="stat-number">{{market.total_installations}}+</div>
+                        <div class="stat-label">Local Installations</div>
+                        <div class="stat-description">Successful solar systems across {{city.region}}</div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="stat-number">{{council.carbon_neutral_target}}</div>
+                        <div class="stat-label">Carbon Neutral Target</div>
+                        <div class="stat-description">Help {{city.display_name}} reach net-zero carbon emissions</div>
                     </div>
                 </div>
             </div>

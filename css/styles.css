@@ -12,6 +12,29 @@
   --solar-green: #22c55e;
   --trust-blue: #3b82f6;
   --solar-yellow: #eab308;
+  /* NEW CONSISTENCY TOKENS */
+/* Section Spacing Tokens */
+--section-padding-y: var(--space-16);
+--section-padding-compact: var(--space-12);
+--section-padding-large: var(--space-20);
+
+/* Button Color Tokens */
+--btn-primary-bg: var(--solar-green);
+--btn-primary-hover: #16a34a;
+--btn-primary-focus: var(--solar-yellow);
+
+--btn-secondary-bg: var(--trust-blue);
+--btn-secondary-hover: #1e40af;
+
+--btn-outline-border: rgba(255, 255, 255, 0.5);
+--btn-outline-hover-bg: rgba(255, 255, 255, 0.1);
+--btn-outline-hover-border: var(--neutral-0);
+
+/* Shadow Tokens for Buttons */
+--btn-shadow-green: 0 4px 14px rgba(34, 197, 94, 0.25);
+--btn-shadow-green-hover: 0 8px 25px rgba(34, 197, 94, 0.35);
+--btn-shadow-blue: 0 4px 14px rgba(59, 130, 246, 0.25);
+--btn-shadow-blue-hover: 0 8px 25px rgba(59, 130, 246, 0.35);
   
   /* Neutral System */
   --neutral-900: #111827;

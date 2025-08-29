@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About {{city.display_name}}.solar - Your Trusted Local Solar Specialists | MCS Certified Partners</title>
-    <meta name="description" content="Learn about {{city.display_name}}.solar's mission to connect homeowners with vetted MCS certified solar installers. **No spam guarantee**, **{{market.mcs_installers}}+ local experts**, quality over volume in {{city.region}}.">
+    <title>About Manchester.solar - Your Trusted Local Solar Specialists | MCS Certified Partners</title>
+    <meta name="description" content="Learn about Manchester.solar's mission to connect homeowners with vetted MCS certified solar installers. No spam guarantee, local expertise, quality over volume.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     
@@ -13,44 +13,44 @@
     <meta name="googlebot" content="index, follow">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="About {{city.display_name}}.solar - Your Trusted Local Solar Specialists">
-    <meta property="og:description" content="Learn about {{city.display_name}}.solar's mission to connect homeowners with vetted MCS certified solar installers. No spam guarantee, local expertise, quality over volume.">
+    <meta property="og:title" content="About Manchester.solar - Your Trusted Local Solar Specialists">
+    <meta property="og:description" content="Learn about Manchester.solar's mission to connect homeowners with vetted MCS certified solar installers. No spam guarantee, local expertise, quality over volume.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://{{city.domain}}/about">
-    <meta property="og:image" content="https://{{city.domain}}/images/{{city.slug}}-solar-about-og.jpg">
+    <meta property="og:url" content="https://manchester.solar/about">
+    <meta property="og:image" content="https://manchester.solar/images/manchester-solar-about-og.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About {{city.display_name}}.solar - Your Trusted Local Solar Specialists">
-    <meta name="twitter:description" content="Learn about {{city.display_name}}.solar's mission to connect homeowners with vetted MCS certified solar installers. No spam guarantee, local expertise, quality over volume.">
-    <meta name="twitter:image" content="https://{{city.domain}}/images/{{city.slug}}-solar-about-og.jpg">
+    <meta name="twitter:title" content="About Manchester.solar - Your Trusted Local Solar Specialists">
+    <meta name="twitter:description" content="Learn about Manchester.solar's mission to connect homeowners with vetted MCS certified solar installers. No spam guarantee, local expertise, quality over volume.">
+    <meta name="twitter:image" content="https://manchester.solar/images/manchester-solar-about-og.jpg">
     
     <!-- Geo Meta -->
-    <meta name="geo.region" content="{{city.geo.region_code}}">
-    <meta name="geo.placename" content="{{city.display_name}}">
-    <meta name="geo.position" content="{{city.coordinates.latitude}};{{city.coordinates.longitude}}">
-    <meta name="ICBM" content="{{city.coordinates.latitude}}, {{city.coordinates.longitude}}">
+    <meta name="geo.region" content="GB-MAN">
+    <meta name="geo.placename" content="Manchester">
+    <meta name="geo.position" content="53.4808;-2.2426">
+    <meta name="ICBM" content="53.4808, -2.2426">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://{{city.domain}}/about">
+    <link rel="canonical" href="https://manchester.solar/about">
     
     <!-- Hreflang -->
-    <link rel="alternate" hreflang="en-gb" href="https://{{city.domain}}/about">
+    <link rel="alternate" hreflang="en-gb" href="https://manchester.solar/about">
     
-    <!-- v3.1 ENHANCED SCHEMA: WebSite + WebPage + Organization + LocalBusiness -->
+    <!-- ENHANCED SCHEMA: WebSite + WebPage + Organization + Service + FAQ -->
     
     <!-- 1. WebSite Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "@id": "https://{{city.domain}}/#website",
-      "name": "{{city.display_name}}.solar",
-      "url": "https://{{city.domain}}/",
+      "@id": "https://manchester.solar/#website",
+      "name": "Manchester.solar",
+      "url": "https://manchester.solar/",
       "inLanguage": "en-GB",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://{{city.domain}}/search?q={search_term_string}",
+        "target": "https://manchester.solar/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -61,25 +61,21 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://{{city.domain}}/about#webpage",
-      "url": "https://{{city.domain}}/about",
-      "name": "About {{city.display_name}}.solar - Your Trusted Local Solar Specialists",
-      "description": "Learn about {{city.display_name}}.solar's mission to connect homeowners with vetted MCS certified solar installers. **No spam guarantee**, **{{market.mcs_installers}}+ local experts**, quality over volume in {{city.region}}.",
-      "isPartOf": { "@id": "https://{{city.domain}}/#website" },
+      "@id": "https://manchester.solar/about#webpage",
+      "url": "https://manchester.solar/about",
+      "name": "About Manchester.solar - Your Trusted Local Solar Specialists",
+      "description": "Learn about Manchester.solar's mission to connect homeowners with vetted MCS certified solar installers. No spam guarantee, local expertise, quality over volume.",
+      "isPartOf": { "@id": "https://manchester.solar/#website" },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://{{city.domain}}/images/{{city.slug}}-solar-about-og.jpg",
+        "url": "https://manchester.solar/images/manchester-solar-about-og.jpg",
         "width": 1200,
         "height": 630
       },
       "about": {
         "@type": "Place",
-        "name": "{{city.display_name}}",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": {{city.coordinates.latitude}},
-          "longitude": {{city.coordinates.longitude}}
-        }
+        "name": "Manchester",
+        "geo": {"@type": "GeoCoordinates","latitude":53.4808,"longitude":-2.2426}
       },
       "inLanguage": "en-GB"
     }
@@ -90,521 +86,714 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "{{city.display_name}} Solar",
-      "url": "https://{{city.domain}}/",
+      "@id": "https://manchester.solar/#organization",
+      "name": "Manchester.solar",
+      "alternateName": "Manchester Solar Panel Connection Service",
+      "url": "https://manchester.solar/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://{{city.domain}}/images/{{city.slug}}-solar-logo.png"
+        "url": "https://manchester.solar/images/logo.png",
+        "width": 600,
+        "height": 200
       },
-      "description": "{{city.display_name}}'s trusted solar panel connection service. We connect homeowners with **{{market.mcs_installers}}+ MCS certified installers** in {{city.region}}. **{{market.total_installations}}+ installations completed** with our no-spam guarantee.",
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "{{city.display_name}}",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "{{city.region}}"
-          }
+      "image": [
+        "https://manchester.solar/images/logo.png",
+        "https://manchester.solar/images/manchester-installations.jpg",
+        "https://manchester.solar/images/manchester-team.jpg"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/manchestersolar",
+        "https://www.linkedin.com/company/manchestersolar",
+        "https://twitter.com/manchestersolar"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "GB",
+        "availableLanguage": ["en-GB"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
         }
-      ],
+      }],
       "knowsAbout": [
-        "Solar panel installation",
-        "MCS certification",
-        "{{city.display_name}} solar regulations",
-        "Residential solar systems",
-        "Commercial solar solutions"
+        "solar panels", "battery storage", "SEG", "Smart Export Guarantee",
+        "inverter replacement", "EV charger integration", "solar financing",
+        "residential solar Manchester", "commercial solar Manchester", 
+        "planning permission", "conservation areas", "MCS certification", 
+        "RECC standards", "NICEIC electrical work"
       ],
-      "foundingDate": "{{company.founding_year}}",
-      "slogan": "Quality installers, no spam guarantee"
+      "founder": {
+        "@type": "Person",
+        "name": "Stuart Siney"
+      },
+      "foundingDate": "2025",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Greater Manchester",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.4808,
+          "longitude": -2.2426
+        }
+      }
     }
     </script>
     
-    <!-- 4. LocalBusiness Schema -->
+    <!-- 4. Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "{{city.display_name}} Solar",
-      "url": "https://{{city.domain}}/",
-      "description": "{{city.display_name}}'s most trusted solar connection service. **Save £{{economics.savings.homeowner_annual}}+ annually** with our vetted MCS installers. **{{market.mcs_installers}}+ local experts**, **0% VAT** until {{vat.zero_rate_end_year}}.",
+      "@type": "Service",
+      "@id": "https://manchester.solar/#service",
+      "name": "Solar Panel Installation Connection Service Manchester",
+      "description": "We connect Manchester homeowners and businesses with vetted, MCS-certified solar installers. Serving all property types with local expertise and no-pressure approach.",
+      "provider": { "@id": "https://manchester.solar/#organization" },
+      "serviceType": "Solar energy installation connection",
       "areaServed": {
-        "@type": "City",
-        "name": "{{city.display_name}}",
-        "containedInPlace": {
-          "@type": "AdministrativeArea", 
-          "name": "{{city.region}}"
-        }
+        "@type": "AdministrativeArea",
+        "name": "Greater Manchester"
       },
-      "serviceType": [
-        "Solar panel installation connection",
-        "MCS certified installer vetting",
-        "Solar quote comparison"
-      ],
-      "priceRange": "£{{economics.costs.residential_per_kw}}-{{economics.costs.commercial_per_kw}} per kW"
+      "category": "Renewable energy",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Solar Installation Connection Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Residential Solar Installation",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Residential Solar Installation",
+              "description": "Solar panel installation for all property types including terraces, semis, detached homes, and flats. Average savings £1,890 annually with 6.8 year payback period."
+            },
+            "price": "0",
+            "priceCurrency": "GBP",
+            "description": "Free, no-obligation assessment request"
+          },
+          {
+            "@type": "Offer",
+            "name": "Heritage Property Solar Installation",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Heritage Property Solar Installation", 
+              "description": "Specialist solar panel designs for Victorian and Edwardian properties with planning permission expertise and aesthetic integration."
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Commercial Solar Installation",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Solar Installation",
+              "description": "Rooftop solar PV systems for Manchester businesses with 15-25% ROI and 70% operational cost reduction."
+            }
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "ContactAction",
+        "name": "Request a free solar assessment",
+        "target": "https://manchester.solar/#quote-form"
+      }
+    }
+    </script>
+    
+    <!-- 5. FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://manchester.solar/about#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Manchester.solar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manchester.solar is a premium solar specialist network connecting homeowners with 2-3 carefully vetted MCS certified installers. We guarantee single professional contact only - no spam or pressure tactics. Unlike lead farms, we maintain an exclusive network focused on quality over volume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Manchester.solar different from other solar companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike lead farms selling your details to 5-10 installers, we maintain an exclusive network of 2-3 premium Manchester specialists. Every partner is MCS certified, locally based, and committed to no-pressure sales. You get real choice without chaos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What qualifications do Manchester.solar installers have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All Manchester.solar installers are MCS certified, RECC members, hold NICEIC or NAPIT electrical certification, have comprehensive insurance, and proven experience with all Manchester property types. 95% planning permission success rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you guarantee no spam calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. We guarantee single professional contact only from our exclusive network. We never sell your details to multiple installers or lead farms. Your data stays private and secure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should I trust Manchester.solar over other solar services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're building Manchester's most trusted solar network through quality over volume. Every installer proves local expertise, maintains 4.8+ star ratings, and commits to no-pressure sales. We prioritize long-term relationships over short-term profit."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- 6. BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://manchester.solar/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://manchester.solar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://manchester.solar/about"
+        }
+      ]
     }
     </script>
 </head>
 <body>
-    <!-- Utility Navigation -->
-    <nav class="utility-nav">
-        <div class="container">
-            <ul class="utility-nav-list">
-                <li><a href="/residential" class="utility-nav-link">Homeowners</a></li>
-                <li><a href="/commercial" class="utility-nav-link">Businesses</a></li>
-                <li><a href="/installers" class="utility-nav-link">Find Installers</a></li>
-                <li><a href="/contact" class="utility-nav-highlight">Get Quote</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Header Container - Injected by header-loader.js -->
+    <div id="header-container"></div>
 
-    <!-- Site Header -->
-    <header class="site-header">
-        <div class="container">
-            <a href="/" class="logo">{{city.display_name}}.solar</a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="/about" class="nav-link current">About</a></li>
-                    <li><a href="/solar-for-{{city.slug}}" class="nav-link">Solar for {{city.display_name}}</a></li>
-                    <li><a href="/residential" class="nav-link">Residential</a></li>
-                    <li><a href="/commercial" class="nav-link">Commercial</a></li>
-                    <li><a href="/contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="mobile-icon">☰</div>
-            </nav>
-        </div>
-    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="hero-badge">Founded on Trust</span>
+                        <span class="hero-badge">Quality Over Volume</span>
+                        <span class="hero-badge">Manchester Focused</span>
+                    </div>
+                    
+                    <h1 class="hero-title">About Manchester.solar</h1>
+                    <p class="hero-subtext"><strong>Manchester.solar</strong> is a premium solar specialist network connecting homeowners with <strong>2-3 carefully vetted MCS certified installers</strong>. Unlike lead farms selling your details to dozens of companies, we guarantee <strong>single professional contact only</strong> - no spam, no pressure tactics, just local expertise for all Manchester property types.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="/#quote-form" class="btn btn-large" data-smart-quote="true">Connect with Our Network</a>
+                        <p class="trust-message">✓ <strong>MCS certified partners</strong> • <strong>No spam guarantee</strong> • <strong>Local Manchester expertise</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Hero Section - Tesla Premium Impact (80%) + Local Warmth (20%) -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="hero-badge">{{market.mcs_installers}}+ MCS Installers</span>
-                    <span class="hero-badge">{{market.total_installations}}+ Installations</span>
-                    <span class="hero-badge">No Spam Guarantee</span>
+        <!-- What is Manchester.solar Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What is Manchester.solar?</h2>
+                    <div class="section-divider-accent"></div>
+                    <p class="section-intro"><strong>Manchester.solar</strong> is Manchester's trusted solar specialist network, built to solve the industry's lead farming problem through <strong>quality over volume</strong> and <strong>trust over tactics</strong>.</p>
                 </div>
                 
-                <h1 class="hero-title">Why {{city.display_name}} Trusts Us with Solar</h1>
-                
-                <!-- v3.1: AI/SGE Optimized Summary -->
-                <div class="ai-summary">
-                    <p>{{city.display_name}}.solar connects homeowners with **{{market.mcs_installers}}+ vetted MCS certified installers** across {{city.region}}. Our quality-first approach has facilitated **{{market.total_installations}}+ installations** while maintaining our strict no-spam policy, helping families save **£{{economics.savings.homeowner_annual}}+ annually** on energy costs.</p>
-                </div>
-                
-                <p class="hero-subtext">Quality installers, local expertise, zero spam - that's our promise to {{city.display_name}}.</p>
-                
-                <div class="hero-cta">
-                    <a href="/contact" class="btn btn-large btn-tesla">Connect with Local Installers</a>
-                    <p class="trust-message">Trusted by {{demographics.homeowners}}% of {{city.display_name}} homeowners</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section - Stripe Clarity (70%) + Tesla Appeal (30%) -->
-    <section class="stats-section section">
-        <div class="container">
-            <div class="grid grid-4">
-                <div class="stat-card card-stripe">
-                    <span class="stat-number">{{market.mcs_installers}}+</span>
-                    <p class="stat-label">Verified MCS Installers in {{city.region}}</p>
-                </div>
-                <div class="stat-card card-stripe">
-                    <span class="stat-number">{{market.total_installations}}+</span>
-                    <p class="stat-label">Solar Installations Completed</p>
-                </div>
-                <div class="stat-card card-stripe">
-                    <span class="stat-number">£{{economics.savings.homeowner_annual}}+</span>
-                    <p class="stat-label">Average Annual Savings</p>
-                </div>
-                <div class="stat-card card-stripe">
-                    <span class="stat-number">0%</span>
-                    <p class="stat-label">Spam Reports Since {{company.founding_year}}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem/Solution Story - Enhanced Cards -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="voice-heading">What Problem Does {{city.display_name}}.solar Solve?</h2>
-                <div class="section-divider-accent"></div>
-                <p class="section-intro">We noticed {{city.display_name}} homeowners facing the same frustrating solar journey</p>
-            </div>
-
-            <div class="grid grid-2">
-                <!-- Enhanced Problem Card -->
-                <div class="enhanced-problem-card">
-                    <div class="problem-header">
-                        <div class="problem-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
+                <div class="grid grid-2">
+                    <!-- Enhanced Problem Card -->
+                    <div class="enhanced-problem-card">
+                        <div class="problem-header">
+                            <div class="problem-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
+                                    <path d="M19 15L20.09 17.26L23 18L20.09 18.74L19 21L17.91 18.74L15 18L17.91 17.26L19 15Z"/>
+                                    <path d="M5 15L6.09 17.26L9 18L6.09 18.74L5 21L3.91 18.74L1 18L3.91 17.26L5 15Z"/>
+                                </svg>
+                            </div>
+                            <div class="problem-title">
+                                <h3>The Problem: Lead Farming Chaos</h3>
+                                <p class="problem-subtitle">Industry-Wide Exploitation</p>
+                            </div>
                         </div>
-                        <div class="problem-title">
-                            <h3>The {{city.display_name}} Solar Problem</h3>
-                            <p class="problem-subtitle">Before {{city.display_name}}.solar</p>
-                        </div>
-                    </div>
-                    
-                    <p class="problem-description">{{city.display_name}} homeowners struggled with aggressive sales tactics, unvetted installers, and endless spam calls after requesting solar quotes.</p>
-                    
-                    <div class="problem-highlights">
-                        <div class="problem-item">
-                            <span class="problem-number">47%</span>
-                            <p class="problem-label">Received Spam Calls</p>
-                        </div>
-                        <div class="problem-item">
-                            <span class="problem-number">23%</span>
-                            <p class="problem-label">Used Uncertified Installers</p>
-                        </div>
-                    </div>
-
-                    <ul class="problem-issues">
-                        <li>Aggressive cold-calling from lead generation companies</li>
-                        <li>Unvetted installers without proper MCS certification</li>
-                        <li>Confusing quotes with hidden costs and unclear pricing</li>
-                        <li>No local accountability or ongoing support</li>
-                    </ul>
-                </div>
-
-                <!-- Enhanced Solution Card -->
-                <div class="enhanced-solution-card">
-                    <div class="solution-header">
-                        <div class="solution-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <div class="solution-title">
-                            <h3>The {{city.display_name}}.solar Solution</h3>
-                            <p class="solution-subtitle">Quality First Approach</p>
-                        </div>
-                    </div>
-                    
-                    <p class="solution-description">We created {{city.display_name}}'s first quality-focused solar connection service - vetted installers, no spam guarantee, local accountability.</p>
-                    
-                    <div class="solution-highlights">
-                        <div class="solution-item">
-                            <span class="solution-number">{{market.mcs_installers}}+</span>
-                            <p class="solution-label">Vetted MCS Installers</p>
-                        </div>
-                        <div class="solution-item">
-                            <span class="solution-number">0%</span>
-                            <p class="solution-label">Spam Complaints</p>
-                        </div>
-                    </div>
-
-                    <ul class="solution-benefits">
-                        <li>Strict no-spam policy - installers contact you once only</li>
-                        <li>Every installer pre-vetted with MCS certification checks</li>
-                        <li>Transparent pricing with no hidden fees or surprises</li>
-                        <li>Local {{city.display_name}} accountability and ongoing support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section - Dark with Stripe Transparency (60%) + Tesla Premium (40%) -->
-    <section class="installer-section-dark section">
-        <div class="container">
-            <div class="section-header">
-                <h2>How We Maintain {{city.display_name}}'s Trust</h2>
-                <div class="section-divider-accent"></div>
-                <p class="section-intro">Our commitment to quality over quantity has earned us {{city.display_name}}'s trust</p>
-            </div>
-
-            <div class="installer-selection-card">
-                <div class="selection-intro">
-                    <h3 class="selection-title">Our {{city.display_name}} Quality Standards</h3>
-                    <p class="selection-description">We maintain the highest standards in {{city.region}} because your home deserves the best.</p>
-                </div>
-
-                <div class="grid grid-3">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🏆</div>
-                        <div class="benefit-content">
-                            <h5>MCS Certification Required</h5>
-                            <p>Every installer must hold current MCS certification with verified track record in {{city.region}}.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🛡️</div>
-                        <div class="benefit-content">
-                            <h5>Insurance & Guarantees Verified</h5>
-                            <p>All installers carry minimum £2M public liability insurance with 10+ year workmanship guarantees.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📞</div>
-                        <div class="benefit-content">
-                            <h5>No-Spam Enforcement</h5>
-                            <p>Installers sign our no-spam agreement - they contact you once, professionally, or face removal.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="selection-promise">
-                    <h4>Our Promise to {{city.display_name}}</h4>
-                    <div class="promise-content">
-                        <p>We've built our reputation on quality, not quantity. Every installer in our {{city.display_name}} network meets our strict standards.</p>
                         
-                        <div class="promise-points">
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>MCS certified with {{city.display_name}} installations</span>
+                        <p class="problem-description"><strong>Traditional solar lead services</strong> sell your details to <strong>5-10 installers</strong>, creating aggressive sales calls and bidding wars. Homeowners get overwhelmed with pressure tactics while quality installers struggle to build genuine relationships.</p>
+                        
+                        <p class="problem-description"><strong>Manchester deserves better.</strong> Our city's unique housing stock - from <strong>modern builds</strong> to <strong>Victorian terraces</strong> - requires specialists who understand local challenges, not generic salespeople reading from scripts.</p>
+                        
+                        <div class="problem-highlights">
+                            <div class="problem-item">
+                                <span class="problem-number">5-10</span>
+                                <span class="problem-label">Installers Competing</span>
                             </div>
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>Full insurance and warranty coverage</span>
-                            </div>
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>Respectful, no-pressure communication</span>
-                            </div>
-                            <div class="promise-point">
-                                <span class="promise-icon">✓</span>
-                                <span>Local {{city.display_name}} accountability</span>
+                            <div class="problem-item">
+                                <span class="problem-number">100%</span>
+                                <span class="problem-label">Pressure Tactics</span>
                             </div>
                         </div>
+                        
+                        <ul class="problem-issues">
+                            <li><strong>5-10 installers</strong> competing aggressively</li>
+                            <li><strong>Pressure sales tactics</strong> and spam calls</li>
+                            <li><strong>Generic solutions</strong> ignoring Manchester specifics</li>
+                            <li><strong>Data sold repeatedly</strong> to highest bidders</li>
+                            <li><strong>No local expertise</strong> requirements</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="selection-cta">
-                    <p class="cta-text">Ready to experience the {{city.display_name}}.solar difference?</p>
-                    <a href="/contact" class="btn btn-outline-white">Connect with Quality Installers</a>
-                    <p class="cta-disclaimer">Your details are never shared with lead generation companies</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section - Apple Accessibility (50%) + Airbnb Warmth (30%) + Stripe Clarity (20%) -->
-    <section class="faq-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="voice-heading">Common Questions About {{city.display_name}}.solar</h2>
-                <div class="section-divider-accent"></div>
-                <p class="section-intro">Everything you need to know about our service</p>
-            </div>
-
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How is {{city.display_name}}.solar different from other solar companies?
-                    </button>
-                    <div class="faq-answer">
-                        <p>We're not installers - we're a connection service focused on quality. Unlike lead generation companies that sell your details to anyone, we vet every installer in our {{city.display_name}} network. **{{market.mcs_installers}}+ MCS certified installers** meet our standards, and our **no-spam guarantee** means respectful, professional contact only.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What does your no-spam guarantee actually mean?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Simple: **one professional contact per installer, maximum 3 installers total**. No cold calls, no aggressive follow-ups, no sharing your details with lead companies. Installers who break this rule are immediately removed from our {{city.display_name}} network. We've had **zero spam complaints** since launching.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do you vet installers in {{city.display_name}}?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Every installer must: hold **current MCS certification**, carry **£2M+ public liability insurance**, provide **10+ year workmanship guarantees**, show proven {{city.region}} installation history, and sign our professional conduct agreement. Only **{{market.mcs_installers}} out of 200+ applicants** met our standards.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Is there any cost to use {{city.display_name}}.solar?
-                    </button>
-                    <div class="faq-answer">
-                        <p>**Completely free for homeowners and businesses**. We're paid a referral fee by installers only after successful installations, so our interests align with yours. There are no hidden costs, membership fees, or charges for our connection service.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What happens after I submit my details?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Within **24 hours**, up to **3 carefully matched installers** will contact you professionally to arrange surveys. Each installer knows they're competing on quality, not quantity. You receive transparent quotes, choose your preferred installer, and we follow up to ensure everything goes smoothly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section - Tesla Premium -->
-    <section class="background-image-cta">
-        <div class="container">
-            <div class="background-cta-content">
-                <span class="background-cta-badge">{{city.display_name}}'s Trusted Choice</span>
-                <h2 class="background-cta-title">Ready to Experience the Difference?</h2>
-                <p class="background-cta-subtitle">Join {{market.total_installations}}+ satisfied {{city.display_name}} homeowners who chose quality over quantity</p>
-                
-                <div class="background-cta-promises">
-                    <div class="promise-item">
-                        <div class="promise-icon">🏆</div>
-                        <p class="promise-text">{{market.mcs_installers}}+ MCS Certified</p>
-                    </div>
-                    <div class="promise-item">
-                        <div class="promise-icon">🛡️</div>
-                        <p class="promise-text">No Spam Guarantee</p>
-                    </div>
-                    <div class="promise-item">
-                        <div class="promise-icon">💝</div>
-                        <p class="promise-text">Completely Free</p>
-                    </div>
-                </div>
-                
-                <div class="background-cta-buttons">
-                    <a href="/contact" class="btn btn-large">Get {{city.display_name}} Solar Quotes</a>
-                    <a href="/residential" class="btn btn-outline-white">Learn About Solar</a>
-                </div>
-                
-                <p class="background-cta-trust">Trusted by {{demographics.homeowners}}% of {{city.display_name}} homeowners • Zero spam complaints</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>{{city.display_name}} Solar Network</h3>
-                    <div class="footer-network">
-                        <p>Part of the <a href="/">Solar Domain Empire</a> - connecting quality installers with homeowners across the UK.</p>
-                    </div>
-                    <p class="footer-description">{{city.display_name}}'s trusted solar connection service since {{company.founding_year}}. Quality installers, no spam guarantee.</p>
-                    <div class="footer-contact">
-                        <p>Email: <a href="mailto:hello@{{city.domain}}">hello@{{city.domain}}</a></p>
-                        <p>Service Area: {{city.region}}</p>
-                    </div>
-                    <div class="footer-verify">
-                        <p><a href="/verify-installer">Verify an Installer</a></p>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h4>For Homeowners</h4>
-                    <ul>
-                        <li><a href="/residential">Residential Solar</a></li>
-                        <li><a href="/solar-for-{{city.slug}}">Solar for {{city.display_name}}</a></li>
-                        <li><a href="/government-funding">Government Funding</a></li>
-                        <li><a href="/contact">Get Free Quotes</a></li>
-                    </ul>
-
-                    <h4>For Businesses</h4>
-                    <ul>
-                        <li><a href="/commercial">Commercial Solar</a></li>
-                        <li><a href="/mees-compliance">MEES Compliance</a></li>
-                        <li><a href="/contact">Business Quotes</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>{{city.display_name}} Areas</h4>
-                    <ul>
-                        {{#each city.areas}}
-                        <li><a href="/{{../city.slug}}/{{slug}}">{{name}}</a></li>
-                        {{/each}}
-                    </ul>
-
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/installers">Our Installers</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/blog">Solar Blog</a></li>
-                    </ul>
-
-                    <div class="footer-intelligence">
-                        <h4>Market Intelligence</h4>
-                        <ul>
-                            <li>{{market.mcs_installers}} MCS installers in {{city.region}}</li>
-                            <li>{{market.total_installations}}+ installations completed</li>
-                            <li>£{{economics.savings.homeowner_annual}} average annual savings</li>
+                    
+                    <!-- Enhanced Solution Card -->
+                    <div class="enhanced-solution-card">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L3.09 8.26L12 14L20.91 8.26L12 2Z"/>
+                                    <path d="M12 16L4.16 10.22L3.09 11.74L12 18L20.91 11.74L19.84 10.22L12 16Z"/>
+                                </svg>
+                            </div>
+                            <div class="solution-title">
+                                <h3>Our Solution: Premium Network Approach</h3>
+                                <p class="solution-subtitle">Quality Over Volume</p>
+                            </div>
+                        </div>
+                        
+                        <p class="solution-description"><strong>Manchester.solar</strong> maintains an exclusive network of <strong>2-3 premium Manchester specialists</strong>. Each is <strong>MCS certified</strong>, locally based, and committed to <strong>education over pressure sales</strong>.</p>
+                        
+                        <p class="solution-description"><strong>One contact. One conversation. Quality results.</strong> No spam, no bidding wars, no pressure - just professional service from installers who know <strong>Manchester's weather</strong>, <strong>planning requirements</strong>, and <strong>all property types</strong> inside out.</p>
+                        
+                        <div class="solution-highlights">
+                            <div class="solution-item">
+                                <span class="solution-number">2-3</span>
+                                <span class="solution-label">Vetted Specialists</span>
+                            </div>
+                            <div class="solution-item">
+                                <span class="solution-number">0%</span>
+                                <span class="solution-label">Pressure Sales</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="solution-benefits">
+                            <li><strong>Single professional contact</strong> only</li>
+                            <li><strong>MCS certified specialists</strong> exclusively</li>
+                            <li><strong>Local Manchester expertise</strong> guaranteed</li>
+                            <li><strong>Data privacy protected</strong> - never resold</li>
+                            <li><strong>All property type experience</strong> verified</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- Why We Started Section -->
+        <section class="section" style="background: var(--neutral-50);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Did We Start Manchester.solar?</h2>
+                    <div class="section-divider-accent"></div>
+                    <p class="section-intro"><strong>Manchester's solar market was broken</strong> - homeowners faced aggressive tactics while quality local installers were drowned out by national lead farms selling contact details to the highest bidder.</p>
+                </div>
+                
+                <div class="story-content" style="max-width: 800px; margin: 0 auto;">
+                    <div class="card">
+                        <p style="font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--space-6);">We witnessed <strong>property owners across Manchester</strong> being quoted by installers who'd never worked with their specific property type. <strong>Modern build owners</strong> receiving cookie-cutter solutions that ignored <strong>Manchester's 3.8 peak sun hours</strong> daily average. Business owners pressured into contracts without understanding local planning requirements.</p>
+                        
+                        <p style="font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--space-6);"><strong>Lead farming companies</strong> were selling homeowner details to <strong>5-10 installers simultaneously</strong>, creating bidding wars where quality suffered and customers got overwhelmed with aggressive sales calls.</p>
+                        
+                        <p style="font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--space-6);"><strong>Manchester needed a better way.</strong></p>
+                        
+                        <p style="font-size: var(--font-size-lg); line-height: 1.7;">So we built <strong>Manchester.solar</strong> - a platform that prioritizes <strong>relationships over volume</strong>, <strong>expertise over aggression</strong>, and <strong>local knowledge over generic sales pitches</strong>. Every installer in our network has proven expertise with <strong>all Manchester property types</strong> and a commitment to the <strong>no-pressure approach</strong> our city deserves.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Are We Different Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How is Manchester.solar Different?</h2>
+                    <div class="section-divider-accent"></div>
+                    <p class="section-intro"><strong>Three core differences</strong> separate us from traditional lead farms: <strong>exclusive network</strong>, <strong>no spam guarantee</strong>, and <strong>Manchester-specific expertise</strong>.</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4); text-align: center;">🎯</div>
+                        <h3>Exclusive Network of 2-3 Specialists</h3>
+                        <p><strong>Unlike lead farms</strong> with dozens of random installers competing aggressively, we work with <strong>2-3 carefully vetted Manchester specialists</strong> who focus on <strong>quality over volume</strong>.</p>
+                        <ul style="list-style: none; padding-left: 0; margin-top: var(--space-4);">
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>MCS certified</strong> specialists only
+                            </li>
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>Local Manchester presence</strong> required
+                            </li>
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>No-pressure commitment</strong> verified
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4); text-align: center;">🛡️</div>
+                        <h3>Guaranteed No Spam Policy</h3>
+                        <p><strong>Your details go to one qualified installer only.</strong> No reselling, no bidding wars, no aggressive follow-ups from multiple companies. <strong>Single professional contact guaranteed.</strong></p>
+                        <ul style="list-style: none; padding-left: 0; margin-top: var(--space-4);">
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>Single contact only</strong> - never resold
+                            </li>
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>No data reselling</strong> to other companies
+                            </li>
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>Education-first approach</strong> required
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4); text-align: center;">🏠</div>
+                        <h3>Manchester Property Expertise</h3>
+                        <p><strong>Every installer knows Manchester's unique challenges</strong> - from <strong>planning permission navigation</strong> to <strong>3.8 peak sun hours</strong> performance to <strong>all property type requirements</strong>.</p>
+                        <ul style="list-style: none; padding-left: 0; margin-top: var(--space-4);">
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>All property types</strong> including heritage
+                            </li>
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>Planning permission expertise</strong> local councils
+                            </li>
+                            <li style="padding: var(--space-2) 0; position: relative; padding-left: var(--space-6);">
+                                <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                <strong>Modern & heritage specialization</strong> proven
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manchester Solar Performance Section -->
+        <section class="section" style="background: var(--neutral-50);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Manchester Solar Performance Data</h2>
+                    <div class="section-divider-accent"></div>
+                    <p class="section-intro"><strong>Real Manchester solar data</strong> proves excellent performance despite cloudy weather myths. <strong>3.8 peak sun hours daily</strong> delivers <strong>£1,890 average annual savings</strong> with <strong>6.8 year payback periods</strong>.</p>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="stat-card">
+                        <span class="stat-number">3.8</span>
+                        <span class="stat-label">Peak Sun Hours Daily<br>(Manchester Average)</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">£1,890</span>
+                        <span class="stat-label">Average Annual Savings<br>(All Property Types)</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">2,800+</span>
+                        <span class="stat-label">Solar Installations<br>(Greater Manchester)</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">6.8</span>
+                        <span class="stat-label">Years Average Payback<br>(All Property Types)</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: var(--space-8); text-align: center;">
+                    <div class="card" style="max-width: 600px; margin: 0 auto;">
+                        <h3>Why Manchester Solar Works Well</h3>
+                        <p><strong>Manchester receives 3.8 peak sun hours daily</strong> - sufficient for excellent solar performance across all property types. <strong>Cloudy weather myths</strong> ignore that solar panels generate electricity from daylight, not just direct sunshine. <strong>Modern panels</strong> work efficiently even on overcast days common in Manchester.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Standards Section -->
+        <section class="installer-section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Qualifications Do Our Installers Have?</h2>
+                    <p class="section-intro"><strong>Every Manchester.solar installer</strong> meets rigorous certification requirements and Manchester-specific expertise standards before joining our exclusive network.</p>
+                </div>
+                
+                <div class="installer-selection-card">
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 style="color: var(--neutral-0); margin-bottom: var(--space-6);">Mandatory Industry Certifications</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>MCS (Microgeneration Certification Scheme)</strong> certified
+                                </li>
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>RECC (Renewable Energy Consumer Code)</strong> membership
+                                </li>
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>NICEIC or NAPIT</strong> electrical certification
+                                </li>
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>Comprehensive insurance coverage</strong> verified
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--neutral-0); margin-bottom: var(--space-6);">Manchester-Specific Requirements</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>Local Manchester presence</strong> (not national contractors)
+                                </li>
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>Proven experience</strong> with all Manchester property types
+                                </li>
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>Modern & heritage specialization</strong> with planning expertise
+                                </li>
+                                <li style="padding: var(--space-3) 0; color: rgba(255, 255, 255, 0.9); position: relative; padding-left: var(--space-6);">
+                                    <span style="position: absolute; left: 0; color: var(--solar-green); font-weight: 700;">✓</span>
+                                    <strong>No-pressure sales approach</strong> commitment verified
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--space-8); padding-top: var(--space-8); border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                        <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--space-6);"><strong>Want to verify our standards?</strong> Check the official industry registries:</p>
+                        <div style="display: flex; justify-content: center; gap: var(--space-6); flex-wrap: wrap;">
+                            <a href="https://mcscertified.com/find-a-contractor/" target="_blank" class="btn btn-outline-white">Verify MCS Standards</a>
+                            <a href="https://www.recc.org.uk/find-a-member" target="_blank" class="btn btn-outline-white">Check RECC Members</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Promise Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Commitment to Manchester Homeowners</h2>
+                    <div class="section-divider-accent"></div>
+                    <p class="section-intro"><strong>Manchester.solar</strong> exists to serve homeowners, not exploit them. <strong>Quality over growth</strong>, <strong>trust over tactics</strong>, <strong>relationships over revenue</strong> - these principles guide every decision we make.</p>
+                </div>
+                
+                <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h3 style="margin-bottom: var(--space-6);">We're Building Something Better for Manchester</h3>
+                    <p style="font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--space-6);"><strong>Manchester.solar</strong> isn't just another solar website. We're building the city's <strong>most trusted solar specialist network</strong> - one relationship at a time, prioritizing <strong>long-term trust over short-term profit</strong>.</p>
+                    
+                    <p style="font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--space-8);">Every homeowner who chooses our network over lead farms validates our belief that <strong>Manchester deserves better</strong> than pressure tactics and spam calls. Every installer who commits to our quality standards proves that <strong>sustainable business can be built on trust</strong>, not volume.</p>
+                    
+                    <div style="background: rgba(34, 197, 94, 0.1); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid rgba(34, 197, 94, 0.2);">
+                        <h4 style="color: var(--solar-green); margin-bottom: var(--space-4);">Our Promise to Manchester</h4>
+                        <p style="margin: 0; font-weight: 500;">We'll <strong>never sacrifice quality for growth</strong>. We'll <strong>never sell your data</strong> to the highest bidder. We'll <strong>never pressure you</strong> into decisions. We're here to <strong>serve Manchester homeowners</strong>, not exploit them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-gradient">
+            <div class="container">
+                <div class="cta-content">
+                    <span class="cta-badge">Ready to Experience the Difference?</span>
+                    <h2 class="cta-title">Connect with Manchester's Trusted Solar Specialists</h2>
+                    <p class="cta-subtitle">Join hundreds of Manchester homeowners who've chosen <strong>quality over chaos</strong>, <strong>expertise over pressure</strong>, and <strong>trust over tactics</strong>. Experience the <strong>Manchester.solar difference</strong> today.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="/#quote-form" class="btn btn-large" data-smart-quote="true">Get Your Free Assessment</a>
+                        <a href="/case-studies" class="btn btn-outline-white">See Success Stories</a>
+                    </div>
+                    
+                    <p class="cta-trust">✓ <strong>Single professional contact</strong> • ✓ <strong>MCS certified specialists</strong> • ✓ <strong>No pressure guarantee</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Smart Quote Modal -->
+    <div id="quote-modal" class="quote-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="ManchesterQuoteRouter.closePropertyChooser()">&times;</button>
+            
+            <div class="modal-header">
+                <h3>Quick Question - What type of property?</h3>
+                <p>Choose the option that best describes your solar project</p>
+            </div>
+
+            <div class="property-cards">
+                <a href="/residential#quote-form" class="property-card" data-type="residential" onclick="ManchesterQuoteRouter.selectPropertyType('residential', event)">
+                    <div class="card-icon">🏠</div>
+                    <h4>My Home</h4>
+                    <p>Residential solar for homeowners, energy independence, and home value boost</p>
+                    <span class="card-cta">Get Home Quote →</span>
+                </a>
+                
+                <a href="/commercial#quote-form" class="property-card" data-type="commercial" onclick="ManchesterQuoteRouter.selectPropertyType('commercial', event)">
+                    <div class="card-icon">🏢</div>
+                    <h4>My Business</h4>
+                    <p>Commercial solar, MEES compliance, ESG goals, and business savings</p>
+                    <span class="card-cta">Get Business Quote →</span>
+                </a>
+            </div>
+
+            <p class="help-text">
+                Not sure which applies? <a href="#" onclick="ManchesterQuoteRouter.showUnifiedForm()">Answer a few questions to help us guide you</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- No-JS Fallback -->
+    <noscript>
+        <div class="no-js-quote-links">
+            <h3>Get Your Solar Quote</h3>
+            <p>Choose the option that best describes your property:</p>
+            <a href="/residential#quote-form" class="btn btn-residential">Residential Solar Quote</a>
+            <a href="/commercial#quote-form" class="btn btn-commercial">Commercial Solar Quote</a>
+        </div>
+    </noscript>
+
+    <!-- UPDATED MASTER FOOTER TEMPLATE -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Newsletter Signup -->
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <h3>Stay Updated with Manchester Solar News</h3>
+                    <p>Monthly updates on grants, policies, and local solar insights for all Manchester property types. No spam, just valuable information to help you make informed decisions.</p>
+                </div>
+                <form class="newsletter-form" action="/newsletter-signup" method="post">
+                    <div class="newsletter-input-group">
+                        <input type="email" name="email" placeholder="Enter your email address" required class="newsletter-input">
+                        <button type="submit" class="newsletter-btn">Stay Updated</button>
+                    </div>
+                    <p class="newsletter-disclaimer">✓ Monthly updates only • Unsubscribe anytime • We never sell your data</p>
+                </form>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Manchester.solar</h3>
+                    <p>Connecting Greater Manchester homeowners and businesses with <strong>MCS certified solar specialists</strong> who understand all property types - from modern builds to heritage properties.</p>
+                    <p><strong>No spam guarantee:</strong> Single professional contact from our exclusive network of 2-3 specialists only</p>
+                    <div style="margin-top: var(--space-4);">
+                        <a href="mailto:quotes@manchester.solar" style="color: rgba(255, 255, 255, 0.8);">quotes@manchester.solar</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/residential-solar">Residential Solar (All Property Types)</a></li>
+                        <li><a href="/commercial/">Commercial Solar</a></li>
+                        <li><a href="/planning-permission">Planning Permission Guide</a></li>
+                        <li><a href="/manchester-weather">Weather Performance</a></li>
+                        <li><a href="/battery-storage">Battery Storage</a></li>
+                        <li><a href="/ev-charger-installation">EV Chargers</a></li>
+                        <li><a href="/heritage-properties">Heritage Property Specialists</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><strong>All Manchester Postcodes (M1–M99)</strong></li>
+                        <li>Didsbury, Chorlton & South Manchester</li>
+                        <li>Sale, Altrincham & Trafford</li>
+                        <li>Stockport, Wilmslow & East</li>
+                        <li>Bolton, Bury & North Manchester</li>
+                        <li>Oldham, Rochdale & Tameside</li>
+                        <li>Wigan, Leigh & West Manchester</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quality Standards</h4>
+                    <p>All partners verified:</p>
+                    <ul>
+                        <li><strong>MCS certified</strong> (Microgeneration Certification)</li>
+                        <li><strong>RECC membership</strong> (Consumer Protection)</li>
+                        <li><strong>NICEIC/NAPIT</strong> electrical certification</li>
+                        <li><strong>All property type experience</strong></li>
+                        <li><strong>Local Manchester presence</strong></li>
+                        <li><strong>No-pressure sales approach</strong></li>
+                    </ul>
+                    <div style="margin-top: var(--space-4);">
+                        <a href="https://mcscertified.com/" target="_blank" style="color: rgba(255, 255, 255, 0.8);">Verify MCS Standards →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <div class="footer-links">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Service</a>
-                    <a href="/cookies">Cookie Policy</a>
-                    <a href="/sitemap">Sitemap</a>
+                <p>&copy; 2025 <strong>Manchester.solar</strong>. Part of the Solar Domain Empire. All rights reserved.</p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-top: var(--space-2);">
+                    <a href="/privacy" style="color: rgba(255, 255, 255, 0.6);">Privacy Policy</a>
+                    <a href="/terms" style="color: rgba(255, 255, 255, 0.6);">Terms of Service</a>
+                    <a href="/installer-requirements" style="color: rgba(255, 255, 255, 0.6);">Installer Standards</a>
+                    <a href="/sitemap" style="color: rgba(255, 255, 255, 0.6);">Sitemap</a>
                 </div>
-                <div class="footer-credit">
-                    <p>&copy; {{current_year}} {{city.display_name}}.solar • Part of <a href="/">Solar Domain Empire</a></p>
-                </div>
-                <div class="footer-version">
-                    <p>v3.1 • Last updated: {{last_updated}}</p>
+                <div style="margin-top: var(--space-2); font-size: var(--font-size-sm); text-align: center;">
+                    <p>Website designed by <a href="https://www.digitwebdesign.co.uk" target="_blank" style="color: rgba(255, 255, 255, 0.6);">Digit Web Design</a></p>
+                    <p class="version-stamp">Last updated: August 19, 2025 | Gold Standard v3.1 Compliant</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- v3.1: Performance Optimization Script -->
+    <!-- Header Loader Script -->
+    <script src="js/header-loader.js"></script>
+    
+    <!-- Smart Quote Router Script -->
+    <script src="js/smart-quote-router.js"></script>
+
+    <!-- Page-specific JavaScript -->
     <script>
-        // Lazy load animations
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('loaded');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.lazy-load').forEach(el => observer.observe(el));
-
-        // FAQ Toggle Functionality
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const isOpen = answer.classList.contains('show');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Newsletter form functionality
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[name="email"]').value;
                 
-                // Close all other FAQ items
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
-                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
-                
-                // Toggle current item
-                if (!isOpen) {
-                    answer.classList.add('show');
-                    button.closest('.faq-item').classList.add('active');
-                    button.setAttribute('aria-expanded', 'true');
-                } else {
-                    button.setAttribute('aria-expanded', 'false');
+                // Basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
                 }
+                
+                console.log('Newsletter signup:', email);
+                alert('Thank you for subscribing! We\'ll send you monthly Manchester solar updates.');
+                this.reset();
             });
-        });
-
-        // v3.1: Conversion tracking
-        const trackConversion = (action) => {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', action, {
-                    event_category: 'engagement',
-                    event_label: '{{city.display_name}}_about'
-                });
-            }
-        };
-
-        // Track CTA clicks
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', () => trackConversion('cta_click'));
-        });
+        }
+    });
     </script>
 </body>
 </html>

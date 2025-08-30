@@ -8037,3 +8037,130 @@ body {
         font-size: var(--font-size-sm);
     }
 }
+
+/* ============================================ */
+/* INSTALLER QUALIFICATIONS SECTION */
+/* Add to bottom of styles.css */
+/* ============================================ */
+
+.qualification-column {
+    margin-bottom: var(--space-6);
+}
+
+.qualification-title {
+    color: var(--neutral-0);
+    margin-bottom: var(--space-6);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.qualification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.qualification-list li {
+    padding: var(--space-3) 0;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    padding-left: var(--space-6);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+}
+
+.qualification-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--solar-green);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+}
+
+.verification-section {
+    margin-top: var(--space-8);
+    padding-top: var(--space-8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.verification-text {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-6);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+.verification-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+}
+
+/* Green Glow Effect for Verification Buttons */
+.verification-buttons .btn-outline-white {
+    border-color: var(--solar-green);
+    color: var(--solar-green);
+    background: rgba(34, 197, 94, 0.1);
+    box-shadow: 
+        0 0 10px rgba(34, 197, 94, 0.3),
+        0 0 20px rgba(34, 197, 94, 0.2),
+        0 0 30px rgba(34, 197, 94, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.verification-buttons .btn-outline-white:hover {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: var(--solar-green);
+    color: var(--neutral-0);
+    box-shadow: 
+        0 0 15px rgba(34, 197, 94, 0.5),
+        0 0 30px rgba(34, 197, 94, 0.4),
+        0 0 45px rgba(34, 197, 94, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .qualification-column {
+        margin-bottom: var(--space-8);
+    }
+    
+    .qualification-title {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-4);
+        text-align: center;
+    }
+    
+    .qualification-list li {
+        font-size: var(--font-size-sm);
+        padding: var(--space-2) 0;
+        padding-left: var(--space-5);
+    }
+    
+    .verification-section {
+        margin-top: var(--space-6);
+        padding-top: var(--space-6);
+    }
+    
+    .verification-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-3);
+    }
+    
+    .verification-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qualification-list li {
+        padding-left: var(--space-4);
+    }
+}

@@ -7788,3 +7788,39 @@ body {
         border-width: 2px;
     }
 }
+
+
+/* ============================================ */
+/* WHO WE HELP SECTION - CARD BUTTON WRAPPERS */
+/* Add to bottom of styles.css */
+/* ============================================ */
+
+.card-cta-wrapper {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--neutral-200);
+    text-align: center;
+}
+
+/* Ensure cards have consistent height with buttons */
+.enhanced-homeowner-card,
+.enhanced-business-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 520px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .enhanced-homeowner-card,
+    .enhanced-business-card {
+        min-height: auto;
+        margin-bottom: var(--space-6);
+    }
+    
+    .card-cta-wrapper {
+        margin-top: var(--space-4);
+        padding-top: var(--space-3);
+    }
+}

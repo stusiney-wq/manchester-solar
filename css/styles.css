@@ -6519,37 +6519,28 @@ body {
     box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
+
 /* ============================================ */
 /* PROPERTY CARDS - 2-COLUMN FUNDING STYLE LAYOUT */
-/* Matches the ECO4 & Interest-Free Loans design */
+/* Unified styles for all property card variations */
 /* ============================================ */
 
-.property-cards {
+/* Property Cards Container */
+.property-cards,
+.property-type-selection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-6);
-    margin: var(--space-6) 0;
-    max-width: 1000px; /* Wide like the funding cards */
+    gap: var(--space-8);
+    margin: var(--space-6) 0 var(--space-12);
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Stack on mobile */
-@media (max-width: 768px) {
-    .property-cards {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-        max-width: none;
-    }
-}
-
-/* ============================================ */
-/* MODAL PROPERTY CARDS STYLES */
-/* For the modal popup cards */
-/* ============================================ */
-
-/* Individual Property Card Styling - Funding Card Style */
-.property-card {
+/* Property Card Base Styles */
+.property-card,
+.property-selection-card,
+.assessment-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6562,15 +6553,17 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
-    min-height: 320px; /* Taller like funding cards */
+    min-height: 320px;
     justify-content: space-between;
     box-shadow: var(--shadow-md);
     position: relative;
     overflow: hidden;
 }
 
-/* Gradient top border like funding cards */
-.property-card::before {
+/* Gradient Top Border */
+.property-card::before,
+.property-selection-card::before,
+.assessment-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -6580,207 +6573,54 @@ body {
     background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
 }
 
-.property-card:hover {
+/* Business/Commercial Cards - Blue Gradient */
+.property-card[data-type="commercial"]::before,
+.property-selection-card[href*="commercial"]::before,
+.assessment-card[data-type="commercial"]::before {
+    background: linear-gradient(90deg, var(--trust-blue), var(--solar-green));
+}
+
+/* Card Hover States */
+.property-card:hover,
+.property-selection-card:hover,
+.assessment-card:hover {
     border-color: var(--solar-green);
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
     background: rgba(34, 197, 94, 0.02);
 }
 
-.property-card:focus {
+.property-card:focus,
+.property-selection-card:focus,
+.assessment-card:focus {
     outline: 3px solid var(--solar-green);
     outline-offset: 2px;
 }
 
-/* Card Icon - Larger like funding cards */
-.card-icon {
-    font-size: 4rem; /* Much larger icons */
-    margin-bottom: var(--space-6);
-    filter: grayscale(0.1);
-    transition: all 0.3s ease;
-}
-
-.property-card:hover .card-icon {
-    filter: grayscale(0);
-    transform: scale(1.05);
-}
-
-/* Card Title - Funding Card Style */
-.property-card h4 {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--neutral-900);
-    margin: 0 0 var(--space-6) 0;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-}
-
-/* Card Description - More space like funding cards */
-.property-card p {
-    color: var(--neutral-600);
-    font-size: var(--font-size-base);
-    line-height: 1.6;
-    margin: 0 0 var(--space-8) 0;
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 300px;
-}
-
-/* CTA Button - Funding Card Style */
-.card-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-    font-weight: 600;
-    color: var(--neutral-0);
-    font-size: var(--font-size-base);
-    background: var(--solar-green);
-    padding: var(--space-4) var(--space-8);
-    border-radius: var(--radius-full);
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 240px;
-    border: none;
-    text-decoration: none;
-}
-
-.property-card:hover .card-cta {
-    background: #16a34a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-}
-
-/* Gradient top border like funding cards */
-.property-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
-}
-
-.property-card:hover {
-    border-color: var(--solar-green);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    background: rgba(34, 197, 94, 0.02);
-}
-
-.property-card:focus {
-    outline: 3px solid var(--solar-green);
-    outline-offset: 2px;
-}
-
-/* Card Icon - Larger like funding cards */
-.card-icon {
-    font-size: 4rem; /* Much larger icons */
-    margin-bottom: var(--space-6);
-    filter: grayscale(0.1);
-    transition: all 0.3s ease;
-}
-
-.property-card:hover .card-icon {
-    filter: grayscale(0);
-    transform: scale(1.05);
-}
-
-/* Card Title - Funding Card Style */
-.property-card h4 {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--neutral-900);
-    margin: 0 0 var(--space-6) 0;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-}
-
-/* Card Description - More space like funding cards */
-.property-card p {
-    color: var(--neutral-600);
-    font-size: var(--font-size-base);
-    line-height: 1.6;
-    margin: 0 0 var(--space-8) 0;
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 300px;
-}
-
-/* CTA Button - Funding Card Style */
-.card-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-    font-weight: 600;
-    color: var(--neutral-0);
-    font-size: var(--font-size-base);
-    background: var(--solar-green);
-    padding: var(--space-4) var(--space-8);
-    border-radius: var(--radius-full);
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 240px;
-    border: none;
-    text-decoration: none;
-}
-
-.property-card:hover .card-cta {
-    background: #16a34a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-}
-
-/* ============================================ */
-/* HOMEPAGE QUOTE ROUTING STYLES */
-/* For the homepage property selection section */
-/* ============================================ */
-
-/* Gradient top border like funding cards */
-.property-selection-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
-}
-
-.property-selection-card:hover {
-    border-color: var(--solar-green);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    background: rgba(34, 197, 94, 0.02);
-}
-
-.property-selection-card:focus {
-    outline: 3px solid var(--solar-green);
-    outline-offset: 2px;
-}
-
-/* Selection Icon - Large like funding cards */
-.selection-icon {
+/* Card Icons */
+.card-icon,
+.selection-icon,
+.assessment-icon {
     font-size: 4rem;
     margin-bottom: var(--space-6);
-    display: block;
     filter: grayscale(0.1);
     transition: all 0.3s ease;
 }
 
-.property-selection-card:hover .selection-icon {
+.property-card:hover .card-icon,
+.property-selection-card:hover .selection-icon,
+.assessment-card:hover .assessment-icon {
     filter: grayscale(0);
     transform: scale(1.05);
 }
 
-/* Card Title - Funding Card Style */
-.property-selection-card h4 {
+/* Card Titles */
+.property-card h3,
+.property-card h4,
+.property-selection-card h3,
+.property-selection-card h4,
+.assessment-card h3,
+.assessment-card h4 {
     font-size: var(--font-size-2xl);
     font-weight: 700;
     color: var(--neutral-900);
@@ -6789,8 +6629,10 @@ body {
     line-height: 1.2;
 }
 
-/* Card Description - More space like funding cards */
-.property-selection-card p {
+/* Card Descriptions */
+.property-card p,
+.property-selection-card p,
+.assessment-card p {
     color: var(--neutral-600);
     font-size: var(--font-size-base);
     line-height: 1.6;
@@ -6803,7 +6645,8 @@ body {
 }
 
 /* Selection Highlights */
-.selection-highlights {
+.selection-highlights,
+.assessment-highlights {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2);
@@ -6811,7 +6654,8 @@ body {
     margin-bottom: var(--space-6);
 }
 
-.highlight-item {
+.highlight-item,
+.highlight-tag {
     display: inline-block;
     padding: var(--space-1) var(--space-3);
     background: rgba(34, 197, 94, 0.1);
@@ -6822,8 +6666,53 @@ body {
     border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
-/* CTA Button - Funding Card Style */
-.selection-cta {
+/* Business Cards - Blue Highlights */
+.property-card[data-type="commercial"] .highlight-item,
+.assessment-card[data-type="commercial"] .highlight-tag {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--trust-blue);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Assessment Stats */
+.assessment-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    background: var(--neutral-50);
+    border-radius: var(--radius-lg);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 900;
+    color: var(--solar-green);
+    margin-bottom: var(--space-1);
+}
+
+.assessment-card[data-type="commercial"] .stat-value {
+    color: var(--trust-blue);
+}
+
+.stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--neutral-600);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Card CTAs */
+.card-cta,
+.selection-cta,
+.assessment-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -6841,14 +6730,63 @@ body {
     text-decoration: none;
 }
 
-.property-selection-card:hover .selection-cta {
+/* Business CTAs - Blue */
+.property-card[data-type="commercial"] .card-cta,
+.property-selection-card[href*="commercial"] .selection-cta,
+.assessment-card[data-type="commercial"] .assessment-cta {
+    background: var(--trust-blue);
+}
+
+/* CTA Hover States */
+.property-card:hover .card-cta,
+.property-selection-card:hover .selection-cta,
+.assessment-card:hover .assessment-cta {
     background: #16a34a;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
+.property-card[data-type="commercial"]:hover .card-cta,
+.property-selection-card[href*="commercial"]:hover .selection-cta,
+.assessment-card[data-type="commercial"]:hover .assessment-cta {
+    background: #1e40af;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* ============================================ */
+/* QUOTE ROUTING CONTAINERS */
+/* ============================================ */
+
+.quote-routing-container,
+.assessment-routing-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.routing-explanation {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.routing-explanation h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-4);
+}
+
+.routing-explanation p {
+    font-size: var(--font-size-lg);
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Trust Section */
-.routing-trust {
+.routing-trust,
+.assessment-trust {
     text-align: center;
     padding: var(--space-8);
     background: var(--neutral-50);
@@ -6856,7 +6794,8 @@ body {
     border: 1px solid var(--neutral-200);
 }
 
-.trust-badges {
+.trust-badges,
+.trust-grid {
     display: flex;
     justify-content: center;
     gap: var(--space-8);
@@ -6864,15 +6803,26 @@ body {
     flex-wrap: wrap;
 }
 
-.trust-badge {
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+.trust-badge,
+.trust-item {
     display: flex;
     align-items: center;
     gap: var(--space-2);
 }
 
+.trust-item {
+    flex-direction: column;
+}
+
 .trust-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     background: var(--solar-green);
     color: var(--neutral-0);
     border-radius: 50%;
@@ -6884,13 +6834,24 @@ body {
     flex-shrink: 0;
 }
 
+.trust-badge .trust-icon {
+    width: 24px;
+    height: 24px;
+}
+
 .trust-text {
     font-size: var(--font-size-base);
     font-weight: 600;
     color: var(--neutral-700);
+    text-align: center;
 }
 
-.routing-disclaimer {
+.trust-badge .trust-text {
+    font-size: var(--font-size-base);
+}
+
+.routing-disclaimer,
+.assessment-disclaimer {
     font-size: var(--font-size-base);
     color: var(--neutral-600);
     line-height: 1.6;
@@ -6900,86 +6861,49 @@ body {
 }
 
 /* ============================================ */
-/* RESPONSIVE DESIGN */
+/* DARK SECTION OVERRIDES */
 /* ============================================ */
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .property-type-selection {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-        max-width: none;
-    }
-    
-    .property-selection-card,
-    .property-card {
-        padding: var(--space-6);
-        min-height: 280px;
-    }
-    
-    .selection-icon,
-    .card-icon {
-        font-size: 3.5rem;
-        margin-bottom: var(--space-4);
-    }
-    
-    .property-selection-card h4,
-    .property-card h4 {
-        font-size: var(--font-size-xl);
-        margin-bottom: var(--space-4);
-    }
-    
-    .property-selection-card p,
-    .property-card p {
-        font-size: var(--font-size-sm);
-        max-width: none;
-        margin-bottom: var(--space-6);
-    }
-    
-    .selection-cta,
-    .card-cta {
-        padding: var(--space-3) var(--space-6);
-        max-width: none;
-    }
-    
-    .trust-badges {
-        flex-direction: column;
-        gap: var(--space-4);
-    }
-    
-    .routing-trust {
-        padding: var(--space-6);
-    }
-    
-    .routing-explanation {
-        margin-bottom: var(--space-6);
-    }
+.section-dark .routing-explanation h3 {
+    color: var(--neutral-0);
 }
 
-@media (max-width: 480px) {
-    .property-selection-card,
-    .property-card {
-        padding: var(--space-4);
-        min-height: 260px;
-    }
-    
-    .selection-highlights {
-        flex-direction: column;
-        gap: var(--space-1);
-    }
-    
-    .routing-explanation h3 {
-        font-size: var(--font-size-xl);
-    }
-    
-    .trust-badge {
-        justify-content: center;
-    }
+.section-dark .routing-explanation p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section-dark .property-selection-card,
+.section-dark .assessment-card {
+    background: var(--neutral-0);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.section-dark .property-selection-card:hover,
+.section-dark .assessment-card:hover {
+    border-color: var(--solar-green);
+    background: var(--neutral-0);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.section-dark .routing-trust,
+.section-dark .assessment-trust {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.section-dark .trust-text {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.section-dark .routing-disclaimer,
+.section-dark .assessment-disclaimer {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================ */
 /* MID-SECTION CTA - BLUE BACKGROUND HERO */
-/* Add to styles.css - Manchester Solar Ready to Start */
 /* ============================================ */
 
 .mid-cta-hero {
@@ -7176,8 +7100,78 @@ body {
     font-size: var(--font-size-base);
 }
 
+/* ============================================ */
+/* RESPONSIVE DESIGN */
+/* ============================================ */
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .property-cards,
+    .property-type-selection {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+        max-width: none;
+    }
+    
+    .property-selection-card,
+    .property-card,
+    .assessment-card {
+        padding: var(--space-6);
+        min-height: 280px;
+    }
+    
+    .selection-icon,
+    .card-icon,
+    .assessment-icon {
+        font-size: 3.5rem;
+        margin-bottom: var(--space-4);
+    }
+    
+    .property-selection-card h3,
+    .property-selection-card h4,
+    .property-card h3,
+    .property-card h4,
+    .assessment-card h3,
+    .assessment-card h4 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-4);
+    }
+    
+    .property-selection-card p,
+    .property-card p,
+    .assessment-card p {
+        font-size: var(--font-size-sm);
+        max-width: none;
+        margin-bottom: var(--space-6);
+    }
+    
+    .selection-cta,
+    .card-cta,
+    .assessment-cta {
+        padding: var(--space-3) var(--space-6);
+        max-width: none;
+    }
+    
+    .trust-badges {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+    
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .routing-trust,
+    .assessment-trust {
+        padding: var(--space-6);
+    }
+    
+    .routing-explanation {
+        margin-bottom: var(--space-6);
+    }
+    
+    /* Mid-CTA Mobile */
     .mid-cta-hero {
         min-height: 450px;
     }
@@ -7219,6 +7213,39 @@ body {
 }
 
 @media (max-width: 480px) {
+    .property-selection-card,
+    .property-card,
+    .assessment-card {
+        padding: var(--space-4);
+        min-height: 260px;
+    }
+    
+    .selection-highlights,
+    .assessment-highlights {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+    
+    .routing-explanation h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .trust-badge,
+    .trust-item {
+        justify-content: center;
+    }
+    
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+    
+    .trust-item {
+        flex-direction: row;
+        gap: var(--space-3);
+    }
+    
+    /* Mid-CTA Small Mobile */
     .cta-headline {
         font-size: var(--font-size-2xl);
     }
@@ -7244,19 +7271,24 @@ body {
     }
 }
 
-/* Accessibility & Performance */
+/* ============================================ */
+/* ACCESSIBILITY & PERFORMANCE */
+/* ============================================ */
+
 @media (prefers-reduced-motion: reduce) {
     .cta-background-overlay,
     .urgency-badge {
         animation: none;
     }
     
-    .btn-cta-primary:hover {
+    .btn-cta-primary:hover,
+    .property-card:hover,
+    .property-selection-card:hover,
+    .assessment-card:hover {
         transform: none;
     }
 }
 
-/* High contrast mode */
 @media (prefers-contrast: high) {
     .mid-cta-hero {
         background: var(--neutral-900);
@@ -7269,5 +7301,16 @@ body {
     
     .btn-cta-primary {
         border-width: 4px;
+    }
+    
+    .property-card,
+    .property-selection-card,
+    .assessment-card {
+        border-width: 3px;
+    }
+    
+    .highlight-item,
+    .highlight-tag {
+        border-width: 2px;
     }
 }

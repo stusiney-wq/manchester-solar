@@ -6107,6 +6107,11 @@ body {
     }
 }
 
+/* ============================================ */
+/* MODAL PROPERTY CARDS STYLES */
+/* For the modal popup cards */
+/* ============================================ */
+
 /* Individual Property Card Styling - Funding Card Style */
 .property-card {
     display: flex;
@@ -6212,45 +6217,325 @@ body {
     box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
-/* Responsive adjustments */
-@media (max-width: 767px) {
+/* Gradient top border like funding cards */
+.property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
+}
+
+.property-card:hover {
+    border-color: var(--solar-green);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    background: rgba(34, 197, 94, 0.02);
+}
+
+.property-card:focus {
+    outline: 3px solid var(--solar-green);
+    outline-offset: 2px;
+}
+
+/* Card Icon - Larger like funding cards */
+.card-icon {
+    font-size: 4rem; /* Much larger icons */
+    margin-bottom: var(--space-6);
+    filter: grayscale(0.1);
+    transition: all 0.3s ease;
+}
+
+.property-card:hover .card-icon {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* Card Title - Funding Card Style */
+.property-card h4 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin: 0 0 var(--space-6) 0;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+/* Card Description - More space like funding cards */
+.property-card p {
+    color: var(--neutral-600);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0 0 var(--space-8) 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 300px;
+}
+
+/* CTA Button - Funding Card Style */
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--neutral-0);
+    font-size: var(--font-size-base);
+    background: var(--solar-green);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 240px;
+    border: none;
+    text-decoration: none;
+}
+
+.property-card:hover .card-cta {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* ============================================ */
+/* HOMEPAGE QUOTE ROUTING STYLES */
+/* For the homepage property selection section */
+/* ============================================ */
+
+/* Gradient top border like funding cards */
+.property-selection-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
+}
+
+.property-selection-card:hover {
+    border-color: var(--solar-green);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    background: rgba(34, 197, 94, 0.02);
+}
+
+.property-selection-card:focus {
+    outline: 3px solid var(--solar-green);
+    outline-offset: 2px;
+}
+
+/* Selection Icon - Large like funding cards */
+.selection-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-6);
+    display: block;
+    filter: grayscale(0.1);
+    transition: all 0.3s ease;
+}
+
+.property-selection-card:hover .selection-icon {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* Card Title - Funding Card Style */
+.property-selection-card h4 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin: 0 0 var(--space-6) 0;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+/* Card Description - More space like funding cards */
+.property-selection-card p {
+    color: var(--neutral-600);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0 0 var(--space-6) 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 300px;
+}
+
+/* Selection Highlights */
+.selection-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-6);
+}
+
+.highlight-item {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--solar-green);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* CTA Button - Funding Card Style */
+.selection-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--neutral-0);
+    font-size: var(--font-size-base);
+    background: var(--solar-green);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 240px;
+    border: none;
+    text-decoration: none;
+}
+
+.property-selection-card:hover .selection-cta {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Trust Section */
+.routing-trust {
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--neutral-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-200);
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.trust-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--solar-green);
+    color: var(--neutral-0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.trust-text {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--neutral-700);
+}
+
+.routing-disclaimer {
+    font-size: var(--font-size-base);
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ============================================ */
+/* RESPONSIVE DESIGN */
+/* ============================================ */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .property-type-selection {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .property-selection-card,
     .property-card {
         padding: var(--space-6);
         min-height: 280px;
     }
     
+    .selection-icon,
     .card-icon {
         font-size: 3.5rem;
         margin-bottom: var(--space-4);
     }
     
+    .property-selection-card h4,
     .property-card h4 {
         font-size: var(--font-size-xl);
         margin-bottom: var(--space-4);
     }
     
+    .property-selection-card p,
     .property-card p {
         font-size: var(--font-size-sm);
         max-width: none;
         margin-bottom: var(--space-6);
     }
     
+    .selection-cta,
     .card-cta {
         padding: var(--space-3) var(--space-6);
         max-width: none;
     }
+    
+    .trust-badges {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+    
+    .routing-trust {
+        padding: var(--space-6);
+    }
+    
+    .routing-explanation {
+        margin-bottom: var(--space-6);
+    }
 }
 
-/* Special styling for business card to match trust-blue theme */
-.property-card[data-type="commercial"] .card-cta {
-    background: var(--trust-blue);
-}
-
-.property-card[data-type="commercial"]:hover .card-cta {
-    background: #1e40af;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-}
-
-.property-card[data-type="commercial"]::before {
-    background: linear-gradient(90deg, var(--trust-blue), var(--solar-green));
+@media (max-width: 480px) {
+    .property-selection-card,
+    .property-card {
+        padding: var(--space-4);
+        min-height: 260px;
+    }
+    
+    .selection-highlights {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+    
+    .routing-explanation h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .trust-badge {
+        justify-content: center;
+    }
 }

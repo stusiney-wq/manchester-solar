@@ -110,12 +110,11 @@ body {
   letter-spacing: -0.025em;
 }
 
-.section-intro {
-  font-size: var(--font-size-xl);
-  color: var(--neutral-600);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.7;
+/* Fix for section intro centering - add this to styles.css */
+.section-header .section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .section-divider-accent {

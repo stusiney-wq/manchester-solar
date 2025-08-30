@@ -6904,6 +6904,7 @@ body {
 
 /* ============================================ */
 /* MID-SECTION CTA - BLUE BACKGROUND HERO */
+/* Add this to the BOTTOM of your styles.css file */
 /* ============================================ */
 
 .mid-cta-hero {
@@ -7101,77 +7102,11 @@ body {
 }
 
 /* ============================================ */
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN FOR MID-CTA */
 /* ============================================ */
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .property-cards,
-    .property-type-selection {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-        max-width: none;
-    }
-    
-    .property-selection-card,
-    .property-card,
-    .assessment-card {
-        padding: var(--space-6);
-        min-height: 280px;
-    }
-    
-    .selection-icon,
-    .card-icon,
-    .assessment-icon {
-        font-size: 3.5rem;
-        margin-bottom: var(--space-4);
-    }
-    
-    .property-selection-card h3,
-    .property-selection-card h4,
-    .property-card h3,
-    .property-card h4,
-    .assessment-card h3,
-    .assessment-card h4 {
-        font-size: var(--font-size-xl);
-        margin-bottom: var(--space-4);
-    }
-    
-    .property-selection-card p,
-    .property-card p,
-    .assessment-card p {
-        font-size: var(--font-size-sm);
-        max-width: none;
-        margin-bottom: var(--space-6);
-    }
-    
-    .selection-cta,
-    .card-cta,
-    .assessment-cta {
-        padding: var(--space-3) var(--space-6);
-        max-width: none;
-    }
-    
-    .trust-badges {
-        flex-direction: column;
-        gap: var(--space-4);
-    }
-    
-    .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-4);
-    }
-    
-    .routing-trust,
-    .assessment-trust {
-        padding: var(--space-6);
-    }
-    
-    .routing-explanation {
-        margin-bottom: var(--space-6);
-    }
-    
-    /* Mid-CTA Mobile */
     .mid-cta-hero {
         min-height: 450px;
     }
@@ -7213,39 +7148,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .property-selection-card,
-    .property-card,
-    .assessment-card {
-        padding: var(--space-4);
-        min-height: 260px;
-    }
-    
-    .selection-highlights,
-    .assessment-highlights {
-        flex-direction: column;
-        gap: var(--space-1);
-    }
-    
-    .routing-explanation h3 {
-        font-size: var(--font-size-xl);
-    }
-    
-    .trust-badge,
-    .trust-item {
-        justify-content: center;
-    }
-    
-    .trust-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-3);
-    }
-    
-    .trust-item {
-        flex-direction: row;
-        gap: var(--space-3);
-    }
-    
-    /* Mid-CTA Small Mobile */
     .cta-headline {
         font-size: var(--font-size-2xl);
     }
@@ -7281,10 +7183,7 @@ body {
         animation: none;
     }
     
-    .btn-cta-primary:hover,
-    .property-card:hover,
-    .property-selection-card:hover,
-    .assessment-card:hover {
+    .btn-cta-primary:hover {
         transform: none;
     }
 }
@@ -7301,16 +7200,5 @@ body {
     
     .btn-cta-primary {
         border-width: 4px;
-    }
-    
-    .property-card,
-    .property-selection-card,
-    .assessment-card {
-        border-width: 3px;
-    }
-    
-    .highlight-item,
-    .highlight-tag {
-        border-width: 2px;
     }
 }

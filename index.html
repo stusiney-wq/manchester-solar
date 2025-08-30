@@ -1020,67 +1020,376 @@
         </div>
     </section>
     <!-- Smart Quote CTA Section -->
-<!-- Smart Quote CTA Section -->
-<section class="form-section section section-dark">
+<!-- Get Your Free Manchester Solar Assessment Section -->
+<section class="section" id="solar-assessment">
     <div class="container">
-        <div class="form-wrapper">
+        <div class="section-header">
             <h2>Get Your Free Manchester Solar Assessment</h2>
-            <p class="form-intro">Start your journey to energy independence with a professional consultation from our Manchester property specialists.</p>
-            
-            <div class="quote-routing-container">
-                <div class="routing-explanation">
-                    <h3>Choose Your Property Type for Accurate Quotes</h3>
-                    <p>We provide specialized assessments for different property types to ensure you get the most accurate savings projections and system recommendations.</p>
-                </div>
-                
-                <div class="property-type-selection">
-                    <a href="/residential#quote-form" class="property-selection-card">
-                        <div class="selection-icon">🏠</div>
-                        <h4>Home & Residential</h4>
-                        <p>Perfect for houses, bungalows, and residential properties across all Manchester postcodes</p>
-                        <div class="selection-highlights">
-                            <span class="highlight-item">Victorian Terraces</span>
-                            <span class="highlight-item">Modern Homes</span>
-                            <span class="highlight-item">Heritage Properties</span>
-                        </div>
-                        <span class="selection-cta">Get Home Quote</span>
-                    </a>
+            <div class="section-divider-accent"></div>
+            <p class="section-intro">Start your journey to energy independence with a professional consultation from our Manchester property specialists. Choose your property type for accurate savings projections.</p>
+        </div>
+        
+        <div class="assessment-routing-container">
+            <div class="property-type-selection">
+                <a href="/residential#quote-form" class="assessment-card" data-type="residential">
+                    <div class="assessment-icon">🏠</div>
+                    <h3>Home & Residential</h3>
+                    <p>Perfect for houses, bungalows, and residential properties across all Manchester postcodes</p>
                     
-                    <a href="/commercial#quote-form" class="property-selection-card">
-                        <div class="selection-icon">🏢</div>
-                        <h4>Business & Commercial</h4>
-                        <p>Tailored solutions for offices, shops, warehouses, and commercial buildings</p>
-                        <div class="selection-highlights">
-                            <span class="highlight-item">Retail Spaces</span>
-                            <span class="highlight-item">Warehouses</span>
-                            <span class="highlight-item">Office Buildings</span>
+                    <div class="assessment-highlights">
+                        <span class="highlight-tag">Victorian Terraces</span>
+                        <span class="highlight-tag">Modern Homes</span>
+                        <span class="highlight-tag">Heritage Properties</span>
+                    </div>
+                    
+                    <div class="assessment-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">£1,890</span>
+                            <span class="stat-label">Avg. Annual Savings</span>
                         </div>
-                        <span class="selection-cta">Get Business Quote</span>
-                    </a>
-                </div>
-                
-                <div class="routing-trust">
-                    <div class="trust-badges">
-                        <div class="trust-badge">
-                            <span class="trust-icon">✓</span>
-                            <span class="trust-text">MCS Certified Installers Only</span>
-                        </div>
-                        <div class="trust-badge">
-                            <span class="trust-icon">✓</span>
-                            <span class="trust-text">No Spam Guarantee</span>
-                        </div>
-                        <div class="trust-badge">
-                            <span class="trust-icon">✓</span>
-                            <span class="trust-text">Local Manchester Expertise</span>
+                        <div class="stat-item">
+                            <span class="stat-value">6.8 yrs</span>
+                            <span class="stat-label">Payback Period</span>
                         </div>
                     </div>
                     
-                    <p class="routing-disclaimer">Your details connect you with 1 carefully vetted Manchester specialist from our exclusive network of 47 MCS-certified installers. No pressure sales, no data sharing with lead farms.</p>
+                    <span class="assessment-cta">Get Home Assessment →</span>
+                </a>
+                
+                <a href="/commercial#quote-form" class="assessment-card" data-type="commercial">
+                    <div class="assessment-icon">🏢</div>
+                    <h3>Business & Commercial</h3>
+                    <p>Tailored solutions for offices, shops, warehouses, and commercial buildings</p>
+                    
+                    <div class="assessment-highlights">
+                        <span class="highlight-tag">Retail Spaces</span>
+                        <span class="highlight-tag">Warehouses</span>
+                        <span class="highlight-tag">Office Buildings</span>
+                    </div>
+                    
+                    <div class="assessment-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">£4,200</span>
+                            <span class="stat-label">Avg. Annual Savings</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">5.2 yrs</span>
+                            <span class="stat-label">Payback Period</span>
+                        </div>
+                    </div>
+                    
+                    <span class="assessment-cta">Get Business Assessment →</span>
+                </a>
+            </div>
+            
+            <div class="assessment-trust">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span class="trust-text">47 MCS Certified Installers</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span class="trust-text">No Spam Guarantee</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span class="trust-text">Local Manchester Expertise</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span class="trust-text">Free Assessment</span>
+                    </div>
                 </div>
+                
+                <p class="assessment-disclaimer">Your details connect you with 1 carefully vetted Manchester specialist from our exclusive network. No pressure sales, no data sharing with lead farms. Professional consultation guaranteed within 24 hours.</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+/* ============================================ */
+/* MANCHESTER SOLAR ASSESSMENT SECTION */
+/* CARD-GRID-2 Funding Card Style */
+/* ============================================ */
+
+.assessment-routing-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.property-type-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+}
+
+.assessment-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-8);
+    background: var(--neutral-0);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    justify-content: space-between;
+    box-shadow: var(--shadow-md);
+}
+
+.assessment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
+}
+
+.assessment-card[data-type="commercial"]::before {
+    background: linear-gradient(90deg, var(--trust-blue), var(--solar-green));
+}
+
+.assessment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--solar-green);
+}
+
+.assessment-card[data-type="commercial"]:hover {
+    border-color: var(--trust-blue);
+}
+
+.assessment-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: var(--space-6);
+    filter: grayscale(0.1);
+    transition: all 0.3s ease;
+}
+
+.assessment-card:hover .assessment-icon {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.assessment-card h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-4);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.assessment-card p {
+    color: var(--neutral-600);
+    font-size: var(--font-size-base);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+}
+
+.assessment-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-6);
+}
+
+.highlight-tag {
+    padding: var(--space-1) var(--space-3);
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--solar-green);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.assessment-card[data-type="commercial"] .highlight-tag {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--trust-blue);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.assessment-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    background: var(--neutral-50);
+    border-radius: var(--radius-lg);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 900;
+    color: var(--solar-green);
+    margin-bottom: var(--space-1);
+}
+
+.assessment-card[data-type="commercial"] .stat-value {
+    color: var(--trust-blue);
+}
+
+.stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--neutral-600);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.assessment-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4) var(--space-8);
+    background: var(--solar-green);
+    color: var(--neutral-0);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.assessment-card[data-type="commercial"] .assessment-cta {
+    background: var(--trust-blue);
+}
+
+.assessment-card:hover .assessment-cta {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.assessment-card[data-type="commercial"]:hover .assessment-cta {
+    background: #1e40af;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.assessment-trust {
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--neutral-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-200);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.trust-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--solar-green);
+    color: var(--neutral-0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+}
+
+.trust-text {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--neutral-700);
+    text-align: center;
+}
+
+.assessment-disclaimer {
+    font-size: var(--font-size-base);
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .property-type-selection {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .assessment-card {
+        padding: var(--space-6);
+        min-height: 350px;
+    }
+    
+    .assessment-icon {
+        font-size: 3.5rem;
+        margin-bottom: var(--space-4);
+    }
+    
+    .assessment-card h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .assessment-trust {
+        padding: var(--space-6);
+    }
+}
+
+@media (max-width: 480px) {
+    .assessment-card {
+        padding: var(--space-4);
+        min-height: 320px;
+    }
+    
+    .assessment-highlights {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+    
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+    
+    .trust-item {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-3);
+    }
+}
+</style>
+
     <!-- Resources Section -->
     <section class="resources-section section">
         <div class="container">

@@ -1319,7 +1319,7 @@ body {
 
 .background-image-cta {
   background: 
-    linear-gradient(135deg, rgba(34, 197, 94, 0.9) 0%, rgba(16, 163, 74, 0.9) 100%),
+    linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(29, 78, 216, 0.9) 100%),
     url('../images/manchester-hero-2000x1200-1.webp');
   background-size: cover;
   background-position: center;

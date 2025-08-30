@@ -7824,3 +7824,53 @@ body {
         padding-top: var(--space-3);
     }
 }
+
+/* ============================================ */
+/* STORY CONTENT SECTION - WHY WE STARTED */
+/* Add to bottom of styles.css */
+/* ============================================ */
+
+.section-light {
+    background: var(--neutral-50);
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-card {
+    padding: var(--space-8);
+}
+
+.story-paragraph {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    margin-bottom: var(--space-6);
+    color: var(--neutral-700);
+}
+
+.story-highlight {
+    font-size: var(--font-size-xl);
+    line-height: 1.5;
+    margin: var(--space-8) 0;
+    text-align: center;
+    color: var(--neutral-900);
+    font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .story-card {
+        padding: var(--space-6);
+    }
+    
+    .story-paragraph {
+        font-size: var(--font-size-base);
+    }
+    
+    .story-highlight {
+        font-size: var(--font-size-lg);
+        margin: var(--space-6) 0;
+    }
+}

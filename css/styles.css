@@ -7991,3 +7991,49 @@ body {
         padding-left: var(--space-4);
     }
 }
+
+/* ============================================ */
+/* MANCHESTER SOLAR PERFORMANCE DATA SECTION */
+/* Add to bottom of styles.css */
+/* ============================================ */
+
+.performance-explanation {
+    margin-top: var(--space-8);
+    text-align: center;
+}
+
+.performance-card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-6);
+}
+
+.performance-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--neutral-900);
+}
+
+.performance-card p {
+    font-size: var(--font-size-base);
+    color: var(--neutral-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .performance-card {
+        padding: var(--space-4);
+    }
+    
+    .performance-card h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .performance-card p {
+        font-size: var(--font-size-sm);
+    }
+}

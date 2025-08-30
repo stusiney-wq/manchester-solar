@@ -6384,3 +6384,174 @@ body {
         border-width: 2px;
     }
 }
+/* ============================================ */
+/* PROPERTY CARDS - 2-COLUMN FUNDING STYLE LAYOUT */
+/* Matches the ECO4 & Interest-Free Loans design */
+/* ============================================ */
+
+.property-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin: var(--space-6) 0;
+    max-width: 1000px; /* Wide like the funding cards */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+    .property-cards {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        max-width: none;
+    }
+}
+
+/* Individual Property Card Styling - Funding Card Style */
+.property-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--neutral-0);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    min-height: 320px; /* Taller like funding cards */
+    justify-content: space-between;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient top border like funding cards */
+.property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
+}
+
+.property-card:hover {
+    border-color: var(--solar-green);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    background: rgba(34, 197, 94, 0.02);
+}
+
+.property-card:focus {
+    outline: 3px solid var(--solar-green);
+    outline-offset: 2px;
+}
+
+/* Card Icon - Larger like funding cards */
+.card-icon {
+    font-size: 4rem; /* Much larger icons */
+    margin-bottom: var(--space-6);
+    filter: grayscale(0.1);
+    transition: all 0.3s ease;
+}
+
+.property-card:hover .card-icon {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* Card Title - Funding Card Style */
+.property-card h4 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin: 0 0 var(--space-6) 0;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+/* Card Description - More space like funding cards */
+.property-card p {
+    color: var(--neutral-600);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0 0 var(--space-8) 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 300px;
+}
+
+/* CTA Button - Funding Card Style */
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--neutral-0);
+    font-size: var(--font-size-base);
+    background: var(--solar-green);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 240px;
+    border: none;
+    text-decoration: none;
+}
+
+.property-card:hover .card-cta {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .property-card {
+        padding: var(--space-6);
+        min-height: 280px;
+    }
+    
+    .card-icon {
+        font-size: 3.5rem;
+        margin-bottom: var(--space-4);
+    }
+    
+    .property-card h4 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-4);
+    }
+    
+    .property-card p {
+        font-size: var(--font-size-sm);
+        max-width: none;
+        margin-bottom: var(--space-6);
+    }
+    
+    .card-cta {
+        padding: var(--space-3) var(--space-6);
+        max-width: none;
+    }
+}
+
+/* Special styling for business card to match trust-blue theme */
+.property-card[data-type="commercial"] .card-cta {
+    background: var(--trust-blue);
+}
+
+.property-card[data-type="commercial"]:hover .card-cta {
+    background: #1e40af;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.property-card[data-type="commercial"]::before {
+    background: linear-gradient(90deg, var(--trust-blue), var(--solar-green));
+}

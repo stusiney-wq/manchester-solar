@@ -8164,3 +8164,118 @@ body {
         padding-left: var(--space-4);
     }
 }
+
+/* ============================================ */
+/* OUR COMMITMENT TO MANCHESTER SECTION */
+/* Add to bottom of styles.css */
+/* ============================================ */
+
+.commitment-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.commitment-card {
+    padding: var(--space-8);
+    text-align: center;
+}
+
+.commitment-title {
+    margin-bottom: var(--space-6);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    line-height: 1.3;
+}
+
+.commitment-paragraph {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    margin-bottom: var(--space-6);
+    color: var(--neutral-700);
+}
+
+.commitment-final {
+    margin-bottom: var(--space-8);
+}
+
+.promise-box {
+    background: rgba(34, 197, 94, 0.1);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    margin-top: var(--space-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.promise-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--solar-green), var(--solar-yellow));
+}
+
+.promise-title {
+    color: var(--solar-green);
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.promise-text {
+    margin: 0;
+    font-weight: 500;
+    color: var(--neutral-800);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .commitment-card {
+        padding: var(--space-6);
+    }
+    
+    .commitment-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-4);
+    }
+    
+    .commitment-paragraph {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--space-4);
+    }
+    
+    .commitment-final {
+        margin-bottom: var(--space-6);
+    }
+    
+    .promise-box {
+        padding: var(--space-4);
+    }
+    
+    .promise-title {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-3);
+    }
+    
+    .promise-text {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .commitment-card {
+        padding: var(--space-4);
+    }
+    
+    .promise-box {
+        padding: var(--space-3);
+    }
+}

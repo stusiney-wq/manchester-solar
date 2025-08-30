@@ -6185,3 +6185,11 @@ body {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
+
+/* Stats notes: replace inline styles */
+.stat-note{
+  font-size: .875rem;
+  color: #4b5563;
+  margin-top: 8px;
+  line-height: 1.45;
+}

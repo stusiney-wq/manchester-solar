@@ -9371,6 +9371,57 @@ h1.hero-title {
     transform: scale(1.02) translateY(-4px);
 }
 
+/* ============================================ */
+/* SIMPLE SAVINGS CALCULATOR - v3.1 */
+/* ============================================ */
+
+/* Section spacing and centering */
+.section-neutral {
+    background: var(--neutral-50);
+    padding: var(--space-20) 0;
+}
+
+.section-header-center {
+    text-align: center;
+    margin-bottom: var(--space-16);
+}
+
+.section-header-center h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--neutral-900);
+}
+
+.section-intro {
+    font-size: var(--font-size-lg);
+    color: var(--neutral-700);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Simple Savings Cards */
+.card-simple-savings {
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: var(--space-8);
+}
+
+.card-simple-savings:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-simple-featured {
+    border: 2px solid var(--solar-green);
+    transform: scale(1.02);
+}
+
+.card-simple-featured:hover {
+    transform: scale(1.02) translateY(-4px);
+}
+
 /* Simple Savings Components */
 .simple-savings-title {
     color: var(--solar-green);
@@ -9390,7 +9441,7 @@ h1.hero-title {
     font-size: var(--font-size-base);
     color: var(--neutral-600);
     font-weight: 500;
-    margin: 0;
+    margin: 0 0 var(--space-3) 0;
 }
 
 .simple-savings-detail {
@@ -9416,16 +9467,18 @@ h1.hero-title {
 /* Simple Calculator Footer */
 .simple-calc-footer {
     text-align: center;
-    margin-top: var(--space-12);
+    margin-top: var(--space-16);
+    padding: 0 var(--space-4);
 }
 
 .simple-calc-disclaimer {
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
     font-size: var(--font-size-base);
     color: var(--neutral-700);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .simple-calc-disclaimer strong {
@@ -9435,6 +9488,27 @@ h1.hero-title {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .section-neutral {
+        padding: var(--space-16) 0;
+    }
+    
+    .section-header-center {
+        margin-bottom: var(--space-12);
+        padding: 0 var(--space-4);
+    }
+    
+    .section-header-center h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .section-intro {
+        font-size: var(--font-size-base);
+    }
+    
+    .card-simple-savings {
+        padding: var(--space-6);
+    }
+    
     .card-simple-featured {
         transform: none;
         order: -1;
@@ -9453,5 +9527,15 @@ h1.hero-title {
         display: inline-block;
         margin-top: var(--space-3);
         margin-bottom: var(--space-2);
+    }
+    
+    .simple-calc-footer {
+        margin-top: var(--space-12);
+        padding: 0 var(--space-4);
+    }
+    
+    .simple-calc-disclaimer {
+        margin-bottom: var(--space-6);
+        font-size: var(--font-size-sm);
     }
 }

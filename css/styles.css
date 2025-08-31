@@ -8504,7 +8504,15 @@ h1.hero-title {
 }
 
 .application-info .card {
-  text-align: left;
+  text-align: left !important;
+}
+
+.application-info .card h3 {
+  text-align: left !important;
+}
+
+.application-info .card * {
+  text-align: left !important;
 }
 
 .process-steps {

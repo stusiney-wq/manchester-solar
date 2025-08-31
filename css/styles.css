@@ -9346,135 +9346,319 @@ h1.hero-title {
     gap: var(--space-4);
   }
 }
-* ============================================ */
-/* SAVINGS CALCULATOR COMPONENT - v3.1 */
-/* Add to your existing styles.css */
+/* ============================================ */
+/* SINGLE COLUMN INTERACTIVE CALCULATOR - v3.1 */
 /* ============================================ */
 
-.section-neutral {
-    background: var(--neutral-50);
+.calculator-single-column {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.section-header-center {
+/* Input Sections */
+.calc-input-section {
+    margin-bottom: var(--space-12);
+}
+
+.calc-section-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
     text-align: center;
-    margin-bottom: var(--space-16);
 }
 
-.section-header-center h2 {
+/* Bill Input Card */
+.bill-input-card {
+    background: var(--neutral-0);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.bill-slider-wrapper {
+    margin-bottom: var(--space-6);
+}
+
+.bill-range {
+    width: 100%;
+    height: 12px;
+    border-radius: var(--radius-full);
+    background: var(--neutral-200);
+    outline: none;
+    cursor: pointer;
+}
+
+.bill-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--solar-green);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    transition: all 0.2s ease;
+}
+
+.bill-range::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+}
+
+.bill-range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+}
+
+.bill-current {
+    text-align: center;
+}
+
+.bill-amount-large {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--solar-green);
+    display: block;
+}
+
+.bill-period {
+    font-size: var(--font-size-lg);
+    color: var(--neutral-600);
+    margin-top: var(--space-2);
+    display: block;
+}
+
+/* Property Grid */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-4);
+}
+
+.property-card {
+    background: var(--neutral-0);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--neutral-200);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    border-color: var(--solar-green);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.property-selected {
+    border-color: var(--solar-green);
+    background: rgba(34, 197, 94, 0.05);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.property-emoji {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-3);
+}
+
+.property-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-2);
+}
+
+.property-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+}
+
+/* Roof Selection */
+.roof-select-card {
+    background: var(--neutral-0);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-md);
+}
+
+.roof-select {
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    border: 2px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    background: var(--neutral-0);
+    font-size: var(--font-size-lg);
+    color: var(--neutral-900);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.roof-select:focus {
+    outline: none;
+    border-color: var(--solar-green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+/* Results Section */
+.calc-results-section {
+    background: linear-gradient(135deg, var(--neutral-0), var(--neutral-50));
+    padding: var(--space-12);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    margin-top: var(--space-16);
+}
+
+.results-header-main {
+    text-align: center;
+    margin-bottom: var(--space-10);
+}
+
+.results-title-main {
     font-size: var(--font-size-3xl);
     font-weight: 700;
-    margin-bottom: var(--space-6);
     color: var(--neutral-900);
+    margin-bottom: var(--space-3);
 }
 
-.section-intro {
+.results-subtitle-main {
     font-size: var(--font-size-lg);
+    color: var(--neutral-600);
+    margin: 0;
+}
+
+/* Results Grid */
+.results-main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
+}
+
+.result-main-card {
+    background: var(--neutral-0);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--neutral-200);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.result-main-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.result-featured {
+    border: 2px solid var(--solar-green);
+    background: rgba(34, 197, 94, 0.05);
+    grid-column: 1 / -1;
+}
+
+.result-main-value {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--solar-green);
+    margin-bottom: var(--space-2);
+    transition: all 0.3s ease;
+}
+
+.result-featured .result-main-value {
+    font-size: var(--font-size-4xl);
+}
+
+.result-main-label {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-1);
+}
+
+.result-main-detail {
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+}
+
+/* Final CTA */
+.calc-final-cta {
+    text-align: center;
+}
+
+.calc-cta-btn {
+    margin-bottom: var(--space-6);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+    transform: scale(1.02);
+}
+
+.calc-cta-btn:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 12px 35px rgba(34, 197, 94, 0.4);
+}
+
+.calc-final-disclaimer {
+    font-size: var(--font-size-sm);
     color: var(--neutral-700);
+    line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Savings Cards */
-.card-savings {
-    text-align: center;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.card-savings:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-}
-
-.card-featured {
-    border: 2px solid var(--solar-green);
-    transform: scale(1.02);
-}
-
-.card-featured:hover {
-    transform: scale(1.02) translateY(-4px);
-}
-
-/* Savings Components */
-.savings-system-title {
-    color: var(--solar-green);
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    margin-bottom: var(--space-4);
-}
-
-.savings-amount {
-    font-size: var(--font-size-4xl);
-    font-weight: 700;
+.calc-final-disclaimer strong {
     color: var(--neutral-900);
-    margin: var(--space-4) 0;
 }
 
-.savings-label {
-    font-size: var(--font-size-base);
-    color: var(--neutral-600);
-    font-weight: 500;
-    margin: 0;
-}
-
-.savings-context {
-    margin-top: var(--space-3);
-    font-size: var(--font-size-sm);
-    color: var(--neutral-600);
-    font-style: italic;
-}
-
-.hero-badge {
-    position: absolute;
-    top: -10px;
-    right: var(--space-4);
-    background: linear-gradient(135deg, var(--solar-green), var(--solar-yellow));
-    color: var(--neutral-0);
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--radius-full);
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    box-shadow: var(--shadow-md);
-}
-
-.savings-calculator-footer {
-    text-align: center;
-    margin-top: var(--space-12);
-}
-
-.savings-disclaimer {
-    margin-bottom: var(--space-6);
-    font-size: var(--font-size-base);
-    color: var(--neutral-700);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.savings-disclaimer strong {
-    color: var(--neutral-900);
-    font-weight: 600;
+/* Result Update Animation */
+.result-updating {
+    transform: scale(1.05);
+    color: var(--solar-yellow);
+    transition: all 0.15s ease;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .card-featured {
-        transform: none;
-        order: -1;
+    .calculator-single-column {
+        padding: 0 var(--space-4);
     }
     
-    .card-featured:hover {
-        transform: translateY(-4px);
+    .property-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
     }
     
-    .savings-amount {
+    .results-main-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .result-featured {
+        grid-column: 1 / -1;
+    }
+    
+    .bill-amount-large {
         font-size: var(--font-size-3xl);
     }
     
-    .hero-badge {
-        position: static;
-        display: inline-block;
-        margin-top: var(--space-3);
+    .result-main-value {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .result-featured .result-main-value {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .calc-results-section {
+        padding: var(--space-8);
+        margin-top: var(--space-12);
+    }
+    
+    .calc-input-section {
+        margin-bottom: var(--space-8);
     }
 }
-

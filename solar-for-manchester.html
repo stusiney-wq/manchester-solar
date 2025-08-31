@@ -506,120 +506,148 @@
 
        
 
-        <!-- Planning Permission Guide -->
-        <section class="section">
-            <div class="container">
-                <div class="council-info-section">
-                    <h2 style="margin-bottom: var(--space-6);">Manchester Planning Permission Guide</h2>
-                    <p style="opacity: 0.9; margin-bottom: var(--space-6); font-size: var(--font-size-lg);">Planning requirements vary between residential and commercial solar installations. Choose your property type for specific guidance.</p>
-                    
-                    <!-- Planning Permission Tabs -->
-                    <div class="planning-tabs">
-                        <button class="planning-tab active" onclick="switchPlanningTab('residential', this)">
-                            🏠 Residential Properties
-                        </button>
-                        <button class="planning-tab" onclick="switchPlanningTab('commercial', this)">
-                            🏢 Commercial Properties
-                        </button>
-                    </div>
-                    
-                    <!-- Residential Planning Content -->
-                    <div id="residential-planning" class="planning-content active">
-                        <div class="council-grid">
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-green); margin-bottom: var(--space-3);">✅ Usually No Permission Needed</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Standard residential properties</li>
-                                    <li style="padding: var(--space-2) 0;">• Roof-mounted systems</li>
-                                    <li style="padding: var(--space-2) 0;">• Non-conservation areas</li>
-                                    <li style="padding: var(--space-2) 0;">• Modern building stock</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-yellow); margin-bottom: var(--space-3);">⚠️ May Need Permission</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Conservation areas</li>
-                                    <li style="padding: var(--space-2) 0;">• Listed buildings</li>
-                                    <li style="padding: var(--space-2) 0;">• Flats and apartments</li>
-                                    <li style="padding: var(--space-2) 0;">• Ground-mounted systems</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-green); margin-bottom: var(--space-3);">📋 Manchester Conservation Areas</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• City Centre Conservation Area</li>
-                                    <li style="padding: var(--space-2) 0;">• Didsbury Village</li>
-                                    <li style="padding: var(--space-2) 0;">• Chorlton Conservation Area</li>
-                                    <li style="padding: var(--space-2) 0;">• Many listed Victorian properties</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-green); margin-bottom: var(--space-3);">🏠 Residential Support</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Free planning assessment</li>
-                                    <li style="padding: var(--space-2) 0;">• Application support included</li>
-                                    <li style="padding: var(--space-2) 0;">• 95% approval success rate</li>
-                                    <li style="padding: var(--space-2) 0;">• Heritage property specialists</li>
-                                </ul>
-                            </div>
+        <section class="section section-planning">
+    <div class="container">
+        <div class="planning-info-section">
+            <div class="section-header-center">
+                <h2>Manchester Planning Permission Guide</h2>
+                <p class="section-intro">Planning requirements vary between residential and commercial solar installations. Choose your property type for specific guidance.</p>
+            </div>
+            
+            <!-- Planning Permission Tabs -->
+            <div class="planning-tabs">
+                <button class="planning-tab active" onclick="switchPlanningTab('residential', this)">
+                    <span class="planning-tab-icon">🏠</span>
+                    <span class="planning-tab-text">Residential Properties</span>
+                </button>
+                <button class="planning-tab" onclick="switchPlanningTab('commercial', this)">
+                    <span class="planning-tab-icon">🏢</span>
+                    <span class="planning-tab-text">Commercial Properties</span>
+                </button>
+            </div>
+            
+            <!-- Residential Planning Content -->
+            <div id="residential-planning" class="planning-content active">
+                <div class="planning-grid">
+                    <div class="planning-card planning-card-success">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">✅</span>
+                            <h4 class="planning-card-title">Usually No Permission Needed</h4>
                         </div>
+                        <ul class="planning-list">
+                            <li>Standard residential properties</li>
+                            <li>Roof-mounted systems</li>
+                            <li>Non-conservation areas</li>
+                            <li>Modern building stock</li>
+                        </ul>
                     </div>
                     
-                    <!-- Commercial Planning Content -->
-                    <div id="commercial-planning" class="planning-content">
-                        <div class="council-grid">
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-green); margin-bottom: var(--space-3);">✅ Permitted Development</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Industrial buildings</li>
-                                    <li style="padding: var(--space-2) 0;">• Warehouses and factories</li>
-                                    <li style="padding: var(--space-2) 0;">• Most office buildings</li>
-                                    <li style="padding: var(--space-2) 0;">• Standard commercial zones</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-yellow); margin-bottom: var(--space-3);">⚠️ Planning Required</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Listed commercial buildings</li>
-                                    <li style="padding: var(--space-2) 0;">• Conservation area businesses</li>
-                                    <li style="padding: var(--space-2) 0;">• Large-scale installations (>1MW)</li>
-                                    <li style="padding: var(--space-2) 0;">• Ground-mounted arrays</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-green); margin-bottom: var(--space-3);">📋 Commercial Considerations</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Business rates implications</li>
-                                    <li style="padding: var(--space-2) 0;">• Health & safety requirements</li>
-                                    <li style="padding: var(--space-2) 0;">• Environmental impact assessment</li>
-                                    <li style="padding: var(--space-2) 0;">• Grid connection applications</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="council-card">
-                                <h4 style="color: var(--solar-green); margin-bottom: var(--space-3);">🏢 Commercial Support</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="padding: var(--space-2) 0;">• Commercial planning expertise</li>
-                                    <li style="padding: var(--space-2) 0;">• DNO application support</li>
-                                    <li style="padding: var(--space-2) 0;">• Business case development</li>
-                                    <li style="padding: var(--space-2) 0;">• Compliance management</li>
-                                </ul>
-                            </div>
+                    <div class="planning-card planning-card-warning">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">⚠️</span>
+                            <h4 class="planning-card-title">May Need Permission</h4>
                         </div>
+                        <ul class="planning-list">
+                            <li>Conservation areas</li>
+                            <li>Listed buildings</li>
+                            <li>Flats and apartments</li>
+                            <li>Ground-mounted systems</li>
+                        </ul>
                     </div>
                     
-                    <div style="text-align: center; margin-top: var(--space-8);">
-                        <p style="opacity: 0.9; margin-bottom: var(--space-4);">Our MCS certified specialists handle all planning considerations and provide guidance specific to your Manchester property type.</p>
-                        <a href="/planning-permission" class="btn btn-outline-white">Detailed Planning Guide</a>
+                    <div class="planning-card planning-card-info">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">📋</span>
+                            <h4 class="planning-card-title">Manchester Conservation Areas</h4>
+                        </div>
+                        <ul class="planning-list">
+                            <li>City Centre Conservation Area</li>
+                            <li>Didsbury Village</li>
+                            <li>Chorlton Conservation Area</li>
+                            <li>28 conservation areas city-wide</li>
+                            <li>Approximately 900 listed buildings</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="planning-card planning-card-support">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">🏠</span>
+                            <h4 class="planning-card-title">Residential Support</h4>
+                        </div>
+                        <ul class="planning-list">
+                            <li>Free planning assessment</li>
+                            <li>Application support included</li>
+                            <li>95% approval success rate</li>
+                            <li>Heritage property specialists</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <!-- Commercial Planning Content -->
+            <div id="commercial-planning" class="planning-content">
+                <div class="planning-grid">
+                    <div class="planning-card planning-card-success">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">✅</span>
+                            <h4 class="planning-card-title">Permitted Development</h4>
+                        </div>
+                        <ul class="planning-list">
+                            <li>Industrial buildings</li>
+                            <li>Warehouses and factories</li>
+                            <li>Most office buildings</li>
+                            <li>Standard commercial zones</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="planning-card planning-card-warning">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">⚠️</span>
+                            <h4 class="planning-card-title">Planning Required</h4>
+                        </div>
+                        <ul class="planning-list">
+                            <li>Listed commercial buildings</li>
+                            <li>Conservation area businesses</li>
+                            <li>Large-scale installations (&gt;1MW)</li>
+                            <li>Ground-mounted arrays</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="planning-card planning-card-info">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">📋</span>
+                            <h4 class="planning-card-title">Commercial Considerations</h4>
+                        </div>
+                        <ul class="planning-list">
+                            <li>Business rates implications</li>
+                            <li>Health &amp; safety requirements</li>
+                            <li>Environmental impact assessment</li>
+                            <li>Grid connection applications</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="planning-card planning-card-support">
+                        <div class="planning-card-header">
+                            <span class="planning-status-icon">🏢</span>
+                            <h4 class="planning-card-title">Commercial Support</h4>
+                        </div>
+                        <ul class="planning-list">
+                            <li>Commercial planning expertise</li>
+                            <li>DNO application support</li>
+                            <li>Business case development</li>
+                            <li>Compliance management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="planning-cta">
+                <p class="planning-disclaimer">Our MCS certified specialists handle all planning considerations and provide guidance specific to your Manchester property type.</p>
+                <a href="/planning-permission" class="btn btn-outline">Detailed Planning Guide</a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Local Performance Stats -->
         <section class="section" style="background: var(--neutral-50);">

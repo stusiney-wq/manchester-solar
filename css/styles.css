@@ -9199,8 +9199,19 @@ h1.hero-title {
 
 .chart-summary p {
   color: var(--neutral-700);
-  margin: 0;
+  margin: 0 0 var(--space-2) 0;
   line-height: 1.5;
+}
+
+.chart-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.chart-disclaimer {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-500);
+  font-style: italic;
+  margin-top: var(--space-3);
 }
 
 .chart-summary strong {

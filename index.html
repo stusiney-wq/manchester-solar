@@ -725,21 +725,21 @@
         </div>
     </section>
 
-    <!-- PROCESS STEPS SECTION - Insert after Benefits Section in index.html -->
+   <!-- PROCESS STEPS SECTION - Insert after Benefits Section in index.html -->
 
 <!-- Our Installation Process -->
 <section class="section">
     <div class="container">
-        <div class="section-header-center">
+        <div class="section-header section-header-center">
             <h2>Our Professional Installation Process</h2>
             <div class="section-divider-accent"></div>
-            <p class="section-intro">MCS-certified installers follow a proven process for every {{city.display_name}} solar installation</p>
+            <p class="section-intro">MCS-certified installers follow a proven process for every {{city.display_name}} solar installation. Over **{{market.total_installations}} successful installations** with our trusted process.</p>
         </div>
         
         <div class="grid grid-3">
             <!-- Step 1: Site Survey -->
             <div class="process-card card">
-                <img src="images/chorlton-terraced-solar.webp" alt="{{images.steps[0].alt}}" class="process-image">
+                <img src="images/{{images.steps[0].file}}" alt="{{images.steps[0].alt}}" class="process-image">
                 <div class="process-content">
                     <div class="process-number">1</div>
                     <h3>Free Site Survey</h3>
@@ -769,13 +769,6 @@
                     <div class="process-duration">Duration: 1-2 days</div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Trust Message -->
-        <div class="text-center" style="margin-top: var(--space-8);">
-            <p style="font-size: var(--font-size-lg); color: var(--neutral-600);">
-                <strong>**Over {{market.total_installations}} successful installations**</strong> across {{city.display_name}} with our trusted MCS-certified process.
-            </p>
         </div>
     </div>
 </section>

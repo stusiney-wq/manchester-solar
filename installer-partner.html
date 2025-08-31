@@ -363,138 +363,153 @@
         </div>
     </section>
 
-    <!-- Application Form -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Founding Partner Application</h2>
-                <div class="section-divider-accent"></div>
-                <p class="section-intro">Ready to secure your exclusive Manchester territory? Join our founding partner program - <strong>free until we deliver your first 10 qualified leads</strong>.</p>
+   <!-- FOUNDING PARTNER APPLICATION SECTION - Gold Standard v3.1 -->
+<section class="section">
+    <div class="container">
+        <div class="section-header section-header-center">
+            <h2>Founding Partner Application</h2>
+            <div class="section-divider-accent"></div>
+            <p class="section-intro">Ready to secure your exclusive {{city.display_name}} territory? Join our founding partner program - **free until we deliver your first 10 qualified leads**.</p>
+        </div>
+        
+        <div class="grid grid-2">
+            <!-- Application Form -->
+            <div class="card">
+                <h3>Founding Partner Application</h3>
+                <p>Secure your exclusive {{city.display_name}} territory with our risk-free founding partner program. **Free until we deliver your first 10 qualified leads.**</p>
+                
+                <form action="/installer-application-submit" method="post" class="installer-application-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="company_name">Company Name *</label>
+                            <input type="text" id="company_name" name="company_name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="companies_house">Companies House Number</label>
+                            <input type="text" id="companies_house" name="companies_house" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="contact_name">Primary Contact Name *</label>
+                            <input type="text" id="contact_name" name="contact_name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position/Role *</label>
+                            <input type="text" id="position" name="position" required class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">Business Email *</label>
+                            <input type="email" id="email" name="email" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Business Phone *</label>
+                            <input type="tel" id="phone" name="phone" required class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="website">Company Website *</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourcompany.co.uk" required class="form-input">
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="mcs_number">MCS Certification Number *</label>
+                            <input type="text" id="mcs_number" name="mcs_number" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="years_trading">Years Trading *</label>
+                            <select id="years_trading" name="years_trading" required class="form-select">
+                                <option value="">Select years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="5-10">5-10 years</option>
+                                <option value="10-15">10-15 years</option>
+                                <option value="15+">15+ years</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="service_areas">Current Service Areas in {{city.region}} *</label>
+                        <textarea id="service_areas" name="service_areas" placeholder="List the specific {{city.display_name}} areas you currently serve (e.g., Didsbury, Chorlton, Stockport, etc.)" required class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="services_offered">Services Offered *</label>
+                        <textarea id="services_offered" name="services_offered" placeholder="Detail your solar services: residential, commercial, battery storage, off-grid, grid connections, etc." required class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="why_partnership">Why do you want to partner with {{city.display_name}}.solar? *</label>
+                        <textarea id="why_partnership" name="why_partnership" placeholder="Tell us why you're interested in our exclusive network and how you align with our quality-over-volume philosophy..." required class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="property_experience">{{city.display_name}} Property Type Experience</label>
+                        <textarea id="property_experience" name="property_experience" placeholder="Describe your experience with different {{city.display_name}} property types - modern builds, Victorian terraces, heritage properties, etc." class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-submit-wrapper">
+                        <button type="submit" class="btn btn-large">Apply for Founding Partnership</button>
+                        <p class="form-trust-message">✓ **Free until 10 qualified leads** • ✓ **Exclusive territory** • ✓ **Limited spots available**</p>
+                    </div>
+                </form>
             </div>
             
-            <div class="grid grid-2">
-                <!-- Application Form -->
-                <div class="card" id="application-form">
-                    <h3>Founding Partner Application</h3>
-                    <p>Secure your exclusive Manchester territory with our risk-free founding partner program. <strong>Free until we deliver your first 10 qualified leads.</strong></p>
-                    
-                    <form action="/installer-application-submit" method="post" class="installer-application-form">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="company_name">Company Name *</label>
-                                <input type="text" id="company_name" name="company_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="companies_house">Companies House Number</label>
-                                <input type="text" id="companies_house" name="companies_house">
-                            </div>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="contact_name">Primary Contact Name *</label>
-                                <input type="text" id="contact_name" name="contact_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="position">Position/Role *</label>
-                                <input type="text" id="position" name="position" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="email">Business Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Business Phone *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="website">Company Website *</label>
-                            <input type="url" id="website" name="website" placeholder="https://yourcompany.co.uk" required>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="mcs_number">MCS Certification Number *</label>
-                                <input type="text" id="mcs_number" name="mcs_number" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="years_trading">Years Trading *</label>
-                                <select id="years_trading" name="years_trading" required>
-                                    <option value="">Select years</option>
-                                    <option value="3-5">3-5 years</option>
-                                    <option value="5-10">5-10 years</option>
-                                    <option value="10-15">10-15 years</option>
-                                    <option value="15+">15+ years</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="service_areas">Current Service Areas in Greater Manchester *</label>
-                            <textarea id="service_areas" name="service_areas" placeholder="List the specific Manchester areas you currently serve (e.g., Didsbury, Chorlton, Stockport, etc.)" required></textarea>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="services_offered">Services Offered *</label>
-                            <textarea id="services_offered" name="services_offered" placeholder="Detail your solar services: residential, commercial, battery storage, off-grid, grid connections, etc." required></textarea>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="why_partnership">Why do you want to partner with Manchester.solar? *</label>
-                            <textarea id="why_partnership" name="why_partnership" placeholder="Tell us why you're interested in our exclusive network and how you align with our quality-over-volume philosophy..." required></textarea>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="property_experience">Manchester Property Type Experience</label>
-                            <textarea id="property_experience" name="property_experience" placeholder="Describe your experience with different Manchester property types - modern builds, Victorian terraces, heritage properties, etc."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-large">Apply for Founding Partnership</button>
-                        
-                        <p class="trust-message">✓ <strong>Free until 10 qualified leads</strong> • ✓ <strong>Exclusive territory</strong> • ✓ <strong>Limited spots available</strong></p>
-                    </form>
-                </div>
-                
-                <!-- Next Steps Info -->
-                <div>
-                    <div class="card">
-                        <h3>Application Process</h3>
-                        <div class="grid grid-2">
-                            <div>
-                                <h4>1. Application Review</h4>
+            <!-- Application Process Info -->
+            <div class="application-info">
+                <div class="card">
+                    <h3>Application Process</h3>
+                    <div class="process-steps">
+                        <div class="process-step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Application Review</h4>
                                 <p>48-hour initial assessment</p>
                             </div>
-                            <div>
-                                <h4>2. Verification Process</h4>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Verification Process</h4>
                                 <p>Certification and reference checks</p>
                             </div>
-                            <div>
-                                <h4>3. Partnership Interview</h4>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Partnership Interview</h4>
                                 <p>Philosophy alignment discussion</p>
                             </div>
-                            <div>
-                                <h4>4. Partnership Launch</h4>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Partnership Launch</h4>
                                 <p>Onboarding and territory setup</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="card">
-                        <h3>Contact Partnership Team</h3>
-                        <p>Questions about the partnership program? Our team is here to help.</p>
-                        <p><strong>Email:</strong> <a href="mailto:partnerships@manchester.solar">partnerships@manchester.solar</a></p>
+                </div>
+                
+                <div class="card">
+                    <h3>Contact Partnership Team</h3>
+                    <p>Questions about the partnership program? Our team is here to help.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> <a href="mailto:partnerships@{{city.domain}}" class="link-accent">partnerships@{{city.domain}}</a></p>
                         <p><strong>Response Time:</strong> Within 24 hours</p>
                         <p><strong>Available:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CTA Section -->
     <section class="background-image-cta">

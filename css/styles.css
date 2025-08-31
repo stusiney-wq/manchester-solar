@@ -8293,3 +8293,95 @@ h1.hero-title {
   color: var(--neutral-0) !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
+
+/* ============================================ */
+/* PROCESS STEPS CARDS - v3.1 with Images */
+/* ============================================ */
+
+.process-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.process-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.process-content {
+  padding: var(--space-6);
+  position: relative;
+}
+
+.process-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: var(--solar-green);
+  color: var(--neutral-0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.process-content h3 {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-3);
+  color: var(--neutral-900);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.process-content p {
+  color: var(--neutral-600);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.process-duration {
+  font-size: var(--font-size-sm);
+  color: var(--solar-green);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .process-image {
+    height: 180px;
+  }
+  
+  .process-content {
+    padding: var(--space-4);
+  }
+  
+  .process-number {
+    width: 28px;
+    height: 28px;
+    top: -14px;
+    font-size: var(--font-size-xs);
+  }
+  
+  .process-content h3 {
+    font-size: var(--font-size-base);
+  }
+}

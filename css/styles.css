@@ -9920,3 +9920,173 @@ h1.hero-title {
     padding: var(--space-6);
   }
 }
+
+/* ============================================ */
+/* ABOUT MANCHESTER.SOLAR SECTION - Gold Standard v3.1 */
+/* ============================================ */
+
+.section-light {
+  background: var(--neutral-0);
+  padding: var(--space-20) 0;
+  position: relative;
+}
+
+/* Subtle background pattern for visual interest */
+.section-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, var(--neutral-50) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--neutral-50) 0%, transparent 50%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.section-light .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced section header for about section */
+.section-light .section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-light .section-header h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+
+.section-light .section-intro {
+  font-size: var(--font-size-xl);
+  color: var(--neutral-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+
+.section-light .section-intro strong {
+  color: var(--solar-green);
+  font-weight: 600;
+}
+
+/* About cards with enhanced styling */
+.section-light .grid {
+  gap: var(--space-8);
+}
+
+.section-light .card {
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Subtle gradient accent */
+.section-light .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--solar-green), var(--trust-blue));
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+.section-light .card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: var(--solar-green);
+}
+
+.section-light .card:hover::before {
+  transform: translateY(0);
+}
+
+.section-light .card h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+.section-light .card p {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section-light .card strong {
+  color: var(--solar-green);
+  font-weight: 600;
+}
+
+/* Special styling for key value propositions */
+.section-light .card:nth-child(1) h3 {
+  color: var(--trust-blue);
+}
+
+.section-light .card:nth-child(2) h3 {
+  color: var(--solar-green);
+}
+
+.section-light .card:nth-child(3) h3 {
+  color: var(--neutral-800);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .section-light {
+    padding: var(--space-16) 0;
+  }
+  
+  .section-light .section-header h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .section-light .section-intro {
+    font-size: var(--font-size-lg);
+  }
+  
+  .section-light .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .section-light .card {
+    padding: var(--space-6);
+  }
+  
+  .section-light .card h3 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Tablet view optimization */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .section-light .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

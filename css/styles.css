@@ -8980,3 +8980,122 @@ h1.hero-title {
     font-size: var(--font-size-3xl);
   }
 }
+
+/* ============================================ */
+/* MANCHESTER SOLAR MYTHS VS FACTS SECTION */
+/* ============================================ */
+
+.myths-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+/* Myth Cards - Neutral styling */
+.myth-card {
+  background: var(--neutral-50);
+  border: 2px solid var(--neutral-200);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.myth-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.myth-icon {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.myth-label {
+  color: #dc2626;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+
+.myth-claim {
+  color: var(--neutral-900);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+.myth-description {
+  color: var(--neutral-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Fact Cards - Gradient styling */
+.fact-card.gradient-card {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+  border: none;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+}
+
+.fact-icon {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-3);
+  color: var(--neutral-0);
+}
+
+.fact-label {
+  color: var(--neutral-0);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+
+.fact-claim {
+  color: var(--neutral-0);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+.fact-description {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .myths-facts-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .myth-card,
+  .fact-card {
+    padding: var(--space-4);
+  }
+  
+  .myth-claim,
+  .fact-claim {
+    font-size: var(--font-size-base);
+  }
+}

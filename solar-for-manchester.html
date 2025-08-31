@@ -464,210 +464,42 @@
 <section class="section section-neutral">
     <div class="container">
         <div class="section-header-center">
-            <h2>{{city.display_name}} Interactive Solar Calculator</h2>
-            <p class="section-intro">Calculate your personalized savings based on real data from {{market.total_installations}}+ Manchester installations.</p>
+            <h2>{{city.display_name}} Solar Savings Calculator</h2>
+            <p class="section-intro">Based on real {{city.display_name}} performance data and current energy prices.</p>
         </div>
         
-        <div class="calculator-single-column">
+        <div class="grid grid-3">
+            <div class="card card-simple-savings">
+                <h3 class="simple-savings-title">Small System (3kW)</h3>
+                <div class="simple-savings-amount">£1,260</div>
+                <p class="simple-savings-label">Annual savings</p>
+                <p class="simple-savings-detail">2-3 bed terraced homes</p>
+            </div>
             
-            <!-- Monthly Bill Input -->
-            <div class="calc-input-section">
-                <h3 class="calc-section-title">💡 Your Monthly Electricity Bill</h3>
-                <div class="bill-input-card">
-                    <div class="bill-slider-wrapper">
-                        <input type="range" id="monthly-bill" class="bill-range" min="50" max="300" value="120" step="10">
-                        <div class="bill-range-labels">
-                            <span>£50</span>
-                            <span>£300</span>
-                        </div>
-                    </div>
-                    <div class="bill-current">
-                        <span class="bill-amount-large">£<span id="bill-display">120</span></span>
-                        <span class="bill-period">per month</span>
-                    </div>
-                </div>
+            <div class="card card-simple-savings card-simple-featured">
+                <div class="simple-popular-badge">Most Popular</div>
+                <h3 class="simple-savings-title">Medium System (4kW)</h3>
+                <div class="simple-savings-amount">£{{economics.savings.homeowner_annual}}</div>
+                <p class="simple-savings-label">Annual savings</p>
+                <p class="simple-savings-detail">3-4 bed semi-detached</p>
             </div>
-
-            <!-- Property Type Selection -->
-            <div class="calc-input-section">
-                <h3 class="calc-section-title">🏠 Your Manchester Property Type</h3>
-                <div class="property-grid">
-                    <div class="property-card property-selected" data-multiplier="0.8" data-type="victorian">
-                        <div class="property-emoji">🏘️</div>
-                        <div class="property-title">Victorian Terrace</div>
-                        <div class="property-subtitle">1850-1910 • 2-3 bed</div>
-                    </div>
-                    <div class="property-card" data-multiplier="1.0" data-type="edwardian">
-                        <div class="property-emoji">🏡</div>
-                        <div class="property-title">Edwardian Semi</div>
-                        <div class="property-subtitle">1900-1918 • 3-4 bed</div>
-                    </div>
-                    <div class="property-card" data-multiplier="1.2" data-type="modern">
-                        <div class="property-emoji">🏠</div>
-                        <div class="property-title">Modern Build</div>
-                        <div class="property-subtitle">1980+ • All sizes</div>
-                    </div>
-                </div>
+            
+            <div class="card card-simple-savings">
+                <h3 class="simple-savings-title">Large System (6kW)</h3>
+                <div class="simple-savings-amount">£2,520</div>
+                <p class="simple-savings-label">Annual savings</p>
+                <p class="simple-savings-detail">4+ bed detached homes</p>
             </div>
-
-            <!-- Roof Direction -->
-            <div class="calc-input-section">
-                <h3 class="calc-section-title">🧭 Your Main Roof Direction</h3>
-                <div class="roof-select-card">
-                    <select id="roof-direction" class="roof-select">
-                        <option value="1.0">South Facing (Best Performance)</option>
-                        <option value="0.95">Southwest or Southeast</option>
-                        <option value="0.8">East or West Facing</option>
-                        <option value="0.6">North Facing (Limited)</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Results Display -->
-            <div class="calc-results-section">
-                <div class="results-header-main">
-                    <h3 class="results-title-main">Your Estimated Solar Savings</h3>
-                    <p class="results-subtitle-main">Based on Manchester's 3.8 peak sun hours and current energy prices</p>
-                </div>
-                
-                <div class="results-main-grid">
-                    <div class="result-main-card result-featured">
-                        <div class="result-main-value">£<span id="annual-savings">1,512</span></div>
-                        <div class="result-main-label">Annual Savings</div>
-                        <div class="result-main-detail">Electricity bill reduction</div>
-                    </div>
-                    <div class="result-main-card">
-                        <div class="result-main-value"><span id="system-size">3.5</span>kW</div>
-                        <div class="result-main-label">Recommended Size</div>
-                        <div class="result-main-detail">Optimal for your property</div>
-                    </div>
-                    <div class="result-main-card">
-                        <div class="result-main-value"><span id="payback-time">7.2</span> years</div>
-                        <div class="result-main-label">Payback Period</div>
-                        <div class="result-main-detail">When system pays for itself</div>
-                    </div>
-                    <div class="result-main-card">
-                        <div class="result-main-value">£<span id="lifetime-total">37,800</span></div>
-                        <div class="result-main-label">25-Year Total</div>
-                        <div class="result-main-detail">Total lifetime savings</div>
-                    </div>
-                </div>
-                
-                <div class="calc-final-cta">
-                    <a href="#quote-form" class="btn btn-large calc-cta-btn">Get My Detailed Manchester Quote</a>
-                    <p class="calc-final-disclaimer">
-                        <strong>Free assessment by MCS-certified installers • No spam guarantee</strong><br>
-                        Calculations based on Manchester data: 3.8 peak sun hours daily, £0.28/kWh electricity, £0.15/kWh export rate
-                    </p>
-                </div>
-            </div>
+        </div>
+        
+        <div class="simple-calc-footer">
+            <p class="simple-calc-disclaimer">
+                <strong>Based on:</strong> Current {{city.display_name}} energy prices (£0.28/kWh), {{solar.peak_sun_hours}} peak sun hours daily, 
+                Smart Export Guarantee rates, and typical household consumption patterns.
+            </p>
+            <a href="#quote-form" class="btn btn-large">Get Your Personalized Quote</a>
         </div>
     </div>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Manchester Solar Data (hardcoded for reliable calculations)
-        const MANCHESTER_DATA = {
-            peakSunHours: 3.8,
-            electricityRate: 0.28, // £ per kWh
-            exportRate: 0.15, // SEG rate
-            systemCostPerKW: 1100, // £ per kW installed
-            averageGenPerKW: 1387, // kWh per kW per year (3.8 * 365)
-            selfConsumption: 0.4, // 40% used directly
-            exportPercentage: 0.6 // 60% exported
-        };
-
-        // Get elements
-        const billSlider = document.getElementById('monthly-bill');
-        const billDisplay = document.getElementById('bill-display');
-        const propertyCards = document.querySelectorAll('.property-card');
-        const roofSelect = document.getElementById('roof-direction');
-        
-        const annualSavings = document.getElementById('annual-savings');
-        const systemSize = document.getElementById('system-size');
-        const paybackTime = document.getElementById('payback-time');
-        const lifetimeTotal = document.getElementById('lifetime-total');
-
-        // Calculator state
-        let calcState = {
-            monthlyBill: 120,
-            propertyMultiplier: 0.8,
-            roofMultiplier: 1.0
-        };
-
-        // Calculate and update results
-        function updateCalculations() {
-            const annualBill = calcState.monthlyBill * 12;
-            const annualUsage = annualBill / MANCHESTER_DATA.electricityRate;
-            
-            // System sizing based on usage and property type
-            const recommendedKW = Math.round(((annualUsage / MANCHESTER_DATA.averageGenPerKW) * calcState.propertyMultiplier) * 10) / 10;
-            const finalKW = Math.max(2.5, Math.min(8.0, recommendedKW)); // Cap between 2.5-8kW
-            
-            // Annual generation with roof direction adjustment
-            const annualGeneration = finalKW * MANCHESTER_DATA.averageGenPerKW * calcState.roofMultiplier;
-            
-            // Savings calculation
-            const selfConsumedKWh = annualGeneration * MANCHESTER_DATA.selfConsumption;
-            const exportedKWh = annualGeneration * MANCHESTER_DATA.exportPercentage;
-            const annualSavingsAmount = (selfConsumedKWh * MANCHESTER_DATA.electricityRate) + (exportedKWh * MANCHESTER_DATA.exportRate);
-            
-            // Payback calculation
-            const systemCost = finalKW * MANCHESTER_DATA.systemCostPerKW;
-            const paybackYears = systemCost / annualSavingsAmount;
-            
-            // 25-year lifetime savings (accounting for degradation)
-            const lifetimeSavings = annualSavingsAmount * 22; // Conservative 22 years effective
-            
-            // Update display with animation
-            updateValueWithAnimation(annualSavings, Math.round(annualSavingsAmount).toLocaleString());
-            updateValueWithAnimation(systemSize, finalKW.toString());
-            updateValueWithAnimation(paybackTime, Math.round(paybackYears * 10) / 10);
-            updateValueWithAnimation(lifetimeTotal, Math.round(lifetimeSavings / 1000).toLocaleString() + 'k');
-        }
-
-        // Smooth value update animation (no inline CSS)
-        function updateValueWithAnimation(element, newValue) {
-            element.classList.add('result-updating');
-            
-            setTimeout(() => {
-                element.textContent = newValue;
-                element.classList.remove('result-updating');
-            }, 150);
-        }
-
-        // Bill slider handler
-        billSlider.addEventListener('input', function() {
-            calcState.monthlyBill = parseInt(this.value);
-            billDisplay.textContent = calcState.monthlyBill;
-            updateCalculations();
-        });
-
-        // Property selection handler
-        propertyCards.forEach(card => {
-            card.addEventListener('click', function() {
-                // Remove active class from all cards
-                propertyCards.forEach(c => c.classList.remove('property-selected'));
-                // Add active class to clicked card
-                this.classList.add('property-selected');
-                // Update multiplier
-                calcState.propertyMultiplier = parseFloat(this.dataset.multiplier);
-                updateCalculations();
-            });
-        });
-
-        // Roof direction handler
-        roofSelect.addEventListener('change', function() {
-            calcState.roofMultiplier = parseFloat(this.value);
-            updateCalculations();
-        });
-
-        // Initialize calculations
-        updateCalculations();
-        
-        console.log('Manchester Solar Calculator v3.1 Ready - Interactive & Working!');
-    });
-    </script>
 </section>
 
        

@@ -8628,6 +8628,10 @@ h1.hero-title {
 /* MANCHESTER SOLAR GRADIENT SYSTEM */
 /* ============================================ */
 
+/* ============================================ */
+/* MANCHESTER SOLAR GRADIENT SYSTEM */
+/* ============================================ */
+
 /* Base Gradient - Our Signature Look */
 .gradient-primary {
   background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
@@ -8675,6 +8679,12 @@ h1.hero-title {
   box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
 }
 
+/* White arrow for gradient buttons */
+.btn.gradient-btn::after,
+.gradient-btn::after {
+  color: var(--neutral-0) !important;
+}
+
 /* Gradient Sections */
 .section.gradient-section,
 .gradient-section {
@@ -8705,17 +8715,22 @@ h1.hero-title {
 }
 
 /* Gradient Stats */
+.cta-stat.gradient-stat,
 .stat-card.gradient-stat,
 .gradient-stat {
   background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
   color: var(--neutral-0);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
 }
 
-.gradient-stat .stat-number {
+.gradient-stat .stat-number,
+.gradient-stat .cta-stat-number {
   color: var(--neutral-0);
 }
 
-.gradient-stat .stat-label {
+.gradient-stat .stat-label,
+.gradient-stat .cta-stat-label {
   color: rgba(255, 255, 255, 0.9);
 }
 

@@ -9283,6 +9283,13 @@ h1.hero-title {
   line-height: 1.5;
   margin-bottom: var(--space-4);
   text-align: center;
+  word-wrap: break-word;
+  hyphens: none;
+}
+
+.property-description strong {
+  display: inline;
+  text-align: inherit;
 }
 
 .property-features {

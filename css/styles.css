@@ -8623,3 +8623,164 @@ h1.hero-title {
     gap: var(--space-3);
   }
 }
+
+/* ============================================ */
+/* MANCHESTER SOLAR GRADIENT SYSTEM */
+/* ============================================ */
+
+/* Base Gradient - Our Signature Look */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+}
+
+/* Gradient Cards */
+.card.gradient-card,
+.gradient-card {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+}
+
+.gradient-card h1,
+.gradient-card h2,
+.gradient-card h3,
+.gradient-card h4,
+.gradient-card h5,
+.gradient-card h6 {
+  color: var(--neutral-0);
+}
+
+.gradient-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.gradient-card .link-accent {
+  color: var(--neutral-0);
+  text-decoration: underline;
+}
+
+/* Gradient Buttons */
+.btn.gradient-btn,
+.gradient-btn {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+  border: none;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.3);
+}
+
+.btn.gradient-btn:hover,
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+/* Gradient Sections */
+.section.gradient-section,
+.gradient-section {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+}
+
+.gradient-section h1,
+.gradient-section h2,
+.gradient-section h3,
+.gradient-section h4,
+.gradient-section h5,
+.gradient-section h6 {
+  color: var(--neutral-0);
+}
+
+.gradient-section p,
+.gradient-section li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Gradient Badges */
+.hero-badge.gradient-badge,
+.gradient-badge {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Gradient Stats */
+.stat-card.gradient-stat,
+.gradient-stat {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+}
+
+.gradient-stat .stat-number {
+  color: var(--neutral-0);
+}
+
+.gradient-stat .stat-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Gradient Dividers */
+.section-divider-gradient {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  margin: var(--space-4) auto;
+  border-radius: var(--radius-full);
+}
+
+/* Gradient Trust Elements */
+.trust-message.gradient-trust,
+.gradient-trust {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: rgba(255, 255, 255, 0.9);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+/* Gradient Process Numbers */
+.process-number.gradient-number,
+.gradient-number {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+}
+
+/* Gradient Form Highlights */
+.form-highlight.gradient-form,
+.gradient-form {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  color: var(--neutral-0);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+}
+
+.gradient-form h3,
+.gradient-form h4 {
+  color: var(--neutral-0);
+}
+
+.gradient-form p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Subtle Gradient Backgrounds */
+.gradient-subtle {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(30, 64, 175, 0.1));
+}
+
+/* Gradient Text (for headings) */
+.gradient-text {
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Accessibility - ensure contrast */
+.gradient-card:focus,
+.gradient-btn:focus,
+.gradient-section:focus {
+  outline: 3px solid var(--solar-yellow);
+  outline-offset: 2px;
+}

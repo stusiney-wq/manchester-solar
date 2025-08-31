@@ -461,43 +461,77 @@
     </div>
 </section>
 
-        <!-- Manchester Savings Calculator -->
-        <section class="section" style="background: var(--neutral-50);">
-            <div class="container">
-                <div class="savings-calculator">
-                    <h2 style="margin-bottom: var(--space-6); text-align: center;">Manchester Solar Savings Calculator</h2>
-                    <p style="text-align: center; margin-bottom: var(--space-8); color: var(--neutral-700);">Based on real Manchester performance data and current energy prices.</p>
-                    
-                    <div class="grid grid-3" style="gap: var(--space-6);">
-                        <div style="text-align: center; padding: var(--space-4); background: var(--neutral-0); border-radius: var(--radius-lg);">
-                            <h3 style="color: var(--solar-green);">Small System (3kW)</h3>
-                            <div style="font-size: var(--font-size-2xl); font-weight: 700; margin: var(--space-3) 0;">£1,420</div>
-                            <p style="margin: 0; color: var(--neutral-600);">Annual savings</p>
-                            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm); color: var(--neutral-600);">Typical 2-bed terrace</p>
-                        </div>
-                        
-                        <div style="text-align: center; padding: var(--space-4); background: var(--neutral-0); border-radius: var(--radius-lg); border: 2px solid var(--solar-green);">
-                            <h3 style="color: var(--solar-green);">Medium System (4kW)</h3>
-                            <div style="font-size: var(--font-size-2xl); font-weight: 700; margin: var(--space-3) 0;">£1,890</div>
-                            <p style="margin: 0; color: var(--neutral-600);">Annual savings</p>
-                            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm); color: var(--neutral-600);">Most popular size</p>
-                        </div>
-                        
-                        <div style="text-align: center; padding: var(--space-4); background: var(--neutral-0); border-radius: var(--radius-lg);">
-                            <h3 style="color: var(--solar-green);">Large System (6kW)</h3>
-                            <div style="font-size: var(--font-size-2xl); font-weight: 700; margin: var(--space-3) 0;">£2,840</div>
-                            <p style="margin: 0; color: var(--neutral-600);">Annual savings</p>
-                            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm); color: var(--neutral-600);">4+ bed properties</p>
-                        </div>
+       <section class="section section-neutral">
+    <div class="container">
+        <div class="savings-calculator">
+            <div class="section-header-center">
+                <h2>{{city.display_name}} Solar Savings Calculator</h2>
+                <p class="section-intro">Based on real {{city.display_name}} performance data and current energy prices.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card card-savings">
+                    <div class="card-header-center">
+                        <h3 class="savings-system-title">Small System ({{economics.system_sizes.small}}kW)</h3>
                     </div>
-                    
-                    <div style="text-align: center; margin-top: var(--space-8);">
-                        <p style="margin-bottom: var(--space-4);"><strong>Based on:</strong> Current Manchester energy prices, 3.8 peak sun hours daily, Smart Export Guarantee rates, and typical household consumption patterns.</p>
-                        <a href="#quote-form" class="btn btn-large" data-smart-quote="true">Get Your Personalized Quote</a>
+                    <div class="savings-amount">{{economics.savings.small_system_annual}}</div>
+                    <p class="savings-label">Annual savings</p>
+                    <p class="savings-context">{{economics.property_types.small_system}}</p>
+                </div>
+                
+                <div class="card card-savings card-featured">
+                    <div class="card-header-center">
+                        <h3 class="savings-system-title">Medium System ({{economics.system_sizes.medium}}kW)</h3>
                     </div>
+                    <div class="savings-amount">{{economics.savings.medium_system_annual}}</div>
+                    <p class="savings-label">Annual savings</p>
+                    <p class="savings-context">{{economics.property_types.medium_system}}</p>
+                    <div class="hero-badge">Most Popular</div>
+                </div>
+                
+                <div class="card card-savings">
+                    <div class="card-header-center">
+                        <h3 class="savings-system-title">Large System ({{economics.system_sizes.large}}kW)</h3>
+                    </div>
+                    <div class="savings-amount">{{economics.savings.large_system_annual}}</div>
+                    <p class="savings-label">Annual savings</p>
+                    <p class="savings-context">{{economics.property_types.large_system}}</p>
                 </div>
             </div>
-        </section>
+            
+            <div class="savings-calculator-footer">
+                <p class="savings-disclaimer">
+                    <strong>Based on:</strong> Current {{city.display_name}} energy prices, {{solar.peak_sun_hours}} peak sun hours daily, 
+                    Smart Export Guarantee rates, and typical household consumption patterns.
+                </p>
+                <a href="#quote-form" class="btn btn-large" data-smart-quote="true">Get Your Personalized Quote</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Calculator",
+        "name": "{{city.display_name}} Solar Savings Calculator",
+        "description": "Calculate potential solar panel savings for {{city.display_name}} homeowners based on local performance data",
+        "url": "{{site.base_url}}#savings-calculator",
+        "provider": {
+            "@type": "Organization",
+            "name": "{{site.business_name}}",
+            "url": "{{site.base_url}}"
+        },
+        "serviceType": "Solar Panel Installation",
+        "areaServed": {
+            "@type": "City",
+            "name": "{{city.display_name}}",
+            "addressRegion": "{{city.county}}",
+            "addressCountry": "GB"
+        }
+    }
+    </script>
+</section>
 
         <!-- Planning Permission Guide -->
         <section class="section">

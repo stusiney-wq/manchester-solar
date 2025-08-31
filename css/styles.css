@@ -1356,7 +1356,7 @@ body {
   margin-bottom: var(--space-6);
 }
 
-/* ============================================ */
+* ============================================ */
 /* INSTALLER SECTION COMPLETE STYLING */
 /* ============================================ */
 
@@ -1568,8 +1568,11 @@ body {
 .installer-selection-card .selection-cta .cta-text {
   font-size: var(--font-size-xl) !important;
   font-weight: 600 !important;
+  line-height: 1.4 !important;
   margin-bottom: var(--space-6) !important;
   color: var(--neutral-0) !important;
+  max-width: none !important;
+  white-space: normal !important;
 }
 
 .installer-selection-card .selection-cta .btn {
@@ -1577,7 +1580,9 @@ body {
   color: var(--solar-green) !important;
   border: 2px solid var(--neutral-0) !important;
   font-weight: 700 !important;
-  margin-bottom: var(--space-4) !important;
+  margin: var(--space-6) 0 !important;
+  display: inline-block !important;
+  padding: var(--space-4) var(--space-8) !important;
 }
 
 .installer-selection-card .selection-cta .btn:hover {
@@ -1591,8 +1596,11 @@ body {
 .installer-selection-card .selection-cta .cta-disclaimer {
   font-size: var(--font-size-sm) !important;
   color: rgba(255, 255, 255, 0.8) !important;
-  margin: 0 !important;
+  margin-top: var(--space-4) !important;
+  margin-bottom: 0 !important;
   font-style: italic !important;
+  line-height: 1.5 !important;
+  max-width: none !important;
 }
 
 /* Mobile Responsive */

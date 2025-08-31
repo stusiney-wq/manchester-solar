@@ -9237,3 +9237,112 @@ h1.hero-title {
     padding: var(--space-3);
   }
 }
+
+/* ============================================ */
+/* MANCHESTER PROPERTY TYPES SECTION */
+/* ============================================ */
+
+.property-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.property-card {
+  text-align: center;
+  padding: var(--space-6);
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.property-card:hover {
+  border-color: var(--solar-green);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.1);
+}
+
+.property-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.property-card h3 {
+  color: var(--neutral-900);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+.property-description {
+  color: var(--neutral-600);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+  text-align: left;
+}
+
+.property-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.property-features li {
+  padding: var(--space-2) 0;
+  color: var(--neutral-700);
+  position: relative;
+  padding-left: var(--space-4);
+  line-height: 1.4;
+  font-size: var(--font-size-sm);
+}
+
+.property-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--solar-green);
+  font-weight: 700;
+}
+
+.property-features li:last-child {
+  padding-bottom: 0;
+}
+
+/* Gradient accent for special property types */
+.property-card:nth-child(2) {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.03), rgba(30, 64, 175, 0.03));
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.property-card:nth-child(4) {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.03), rgba(30, 64, 175, 0.03));
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .property-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .property-card {
+    padding: var(--space-4);
+  }
+  
+  .property-icon {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .property-types-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

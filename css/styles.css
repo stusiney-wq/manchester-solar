@@ -9619,9 +9619,12 @@ h1.hero-title {
 /* Planning Grid */
 .planning-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
   margin: var(--space-8) 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Planning Cards */

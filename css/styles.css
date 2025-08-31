@@ -8444,7 +8444,7 @@ h1.hero-title {
   margin: 0;
 }
 
-/* ============================================ */
+* ============================================ */
 /* FOUNDING PARTNER APPLICATION SECTION */
 /* ============================================ */
 
@@ -8503,15 +8503,15 @@ h1.hero-title {
   gap: var(--space-6);
 }
 
-.application-info .card {
+.application-process-card {
   text-align: left !important;
 }
 
-.application-info .card h3 {
+.application-process-card h3 {
   text-align: left !important;
 }
 
-.application-info .card * {
+.application-process-card * {
   text-align: left !important;
 }
 

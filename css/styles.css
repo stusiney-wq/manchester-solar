@@ -8503,6 +8503,10 @@ h1.hero-title {
   gap: var(--space-6);
 }
 
+.application-info .card {
+  text-align: left;
+}
+
 .process-steps {
   display: flex;
   flex-direction: column;

@@ -1357,13 +1357,31 @@ body {
 }
 
 /* ============================================ */
-/* INSTALLER SECTION BOTTOM STYLING */
+/* INSTALLER SECTION COMPLETE STYLING */
 /* ============================================ */
 
 .installer-section-dark {
   background: var(--neutral-900);
   color: var(--neutral-0);
   padding: var(--space-20) 0;
+}
+
+.installer-section-dark .section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.installer-section-dark .section-header h2 {
+  color: var(--neutral-0);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.installer-section-dark .section-intro {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
 }
 
 .installer-selection-card {
@@ -1375,100 +1393,43 @@ body {
   margin-top: var(--space-8);
 }
 
-/* Selection Promise Section */
-.selection-promise {
-  margin-top: var(--space-12);
-  padding: var(--space-8);
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(30, 64, 175, 0.1));
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(34, 197, 94, 0.2);
+/* Selection Intro */
+.selection-intro {
+  text-align: center;
+  margin-bottom: var(--space-12);
 }
 
-.promise-content h4 {
+.selection-title {
   color: var(--solar-green);
   font-size: var(--font-size-2xl);
   font-weight: 700;
   margin-bottom: var(--space-4);
-  text-align: center;
 }
 
-.promise-content p {
+.selection-description {
   color: rgba(255, 255, 255, 0.9);
   font-size: var(--font-size-lg);
   line-height: 1.6;
-  text-align: center;
-  margin-bottom: var(--space-6);
 }
 
-.promise-points {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-6);
+/* Selection Benefits */
+.selection-benefits {
+  margin-bottom: var(--space-12);
 }
 
-.promise-point {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-}
-
-.promise-icon {
+.selection-benefits h4 {
   color: var(--solar-green);
-  font-weight: 700;
-  font-size: var(--font-size-lg);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-/* Selection CTA Section */
-.selection-cta {
-  margin-top: var(--space-12);
-  text-align: center;
-  padding: var(--space-8);
-  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue));
-  border-radius: var(--radius-lg);
-  color: var(--neutral-0);
-}
-
-.cta-text {
   font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin-bottom: var(--space-6);
-  color: var(--neutral-0);
-}
-
-.selection-cta .btn {
-  background: var(--neutral-0);
-  color: var(--solar-green);
-  border: 2px solid var(--neutral-0);
   font-weight: 700;
-  margin-bottom: var(--space-4);
+  text-align: center;
+  margin-bottom: var(--space-8);
 }
 
-.selection-cta .btn:hover {
-  background: transparent;
-  color: var(--neutral-0);
-  border-color: var(--neutral-0);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-}
-
-.cta-disclaimer {
-  font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
-  font-style: italic;
-}
-
-/* Benefit Items Styling */
 .benefit-item {
   display: flex;
   align-items: flex-start;
   gap: var(--space-4);
-  padding: var(--space-4);
+  padding: var(--space-6);
   background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1492,7 +1453,19 @@ body {
   margin: 0;
 }
 
-/* Requirement Groups */
+/* Selection Requirements */
+.selection-requirements {
+  margin-bottom: var(--space-12);
+}
+
+.selection-requirements h4 {
+  color: var(--solar-green);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
 .requirement-group {
   background: rgba(255, 255, 255, 0.05);
   padding: var(--space-6);
@@ -1535,20 +1508,16 @@ body {
   margin-bottom: 0;
 }
 
-/* Section Headers in Dark Context */
-.installer-section-dark .section-header h2 {
-  color: var(--neutral-0);
-  text-align: center;
-  margin-bottom: var(--space-4);
+/* Selection Promise Section */
+.selection-promise {
+  margin-bottom: var(--space-12);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(30, 64, 175, 0.1));
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
-.installer-section-dark .section-intro {
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: var(--font-size-lg);
-}
-
-.selection-title {
+.promise-content h4 {
   color: var(--solar-green);
   font-size: var(--font-size-2xl);
   font-weight: 700;
@@ -1556,12 +1525,74 @@ body {
   text-align: center;
 }
 
-.selection-description {
+.promise-content > p {
   color: rgba(255, 255, 255, 0.9);
   font-size: var(--font-size-lg);
   line-height: 1.6;
   text-align: center;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.promise-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.promise-point {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.promise-icon {
+  color: var(--solar-green);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Selection CTA Section - More Specific Targeting */
+.installer-selection-card .selection-cta {
+  text-align: center !important;
+  padding: var(--space-8) !important;
+  background: linear-gradient(135deg, var(--solar-green), var(--trust-blue)) !important;
+  border-radius: var(--radius-lg) !important;
+  color: var(--neutral-0) !important;
+  margin-top: var(--space-8) !important;
+}
+
+.installer-selection-card .selection-cta .cta-text {
+  font-size: var(--font-size-xl) !important;
+  font-weight: 600 !important;
+  margin-bottom: var(--space-6) !important;
+  color: var(--neutral-0) !important;
+}
+
+.installer-selection-card .selection-cta .btn {
+  background: var(--neutral-0) !important;
+  color: var(--solar-green) !important;
+  border: 2px solid var(--neutral-0) !important;
+  font-weight: 700 !important;
+  margin-bottom: var(--space-4) !important;
+}
+
+.installer-selection-card .selection-cta .btn:hover {
+  background: transparent !important;
+  color: var(--neutral-0) !important;
+  border-color: var(--neutral-0) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.installer-selection-card .selection-cta .cta-disclaimer {
+  font-size: var(--font-size-sm) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin: 0 !important;
+  font-style: italic !important;
 }
 
 /* Mobile Responsive */
@@ -1578,6 +1609,14 @@ body {
   .selection-promise,
   .selection-cta {
     padding: var(--space-6);
+  }
+  
+  .benefit-item {
+    padding: var(--space-4);
+  }
+  
+  .requirement-group {
+    padding: var(--space-4);
   }
 }
 

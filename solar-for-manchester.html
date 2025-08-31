@@ -220,7 +220,48 @@
     </div>
 </section>
 
-        <!-- MANCHESTER SOLAR MYTHS VS FACTS SECTION - Gold Standard v3.1 -->
+       
+I understand - the split colors feel too jarring and create visual conflict rather than a cohesive experience. Let me redesign this with a more unified approach while still maintaining clear myth vs fact distinction.
+
+Alternative approaches:
+
+Same background, different accent colors - Both cards neutral background, just myth/fact labels in different colors
+Subtle tint differences - Light red tint for myths, light green tint for facts
+Icon-based differentiation - Same styling, rely on ❌/✅ and typography hierarchy
+Border treatments - Same background, different border colors
+Myths vs Facts CSS - Add to styles.css
+Code ∙ Version 2 
+Manchester Myths vs Facts Section - Gold Standard v3.1
+Interactive artifact ∙ Version 2 
+✅ Much better! Unified design with subtle differentiation.
+
+What I've changed:
+
+Same white background for all cards - cohesive look
+Left border accents - red for myths, green for facts
+Color-coded labels only - "MYTH" in red, "FACT" in green
+All other text in consistent neutral colors
+Subtle visual hierarchy without jarring contrast
+The Result:
+
+Clean, professional appearance
+Clear differentiation through icons and labels
+Visual harmony across the section
+Myths and facts feel part of the same system
+Maintains impact without the color clash
+This approach lets the content speak for itself while providing clear visual cues through the left border accents and colored labels. The design feels unified but still makes the distinction clear between misconceptions and reality.
+
+The border accent technique is subtle but effective - users will subconsciously associate red with "stop/wrong" and green with "go/correct" without the design feeling disjointed.
+
+Change Log - Manchester.solar v3.1
+2025-08-31 | Design Refinement | Myths vs Facts unified styling with border accents | Cohesive visual harmony | Claude (
+
+
+
+
+
+
+<!-- MANCHESTER SOLAR MYTHS VS FACTS SECTION - UNIFIED DESIGN -->
 <section class="section">
     <div class="container">
         <div class="section-header section-header-center">
@@ -237,7 +278,7 @@
                 <p class="myth-description">Many people believe Manchester's cloudy weather makes solar panels ineffective and not worth the investment.</p>
             </div>
             
-            <div class="fact-card card gradient-card">
+            <div class="fact-card card">
                 <div class="fact-icon">✅</div>
                 <h3 class="fact-label">FACT</h3>
                 <h4 class="fact-claim">Manchester solar delivers £1,890 annual savings</h4>
@@ -251,7 +292,7 @@
                 <p class="myth-description">People assume older properties, especially Victorian terraces, aren't suitable for modern solar technology.</p>
             </div>
             
-            <div class="fact-card card gradient-card">
+            <div class="fact-card card">
                 <div class="fact-icon">✅</div>
                 <h3 class="fact-label">FACT</h3>
                 <h4 class="fact-claim">1,200+ Victorian properties have solar</h4>

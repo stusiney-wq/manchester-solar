@@ -10817,6 +10817,10 @@ h1.hero-title {
   background-image: 
     linear-gradient(135deg, rgba(31, 41, 59, 0.7) 0%, rgba(59, 130, 246, 0.6) 100%),
     url('images/manchester-hero-2000x1200-1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* About page */

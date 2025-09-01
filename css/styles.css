@@ -10428,39 +10428,9 @@ h1.hero-title {
   color: var(--text-muted, #555);
 }
 
-* ============================================ */
+/* ============================================ */
 /* BENEFITS SECTION - MISSING CSS CLASSES */
 /* ============================================ */
-
-/* Benefits Section Dark Background */
-.benefits-section.section-dark {
-  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
-  color: var(--neutral-0);
-  border-top: 1px solid var(--neutral-700);
-}
-
-.benefits-section.section-dark .section-header h2 {
-  color: var(--neutral-0);
-}
-
-.benefits-section.section-dark .section-intro {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* Cards on dark background */
-.benefits-section.section-dark .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.benefits-section.section-dark .card h3 {
-  color: var(--neutral-0);
-}
-
-.benefits-section.section-dark .card p {
-  color: rgba(255, 255, 255, 0.9);
-}
 
 /* Green tick list styling */
 .list-green-tick {
@@ -10518,9 +10488,4 @@ h1.hero-title {
   margin-top: var(--space-3);
   margin-bottom: 0;
   font-weight: 500;
-}
-
-/* Section divider accent on dark background */
-.benefits-section.section-dark .section-divider-accent {
-  background: linear-gradient(90deg, var(--solar-green) 0%, var(--solar-yellow) 100%);
 }

@@ -10428,7 +10428,7 @@ h1.hero-title {
   color: var(--text-muted, #555);
 }
 
-/* ============================================ */
+* ============================================ */
 /* BENEFITS SECTION - MISSING CSS CLASSES */
 /* ============================================ */
 
@@ -10462,8 +10462,45 @@ h1.hero-title {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.benefits-section.section-dark .list-dot li {
-  color: rgba(255, 255, 255, 0.8);
+/* Green tick list styling */
+.list-green-tick {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+}
+
+.list-green-tick li {
+  padding: var(--space-2) 0;
+  position: relative;
+  padding-left: var(--space-6);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.list-green-tick li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+}
+
+.list-green-tick li::after {
+  content: '✓';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+  line-height: 1;
 }
 
 /* Benefits CTA */

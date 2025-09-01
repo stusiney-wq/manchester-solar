@@ -10737,6 +10737,21 @@ h1.hero-title {
 /* INSTALLER STANDARDS SECTION - MINIMAL ADDITIONS */
 /* ============================================ */
 
+/* Fix green tick alignment for installer standards */
+.installer-standards .list-green-tick li {
+  padding-left: var(--space-8); /* More space for better alignment */
+}
+
+.installer-standards .list-green-tick li::before {
+  left: var(--space-1); /* Move tick closer to text */
+  width: 18px;
+  height: 18px;
+}
+
+.installer-standards .list-green-tick li::after {
+  left: 7px; /* Center the tick mark in the circle */
+}
+
 /* Standards CTA (same pattern as benefits-cta) */
 .standards-cta {
   text-align: center;

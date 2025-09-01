@@ -11450,6 +11450,189 @@ h1.hero-title {
 }
 
 /* ============================================ */
+/* REUSABLE HERO SYSTEM - GOLD STANDARD v3.1 */
+/* ============================================ */
+
+/* Base Hero Structure (works for all pages) */
+.hero {
+  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+  color: var(--neutral-0);
+  padding: var(--space-20) 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Specific background images for each page */
+.hero.homepage-hero-bg {
+  background-image: 
+    linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(31, 41, 59, 0.85) 100%),
+    url('manchester-hero-2000x1200-1.webp'),
+    url('images/manchester-hero-2000x1200-1.webp'),
+    url('assets/manchester-hero-2000x1200-1.webp');
+}
+
+.hero.commercial-hero-bg {
+  background-image: 
+    linear-gradient(135deg, rgba(31, 41, 59, 0.85) 0%, rgba(59, 130, 246, 0.85) 100%),
+    url('manchester-hero-2000x1200-1.webp'),
+    url('images/manchester-hero-2000x1200-1.webp'),
+    url('assets/manchester-hero-2000x1200-1.webp'),
+    url('./manchester-hero-2000x1200-1.webp'),
+    url('../manchester-hero-2000x1200-1.webp'),
+    url('manchester-hero-2000x1200-1.jpg'),
+    url('images/manchester-hero-2000x1200-1.jpg');
+  /* Temporary debug - remove when working */
+  background-color: red !important;
+}
+
+.hero.about-hero-bg {
+  background-image: 
+    linear-gradient(135deg, rgba(59, 130, 246, 0.85) 0%, rgba(31, 41, 59, 0.85) 100%),
+    url('manchester-hero-2000x1200-1.webp'),
+    url('images/manchester-hero-2000x1200-1.webp'),
+    url('assets/manchester-hero-2000x1200-1.webp');
+}
+
+.hero.contact-hero-bg {
+  background-image: 
+    linear-gradient(135deg, rgba(34, 197, 94, 0.85) 0%, rgba(31, 41, 59, 0.85) 100%),
+    url('manchester-hero-2000x1200-1.webp'),
+    url('images/manchester-hero-2000x1200-1.webp'),
+    url('assets/manchester-hero-2000x1200-1.webp');
+}
+
+/* Gradient tint overlay for premium effect */
+.hero.gradient-tint::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hero Badges */
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--neutral-0);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: all 0.2s ease;
+}
+
+.hero-badge:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--space-8);
+  color: var(--neutral-0);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.025em;
+}
+
+/* Hero Subtext */
+.hero-subtext {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-subtext strong {
+  color: var(--solar-green);
+  font-weight: 700;
+}
+
+/* Hero CTA */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Gradient Button */
+.gradient-btn {
+  background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+  color: var(--neutral-0);
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+}
+
+.gradient-btn:hover,
+.gradient-btn:focus {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+  color: var(--neutral-0);
+}
+
+/* Trust Message */
+.trust-message {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============================================ */
 /* HERO VARIANTS FOR DIFFERENT PAGES */
 /* ============================================ */
 

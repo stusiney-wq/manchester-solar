@@ -119,64 +119,98 @@
     <!-- Header Container -->
     <div id="header-container"></div>
 
-    <!-- Hero Section -->
-    <section class="hero gradient-tint">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="hero-badge">No Spam Guarantee</span>
-                    <span class="hero-badge">MCS Certified Network</span>
-                    <span class="hero-badge">Manchester Property Experts</span>
-                </div>
-                <h1 class="hero-title">Connect With Manchester's Best Solar Installers</h1>
-                
-                <p class="hero-subtext">
-                    <strong>Manchester.solar connects you with 2-3 carefully vetted MCS specialists</strong> who understand your property type - from Victorian terraces to modern builds. <strong>No spam, no bidding wars</strong> - just professional conversations leading to <strong>£1,890+ annual savings</strong> with <strong>6.8-year payback periods</strong>.
-                </p>
-                <div class="hero-cta">
-                    <a href="#solar-assessment" class="btn btn-large gradient-btn" data-smart-quote="true">Get Your Free Assessment</a>
-                    <p class="trust-message">Single professional contact • No bidding wars • All Manchester property types</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- =========================================
+     HERO — Lead-Capture / Connector Positioning
+     ========================================= -->
+<section class="hero gradient-tint" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badges" aria-label="Trust badges">
+        <span class="hero-badge">No Spam Guarantee</span>
+        <span class="hero-badge">MCS Certified Network</span>
+        <span class="hero-badge">Manchester Property Experts</span>
+      </div>
 
-    <!-- Stats Section -->
-    <section class="stats-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Connect With Manchester Solar Specialists?</h2>
-                <div class="section-divider-accent"></div>
-                <p class="section-intro">Real performance and savings data from 2,800+ Manchester installations through our trusted network</p>
-            </div>
-            
-            <div class="grid grid-4">
-                <div class="stat-card">
-                    <span class="stat-number">3.8</span>
-                    <span class="stat-label">Peak Sun Hours / Day</span>
-                    <p class="stat-note">Manchester averages 3.8 peak sun hours across the year - solid output for PV generation.</p>
-                </div>
-                
-                <div class="stat-card">
-                    <span class="stat-number">£1,890</span>
-                    <span class="stat-label">Avg Home Savings / Year</span>
-                    <p class="stat-note">Typical residential systems deliver ~£1,890 yearly savings at current rates (0% VAT until 2027).</p>
-                </div>
-                
-                <div class="stat-card">
-                    <span class="stat-number">2,800+</span>
-                    <span class="stat-label">Local Installations</span>
-                    <p class="stat-note">More than 2,800 Manchester installs to date, with strong year-on-year growth.</p>
-                </div>
-                
-                <div class="stat-card">
-                    <span class="stat-number">6.8 years</span>
-                    <span class="stat-label">Typical Payback</span>
-                    <p class="stat-note">Average payback around 6.8 years; systems carry ~25-year performance warranties.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <h1 id="hero-heading" class="hero-title">
+        Solar Panels Manchester — Get Free Quotes From Trusted Installers
+      </h1>
+
+      <p class="hero-subtext">
+        <strong>Manchester.solar connects you with 2–3 trusted, MCS-certified installers</strong> for homes and businesses across Greater Manchester.
+        From Victorian terraces to commercial rooftops, we make it simple to compare like-for-like quotes.
+        <strong>No spam. No bidding wars.</strong> Just clear conversations and typical savings of
+        <strong>£1,890+ for households</strong> or <strong>£4,200+ for businesses</strong> — with average payback in <strong>6.8 years</strong>.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#quote-form" class="btn btn-large gradient-btn" data-smart-quote="true" aria-label="Get free Manchester solar quotes">
+          Get Free Manchester Quotes
+        </a>
+        <p class="trust-message">One simple form • 2–3 vetted installers • No spam guarantee</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     STATS — Proof That Builds Trust (Localised)
+     ========================================= -->
+<section class="stats-section section" aria-labelledby="stats-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="stats-heading">Why Use Manchester.solar?</h2>
+      <div class="section-divider-accent"></div>
+      <p class="section-intro">
+        Real Manchester data and clear benefits — so you can compare quotes confidently with no pressure.
+      </p>
+    </div>
+
+    <div class="grid grid-4">
+      <!-- Peak Sun Hours -->
+      <div class="stat-card" role="figure" aria-label="Average peak sun hours">
+        <span class="stat-number">3.8</span>
+        <span class="stat-label">Peak Sun Hours / Day</span>
+        <p class="stat-note">
+          Manchester averages ~3.8 peak sun hours across the year — solid output for modern PV systems.
+        </p>
+      </div>
+
+      <!-- Home Savings -->
+      <div class="stat-card" role="figure" aria-label="Typical homeowner savings per year">
+        <span class="stat-number">£1,890+</span>
+        <span class="stat-label">Typical Home Savings / Year</span>
+        <p class="stat-note">
+          Household installs commonly deliver ~£1,890 in yearly savings (0% VAT on eligible installs until 2027).
+        </p>
+      </div>
+
+      <!-- Local Installations -->
+      <div class="stat-card" role="figure" aria-label="Local installations to date">
+        <span class="stat-number">2,800+</span>
+        <span class="stat-label">Local Installations</span>
+        <p class="stat-note">
+          Thousands of Manchester installs and growing — we connect you with the right local specialists.
+        </p>
+      </div>
+
+      <!-- Payback -->
+      <div class="stat-card" role="figure" aria-label="Typical payback period">
+        <span class="stat-number">~6.8 yrs</span>
+        <span class="stat-label">Typical Payback</span>
+        <p class="stat-note">
+          Average payback around 6.8 years with performance warranties typically ~25 years.
+        </p>
+      </div>
+    </div>
+
+    <!-- Optional mini reassurance below stats -->
+    <div class="stats-cta">
+      <a href="#quote-form" class="btn">Compare Quotes from Vetted MCS Installers</a>
+      <p class="micro-reassurance">One professional contact • No bidding wars • Transparent quotes</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Government Funding Section -->
     <section class="funding-section section">

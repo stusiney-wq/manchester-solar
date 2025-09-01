@@ -10742,10 +10742,19 @@ h1.hero-title {
   text-align: center;
   margin-top: var(--space-8);
   padding-top: var(--space-6);
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Optional info note styling */
+/* Dark section styling for standards CTA */
+.section-dark .standards-cta {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-dark .standards-cta .micro-reassurance {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Info note styling */
 .info-note {
   background: rgba(59, 130, 246, 0.05);
   border: 1px solid rgba(59, 130, 246, 0.2);
@@ -10762,4 +10771,17 @@ h1.hero-title {
   background: rgba(107, 114, 128, 0.05);
   border-color: rgba(107, 114, 128, 0.2);
   color: var(--neutral-600);
+}
+
+/* Dark section info note styling */
+.section-dark .info-note {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-dark .note-muted {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
 }

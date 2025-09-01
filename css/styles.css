@@ -10732,3 +10732,34 @@ h1.hero-title {
     padding-top: var(--space-6);
   }
 }
+
+/* ============================================ */
+/* INSTALLER STANDARDS SECTION - MINIMAL ADDITIONS */
+/* ============================================ */
+
+/* Standards CTA (same pattern as benefits-cta) */
+.standards-cta {
+  text-align: center;
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--neutral-200);
+}
+
+/* Optional info note styling */
+.info-note {
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-top: var(--space-8);
+  text-align: center;
+  color: var(--trust-blue);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.note-muted {
+  background: rgba(107, 114, 128, 0.05);
+  border-color: rgba(107, 114, 128, 0.2);
+  color: var(--neutral-600);
+}

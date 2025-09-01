@@ -10801,40 +10801,43 @@ h1.hero-title {
   color: rgba(255, 255, 255, 0.7);
 }
 
+
+
 /* ============================================ */
-/* HERO BACKGROUND IMAGE FIX - Gold Standard v3.1 */
-/* Add to END of styles.css */
+/* PAGE-SPECIFIC HERO BACKGROUNDS - Clean System */
 /* ============================================ */
 
-/* Override any conflicting hero definitions for commercial pages */
-.hero.commercial-hero-bg.gradient-tint {
+/* Homepage - uses existing gradient background */
+.hero.homepage-bg {
+  /* Inherits your existing hero styles */
+}
+
+/* Commercial page */
+.hero.commercial-bg {
   background-image: 
     linear-gradient(135deg, rgba(31, 41, 59, 0.7) 0%, rgba(59, 130, 246, 0.6) 100%),
     url('images/manchester-hero-2000x1200-1.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
-/* Mobile performance optimization */
+/* About page */
+.hero.about-bg {
+  background-image: 
+    linear-gradient(135deg, rgba(17, 24, 39, 0.7) 0%, rgba(31, 41, 59, 0.7) 100%),
+    url('images/manchester-about.webp');
+}
+
+/* Contact page */
+.hero.contact-bg {
+  background-image: 
+    linear-gradient(135deg, rgba(34, 197, 94, 0.7) 0%, rgba(16, 163, 74, 0.7) 100%),
+    url('images/manchester-contact.webp');
+}
+
+/* Mobile optimization */
 @media (max-width: 768px) {
-  .hero.commercial-hero-bg.gradient-tint {
+  .hero.commercial-bg,
+  .hero.about-bg,
+  .hero.contact-bg {
     background-attachment: scroll;
   }
-}
-
-/* Ensure gradient tint works with background image */
-.hero.commercial-hero-bg.gradient-tint::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(ellipse at 30% 20%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 1;
 }

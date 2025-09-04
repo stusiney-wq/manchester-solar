@@ -11245,3 +11245,7 @@ Enhanced CSS to add to styles.css:
 .before-solar { height: 85%; }
 .after-solar { height: 25%; }
 .savings-arrow.visible { opacity: 1; }
+
+.business-header {
+    margin-bottom: var(--space-6); /* Instead of larger default spacing */
+}

@@ -11260,3 +11260,21 @@ Enhanced CSS to add to styles.css:
 .business-subtitle + .sector-benefits {
     margin-top: var(--space-2) !important;
 }
+
+.compliance-header {
+    margin-bottom: var(--space-4);
+}
+
+.compliance-subtitle {
+    margin-bottom: var(--space-3);
+    margin-top: var(--space-2);
+}
+
+.compliance-list {
+    margin-top: 0;
+}
+
+.compliance-icon {
+    display: inline-block;
+    margin-right: var(--space-2);
+}

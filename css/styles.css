@@ -11246,10 +11246,10 @@ Enhanced CSS to add to styles.css:
 .after-solar { height: 25%; }
 .savings-arrow.visible { opacity: 1; }
 
-.business-subtitle {
-    margin-bottom: var(--space-4); /* Reduce from current larger spacing */
+.enhanced-business-card .business-header {
+    margin-bottom: var(--space-3) !important;
 }
 
-.sector-benefits {
-    margin-top: 0; /* Remove any top margin */
+.enhanced-business-card .sector-benefits {
+    margin-top: 0 !important;
 }

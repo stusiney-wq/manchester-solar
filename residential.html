@@ -412,109 +412,109 @@
         </div>
     </div>
 </section>
-        <!-- 7. Quote Form Section (Keep Current) -->
-        <section id="quote-form" class="section quote-form-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Connect With Manchester Home Solar Specialists</h2>
-                    <div class="section-divider-accent"></div>
-                    <p class="section-intro">Complete this form and we'll connect you with MCS certified network specialists who understand your property type.</p>
-                </div>
+        
+<section id="quote-form" class="section quote-form-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Connect With Manchester Home Solar Specialists</h2>
+            <div class="section-divider-accent"></div>
+            <p class="section-intro">Complete this form and we'll connect you with MCS certified network specialists who understand your property type.</p>
+        </div>
 
-                <div class="quote-form-container">
-                    <form class="quote-form" id="residential-quote-form" action="/submit-quote" method="post">
-                        <input type="hidden" name="lead_source" value="manchester_residential">
-                        <input type="hidden" name="page_template" value="residential">
-                        <input type="hidden" name="routing_path" value="residential">
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="first_name">First Name *</label>
-                                <input type="text" id="first_name" name="first_name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="last_name">Last Name *</label>
-                                <input type="text" id="last_name" name="last_name" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="address">Property Address *</label>
-                            <input type="text" id="address" name="address" placeholder="House number and street name" required>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="city">City/Town *</label>
-                                <input type="text" id="city" name="city" value="{{city.display_name}}" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="postcode">Postcode *</label>
-                                <input type="text" id="postcode" name="postcode" placeholder="{{city.postcode_prefix}}1 1AA" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="property_type">Property Type *</label>
-                            <select id="property_type" name="property_type" required>
-                                <option value="">Select your property type</option>
-                                <option value="modern-build">Modern Build (1980+)</option>
-                                <option value="victorian-terrace">Victorian Terrace (1837-1901)</option>
-                                <option value="edwardian-home">Edwardian Home (1901-1910)</option>
-                                <option value="heritage-listed">Heritage/Listed Property</option>
-                                <option value="semi-detached">Semi-Detached House</option>
-                                <option value="detached-house">Detached House</option>
-                                <option value="flat-apartment">Flat/Apartment</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="monthly_bill">Average Monthly Electricity Bill *</label>
-                            <select id="monthly_bill" name="monthly_bill" required>
-                                <option value="">Select your monthly bill range</option>
-                                <option value="under-50">Under £50</option>
-                                <option value="50-100">£50 - £100</option>
-                                <option value="100-150">£100 - £150</option>
-                                <option value="150-200">£150 - £200</option>
-                                <option value="200-300">£200 - £300</option>
-                                <option value="over-300">Over £300</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="additional_info">Additional Information</label>
-                            <textarea id="additional_info" name="additional_info" rows="4" placeholder="Tell us about any specific requirements, concerns, or questions about your property..."></textarea>
-                        </div>
-                        
-                        <div class="form-group consent-group">
-                            <div class="checkbox-wrapper">
-                                <input type="checkbox" id="consent" name="consent" required>
-                                <label for="consent" class="consent-label">
-                                    I consent to {{city.display_name}}.solar connecting me with 1 MCS certified solar specialist from our network for the purpose of providing quotes. I understand I can withdraw consent at any time. *
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-large btn-full-width">Connect Me With Network Specialists</button>
-                        
-                        <p class="form-trust">Free connection service • No obligation • MCS certified network only</p>
-                    </form>
+        <div class="quote-form-container">
+            <form class="quote-form" id="residential-quote-form" action="/submit-quote" method="post">
+                <input type="hidden" name="lead_source" value="manchester_residential">
+                <input type="hidden" name="page_template" value="residential">
+                <input type="hidden" name="routing_path" value="residential">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="first_name">First Name *</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last_name">Last Name *</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
                 </div>
-            </div>
-        </section>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Property Address *</label>
+                    <input type="text" id="address" name="address" placeholder="House number and street name" required>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="city">City/Town *</label>
+                        <input type="text" id="city" name="city" value="Manchester" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postcode">Postcode *</label>
+                        <input type="text" id="postcode" name="postcode" placeholder="M1 1AA" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="property_type">Property Type *</label>
+                    <select id="property_type" name="property_type" required>
+                        <option value="">Select your property type</option>
+                        <option value="modern-build">Modern Build (1980+)</option>
+                        <option value="victorian-terrace">Victorian Terrace (1837-1901)</option>
+                        <option value="edwardian-home">Edwardian Home (1901-1910)</option>
+                        <option value="heritage-listed">Heritage/Listed Property</option>
+                        <option value="semi-detached">Semi-Detached House</option>
+                        <option value="detached-house">Detached House</option>
+                        <option value="flat-apartment">Flat/Apartment</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="monthly_bill">Average Monthly Electricity Bill *</label>
+                    <select id="monthly_bill" name="monthly_bill" required>
+                        <option value="">Select your monthly bill range</option>
+                        <option value="under-50">Under £50</option>
+                        <option value="50-100">£50 - £100</option>
+                        <option value="100-150">£100 - £150</option>
+                        <option value="150-200">£150 - £200</option>
+                        <option value="200-300">£200 - £300</option>
+                        <option value="over-300">Over £300</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additional_info">Additional Information</label>
+                    <textarea id="additional_info" name="additional_info" rows="4" placeholder="Tell us about any specific requirements, concerns, or questions about your property..."></textarea>
+                </div>
+                
+                <div class="form-group consent-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent" class="consent-label">
+                            I consent to Manchester.solar connecting me with 1 MCS certified solar specialist from our network for the purpose of providing quotes. I understand I can withdraw consent at any time. *
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-large btn-full-width">Connect Me With Network Specialists</button>
+                
+                <p class="form-trust">Free connection service • No obligation • MCS certified network only</p>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <script>

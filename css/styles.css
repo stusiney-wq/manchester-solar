@@ -11290,3 +11290,11 @@ Enhanced CSS to add to styles.css:
 /* ...continuing through year-25 at 86% */
 
 .payback-marker.visible { opacity: 1; }
+
+.bar-value {
+    /* Styling for £3,200 and £960 text inside bars */
+}
+
+.savings-arrow {
+    /* Styling for the £26,880 savings message */
+}

@@ -11029,3 +11029,209 @@ Enhanced CSS to add to styles.css:
         font-size: var(--font-size-base);
     }
 }
+
+/* ============================================ */
+/* FUNDING CTA SECTION - BUSINESS FOCUS */
+/* Add this to your styles.css file */
+/* ============================================ */
+
+.funding-section {
+    background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-0) 100%);
+    border-top: 3px solid var(--trust-blue);
+    border-bottom: 1px solid var(--neutral-100);
+    padding: var(--space-16) 0;
+}
+
+.funding-cta-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--neutral-0) 0%, #fefffe 100%);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.funding-cta-card:hover {
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+.funding-cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--trust-blue) 0%, var(--solar-green) 100%);
+}
+
+.funding-cta-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--neutral-900);
+    letter-spacing: -0.025em;
+    line-height: 1.3;
+}
+
+.funding-cta-content > p {
+    font-size: var(--font-size-lg);
+    color: var(--neutral-700);
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.funding-cta-content > p strong {
+    color: var(--trust-blue);
+    font-weight: 600;
+}
+
+/* Funding Highlights Grid */
+.funding-highlights {
+    margin-bottom: var(--space-8);
+    gap: var(--space-6);
+}
+
+.funding-highlight {
+    text-align: center;
+    padding: var(--space-4);
+    background: rgba(59, 130, 246, 0.04);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    transition: all 0.2s ease;
+}
+
+.funding-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.highlight-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 900;
+    color: var(--trust-blue);
+    margin-bottom: var(--space-2);
+    line-height: 1;
+}
+
+.highlight-label {
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+}
+
+/* CTA Button Styling */
+.funding-cta-content .btn {
+    background: linear-gradient(135deg, var(--trust-blue) 0%, #1e40af 100%);
+    color: var(--neutral-0);
+    border: none;
+    font-weight: 700;
+    margin: var(--space-4) 0;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.funding-cta-content .btn:hover {
+    background: linear-gradient(135deg, #1e40af 0%, var(--trust-blue) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.funding-cta-content .btn::after {
+    content: '';
+    margin-left: var(--space-2);
+}
+
+/* Trust Message */
+.funding-trust {
+    font-size: var(--font-size-sm);
+    color: var(--neutral-500);
+    margin-top: var(--space-4);
+    margin-bottom: 0;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .funding-section {
+        padding: var(--space-12) 0;
+    }
+    
+    .funding-cta-card {
+        padding: var(--space-6);
+    }
+    
+    .funding-cta-content h3 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-4);
+    }
+    
+    .funding-cta-content > p {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--space-6);
+    }
+    
+    .funding-highlights {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        margin-bottom: var(--space-6);
+    }
+    
+    .funding-highlight {
+        padding: var(--space-3);
+    }
+    
+    .highlight-value {
+        font-size: var(--font-size-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .funding-cta-card {
+        padding: var(--space-4);
+    }
+    
+    .funding-cta-content h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .highlight-value {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* Enhanced focus states for accessibility */
+.funding-cta-content .btn:focus {
+    outline: 3px solid var(--solar-yellow);
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .funding-cta-card,
+    .funding-highlight,
+    .funding-cta-content .btn {
+        transition: none;
+    }
+    
+    .funding-cta-card:hover,
+    .funding-highlight:hover,
+    .funding-cta-content .btn:hover {
+        transform: none;
+    }
+}

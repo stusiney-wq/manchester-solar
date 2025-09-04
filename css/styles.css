@@ -10800,3 +10800,71 @@ h1.hero-title {
   border-color: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.7);
 }
+
+<!-- ============================================ -->
+<!-- ENHANCED CSS FOR EXISTING FAQ CLASSES -->
+<!-- Add this to your existing styles.css -->
+<!-- ============================================ -->
+
+<!--
+Enhanced CSS to add to styles.css:
+
+/* ============================================ */
+/* ENHANCED FAQ SYSTEM - v3.1 UPGRADES */
+/* ============================================ */
+
+/* Enhanced FAQ Question Buttons */
+.faq-question {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.faq-question::after {
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] {
+    background: var(--neutral-50);
+    color: var(--solar-green);
+}
+
+.faq-question[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+}
+
+/* Enhanced FAQ Answer Animations */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 var(--space-6);
+}
+
+.faq-answer.show {
+    max-height: 500px;
+    padding: var(--space-6);
+}
+
+/* Enhanced FAQ Item States */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item:has(.faq-answer.show) {
+    border-color: var(--solar-green);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.15);
+}
+
+/* Enhanced Focus States for Accessibility */
+.faq-question:focus {
+    outline: 3px solid rgba(34, 197, 94, 0.3);
+    outline-offset: 2px;
+    background: var(--neutral-50);
+}
+
+/* Mobile Enhancements */
+@media (max-width: 768px) {
+    .faq-answer.show {
+        padding: var(--space-4);
+    }
+}

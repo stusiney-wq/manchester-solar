@@ -11241,3 +11241,7 @@ Enhanced CSS to add to styles.css:
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
 }
+
+.before-solar { height: 85%; }
+.after-solar { height: 25%; }
+.savings-arrow.visible { opacity: 1; }

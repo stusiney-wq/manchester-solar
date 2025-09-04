@@ -11291,37 +11291,67 @@ Enhanced CSS to add to styles.css:
 
 .payback-marker.visible { opacity: 1; }
 
-.bar-value {
-    /* Styling for £3,200 and £960 text inside bars */
+.cost-chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    margin: var(--space-8) 0;
 }
 
-.savings-arrow {
-    /* Styling for the £26,880 savings message */
+.cost-bar {
+    text-align: center;
+    width: 200px;
+}
+
+.bar-container {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .bar-fill {
+    width: 80px;
     height: 0%;
     transition: height 1s ease-out;
+    position: relative;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: var(--space-2);
 }
 
 .bar-fill.before-solar {
-    /* Will be animated to 85% by JavaScript */
+    background-color: #ef4444;
 }
 
 .bar-fill.after-solar {
-    /* Will be animated to 25% by JavaScript */
+    background-color: #22c55e;
+}
+
+.bar-value {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.bar-label {
+    margin-top: var(--space-4);
+    font-size: var(--font-size-sm);
 }
 
 .savings-arrow {
     opacity: 0;
     transition: opacity 0.5s ease-in;
-}
-
-.bar-value {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
+    background-color: #22c55e;
+    color: #ffffff;
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    text-align: center;
     font-weight: bold;
+    margin: var(--space-8) auto;
+    max-width: 400px;
 }

@@ -11298,3 +11298,30 @@ Enhanced CSS to add to styles.css:
 .savings-arrow {
     /* Styling for the £26,880 savings message */
 }
+
+.bar-fill {
+    height: 0%;
+    transition: height 1s ease-out;
+}
+
+.bar-fill.before-solar {
+    /* Will be animated to 85% by JavaScript */
+}
+
+.bar-fill.after-solar {
+    /* Will be animated to 25% by JavaScript */
+}
+
+.savings-arrow {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.bar-value {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+}

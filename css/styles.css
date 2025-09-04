@@ -10868,3 +10868,30 @@ Enhanced CSS to add to styles.css:
         padding: var(--space-4);
     }
 }
+
+/* Enhanced FAQ Animation States */
+.faq-item.faq-active {
+    border-color: var(--solar-green);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.15);
+}
+
+.faq-question[aria-expanded="true"] {
+    background: var(--neutral-50);
+    color: var(--solar-green);
+}
+
+.faq-question[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 var(--space-6);
+}
+
+.faq-answer.show {
+    max-height: 500px;
+    padding: var(--space-6);
+}

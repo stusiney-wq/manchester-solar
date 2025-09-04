@@ -477,33 +477,27 @@
 
 
    
-<!-- ENHANCED FAQ SYSTEM v3.1 -->
-<!-- Uses existing class names with major upgrades -->
-<!-- ============================================ -->
-
-<section class="faq-section section">
+<!-- WORKING FAQ SECTION - Replace your existing one -->
+<section class="faq-section section" aria-labelledby="faq-heading">
     <div class="container">
-        <!-- Centered header with YAML integration -->
         <div class="section-header section-header-center">
-            <h2>{{faq.section_title}}</h2>
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
             <div class="section-divider-accent"></div>
-            <p class="section-intro">{{faq.section_intro}}</p>
+            <p class="section-intro">Get clear answers about solar panels in Manchester from our local experts</p>
         </div>
         
-        <!-- Enhanced FAQ list using existing class names -->
         <div class="faq-list">
-            
             <!-- FAQ Item 1 - Weather Concerns -->
             <div class="faq-item">
                 <button class="faq-question" 
                         data-faq="weather"
                         aria-expanded="false" 
                         aria-controls="faq-weather">
-                    {{faq.questions.weather.question}}
+                    Do solar panels work in Manchester weather?
                 </button>
                 <div class="faq-answer" id="faq-weather">
-                    <p><strong>{{faq.questions.weather.answer_summary}}</strong></p>
-                    <p>{{faq.questions.weather.answer_detail}}</p>
+                    <p><strong>Yes, Manchester solar panels generate excellent electricity with 3.8 peak sun hours daily.</strong></p>
+                    <p>Despite 140 rainy days yearly, Manchester's 950 kWh/m² annual irradiance delivers £1,890+ savings for homeowners. Modern panels work in diffuse light conditions, making Manchester highly profitable for solar.</p>
                 </div>
             </div>
             
@@ -513,11 +507,11 @@
                         data-faq="property"
                         aria-expanded="false" 
                         aria-controls="faq-property">
-                    {{faq.questions.property.question}}
+                    Can I get solar on my Victorian terrace house?
                 </button>
                 <div class="faq-answer" id="faq-property">
-                    <p><strong>{{faq.questions.property.answer_summary}}</strong></p>
-                    <p>{{faq.questions.property.answer_detail}}</p>
+                    <p><strong>Absolutely - Victorian terraces are excellent for solar panels in Manchester.</strong></p>
+                    <p>Our MCS installers specialize in heritage properties and understand roof structures, conservation considerations, and optimal placement for period homes. Most installations require no planning permission.</p>
                 </div>
             </div>
             
@@ -527,11 +521,11 @@
                         data-faq="savings"
                         aria-expanded="false" 
                         aria-controls="faq-savings">
-                    {{faq.questions.savings.question}}
+                    How much can I save with solar panels in Manchester?
                 </button>
                 <div class="faq-answer" id="faq-savings">
-                    <p><strong>{{faq.questions.savings.answer_summary}}</strong></p>
-                    <p>{{faq.questions.savings.answer_detail}}</p>
+                    <p><strong>Manchester households typically save £1,890+ annually with payback around 6.8 years.</strong></p>
+                    <p>Businesses save £4,200+ yearly. With 0% VAT on eligible residential installs until 2027 and 25-year performance warranties, Manchester solar delivers strong long-term returns despite our famously changeable weather.</p>
                 </div>
             </div>
             
@@ -541,11 +535,11 @@
                         data-faq="planning"
                         aria-expanded="false" 
                         aria-controls="faq-planning">
-                    {{faq.questions.planning.question}}
+                    Do I need planning permission for solar panels in Manchester?
                 </button>
                 <div class="faq-answer" id="faq-planning">
-                    <p><strong>{{faq.questions.planning.answer_summary}}</strong></p>
-                    <p>{{faq.questions.planning.answer_detail}}</p>
+                    <p><strong>Most Manchester homes don't need planning permission for solar panels.</strong></p>
+                    <p>Standard roof-mounted panels fall under Permitted Development Rights. However, conservation areas, listed buildings, or visible front-facing panels may need approval. Our installers provide planning guidance specific to your property.</p>
                 </div>
             </div>
             
@@ -555,11 +549,11 @@
                         data-faq="guarantee"
                         aria-expanded="false" 
                         aria-controls="faq-guarantee">
-                    {{faq.questions.guarantee.question}}
+                    How does Manchester.solar's "no spam" guarantee work?
                 </button>
                 <div class="faq-answer" id="faq-guarantee">
-                    <p><strong>{{faq.questions.guarantee.answer_summary}}</strong></p>
-                    <p>{{faq.questions.guarantee.answer_detail}}</p>
+                    <p><strong>We connect you with 2-3 vetted MCS installers only - no lead farms or bidding wars.</strong></p>
+                    <p>Unlike lead generation sites that sell your details to dozens of companies, we carefully match you with quality local installers from our exclusive network. One professional contact per installer, transparent pricing, no pressure tactics.</p>
                 </div>
             </div>
             
@@ -569,14 +563,13 @@
                         data-faq="worth"
                         aria-expanded="false" 
                         aria-controls="faq-worth">
-                    {{faq.questions.worth.question}}
+                    Is solar worth it in Manchester in 2025?
                 </button>
                 <div class="faq-answer" id="faq-worth">
-                    <p><strong>{{faq.questions.worth.answer_summary}}</strong></p>
-                    <p>{{faq.questions.worth.answer_detail}}</p>
+                    <p><strong>Yes - Manchester solar is highly profitable with strong government support and falling equipment costs.</strong></p>
+                    <p>With Smart Export Guarantee payments, 0% VAT on residential installs, and Manchester's 3.8 peak sun hours daily, typical payback is 6.8 years for 25-year systems. Rising energy prices make solar increasingly attractive.</p>
                 </div>
             </div>
-            
         </div>
     </div>
 </section>
@@ -817,179 +810,33 @@
 <!-- ============================================ -->
 
 <script>
-/**
- * Solar Domain Empire Enhanced FAQ System v3.1
- * Upgrades existing class structure with professional functionality
- * Compatible with all existing FAQ implementations
- */
-class EnhancedSolarFAQ {
-    constructor(containerSelector = '.faq-section') {
-        this.container = document.querySelector(containerSelector);
-        if (!this.container) return;
-        
-        this.faqItems = this.container.querySelectorAll('.faq-item');
-        this.faqQuestions = this.container.querySelectorAll('.faq-question');
-        this.faqAnswers = this.container.querySelectorAll('.faq-answer');
-        
-        this.init();
-    }
-    
-    init() {
-        // Enhanced setup for existing FAQ structure
-        this.faqQuestions.forEach((question, index) => {
-            const faqId = question.dataset.faq || `faq-${index + 1}`;
-            const answer = this.container.querySelector(`#faq-${faqId}`) || 
-                          this.container.querySelector(`[id="${faqId}"]`) ||
-                          question.nextElementSibling;
-            
-            if (!answer) return;
-            
-            // Enhanced accessibility setup
-            question.setAttribute('aria-expanded', 'false');
-            question.setAttribute('aria-controls', answer.id || `faq-${faqId}`);
-            if (!answer.id) answer.id = `faq-${faqId}`;
-            
-            // Enhanced event listeners
-            question.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.toggleFAQ(question, answer);
-            });
-            
-            // Enhanced keyboard navigation
-            question.addEventListener('keydown', (e) => this.handleKeydown(e, index));
-            
-            // Set initial max-height for animation
-            if (!answer.classList.contains('show')) {
-                answer.style.maxHeight = '0px';
-            } else {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            }
-        });
-    }
-    
-    toggleFAQ(questionButton, answerElement) {
-        const isOpen = answerElement.classList.contains('show');
-        
-        // Close all FAQs (existing behavior)
-        this.closeAllFAQs();
-        
-        // Open target FAQ if it wasn't already open
-        if (!isOpen) {
-            this.openFAQ(questionButton, answerElement);
-        }
-        
-        // Enhanced analytics tracking
-        if (typeof gtag !== 'undefined' && !isOpen) {
-            gtag('event', 'faq_open', {
-                'question_text': questionButton.textContent.trim(),
-                'faq_id': questionButton.dataset.faq,
-                'page_location': window.location.href
-            });
-        }
-    }
-    
-    openFAQ(questionButton, answerElement) {
-        // Enhanced open animation
-        answerElement.classList.add('show');
-        answerElement.style.maxHeight = answerElement.scrollHeight + 'px';
-        questionButton.setAttribute('aria-expanded', 'true');
-        
-        // Add enhanced visual state to parent item
-        const faqItem = questionButton.closest('.faq-item');
-        if (faqItem) {
-            faqItem.classList.add('faq-active');
-        }
-    }
-    
-    closeFAQ(questionButton, answerElement) {
-        // Enhanced close animation
-        answerElement.classList.remove('show');
-        answerElement.style.maxHeight = '0px';
-        questionButton.setAttribute('aria-expanded', 'false');
-        
-        // Remove enhanced visual state from parent item
-        const faqItem = questionButton.closest('.faq-item');
-        if (faqItem) {
-            faqItem.classList.remove('faq-active');
-        }
-    }
-    
-    closeAllFAQs() {
-        this.faqQuestions.forEach(question => {
-            const faqId = question.dataset.faq;
-            const answer = this.container.querySelector(`#faq-${faqId}`) || 
-                          this.container.querySelector(`[id="${faqId}"]`) ||
-                          question.nextElementSibling;
-            
-            if (answer) {
-                this.closeFAQ(question, answer);
-            }
-        });
-    }
-    
-    handleKeydown(e, currentIndex) {
-        switch(e.key) {
-            case 'ArrowDown':
-                e.preventDefault();
-                this.focusNextFAQ(currentIndex);
-                break;
-            case 'ArrowUp':
-                e.preventDefault();
-                this.focusPreviousFAQ(currentIndex);
-                break;
-            case 'Home':
-                e.preventDefault();
-                this.focusFirstFAQ();
-                break;
-            case 'End':
-                e.preventDefault();
-                this.focusLastFAQ();
-                break;
-            case 'Enter':
-            case ' ':
-                e.preventDefault();
-                const answer = e.target.nextElementSibling || 
-                              this.container.querySelector(`#faq-${e.target.dataset.faq}`);
-                if (answer) {
-                    this.toggleFAQ(e.target, answer);
-                }
-                break;
-        }
-    }
-    
-    focusNextFAQ(currentIndex) {
-        const nextIndex = (currentIndex + 1) % this.faqQuestions.length;
-        this.faqQuestions[nextIndex].focus();
-    }
-    
-    focusPreviousFAQ(currentIndex) {
-        const prevIndex = currentIndex === 0 ? this.faqQuestions.length - 1 : currentIndex - 1;
-        this.faqQuestions[prevIndex].focus();
-    }
-    
-    focusFirstFAQ() {
-        this.faqQuestions[0].focus();
-    }
-    
-    focusLastFAQ() {
-        this.faqQuestions[this.faqQuestions.length - 1].focus();
-    }
-}
-
-// Enhanced initialization - replaces existing FAQ JavaScript
+// Enhanced FAQ System for Manchester.solar
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize enhanced FAQ system
-    new EnhancedSolarFAQ();
+    const faqQuestions = document.querySelectorAll('.faq-question');
     
-    // Fallback for legacy FAQ systems (if multiple FAQ sections exist)
-    document.querySelectorAll('.faq-section').forEach(section => {
-        if (!section.classList.contains('enhanced-initialized')) {
-            new EnhancedSolarFAQ(`.faq-section:nth-of-type(${Array.from(document.querySelectorAll('.faq-section')).indexOf(section) + 1})`);
-            section.classList.add('enhanced-initialized');
-        }
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.closest('.faq-item');
+            const answer = this.nextElementSibling;
+            const isCurrentlyOpen = answer.classList.contains('show');
+            
+            // Close all FAQ answers
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('show');
+                ans.previousElementSibling.setAttribute('aria-expanded', 'false');
+                ans.closest('.faq-item').classList.remove('faq-active');
+            });
+            
+            // Open clicked FAQ if it wasn't already open
+            if (!isCurrentlyOpen) {
+                answer.classList.add('show');
+                this.setAttribute('aria-expanded', 'true');
+                faqItem.classList.add('faq-active');
+            }
+        });
     });
-});
-
+    
+    // Other existing JavaScript continues below...
 
             
             // Newsletter form functionality

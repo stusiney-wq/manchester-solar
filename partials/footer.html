@@ -1,0 +1,112 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <!-- Newsletter Signup -->
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <h3>Stay Updated with Manchester Solar News</h3>
+                <p>Monthly updates on grants, policies, and local solar insights for all Manchester property types. No spam, just valuable information to help you make informed decisions.</p>
+            </div>
+            <form class="newsletter-form" action="/newsletter-signup" method="post">
+                <div class="newsletter-input-group">
+                    <input type="email" name="email" placeholder="Enter your email address" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Stay Updated</button>
+                </div>
+                <p class="newsletter-disclaimer">✓ Monthly updates only • Unsubscribe anytime • We never sell your data</p>
+            </form>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Manchester.solar</h3>
+                <p>Connecting Greater Manchester homeowners and businesses with <strong>MCS certified solar specialists</strong> who understand all property types - from modern builds to heritage properties.</p>
+                <p><strong>No spam guarantee:</strong> Single professional contact from our exclusive network of 2-3 specialists only</p>
+                <div>
+                    <a href="mailto:quotes@manchester.solar">quotes@manchester.solar</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/residential-solar">Residential Solar (All Property Types)</a></li>
+                    <li><a href="/commercial/">Commercial Solar</a></li>
+                    <li><a href="/planning-permission">Planning Permission Guide</a></li>
+                    <li><a href="/manchester-weather">Weather Performance</a></li>
+                    <li><a href="/battery-storage">Battery Storage</a></li>
+                    <li><a href="/ev-charger-installation">EV Chargers</a></li>
+                    <li><a href="/heritage-properties">Heritage Property Specialists</a></li>
+                    <li><a href="/case-studies">Case Studies</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Service Areas</h4>
+                <ul>
+                    <li><strong>All Manchester Postcodes (M1–M99)</strong></li>
+                    <li>Didsbury, Chorlton & South Manchester</li>
+                    <li>Sale, Altrincham & Trafford</li>
+                    <li>Stockport, Wilmslow & East</li>
+                    <li>Bolton, Bury & North Manchester</li>
+                    <li>Oldham, Rochdale & Tameside</li>
+                    <li>Wigan, Leigh & West Manchester</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quality Standards</h4>
+                <p>All partners verified:</p>
+                <ul>
+                    <li><strong>MCS certified</strong> (Microgeneration Certification)</li>
+                    <li><strong>RECC membership</strong> (Consumer Protection)</li>
+                    <li><strong>NICEIC/NAPIT</strong> electrical certification</li>
+                    <li><strong>All property type experience</strong></li>
+                    <li><strong>Local Manchester presence</strong></li>
+                    <li><strong>No-pressure sales approach</strong></li>
+                </ul>
+                <div>
+                    <a href="https://mcscertified.com/" target="_blank">Verify MCS Standards →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 <strong>Manchester.solar</strong>. Part of the Solar Domain Empire. All rights reserved.</p>
+            <div>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/installer-requirements">Installer Standards</a>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+            <div>
+                <p>Website designed by <a href="https://www.digitwebdesign.co.uk" target="_blank">Digit Web Design</a></p>
+                <p class="version-stamp">Last updated: September 1, 2025 | Gold Standard v3.1 Compliant</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Newsletter JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[name="email"]').value;
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            console.log('Newsletter signup:', email);
+            alert('Thank you for subscribing! We\'ll send you monthly Manchester solar updates.');
+            this.reset();
+        });
+    }
+});
+</script>

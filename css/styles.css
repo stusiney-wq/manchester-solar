@@ -11375,3 +11375,66 @@ Enhanced CSS to add to styles.css:
         transform: rotate(90deg);
     }
 }
+
+/* ============================================ */
+/* FOOTER WHITE SPACE FIX - Solar Domain Empire v3.1 */
+/* ============================================ */
+
+/* Remove default margin/padding from body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Ensure footer sticks to bottom and has proper background */
+.footer {
+  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+  color: var(--neutral-0);
+  padding: var(--space-16) 0 var(--space-8);
+  margin-top: auto; /* This pushes footer to bottom */
+}
+
+/* Make body a flex container to control footer positioning */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make main content grow to fill available space */
+main {
+  flex: 1;
+}
+
+/* If you don't have a main tag, apply this to your content wrapper */
+.page-content {
+  flex: 1;
+}
+
+/* Alternative approach - ensure footer background extends fully */
+.footer {
+  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+  width: 100%;
+  margin: 0;
+  padding: var(--space-16) 0 var(--space-8);
+}
+
+/* Ensure no margins on the last section before footer */
+.section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Remove any potential bottom margins from footer container */
+#footer-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure footer content fills width */
+.footer .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}

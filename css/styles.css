@@ -11438,3 +11438,323 @@ main {
   margin: 0 auto;
   padding: 0 var(--space-4);
 }
+
+* ============================================ */
+/* MISSING COMPONENT CSS - Add to styles.css */
+/* Solar Domain Empire Gold Standard v3.1 Compliant */
+/* ============================================ */
+
+/* Fix footer white space */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main, .main-content {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/* Business Transformation Section */
+.business-transformation {
+  background: var(--neutral-50);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin: var(--space-8) 0;
+  text-align: center;
+}
+
+.business-transformation h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-6);
+}
+
+/* Cost Comparison Styles */
+.cost-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.cost-item {
+  flex: 1;
+  text-align: center;
+}
+
+.cost-amount {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  margin-bottom: var(--space-2);
+}
+
+.before-cost .cost-amount {
+  color: #dc2626;
+}
+
+.after-cost .cost-amount {
+  color: var(--solar-green);
+}
+
+.cost-label {
+  font-size: var(--font-size-base);
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.transformation-arrow {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.arrow-icon {
+  font-size: var(--font-size-4xl);
+  color: var(--solar-green);
+  margin-bottom: var(--space-2);
+}
+
+.savings-highlight {
+  background: var(--solar-green);
+  color: var(--neutral-0);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.transformation-summary {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.transformation-summary p {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  margin: 0;
+}
+
+/* Compliance Card Styles */
+.compliance-card {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  background: var(--neutral-0);
+}
+
+.compliance-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.compliance-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.compliance-icon.success {
+  color: var(--solar-green);
+}
+
+.compliance-icon.warning {
+  color: #f59e0b;
+}
+
+.compliance-header h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-2);
+}
+
+.compliance-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.compliance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.compliance-list li {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--neutral-200);
+  color: var(--neutral-700);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.compliance-list li:last-child {
+  border-bottom: none;
+}
+
+/* Conversion Zone Styles */
+.conversion-zone {
+  text-align: center;
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: var(--neutral-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+}
+
+.trust-line {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  margin-bottom: var(--space-4);
+}
+
+/* Funding Card Styles */
+.funding-cta-card {
+  background: linear-gradient(135deg, var(--trust-blue), var(--solar-green));
+  color: var(--neutral-0);
+  border: none;
+  box-shadow: var(--shadow-xl);
+}
+
+.funding-cta-content {
+  text-align: center;
+  padding: var(--space-2);
+}
+
+.funding-cta-content h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  color: var(--neutral-0);
+}
+
+.funding-cta-content p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-6);
+  opacity: 0.95;
+}
+
+.funding-highlights {
+  margin: var(--space-6) 0;
+}
+
+.funding-highlight {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  backdrop-filter: blur(10px);
+}
+
+.highlight-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 900;
+  color: var(--neutral-0);
+  margin-bottom: var(--space-2);
+}
+
+.highlight-label {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.funding-trust {
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-4);
+  opacity: 0.8;
+}
+
+/* Sector Card Styles */
+.sector-card {
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sector-card:hover {
+  border-color: var(--solar-green);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.sector-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.sector-card h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-4);
+}
+
+.sector-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.sector-benefits li {
+  padding: var(--space-2) 0;
+  color: var(--neutral-700);
+  font-size: var(--font-size-base);
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.sector-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--solar-green);
+  font-weight: 700;
+}
+
+/* Mobile responsiveness for cost comparison */
+@media (max-width: 768px) {
+  .cost-comparison {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .transformation-arrow {
+    order: 2;
+  }
+  
+  .arrow-icon {
+    transform: rotate(90deg);
+  }
+  
+  .business-transformation {
+    padding: var(--space-6);
+  }
+  
+  .funding-highlights {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+  

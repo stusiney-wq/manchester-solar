@@ -517,6 +517,54 @@
         </section>
     </main>
 
+    <script>
+// Enhanced FAQ System for Manchester.solar
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.closest('.faq-item');
+            const answer = this.nextElementSibling;
+            const isCurrentlyOpen = answer.classList.contains('show');
+            
+            // Close all FAQ answers
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('show');
+                ans.previousElementSibling.setAttribute('aria-expanded', 'false');
+                ans.closest('.faq-item').classList.remove('faq-active');
+            });
+            
+            // Open clicked FAQ if it wasn't already open
+            if (!isCurrentlyOpen) {
+                answer.classList.add('show');
+                this.setAttribute('aria-expanded', 'true');
+                faqItem.classList.add('faq-active');
+            }
+        });
+    });
+    
+    // Newsletter form functionality (if needed on residential page)
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[name="email"]').value;
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            console.log('Newsletter signup:', email);
+            alert('Thank you for subscribing! We\'ll send you monthly Manchester solar updates.');
+            this.reset();
+        });
+    }
+});
+</script>
+
     <!-- Footer -->
     <div id="footer-container"></div>
 

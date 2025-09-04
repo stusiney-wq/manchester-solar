@@ -11322,14 +11322,25 @@ Enhanced CSS to add to styles.css:
     align-items: flex-end;
     justify-content: center;
     padding-bottom: var(--space-2);
+    min-height: 60px; /* Ensures bars have minimum height for text */
 }
 
+.bar-value {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Stronger shadow */
+    font-size: var(--font-size-lg);
+    z-index: 10;
+    position: relative;
+}
+
+/* Make sure the background colors are solid */
 .bar-fill.before-solar {
-    background-color: #ef4444;
+    background-color: #ef4444 !important;
 }
 
 .bar-fill.after-solar {
-    background-color: #22c55e;
+    background-color: #22c55e !important;
 }
 
 .bar-value {

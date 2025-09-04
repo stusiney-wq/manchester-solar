@@ -11235,3 +11235,9 @@ Enhanced CSS to add to styles.css:
         transform: none;
     }
 }
+
+.funding-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}

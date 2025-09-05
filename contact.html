@@ -318,41 +318,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-    <!-- Contact Form & Info Section -->
-    <section class="section">
-        <div class="container">
-            <div class="grid grid-2">
-                <!-- Contact Form -->
-                <div class="contact-form-container" id="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <p class="contact-form-intro">Whether you're a journalist, potential partner, or have general questions about Manchester.solar, we'd love to hear from you.</p>
-                    
-                    <form action="/contact-form-submit" method="post" class="contact-form">
+   <!-- Contact Form Section - Gold Standard v3.1 Compliant -->
+<section class="section">
+    <div class="container">
+        <div class="grid grid-2">
+            <!-- Contact Form -->
+            <div class="form-wrapper" id="contact-form">
+                <h2>Send Us a Message</h2>
+                <p class="form-intro">Whether you're a journalist, potential partner, or have general questions about Manchester.solar, we'd love to hear from you.</p>
+                
+                <div class="solar-quote-form">
+                    <form action="/contact-form-submit" method="post" id="contactForm">
                         <div class="form-grid">
-                            <div class="form-field">
-                                <label for="first_name" class="form-label">First Name *</label>
-                                <input type="text" id="first_name" name="first_name" class="form-input" required>
+                            <div class="form-group">
+                                <label for="first_name">First Name *</label>
+                                <input type="text" id="first_name" name="first_name" required>
                             </div>
-                            <div class="form-field">
-                                <label for="last_name" class="form-label">Last Name *</label>
-                                <input type="text" id="last_name" name="last_name" class="form-input" required>
+                            <div class="form-group">
+                                <label for="last_name">Last Name *</label>
+                                <input type="text" id="last_name" name="last_name" required>
                             </div>
                         </div>
                         
                         <div class="form-grid">
-                            <div class="form-field">
-                                <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
                             </div>
-                            <div class="form-field">
-                                <label for="organization" class="form-label">Organization/Company</label>
-                                <input type="text" id="organization" name="organization" class="form-input" placeholder="e.g. BBC Manchester, The Guardian">
+                            <div class="form-group">
+                                <label for="organization">Organization/Company</label>
+                                <input type="text" id="organization" name="organization" placeholder="e.g. BBC Manchester, The Guardian">
                             </div>
                         </div>
                         
-                        <div class="form-field">
-                            <label for="enquiry_type" class="form-label">Enquiry Type *</label>
-                            <select id="enquiry_type" name="enquiry_type" class="form-select" required>
+                        <div class="form-group">
+                            <label for="enquiry_type">Enquiry Type *</label>
+                            <select id="enquiry_type" name="enquiry_type" required>
                                 <option value="">Select enquiry type</option>
                                 <option value="general_enquiry">General Enquiry</option>
                                 <option value="press_media">Press & Media</option>
@@ -364,102 +365,114 @@ document.addEventListener('DOMContentLoaded', function() {
                             </select>
                         </div>
                         
-                        <div class="form-field">
-                            <label for="subject" class="form-label">Subject *</label>
-                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Brief description of your enquiry" required>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="Brief description of your enquiry" required>
                         </div>
                         
-                        <div class="form-field">
-                            <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-textarea" placeholder="Please provide details about your enquiry..." required></textarea>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Please provide details about your enquiry..." required rows="6"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-large btn-full-width">Send Message</button>
+                        <div class="form-submit-wrapper">
+                            <button type="submit" class="btn btn-large btn-full-width">Send Message</button>
+                        </div>
                         
-                        <p class="form-guarantee">✓ <strong>24-hour response guarantee</strong> • ✓ <strong>Professional service</strong> • ✓ <strong>All enquiries welcome</strong></p>
+                        <p class="form-disclaimer">24-hour response guarantee • Professional service • All enquiries welcome</p>
                     </form>
                 </div>
                 
-                <!-- Contact Information -->
-                <div class="contact-info-card">
-                    <h3>Contact Information</h3>
-                    
+                <div class="connector-note">
+                    <h4>Our Service Model</h4>
+                    <p>We're a connector — we introduce you to 2–3 vetted, MCS-certified installers. No lead auctions. No spam.</p>
+                    <p><small>For solar quotes, please use our <a href="/residential#quote-form">Residential</a> or <a href="/commercial#quote-form">Commercial</a> pages.</small></p>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="card">
+                <h3>Contact Information</h3>
+                
+                <div class="contact-methods">
                     <div class="contact-method">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </div>
+                        <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h4>General Enquiries</h4>
                             <p><a href="mailto:quotes@manchester.solar">quotes@manchester.solar</a></p>
+                            <p class="contact-note">For homeowner and business solar enquiries across Greater Manchester</p>
                         </div>
                     </div>
                     
                     <div class="contact-method">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </div>
+                        <div class="contact-icon">📰</div>
                         <div class="contact-details">
                             <h4>Press & Media</h4>
                             <p><a href="mailto:press@manchester.solar">press@manchester.solar</a></p>
+                            <p class="contact-note">For journalists covering Manchester's 2,800+ solar installations</p>
                         </div>
                     </div>
                     
                     <div class="contact-method">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
+                        <div class="contact-icon">🤝</div>
                         <div class="contact-details">
                             <h4>Installer Partnerships</h4>
                             <p><a href="mailto:partnerships@manchester.solar">partnerships@manchester.solar</a></p>
+                            <p class="contact-note">Join our network of 47 MCS certified Manchester specialists</p>
                         </div>
                     </div>
                     
                     <div class="contact-method">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                        </div>
+                        <div class="contact-icon">⏰</div>
                         <div class="contact-details">
                             <h4>Response Time</h4>
                             <p>Within 24 hours on weekdays</p>
+                            <p class="contact-note">Professional, no-spam communication guaranteed</p>
                         </div>
                     </div>
                     
                     <div class="contact-method">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                        </div>
+                        <div class="contact-icon">📍</div>
                         <div class="contact-details">
                             <h4>Service Area</h4>
-                            <p>Greater Manchester & UK-wide partnerships</p>
+                            <p>Greater Manchester (M1-M99 postcodes)</p>
+                            <p class="contact-note">Serving 2.8 million residents with 3.8 peak sun hours annually</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-office-hours">
-                        <h4>Office Hours</h4>
-                        <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
-                        <p><strong>Weekend:</strong> Email responses within 24 hours</p>
+                </div>
+                
+                <div class="contact-office-hours">
+                    <h4>Office Hours</h4>
+                    <div class="office-hours-grid">
+                        <div class="hours-item">
+                            <strong>Monday - Friday:</strong>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <strong>Weekend:</strong>
+                            <span>Email responses within 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2,800+</div>
+                        <div class="stat-label">Manchester Installations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">MCS Certified Partners</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">£1,890</div>
+                        <div class="stat-label">Average Annual Savings</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Company Information Section -->
     <section class="section section-light">
@@ -489,79 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </section>
 
-    <!-- MASTER FOOTER TEMPLATE -->
-    <footer class="footer">
-        <div class="container">
-            <!-- Newsletter Signup -->
-            <div class="newsletter-section">
-                <div class="newsletter-content">
-                    <h3>Stay Updated with Manchester Solar News</h3>
-                    <p>Monthly updates on grants, policies, and local solar insights for all Manchester property types. No spam, just valuable information to help you make informed decisions.</p>
-                </div>
-                <form class="newsletter-form" action="/newsletter-signup" method="post">
-                    <div class="newsletter-input-group">
-                        <input type="email" name="email" placeholder="Enter your email address" required class="newsletter-input">
-                        <button type="submit" class="newsletter-btn">Stay Updated</button>
-                    </div>
-                    <p class="newsletter-disclaimer">✓ Monthly updates only • Unsubscribe anytime • We never sell your data</p>
-                </form>
-            </div>
-            
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Manchester.solar</h3>
-                    <p>Connecting Greater Manchester homeowners and businesses with <strong>MCS certified solar specialists</strong> who understand all property types - from modern builds to heritage properties.</p>
-                    <p><strong>No spam guarantee:</strong> Single professional contact from our exclusive network of 2-3 specialists only</p>
-                    <div class="footer-contact">
-                        <a href="mailto:quotes@manchester.solar">quotes@manchester.solar</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/residential-solar">Residential Solar (All Property Types)</a></li>
-                        <li><a href="/commercial/">Commercial Solar</a></li>
-                        <li><a href="/planning-permission">Planning Permission Guide</a></li>
-                        <li><a href="/manchester-weather">Weather Performance</a></li>
-                        <li><a href="/battery-storage">Battery Storage</a></li>
-                        <li><a href="/ev-charger-installation">EV Chargers</a></li>
-                        <li><a href="/heritage-properties">Heritage Property Specialists</a></li>
-                        <li><a href="/case-studies">Case Studies</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Service Areas</h4>
-                    <ul>
-                        <li><strong>All Manchester Postcodes (M1–M99)</strong></li>
-                        <li>Didsbury, Chorlton & South Manchester</li>
-                        <li>Sale, Altrincham & Trafford</li>
-                        <li>Stockport, Wilmslow & East</li>
-                        <li>Bolton, Bury & North Manchester</li>
-                        <li>Oldham, Rochdale & Tameside</li>
-                        <li>Wigan, Leigh & West Manchester</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quality Standards</h4>
-                    <p>All partners verified:</p>
-                    <ul>
-                        <li><strong>MCS certified</strong> (Microgeneration Certification)</li>
-                        <li><strong>RECC membership</strong> (Consumer Protection)</li>
-                        <li><strong>NICEIC/NAPIT</strong> electrical certification</li>
-                        <li><strong>All property type experience</strong></li>
-                        <li><strong>Local Manchester presence</strong></li>
-                        <li><strong>No-pressure sales approach</strong></li>
-                    </ul>
-                    <div class="footer-verify">
-                        <a href="https://mcscertified.com/" target="_blank">Verify MCS Standards →</a>
-                    </div>
-                </div>
-            </div>
-            
-<!-- Footer Container -->
+    
 <div id="footer-container"></div>
 
 <!-- Footer loader script -->

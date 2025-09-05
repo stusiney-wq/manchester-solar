@@ -11757,4 +11757,11 @@ main, .main-content {
     gap: var(--space-4);
   }
 }
-  
+  /* Fix trust message contrast on cards */
+.card .trust-message {
+  color: var(--neutral-600) !important;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: var(--space-4);
+  font-weight: 500;
+}

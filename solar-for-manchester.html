@@ -1002,22 +1002,19 @@
                 </div>
             </div>
             
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 <strong>Manchester.solar</strong>. Part of the Solar Domain Empire. All rights reserved.</p>
-                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-top: var(--space-2);">
-                    <a href="/privacy" style="color: rgba(255, 255, 255, 0.6);">Privacy Policy</a>
-                    <a href="/terms" style="color: rgba(255, 255, 255, 0.6);">Terms of Service</a>
-                    <a href="/installer-requirements" style="color: rgba(255, 255, 255, 0.6);">Installer Standards</a>
-                    <a href="/sitemap" style="color: rgba(255, 255, 255, 0.6);">Sitemap</a>
-                </div>
-                <div style="margin-top: var(--space-2); font-size: var(--font-size-sm); text-align: center;">
-                    <p>Website designed by <a href="https://www.digitwebdesign.co.uk" target="_blank" style="color: rgba(255, 255, 255, 0.6);">Digit Web Design</a></p>
-                    <p class="version-stamp">Last updated: August 19, 2025 | Gold Standard v3.1 Compliant</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+      <!-- Footer Container -->
+<div id="footer-container"></div>
+
+<!-- Footer loader script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('partials/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+});
+</script>
 
     <!-- Header Loader Script -->
     <script src="js/header-loader.js"></script>

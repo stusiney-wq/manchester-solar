@@ -12028,3 +12028,117 @@ main, .main-content {
     font-size: var(--font-size-base);
   }
 }
+
+/* ============================================ */
+/* FOOTER NEWSLETTER STYLING */
+/* ============================================ */
+
+/* Newsletter Section */
+.footer-newsletter {
+    background: rgba(255, 255, 255, 0.05);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--space-8);
+}
+
+.footer-newsletter h4 {
+    color: var(--neutral-0);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+}
+
+.footer-newsletter p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--neutral-0);
+    font-size: var(--font-size-base);
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--solar-green);
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+.newsletter-form .btn {
+    padding: var(--space-3) var(--space-6);
+    background: var(--solar-green);
+    color: var(--neutral-0);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.newsletter-form .btn:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+}
+
+/* Newsletter Disclaimer */
+.newsletter-disclaimer {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+/* Footer Intro */
+.footer-intro {
+    margin-top: var(--space-6);
+}
+
+.footer-intro h5 {
+    color: var(--neutral-0);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+}
+
+.footer-intro p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-3);
+    line-height: 1.6;
+}
+
+.footer-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form .btn {
+        text-align: center;
+    }
+    
+    .footer-newsletter {
+        padding: var(--space-4);
+    }
+}

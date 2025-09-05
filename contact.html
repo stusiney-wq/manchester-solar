@@ -159,29 +159,33 @@
     <!-- Header loads here automatically -->
     <div id="header-container"></div>
 
-    <!-- Contact Hero Section - Gold Standard v3.1 Compliant -->
+    <!-- Contact Hero Section - Gold Standard v3.1 with Refined Copy -->
 <section class="hero gradient-tint">
     <div class="container">
         <div class="hero-content">
             <div class="hero-badges" aria-label="Contact service badges">
-                <span class="hero-badge">Professional Contact</span>
-                <span class="hero-badge">24-Hour Response</span>
-                <span class="hero-badge">Press Friendly</span>
+                <span class="hero-badge">Professional Response</span>
+                <span class="hero-badge">24-Hour Guarantee</span>
+                <span class="hero-badge">Partnership Welcome</span>
             </div>
             
             <h1 id="hero-heading" class="hero-title">
-                Contact {{city.display_name}}.solar
+                Get in Touch with Manchester.solar
             </h1>
             
             <p class="hero-subtext">
-                Get in touch for <strong>press enquiries</strong>, <strong>installer partnerships</strong>, <strong>business questions</strong>, and <strong>general support</strong>. We respond to all enquiries within <strong>24 hours on weekdays</strong> and maintain professional communication standards for all stakeholders.
+                We're here to support <strong>homeowners, businesses, and installer partners</strong> across Greater Manchester.
+            </p>
+            
+            <p class="hero-description">
+                Have a question about going solar in Manchester? Want to discuss installer partnerships, business opportunities, or press enquiries? Our team responds to all messages within <strong>24 hours on weekdays</strong> and maintains professional, no-spam communication standards.
             </p>
             
             <div class="hero-cta">
                 <a href="#contact-form" class="btn btn-large gradient-btn" aria-label="Send us a message">
                     Send Us a Message
                 </a>
-                <p class="trust-message">Professional response guaranteed • Press enquiries welcome • Partnership opportunities</p>
+                <p class="trust-message">One form • Professional response guaranteed • Partnership enquiries welcome</p>
             </div>
         </div>
     </div>
@@ -282,7 +286,7 @@
                         <li>B2B lead generation for qualified prospects</li>
                         <li>MEES compliance & regulatory support</li>
                         <li>Long-term partnership opportunities</li>
-                        <li>Access to £5B government funding programs</li>
+                        <li>Access to government-backed commercial funding opportunities</li>
                     </ul>
                     <a href="/installer-partner" class="btn btn-large btn-outline">Learn More About Partnership</a>
                     <p class="trust-message">For commercial solar specialists serving Manchester businesses</p>
@@ -291,6 +295,29 @@
         </div>
     </div>
 </section>
+
+<!-- JavaScript for Audience Toggle -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audienceRadios = document.querySelectorAll('input[name="audience"]');
+    const audienceContents = document.querySelectorAll('.audience-content');
+    
+    audienceRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            // Hide all content
+            audienceContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected content
+            const targetContent = document.getElementById(this.value + '-content');
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+});
+</script>
     <!-- Contact Form & Info Section -->
     <section class="section">
         <div class="container">

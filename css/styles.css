@@ -12029,7 +12029,7 @@ main, .main-content {
   }
 }
 
-* ============================================ */
+/* ============================================ */
 /* FOOTER LAYOUT - NEWSLETTER FIRST, THEN 3-COLUMN GRID */
 /* ============================================ */
 
@@ -12190,18 +12190,13 @@ main, .main-content {
     text-decoration: underline;
 }
 
-/* Footer Bottom Mission Statement - SEXY STYLING */
+/* Footer Bottom Mission Statement - Clean & Professional */
 .footer-mission {
-    color: var(--solar-green) !important;
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.025em;
-    margin: var(--space-4) 0;
-    background: linear-gradient(135deg, var(--solar-green) 0%, #10b981 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    margin: var(--space-3) 0;
+    font-style: italic;
 }
 
 /* Mobile Responsiveness */
@@ -12232,6 +12227,6 @@ main, .main-content {
     }
     
     .footer-mission {
-        font-size: var(--font-size-base);
+        font-size: var(--font-size-sm);
     }
 }

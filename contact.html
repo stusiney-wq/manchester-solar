@@ -159,26 +159,33 @@
     <!-- Header loads here automatically -->
     <div id="header-container"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="hero-badge">Professional Contact</span>
-                    <span class="hero-badge">24-Hour Response</span>
-                    <span class="hero-badge">Press Friendly</span>
-                </div>
-                
-                <h1 class="hero-title">Contact Manchester.solar</h1>
-                <p class="hero-subtext">Get in touch for <strong>press enquiries</strong>, <strong>installer partnerships</strong>, <strong>business questions</strong>, and <strong>general support</strong>. We respond to all enquiries within 24 hours on weekdays.</p>
-                
-                <div class="hero-cta">
-                    <a href="#contact-form" class="btn btn-large">Send Us a Message</a>
-                    <p class="trust-message">✓ <strong>Professional response guaranteed</strong> • <strong>Press enquiries welcome</strong> • <strong>Partnership opportunities</strong></p>
-                </div>
+    <!-- Contact Hero Section - Gold Standard v3.1 Compliant -->
+<section class="hero gradient-tint">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badges" aria-label="Contact service badges">
+                <span class="hero-badge">Professional Contact</span>
+                <span class="hero-badge">24-Hour Response</span>
+                <span class="hero-badge">Press Friendly</span>
+            </div>
+            
+            <h1 id="hero-heading" class="hero-title">
+                Contact {{city.display_name}}.solar
+            </h1>
+            
+            <p class="hero-subtext">
+                Get in touch for <strong>press enquiries</strong>, <strong>installer partnerships</strong>, <strong>business questions</strong>, and <strong>general support</strong>. We respond to all enquiries within <strong>24 hours on weekdays</strong> and maintain professional communication standards for all stakeholders.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#contact-form" class="btn btn-large gradient-btn" aria-label="Send us a message">
+                    Send Us a Message
+                </a>
+                <p class="trust-message">Professional response guaranteed • Press enquiries welcome • Partnership opportunities</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
    <section class="section section-contact">
     <div class="container">
@@ -523,21 +530,19 @@
                 </div>
             </div>
             
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 <strong>Manchester.solar</strong>. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Service</a>
-                    <a href="/installer-requirements">Installer Standards</a>
-                    <a href="/sitemap">Sitemap</a>
-                </div>
-                <div class="footer-credit">
-                    <p>Website designed by <a href="https://www.digitwebdesign.co.uk" target="_blank">Digit Web Design</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!-- Footer Container -->
+<div id="footer-container"></div>
+
+<!-- Footer loader script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('partials/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+});
+</script>
 
     <!-- Header Loader Script -->
     <script src="js/header-loader.js"></script>

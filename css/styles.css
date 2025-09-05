@@ -12395,13 +12395,13 @@ main, .main-content {
     margin-bottom: var(--space-12);
 }
 
-/* Add arrows between cards via CSS */
+/* Add arrows between cards via CSS - Only after first 2 cards */
 .how-it-works .how-step:nth-child(1)::after,
 .how-it-works .how-step:nth-child(2)::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: calc(-1 * var(--space-8) - 16px);
+    right: calc(-1 * var(--space-4) - 6px);
     transform: translateY(-50%);
     width: 0;
     height: 0;
@@ -12410,6 +12410,11 @@ main, .main-content {
     border-left: 12px solid var(--solar-green);
     opacity: 0.6;
     z-index: 1;
+}
+
+/* Ensure 3rd card has no arrow */
+.how-it-works .how-step:nth-child(3)::after {
+    display: none;
 }
 
 /* Step Cards */

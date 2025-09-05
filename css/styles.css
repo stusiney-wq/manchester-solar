@@ -12230,3 +12230,98 @@ main, .main-content {
         font-size: var(--font-size-sm);
     }
 }
+
+/* ============================================ */
+/* WHO WE HELP SECTION - EQUAL HEIGHT & GREEN TICKS */
+/* ============================================ */
+
+/* Equal Height Cards */
+.card-equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-cta-wrapper {
+    margin-top: auto;
+    padding-top: var(--space-6);
+}
+
+/* Green Tick Lists - Remove bullets, add green ticks */
+.benefits-list-green {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-6) 0;
+}
+
+.benefits-list-green li {
+    margin-bottom: var(--space-3);
+    padding-left: var(--space-6);
+    position: relative;
+    line-height: 1.6;
+    color: var(--neutral-700);
+}
+
+.benefits-list-green li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--solar-green);
+    font-weight: bold;
+    font-size: var(--font-size-lg);
+}
+
+/* Business Button - Blue styling */
+.enhanced-business-card .btn {
+    background: var(--trust-blue);
+    color: var(--neutral-0);
+    border: none;
+}
+
+.enhanced-business-card .btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Ensure consistent spacing in cards */
+.homeowner-header,
+.business-header {
+    margin-bottom: var(--space-6);
+}
+
+.homeowner-description,
+.business-description {
+    margin-bottom: var(--space-6);
+}
+
+.savings-highlights,
+.roi-highlights {
+    margin-bottom: var(--space-6);
+}
+
+/* Grid alignment fix - ensure cards stretch to equal height */
+.grid.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+    align-items: stretch;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .grid.grid-2 {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .benefits-list-green li {
+        padding-left: var(--space-4);
+    }
+}

@@ -570,9 +570,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-    <!-- Footer -->
-    <div id="footer-container"></div>
+    <!-- Footer Container -->
+<div id="footer-container"></div>
 
+<!-- Footer loader script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('partials/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+});
+</script>
     <!-- Header Loader Script -->
     <script src="js/header-loader.js"></script>
     

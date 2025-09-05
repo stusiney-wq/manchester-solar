@@ -708,7 +708,19 @@
         </div>
     </section>
 
-    
+    <!-- Footer Container -->
+<div id="footer-container"></div>
+
+<!-- Footer loader script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('partials/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+});
+</script>
 
     <!-- Smart Quote Modal -->
     <div id="quote-modal" class="quote-modal">

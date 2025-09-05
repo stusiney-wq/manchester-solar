@@ -12029,22 +12029,23 @@ main, .main-content {
   }
 }
 
-/* ============================================ */
-/* FOOTER NEWSLETTER STYLING */
+* ============================================ */
+/* FOOTER LAYOUT - NEWSLETTER FIRST, THEN 3-COLUMN GRID */
 /* ============================================ */
 
-/* Newsletter Section */
+/* Newsletter Section - Full Width at Top */
 .footer-newsletter {
     background: rgba(255, 255, 255, 0.05);
-    padding: var(--space-6);
+    padding: var(--space-8);
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-12);
+    text-align: center;
 }
 
 .footer-newsletter h4 {
     color: var(--neutral-0);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-2xl);
     font-weight: 600;
     margin-bottom: var(--space-4);
 }
@@ -12053,6 +12054,9 @@ main, .main-content {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: var(--space-6);
     line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Newsletter Form */
@@ -12060,6 +12064,9 @@ main, .main-content {
     display: flex;
     gap: var(--space-3);
     margin-bottom: var(--space-4);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .newsletter-form input[type="email"] {
@@ -12106,26 +12113,95 @@ main, .main-content {
     margin: 0;
 }
 
-/* Footer Intro */
-.footer-intro {
-    margin-top: var(--space-6);
+/* Footer Intro Section - Full Width */
+.footer-intro-section {
+    text-align: center;
+    margin-bottom: var(--space-12);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-intro h5 {
+.footer-intro-section h5 {
+    color: var(--neutral-0);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+}
+
+.footer-intro-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: var(--font-size-lg);
+}
+
+/* Footer Content Grid - 3 Columns */
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+}
+
+.footer-section h4 {
     color: var(--neutral-0);
     font-size: var(--font-size-lg);
     font-weight: 600;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
 }
 
-.footer-intro p {
+.footer-section p {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
     line-height: 1.6;
 }
 
-.footer-intro p:last-child {
-    margin-bottom: 0;
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--solar-green);
+}
+
+.footer-verify {
+    margin-top: var(--space-4);
+}
+
+.footer-verify a {
+    color: var(--solar-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-verify a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom Mission Statement - SEXY STYLING */
+.footer-mission {
+    color: var(--solar-green) !important;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.025em;
+    margin: var(--space-4) 0;
+    background: linear-gradient(135deg, var(--solar-green) 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Mobile Responsiveness */
@@ -12139,6 +12215,23 @@ main, .main-content {
     }
     
     .footer-newsletter {
-        padding: var(--space-4);
+        padding: var(--space-6);
+    }
+    
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .footer-intro-section {
+        text-align: left;
+    }
+    
+    .footer-newsletter {
+        text-align: left;
+    }
+    
+    .footer-mission {
+        font-size: var(--font-size-base);
     }
 }

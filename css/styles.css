@@ -12896,3 +12896,210 @@ main, .main-content {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================ */
+/* ZONE OWNERSHIP MODEL - GOLD STANDARD v3.1.1 COMPLIANT */
+/* ============================================ */
+
+/* Zone Grid Layout */
+.zone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+}
+
+/* Zone Cards */
+.zone-card {
+    padding: var(--space-6);
+    border: 2px solid var(--neutral-200);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.zone-card:hover {
+    border-color: var(--solar-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Zone Header */
+.zone-header {
+    text-align: center;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--neutral-200);
+}
+
+.zone-name {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-3);
+}
+
+.zone-price {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--solar-green);
+    margin-bottom: var(--space-2);
+}
+
+.price-period {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--neutral-600);
+}
+
+/* Zone Content */
+.zone-postcodes {
+    margin-bottom: var(--space-4);
+    padding: var(--space-3);
+    background: var(--neutral-50);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    color: var(--neutral-700);
+}
+
+.zone-benefits {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0;
+}
+
+.zone-benefits li {
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-6);
+    position: relative;
+    color: var(--neutral-700);
+    line-height: 1.5;
+}
+
+.zone-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--solar-green);
+    font-weight: bold;
+}
+
+/* Zone Footer */
+.zone-footer {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--neutral-200);
+    text-align: center;
+}
+
+.zone-microcopy {
+    font-size: var(--font-size-xs);
+    color: var(--neutral-600);
+    margin-bottom: var(--space-4);
+    font-style: italic;
+}
+
+/* Multi-Zone Upsell Banner */
+.zone-upsell-banner {
+    background: linear-gradient(135deg, var(--trust-blue) 0%, #2563eb 100%);
+    color: var(--neutral-0);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin-top: var(--space-8);
+}
+
+.upsell-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--neutral-0);
+}
+
+.upsell-benefits {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-6) 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.upsell-benefits li {
+    color: var(--neutral-0);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+}
+
+.upsell-note {
+    color: rgba(255, 255, 255, 0.9);
+    margin: var(--space-6) 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.upsell-cta {
+    margin-top: var(--space-6);
+}
+
+.upsell-cta .btn {
+    background: var(--neutral-0);
+    color: var(--trust-blue);
+    border: 2px solid var(--neutral-0);
+}
+
+.upsell-cta .btn:hover {
+    background: transparent;
+    color: var(--neutral-0);
+    border-color: var(--neutral-0);
+}
+
+/* Map Container Hook */
+.zone-map-container {
+    margin: var(--space-8) 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .zone-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .zone-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .zone-card {
+        padding: var(--space-4);
+    }
+    
+    .zone-upsell-banner {
+        padding: var(--space-6);
+    }
+    
+    .upsell-benefits {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+    
+    .upsell-content h3 {
+        font-size: var(--font-size-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .zone-name {
+        font-size: var(--font-size-lg);
+    }
+    
+    .zone-price {
+        font-size: var(--font-size-xl);
+    }
+}

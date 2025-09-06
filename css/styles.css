@@ -12789,3 +12789,110 @@ main, .main-content {
         font-size: var(--font-size-lg);
     }
 }
+
+/* ============================================ */
+/* ROI CALCULATOR - GOLD STANDARD v3.1.1 COMPLIANT */
+/* ============================================ */
+
+/* Use existing grid and card classes from Gold Standard */
+#roi-calculator .card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
+    text-align: center;
+}
+
+/* Form Elements - Enhanced from existing styles */
+#roi-calculator .form-group {
+    margin-bottom: var(--space-6);
+}
+
+#roi-calculator .form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-base);
+}
+
+/* Input with Prefix Enhancement */
+#roi-calculator .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#roi-calculator .input-prefix {
+    position: absolute;
+    left: var(--space-4);
+    font-weight: 600;
+    color: var(--neutral-600);
+    z-index: 1;
+}
+
+#roi-calculator .input-wrapper input {
+    width: 100%;
+    padding: var(--space-3) var(--space-4) var(--space-3) var(--space-8);
+    border: 2px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-base);
+    background: var(--neutral-0);
+}
+
+#roi-calculator .input-wrapper input:focus,
+#roi-calculator input:focus,
+#roi-calculator select:focus {
+    outline: none;
+    border-color: var(--solar-green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+#roi-calculator .form-help {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+    font-style: italic;
+}
+
+/* Stat Card Highlight */
+#roi-calculator .stat-highlight {
+    background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+    color: var(--neutral-0);
+    border-color: var(--solar-green);
+}
+
+#roi-calculator .stat-highlight .stat-number,
+#roi-calculator .stat-highlight .stat-label {
+    color: var(--neutral-0);
+}
+
+/* ROI Summary */
+#roi-calculator .roi-summary {
+    margin: var(--space-6) 0;
+    padding: var(--space-4);
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    text-align: center;
+}
+
+#roi-calculator .roi-summary p {
+    margin: 0;
+    color: var(--neutral-700);
+    line-height: 1.6;
+}
+
+/* ROI CTA */
+#roi-calculator .roi-cta {
+    text-align: center;
+    margin-top: var(--space-6);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #roi-calculator .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

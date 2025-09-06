@@ -12649,3 +12649,143 @@ main, .main-content {
         margin: var(--space-8) 0;
     }
 }
+
+* ============================================ */
+/* INSTALLER PARTNER PAGE - ADDITIONAL STYLES */
+/* ============================================ */
+
+/* Final CTA Section */
+.cta-final {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-8) 0;
+}
+
+.cta-final-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--neutral-0);
+    margin-bottom: var(--space-6);
+    letter-spacing: -0.025em;
+    text-align: center;
+}
+
+.cta-final-subtext {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.cta-final-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Application Form Enhancements */
+.quote-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--neutral-0);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-base);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease;
+    background: var(--neutral-0);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--solar-green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.consent-group {
+    margin: var(--space-6) 0;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.consent-label {
+    font-size: var(--font-size-sm);
+    color: var(--neutral-700);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.btn-full-width {
+    width: 100%;
+    justify-content: center;
+}
+
+.form-trust {
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+    margin-top: var(--space-4);
+    margin-bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .quote-form {
+        padding: var(--space-6);
+    }
+    
+    .cta-final-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .cta-final-subtext {
+        font-size: var(--font-size-lg);
+    }
+}

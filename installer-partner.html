@@ -276,6 +276,232 @@
         </div>
     </section>
 
+    <!-- ROI Calculator Section -->
+<section class="section section-light" id="roi-calculator" data-fee="995">
+    <div class="container">
+        <div class="section-header">
+            <h2>See Your ROI in Seconds</h2>
+            <div class="section-divider-accent"></div>
+            <p class="section-intro">One installation per month can cover your partnership fee. Use the calculator to model your monthly return with Manchester.solar.</p>
+        </div>
+        
+        <div class="grid grid-2">
+            <!-- Calculator Inputs -->
+            <div class="card">
+                <h3>Your Manchester Solar Business</h3>
+                
+                <div class="form-group">
+                    <label for="leads-per-month">Solar leads per month</label>
+                    <input type="number" id="leads-per-month" name="leads_per_month" min="1" max="200" value="20" aria-describedby="leads-help">
+                    <small id="leads-help" class="form-help">How many solar leads do you expect monthly in Manchester?</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="conversion-rate">Installation conversion rate</label>
+                    <select id="conversion-rate" name="conversion_rate" aria-describedby="conversion-help">
+                        <option value="10">10% (Conservative)</option>
+                        <option value="15">15% (Average)</option>
+                        <option value="20" selected>20% (Good)</option>
+                        <option value="25">25% (Excellent)</option>
+                        <option value="30">30% (Outstanding)</option>
+                    </select>
+                    <small id="conversion-help" class="form-help">Typical Manchester solar installers achieve 15-25%</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="profit-per-job">Profit per solar installation</label>
+                    <div class="input-wrapper">
+                        <span class="input-prefix">£</span>
+                        <input type="number" id="profit-per-job" name="profit_per_job" min="500" max="10000" step="100" value="2500" aria-describedby="profit-help">
+                    </div>
+                    <small id="profit-help" class="form-help">Average Manchester installation profit: £1,500 - £4,000</small>
+                </div>
+            </div>
+            
+            <!-- Results Display -->
+            <div class="card">
+                <h3>Your Monthly Returns</h3>
+                
+                <div class="grid grid-2" aria-live="polite" aria-label="ROI calculation results">
+                    <div class="stat-card">
+                        <span class="stat-number" id="estimated-installs">4</span>
+                        <span class="stat-label">Estimated installs</span>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <span class="stat-number" id="monthly-profit">£10,000</span>
+                        <span class="stat-label">Monthly profit</span>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <span class="stat-number" id="partnership-fee">£995</span>
+                        <span class="stat-label">Partnership fee</span>
+                    </div>
+                    
+                    <div class="stat-card stat-highlight">
+                        <span class="stat-number" id="roi-multiplier">10×</span>
+                        <span class="stat-label">ROI multiplier</span>
+                    </div>
+                </div>
+                
+                <div class="roi-summary">
+                    <p id="roi-summary-text">
+                        With <span id="summary-leads">20</span> leads monthly at <span id="summary-conversion">20%</span> conversion, 
+                        you generate <strong id="summary-profit">£10,000</strong> profit for a <strong>£995</strong> investment.
+                    </p>
+                </div>
+                
+                <div class="roi-cta">
+                    <a href="#application-form" class="btn btn-large" id="roi-cta-button">
+                        Apply Now – Free Until 10 Leads Delivered
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fallback for No JavaScript -->
+        <noscript>
+            <div class="card card-highlight">
+                <h3>ROI Example: 10× Monthly Return</h3>
+                <p>With 20 solar leads per month at 20% conversion rate and £2,500 profit per Manchester solar installation:</p>
+                <div class="grid grid-2">
+                    <div class="stat-card">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Installations</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">£10,000</span>
+                        <span class="stat-label">Monthly profit</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">£995</span>
+                        <span class="stat-label">Partnership fee</span>
+                    </div>
+                    <div class="stat-card stat-highlight">
+                        <span class="stat-number">10×</span>
+                        <span class="stat-label">ROI multiplier</span>
+                    </div>
+                </div>
+                <div class="roi-cta">
+                    <a href="#application-form" class="btn btn-large">Apply Now – Free Until 10 Leads Delivered</a>
+                </div>
+            </div>
+        </noscript>
+    </div>
+</section>
+
+<script>
+(function() {
+    'use strict';
+    
+    // ROI Calculator - Self-contained with no globals
+    const ROICalculator = {
+        elements: {},
+        partnershipFee: 995,
+        
+        init() {
+            // Only initialize if section exists
+            const section = document.querySelector('#roi-calculator');
+            if (!section) return;
+            
+            // Get fee from data attribute
+            this.partnershipFee = parseInt(section.dataset.fee) || 995;
+            
+            // Cache DOM elements
+            this.elements = {
+                leadsInput: document.getElementById('leads-per-month'),
+                conversionSelect: document.getElementById('conversion-rate'),
+                profitInput: document.getElementById('profit-per-job'),
+                installsOutput: document.getElementById('estimated-installs'),
+                profitOutput: document.getElementById('monthly-profit'),
+                feeOutput: document.getElementById('partnership-fee'),
+                roiOutput: document.getElementById('roi-multiplier'),
+                ctaButton: document.getElementById('roi-cta-button'),
+                summaryLeads: document.getElementById('summary-leads'),
+                summaryConversion: document.getElementById('summary-conversion'),
+                summaryProfit: document.getElementById('summary-profit')
+            };
+            
+            // Validate all elements exist
+            const missingElements = Object.entries(this.elements).filter(([key, el]) => !el);
+            if (missingElements.length > 0) {
+                console.warn('ROI Calculator: Missing elements:', missingElements.map(([key]) => key));
+                return;
+            }
+            
+            this.bindEvents();
+            this.calculate();
+        },
+        
+        bindEvents() {
+            this.elements.leadsInput.addEventListener('input', () => {
+                this.clampInput(this.elements.leadsInput, 1, 200);
+                this.calculate();
+            });
+            
+            this.elements.conversionSelect.addEventListener('change', () => {
+                this.calculate();
+            });
+            
+            this.elements.profitInput.addEventListener('input', () => {
+                this.clampInput(this.elements.profitInput, 500, 10000);
+                this.calculate();
+            });
+        },
+        
+        clampInput(input, min, max) {
+            const value = parseInt(input.value);
+            if (value < min) input.value = min;
+            if (value > max) input.value = max;
+        },
+        
+        calculate() {
+            const leads = parseInt(this.elements.leadsInput.value) || 0;
+            const conversionRate = parseInt(this.elements.conversionSelect.value) || 0;
+            const profitPerJob = parseInt(this.elements.profitInput.value) || 0;
+            
+            const installs = Math.round(leads * (conversionRate / 100));
+            const monthlyProfit = installs * profitPerJob;
+            const roiMultiplier = monthlyProfit > 0 ? Math.round(monthlyProfit / this.partnershipFee) : 0;
+            
+            this.updateDisplay(installs, monthlyProfit, roiMultiplier, leads, conversionRate);
+            this.updateCTA(roiMultiplier);
+        },
+        
+        updateDisplay(installs, monthlyProfit, roiMultiplier, leads, conversionRate) {
+            this.elements.installsOutput.textContent = installs;
+            this.elements.profitOutput.textContent = this.formatCurrency(monthlyProfit);
+            this.elements.feeOutput.textContent = this.formatCurrency(this.partnershipFee);
+            this.elements.roiOutput.textContent = roiMultiplier + '×';
+            
+            // Update summary
+            this.elements.summaryLeads.textContent = leads;
+            this.elements.summaryConversion.textContent = conversionRate + '%';
+            this.elements.summaryProfit.textContent = this.formatCurrency(monthlyProfit);
+        },
+        
+        updateCTA(roiMultiplier) {
+            if (roiMultiplier >= 1) {
+                this.elements.ctaButton.textContent = 'Ready to Claim Your Zone? Apply Now';
+            } else {
+                this.elements.ctaButton.textContent = 'Apply Now – Free Until 10 Leads Delivered';
+            }
+        },
+        
+        formatCurrency(amount) {
+            return '£' + amount.toLocaleString();
+        }
+    };
+    
+    // Safe initialization
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => ROICalculator.init());
+    } else {
+        ROICalculator.init();
+    }
+})();
+</script>
+
     <!-- Application Form Section -->
     <section class="section" id="application-form">
         <div class="container">

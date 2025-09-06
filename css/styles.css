@@ -12546,3 +12546,47 @@ main, .main-content {
     }
 }
 
+/* ============================================ */
+/* CARD HIGHLIGHT - GOLD STANDARD COMPLIANT */
+/* ============================================ */
+
+/* Highlight Card */
+.card-highlight {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(16, 163, 74, 0.15) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    margin: var(--space-12) 0;
+    text-align: center;
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+}
+
+.card-highlight-title {
+    color: #166534;
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.card-highlight-text {
+    color: #166534;
+    font-weight: 500;
+    font-size: var(--font-size-lg);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .card-highlight {
+        margin: var(--space-8) 0;
+        padding: var(--space-6);
+    }
+    
+    .card-highlight-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .card-highlight-text {
+        font-size: var(--font-size-base);
+    }
+}

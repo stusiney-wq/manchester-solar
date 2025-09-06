@@ -12590,3 +12590,62 @@ main, .main-content {
         font-size: var(--font-size-base);
     }
 }
+
+/* ============================================ */
+/* OUR SOLUTION SECTION - GOLD STANDARD COMPLIANT */
+/* ============================================ */
+
+/* Section Background */
+.section-light {
+    background: var(--neutral-50);
+}
+
+/* Solution Grid */
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin: var(--space-12) 0;
+}
+
+/* Service Icons */
+.service-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    display: block;
+    text-align: center;
+}
+
+/* Card Content - Handle multiple paragraphs in first card */
+.card p {
+    margin-bottom: var(--space-4);
+    color: var(--neutral-700);
+    line-height: 1.6;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        margin: var(--space-8) 0;
+    }
+}

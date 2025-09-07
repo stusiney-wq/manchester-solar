@@ -1302,3 +1302,14 @@ strong {
     margin-bottom: var(--space-20);
   }
 }
+
+/* FAQ Accessibility Fix */
+.faq-answer[hidden] {
+  display: none;
+}
+
+.faq-answer:not([hidden]) {
+  display: block;
+  max-height: 400px;
+  transition: max-height 0.3s ease;
+}

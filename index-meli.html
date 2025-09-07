@@ -1165,12 +1165,7 @@ window.addEventListener('hashchange', function() {
   }
 });
 
-// Add to your existing addScrollAnimations() function:
-const resourceCards = document.querySelectorAll('.resource-card');
-resourceCards.forEach((card, index) => {
-  card.style.transitionDelay = `${index * 0.2}s`;
-  observer.observe(card);
-});
+
 
 </script>
 

@@ -702,3 +702,172 @@ strong {
     padding: var(--space-8);
   }
 }
+
+/* ============================================ */
+/* BENEFITS SECTION - Add to styles-v3.css */
+/* ============================================ */
+
+.benefits-section {
+  background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+  position: relative;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  margin-bottom: var(--space-16);
+}
+
+/* Benefit Cards */
+.benefit-card {
+  text-align: left;
+  padding: var(--space-8);
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--solar-green);
+}
+
+/* Benefit Icon */
+.benefit-icon {
+  margin-bottom: var(--space-6);
+  color: var(--solar-green);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.benefit-icon-svg {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+/* Benefit Content */
+.benefit-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.benefit-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.benefit-description {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  flex: 1;
+}
+
+/* Benefit Lists */
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-list li {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-6);
+  position: relative;
+  line-height: 1.5;
+}
+
+.benefit-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom bullet points */
+.benefit-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--solar-green);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+/* Benefits CTA */
+.benefits-cta {
+  text-align: center;
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--neutral-200);
+}
+
+.benefits-cta-text {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-700);
+  margin-bottom: var(--space-6);
+  font-weight: 500;
+}
+
+/* ============================================ */
+/* RESPONSIVE - BENEFITS SECTION */
+/* ============================================ */
+
+/* Mobile - Stack cards */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .benefit-card {
+    padding: var(--space-6);
+  }
+  
+  .benefit-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .benefit-icon-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablet - 2 columns, then 3rd card spans full width */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  
+  .benefit-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop - 3 columns */
+@media (min-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+  
+  .benefit-card {
+    padding: var(--space-8);
+  }
+}

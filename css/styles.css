@@ -13211,3 +13211,131 @@ main, .main-content {
         max-width: 320px;
     }
 }
+
+/* ============================================ */
+/* MANCHESTER SOLAR GUIDE 2025 - GOLD STANDARD v3.1.1 COMPLIANT */
+/* ============================================ */
+
+/* Article Meta */
+.article-meta {
+    margin-top: var(--space-6);
+}
+
+.article-meta .muted {
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+    font-style: italic;
+}
+
+/* Table of Contents */
+.toc-nav ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+}
+
+.toc-nav a {
+    color: var(--neutral-700);
+    text-decoration: none;
+    padding: var(--space-2) 0;
+    display: block;
+    border-bottom: 1px solid var(--neutral-200);
+    transition: color 0.2s ease;
+}
+
+.toc-nav a:hover {
+    color: var(--solar-green);
+}
+
+/* FAQ Styling */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: var(--space-4);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: var(--space-4) var(--space-6);
+    background: var(--neutral-50);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--neutral-900);
+    border: none;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.faq-item summary:hover {
+    background: var(--neutral-100);
+}
+
+.faq-item summary:focus {
+    background: var(--neutral-100);
+    box-shadow: inset 0 0 0 2px var(--solar-green);
+}
+
+.faq-item[open] summary {
+    background: var(--solar-green);
+    color: var(--neutral-0);
+}
+
+.faq-answer {
+    padding: var(--space-4) var(--space-6);
+    background: var(--neutral-0);
+    border-top: 1px solid var(--neutral-200);
+}
+
+.faq-answer p {
+    margin: 0;
+    color: var(--neutral-700);
+    line-height: 1.6;
+}
+
+/* Section CTA */
+.section-cta {
+    text-align: center;
+    margin-top: var(--space-8);
+}
+
+/* Figure Styling */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
+figcaption {
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .toc-nav ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-item summary {
+        padding: var(--space-3) var(--space-4);
+    }
+    
+    .faq-answer {
+        padding: var(--space-3) var(--space-4);
+    }
+}

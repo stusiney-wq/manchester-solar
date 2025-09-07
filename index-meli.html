@@ -1114,6 +1114,12 @@ document.addEventListener('DOMContentLoaded', function() {
       observer.observe(item);
     });
 
+    const resourceCards = document.querySelectorAll('.resource-card');
+    resourceCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.2}s`;
+      observer.observe(card);
+    });
+
     // Section headers - fade in from top
     const sectionHeaders = document.querySelectorAll('.section-header');
     sectionHeaders.forEach(header => {

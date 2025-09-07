@@ -534,171 +534,100 @@ strong {
   }
 }
 
-/* ============================================ */
-/* STATS SECTION - Add to styles-v3.css */
-/* ============================================ */
+<!-- Stats Section - Manchester Solar Data -->
+<section class="section stats-section" aria-labelledby="stats-heading">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 id="stats-heading" class="section-title">
+        Manchester Solar Performance
+      </h2>
+      <p class="section-subtitle">
+        Real data from <strong>2,800+ local installations</strong> across Greater Manchester
+      </p>
+    </div>
 
-.stats-section {
-  background: var(--neutral-0);
-  border-bottom: 1px solid var(--neutral-200);
-}
+    <!-- Stats Grid -->
+    <div class="stats-grid grid grid-4">
+      
+      <!-- Stat 1: Annual Savings -->
+      <div class="stat-card card">
+        <div class="stat-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon-svg">
+            <path d="M12 1v6m0 10v6m8-10h-6M4 12h6m5.657-5.657l-4.243 4.243m0-4.243l4.243 4.243"></path>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">£1,890+</div>
+          <div class="stat-label">Average Annual Savings</div>
+          <div class="stat-description">
+            Typical Manchester household with 4kW system
+          </div>
+        </div>
+      </div>
 
-/* Section Header */
-.section-header {
-  text-align: center;
-  margin-bottom: var(--space-16);
-}
+      <!-- Stat 2: Sun Hours -->
+      <div class="stat-card card">
+        <div class="stat-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon-svg">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">3.8</div>
+          <div class="stat-label">Peak Sun Hours Daily</div>
+          <div class="stat-description">
+            Manchester's annual average solar irradiance
+          </div>
+        </div>
+      </div>
 
-.section-title {
-  font-size: clamp(1.875rem, 4vw, var(--font-size-4xl));
-  font-weight: 700;
-  color: var(--neutral-900);
-  margin-bottom: var(--space-4);
-  letter-spacing: -0.025em;
-}
+      <!-- Stat 3: Local Installations -->
+      <div class="stat-card card">
+        <div class="stat-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon-svg">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9,22 9,12 15,12 15,22"></polyline>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">2,800+</div>
+          <div class="stat-label">Local Installations</div>
+          <div class="stat-description">
+            Solar systems across Greater Manchester
+          </div>
+        </div>
+      </div>
 
-.section-subtitle {
-  font-size: var(--font-size-lg);
-  color: var(--neutral-600);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
+      <!-- Stat 4: MCS Installers -->
+      <div class="stat-card card">
+        <div class="stat-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon-svg">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <path d="M20 8v6M23 11l-3 3-3-3"></path>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-number">47</div>
+          <div class="stat-label">MCS Installers</div>
+          <div class="stat-description">
+            Vetted professionals in our network
+          </div>
+        </div>
+      </div>
 
-/* Stats Grid */
-.stats-grid {
-  margin-bottom: var(--space-12);
-}
+    </div>
 
-/* Stat Cards */
-.stat-card {
-  text-align: center;
-  padding: var(--space-8);
-  background: var(--neutral-0);
-  border: 1px solid var(--neutral-200);
-  border-radius: var(--radius-xl);
-  transition: all 0.2s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Add this line */
-}
+    <!-- Supporting Text -->
+    <div class="stats-supporting">
+      <p class="stats-note">
+        <strong>0% VAT until March 2027</strong> • Average payback period: 6.8 years • 
+        <strong>25-year warranties</strong> on panels and workmanship
+      </p>
+    </div>
 
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--solar-green);
-}
-
-/* Stat Icon */
-.stat-icon {
-  margin-bottom: var(--space-6);
-  color: var(--solar-green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat-icon-svg {
-  width: 48px;
-  height: 48px;
-  stroke-width: 1.5;
-}
-
-/* Stat Content */
-.stat-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.stat-number {
-  font-size: var(--font-size-4xl);
-  font-weight: 900;
-  color: var(--neutral-900);
-  line-height: 1;
-  margin-bottom: var(--space-2);
-  letter-spacing: -0.025em;
-}
-
-.stat-label {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--neutral-700);
-  margin-bottom: var(--space-3);
-  line-height: 1.2;
-}
-
-.stat-description {
-  font-size: var(--font-size-sm);
-  color: var(--neutral-600);
-  line-height: 1.4;
-  max-width: 200px;
-}
-
-/* Supporting Text */
-.stats-supporting {
-  text-align: center;
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--neutral-200);
-}
-
-.stats-note {
-  font-size: var(--font-size-base);
-  color: var(--neutral-700);
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.stats-note strong {
-  color: var(--solar-green);
-  font-weight: 600;
-}
-
-/* ============================================ */
-/* RESPONSIVE - STATS SECTION */
-/* ============================================ */
-
-/* Mobile - Stack cards */
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-  
-  .stat-card {
-    padding: var(--space-6);
-  }
-  
-  .stat-number {
-    font-size: var(--font-size-3xl);
-  }
-  
-  .stat-icon-svg {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Tablet - 2 columns */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
-}
-
-/* Desktop - 4 columns */
-@media (min-width: 1024px) {
-  .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-6);
-  }
-  
-  .stat-card {
-    padding: var(--space-8);
-  }
-}
+  </div>
+</section>

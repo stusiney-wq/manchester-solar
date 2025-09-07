@@ -611,6 +611,90 @@
   </div>
 </section>
 
+<!-- Resources Section - Manchester Solar Guides -->
+<section class="section resources-section" aria-labelledby="resources-heading">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 id="resources-heading" class="section-title">
+        Helpful Manchester Solar Resources
+      </h2>
+      <p class="section-subtitle">
+        Expert guides to help you make informed solar decisions for your Manchester property
+      </p>
+    </div>
+
+    <!-- Resources Grid -->
+    <div class="resources-grid grid grid-2">
+      
+      <!-- Resource 1: Complete Guide -->
+      <div class="resource-card card">
+        <div class="resource-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="resource-icon-svg">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="resource-content">
+          <h3 class="resource-title">Complete Manchester Solar Guide 2025</h3>
+          <p class="resource-description">
+            Everything you need to know about solar panels in Manchester - costs, planning permissions, 
+            installer vetting, and realistic savings for Victorian terraces and modern properties.
+          </p>
+          <div class="resource-highlights">
+            <span class="resource-highlight">Property-specific advice</span>
+            <span class="resource-highlight">Local planning guidance</span>
+            <span class="resource-highlight">Cost breakdowns</span>
+          </div>
+        </div>
+        <div class="resource-cta">
+          <a href="/guides/manchester-solar-2025" class="btn btn--secondary" data-analytics="guide_link_click">
+            Read the Complete Guide
+          </a>
+        </div>
+      </div>
+
+      <!-- Resource 2: Zone Finder -->
+      <div class="resource-card card">
+        <div class="resource-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="resource-icon-svg">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <div class="resource-content">
+          <h3 class="resource-title">Find Your Manchester Zone</h3>
+          <p class="resource-description">
+            Discover your exclusive local installer and get connected with Manchester's solar specialists. 
+            Each zone has one vetted MCS installer - no auctions, no multiple calls.
+          </p>
+          <div class="resource-highlights">
+            <span class="resource-highlight">Exclusive per zone</span>
+            <span class="resource-highlight">MCS certified only</span>
+            <span class="resource-highlight">No spam guarantee</span>
+          </div>
+        </div>
+        <div class="resource-cta">
+          <a href="/zones" class="btn btn--secondary" data-analytics="zones_link_click">
+            Find Your Zone
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Additional Info -->
+    <div class="resources-footer">
+      <p class="resources-note">
+        All our resources are created by solar experts and updated regularly with the latest Manchester market data, 
+        government incentives, and local planning requirements.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <!-- FAQ Section - Manchester Solar Questions -->
 <section class="section faq-section" aria-labelledby="faq-heading">
   <div class="container">
@@ -1079,6 +1163,13 @@ window.addEventListener('hashchange', function() {
   if (target && target.classList.contains('faq-answer')) {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+});
+
+// Add to your existing addScrollAnimations() function:
+const resourceCards = document.querySelectorAll('.resource-card');
+resourceCards.forEach((card, index) => {
+  card.style.transitionDelay = `${index * 0.2}s`;
+  observer.observe(card);
 });
 
 </script>

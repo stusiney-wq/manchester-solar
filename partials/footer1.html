@@ -1,0 +1,106 @@
+<!-- Manchester.solar Footer - Newsletter First, Then 3-Column Layout -->
+<footer class="footer section-dark">
+    <div class="container">
+        <!-- Newsletter Section - Full Width at Top -->
+        <div class="footer-newsletter">
+            <div class="newsletter-content">
+                <h4>Manchester Solar Newsletter</h4>
+                <p>Monthly updates on grants, policies, and local solar insights. Supporting Manchester City Council's 2038 carbon neutral target.</p>
+                
+                <form class="newsletter-form" name="manchester-newsletter" method="POST" data-netlify="true">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                
+                <p class="newsletter-disclaimer">
+                    ✓ Monthly updates only • Unsubscribe anytime • GDPR compliant • We never sell your data
+                </p>
+            </div>
+        </div>
+
+        <!-- Manchester.solar Intro - Full Width -->
+        <div class="footer-intro-section">
+            <h5>Manchester.solar</h5>
+            <p>Connecting Greater Manchester homeowners and businesses with <strong>MCS-certified solar specialists</strong>. <strong>No spam • No lead auctions • Just 2–3 vetted installers you can trust.</strong></p>
+        </div>
+        
+        <!-- Footer Content Grid - 3 Columns -->
+        <div class="footer-content-grid">
+            <!-- What We Offer Section -->
+            <div class="footer-section">
+                <h4>What We Offer</h4>
+                <ul>
+                    <li><a href="/solar-guide/">Manchester Solar Guide & Education</a></li>
+                    <li><a href="/residential/">Connect with Residential Solar Installers</a></li>
+                    <li><a href="/commercial/">Connect with Commercial Solar Specialists</a></li>
+                    <li><a href="/installer-partner/">Join Our Installer Network</a></li>
+                    <li><a href="/about/">About Our Ethical Network</a></li>
+                </ul>
+            </div>
+            
+            <!-- Service Areas Section -->
+            <div class="footer-section">
+                <h4>Service Areas</h4>
+                <p class="footer-section-intro"><strong>Serving all Greater Manchester postcodes (M1–M99) with local specialists.</strong></p>
+                <ul>
+                    <li><a href="/didsbury-solar">Didsbury & Chorlton</a></li>
+                    <li><a href="/sale-altrincham-solar">Sale & Altrincham</a></li>
+                    <li><a href="/stockport-solar">Stockport & Wilmslow</a></li>
+                    <li><a href="/oldham-rochdale-solar">Oldham & Rochdale</a></li>
+                    <li><a href="/bolton-bury-solar">Bolton & Bury</a></li>
+                    <li><a href="/wigan-leigh-solar">Wigan & Leigh</a></li>
+                </ul>
+            </div>
+            
+            <!-- Quality Standards Section -->
+            <div class="footer-section">
+                <h4>Quality Standards</h4>
+                <p class="footer-section-intro">All partners verified:</p>
+                <ul>
+                    <li><strong>MCS certified</strong> (Microgeneration Certification)</li>
+                    <li><strong>RECC membership</strong> (Consumer Protection)</li>
+                    <li><strong>NICEIC/NAPIT</strong> electrical certification</li>
+                    <li><strong>TrustMark preferred</strong></li>
+                    <li><strong>Proven Manchester experience across all property types</strong></li>
+                    <li><strong>No-pressure, transparent sales</strong></li>
+                </ul>
+                <div class="footer-verify">
+                    <a href="https://mcscertified.com/" target="_blank">Verify MCS Standards →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 <strong>Manchester.solar</strong> - Part of <a href="https://findsolar.solar" target="_blank"><strong>findsolar.solar</strong></a></p>
+            <p><em>The Ethical Solar Installer and Information Network</em></p>
+            <p class="footer-mission"><strong>Proud to support Manchester's 2038 carbon-neutral goal with ethical, transparent solar choices.</strong></p>
+            <p>Website by <a href="https://digitwebdesign.com" target="_blank">Digit Web Design</a>.</p>
+            <small>v3.1.3 - Gold Standard Compliant</small>
+        </div>
+    </div>
+</footer>
+
+<!-- Newsletter JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[name="email"]').value;
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            console.log('Newsletter signup:', email);
+            alert('Thank you for subscribing! We\'ll send you monthly Manchester solar updates.');
+            this.reset();
+        });
+    }
+});
+</script>

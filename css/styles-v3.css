@@ -533,3 +533,171 @@ strong {
     padding: 0 var(--space-12);
   }
 }
+
+/* ============================================ */
+/* STATS SECTION - Add to styles-v3.css */
+/* ============================================ */
+
+.stats-section {
+  background: var(--neutral-0);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.section-title {
+  font-size: clamp(1.875rem, 4vw, var(--font-size-4xl));
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.025em;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Stats Grid */
+.stats-grid {
+  margin-bottom: var(--space-12);
+}
+
+/* Stat Cards */
+.stat-card {
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  transition: all 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--solar-green);
+}
+
+/* Stat Icon */
+.stat-icon {
+  margin-bottom: var(--space-6);
+  color: var(--solar-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon-svg {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+/* Stat Content */
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  color: var(--neutral-900);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.025em;
+}
+
+.stat-label {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--neutral-700);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.stat-description {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  line-height: 1.4;
+  max-width: 200px;
+}
+
+/* Supporting Text */
+.stats-supporting {
+  text-align: center;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--neutral-200);
+}
+
+.stats-note {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.stats-note strong {
+  color: var(--solar-green);
+  font-weight: 600;
+}
+
+/* ============================================ */
+/* RESPONSIVE - STATS SECTION */
+/* ============================================ */
+
+/* Mobile - Stack cards */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .stat-card {
+    padding: var(--space-6);
+  }
+  
+  .stat-number {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .stat-icon-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* Desktop - 4 columns */
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+  
+  .stat-card {
+    padding: var(--space-8);
+  }
+}

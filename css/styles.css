@@ -13103,3 +13103,111 @@ main, .main-content {
         font-size: var(--font-size-xl);
     }
 }
+
+/* ============================================ */
+/* FOUNDING PARTNER OFFER - GOLD STANDARD v3.1.1 COMPLIANT */
+/* ============================================ */
+
+/* Benefits Grid - Uses existing grid-2 class */
+#founding-partner .grid-2 {
+    margin-bottom: var(--space-12);
+}
+
+#founding-partner .card {
+    text-align: center;
+    padding: var(--space-6);
+    transition: all 0.3s ease;
+}
+
+#founding-partner .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+#founding-partner .service-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    display: block;
+}
+
+#founding-partner .card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-4);
+}
+
+#founding-partner .card p {
+    color: var(--neutral-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Urgency Block */
+.founding-urgency {
+    background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+    color: var(--neutral-0);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.urgency-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--neutral-0);
+}
+
+.urgency-content p {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-6);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.founding-cta {
+    margin-top: var(--space-6);
+}
+
+.founding-cta .btn {
+    background: var(--neutral-0);
+    color: var(--solar-green);
+    border: 2px solid var(--neutral-0);
+    font-weight: 700;
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--font-size-lg);
+}
+
+.founding-cta .btn:hover {
+    background: transparent;
+    color: var(--neutral-0);
+    border-color: var(--neutral-0);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .founding-urgency {
+        padding: var(--space-6);
+    }
+    
+    .urgency-content h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .urgency-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    .founding-cta .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}

@@ -13339,3 +13339,176 @@ figcaption {
         padding: var(--space-3) var(--space-4);
     }
 }
+
+/* ============================================ */
+/* MOBILE GRID FIXES - GOLD STANDARD v3.1.1 */
+/* ============================================ */
+
+/* Core Grid System - Mobile First */
+.grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+/* Default: Single column on mobile */
+.grid-2,
+.grid-3,
+.grid-4 {
+    grid-template-columns: 1fr;
+}
+
+/* Tablet Breakpoint - 768px+ */
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Breakpoint - 1024px+ */
+@media (min-width: 1024px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large Desktop - 1200px+ */
+@media (min-width: 1200px) {
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Specific Mobile Fixes for Problem Areas */
+
+/* Stats Grids - Always stack on mobile */
+.stats-grid-with-arrows {
+    grid-template-columns: 1fr !important;
+}
+
+.stats-grid-with-arrows .stat-arrow {
+    transform: rotate(90deg);
+    margin: var(--space-2) 0;
+}
+
+/* Zone Grid - Ensure proper stacking */
+.zone-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .zone-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .zone-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ROI Calculator Grid */
+#roi-calculator .grid-2 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    #roi-calculator .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Solution Grid Mobile Fix */
+.solution-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Benefits Grid Mobile */
+.benefits-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Form Grid Mobile */
+.form-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+}
+
+/* Footer Content Grid */
+.footer-content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .footer-content-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+/* Card Spacing on Mobile */
+@media (max-width: 767px) {
+    .card {
+        padding: var(--space-4);
+        margin-bottom: var(--space-4);
+    }
+    
+    .section {
+        padding: var(--space-12) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-12);
+    }
+}
+
+/* Prevent Horizontal Overflow */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}

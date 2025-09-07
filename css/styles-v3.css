@@ -1600,3 +1600,127 @@ strong {
     gap: var(--space-4);
   }
 }
+
+/* ============================================ */
+/* SCROLL ANIMATIONS - Add to styles-v3.css */
+/* ============================================ */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-up,
+  .fade-in-left,
+  .fade-in-right {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Base fade-in classes */
+.fade-in,
+.fade-in-up,
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+/* Fade in from bottom */
+.fade-in-up {
+  transform: translateY(30px);
+}
+
+/* Fade in from left */
+.fade-in-left {
+  transform: translateX(-30px);
+}
+
+/* Fade in from right */
+.fade-in-right {
+  transform: translateX(30px);
+}
+
+/* Basic fade in */
+.fade-in {
+  transform: none;
+}
+
+/* Visible state */
+.fade-in.visible,
+.fade-in-up.visible,
+.fade-in-left.visible,
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Staggered animation delays for multiple elements */
+.fade-in-stagger-1 { transition-delay: 0.1s; }
+.fade-in-stagger-2 { transition-delay: 0.2s; }
+.fade-in-stagger-3 { transition-delay: 0.3s; }
+.fade-in-stagger-4 { transition-delay: 0.4s; }
+
+/* Specific section animations */
+.stats-section .stat-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stats-section .stat-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefits-section .benefit-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.benefits-section .benefit-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trust-section .trust-guarantee,
+.trust-section .trust-credentials {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.trust-section .trust-guarantee {
+  transform: translateX(-30px);
+}
+
+.trust-section .trust-credentials {
+  transform: translateX(30px);
+}
+
+.trust-section .trust-guarantee.visible,
+.trust-section .trust-credentials.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.faq-section .faq-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.faq-section .faq-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Performance optimization */
+.fade-in:not(.visible),
+.fade-in-up:not(.visible),
+.fade-in-left:not(.visible),
+.fade-in-right:not(.visible) {
+  pointer-events: none;
+}

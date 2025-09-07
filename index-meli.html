@@ -734,6 +734,179 @@
   </div>
 </section>
 
+<!-- Quote Form Section - Manchester Solar Connection -->
+<section class="section quote-form-section" id="quote-form" aria-labelledby="form-heading">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 id="form-heading" class="section-title">
+        Connect With Your Manchester Solar Specialist
+      </h2>
+      <p class="section-subtitle">
+        Get connected to <strong>your zone's exclusive installer</strong> in under 24 hours. No spam, no auctions, no multiple calls.
+      </p>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+      
+      <!-- Trust Signals -->
+      <div class="form-trust-signals">
+        <div class="trust-signal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="M9 12l2 2 4-4"></path>
+          </svg>
+          <span>No Spam Guarantee</span>
+        </div>
+        <div class="trust-signal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12,6 12,12 16,14"></polyline>
+          </svg>
+          <span>24-Hour Response</span>
+        </div>
+        <div class="trust-signal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <path d="M20 8v6"></path>
+            <path d="M23 11l-3 3-3-3"></path>
+          </svg>
+          <span>MCS Certified Network</span>
+        </div>
+      </div>
+
+      <!-- Quote Form -->
+      <form class="quote-form" action="/submit-quote" method="POST" novalidate>
+        
+        <!-- Hidden Fields -->
+        <input type="hidden" name="source" value="manchester_homepage">
+        <input type="hidden" name="city" value="manchester">
+        <input type="hidden" name="timestamp" value="">
+        
+        <!-- Honeypot for spam protection -->
+        <div style="position: absolute; left: -9999px;" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Property Type -->
+        <div class="form-group">
+          <label for="property-type" class="form-label">Property Type</label>
+          <select id="property-type" name="property_type" class="form-select" required>
+            <option value="">Select your property type</option>
+            <option value="residential">Residential Home</option>
+            <option value="commercial">Commercial Building</option>
+            <option value="industrial">Industrial/Warehouse</option>
+          </select>
+          <div class="form-error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Name -->
+        <div class="form-group">
+          <label for="full-name" class="form-label">Full Name</label>
+          <input 
+            type="text" 
+            id="full-name" 
+            name="full_name" 
+            class="form-input" 
+            required 
+            autocomplete="name"
+            placeholder="Your full name"
+          >
+          <div class="form-error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            required 
+            autocomplete="email"
+            placeholder="your@email.com"
+          >
+          <div class="form-error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Phone (Optional) -->
+        <div class="form-group">
+          <label for="phone" class="form-label">
+            Phone Number 
+            <span class="form-optional">(Optional - for faster response)</span>
+          </label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            class="form-input" 
+            autocomplete="tel"
+            placeholder="07XXX XXXXXX"
+          >
+          <div class="form-error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Postcode -->
+        <div class="form-group">
+          <label for="postcode" class="form-label">Manchester Postcode</label>
+          <input 
+            type="text" 
+            id="postcode" 
+            name="postcode" 
+            class="form-input" 
+            required 
+            autocomplete="postal-code"
+            placeholder="M1 1AA"
+            pattern="^[Mm][0-9]{1,2}[A-Za-z]?\s?[0-9][A-Za-z]{2}$"
+          >
+          <div class="form-error" role="alert" aria-live="polite"></div>
+          <div class="form-help">We serve all Greater Manchester postcodes (M1-M99)</div>
+        </div>
+
+        <!-- GDPR Consent -->
+        <div class="form-group form-consent">
+          <label class="consent-label">
+            <input type="checkbox" id="consent" name="consent" required class="consent-checkbox">
+            <span class="consent-checkmark"></span>
+            <span class="consent-text">
+              I consent to Manchester.solar connecting me with <strong>1 MCS certified solar specialist</strong> from our network for the purpose of providing quotes. I understand I can withdraw consent at any time. 
+              <a href="/privacy" target="_blank" class="consent-link">Privacy Policy</a>
+            </span>
+          </label>
+          <div class="form-error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="btn btn--primary btn--large form-submit"
+          data-analytics="form_submit_click"
+        >
+          Connect Me With My Zone's Installer
+        </button>
+
+        <!-- Form Status -->
+        <div class="form-status" role="alert" aria-live="polite"></div>
+
+      </form>
+
+      <!-- Additional Trust Information -->
+      <div class="form-footer">
+        <p class="form-footer-text">
+          <strong>Your zone's exclusive installer</strong> will contact you within 24 hours to arrange a free, no-obligation consultation. 
+          No lead auctions, no multiple sales calls, no spam.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- Your existing HTML content -->
 
 <!-- FAQ JavaScript - Add before closing </body> tag -->

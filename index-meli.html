@@ -692,3 +692,43 @@
 
   </div>
 </section>
+
+<!-- Your existing HTML content -->
+
+<!-- FAQ JavaScript - Add before closing </body> tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqButtons = document.querySelectorAll('.faq-question');
+  
+  faqButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      const answer = document.getElementById(this.getAttribute('aria-controls'));
+      
+      // Close all other FAQs
+      faqButtons.forEach(otherButton => {
+        if (otherButton !== this) {
+          otherButton.setAttribute('aria-expanded', 'false');
+          const otherAnswer = document.getElementById(otherButton.getAttribute('aria-controls'));
+          otherAnswer.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Toggle current FAQ
+      this.setAttribute('aria-expanded', !expanded);
+      answer.setAttribute('aria-hidden', expanded);
+      
+      // Analytics tracking (optional)
+      if (!expanded && typeof gtag !== 'undefined') {
+        gtag('event', 'faq_toggle', {
+          'question_text': this.textContent.trim(),
+          'page_location': window.location.href
+        });
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

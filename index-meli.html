@@ -12,7 +12,7 @@
     <meta property="og:title" content="Manchester Solar Connection Service | Exclusive MCS Installers">
     <meta property="og:description" content="Connect with your zone's exclusive Manchester solar specialist. No spam guarantee, local property expertise, £1,890+ annual savings.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://manchester.solar">
+    <meta property="og:url" content="https://manchester.solar/">
     <meta property="og:image" content="https://manchester.solar/images/manchester-solar-og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -97,33 +97,34 @@
     }
     </script>
     
-    <!-- Service Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://manchester.solar/#service",
-      "name": "Manchester Solar Installer Connection",
-      "description": "Exclusive per-zone matching with a single, vetted MCS-certified installer. Clear quotes in ~24 hours. No auctions, no spam.",
-      "provider": { "@id": "https://manchester.solar/#organization" },
-      "serviceType": "Solar installer connection and vetting",
-      "areaServed": { "@type": "AdministrativeArea", "name": "Greater Manchester" },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Solar Connection Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Solar Connection" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Solar Connection" } }
-        ]
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "GBP",
-        "description": "Free connection service. 0% VAT on domestic installs until March 2027; typical households save about £1,890/year."
-      }
-    }
-    </script>
+   <!-- 2. FIX: Updated Service Schema with inLanguage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://manchester.solar/#service",
+  "name": "Manchester Solar Installer Connection",
+  "description": "Exclusive per-zone matching with a single, vetted MCS-certified installer. Clear quotes in ~24 hours. No auctions, no spam.",
+  "provider": { "@id": "https://manchester.solar/#organization" },
+  "serviceType": "Solar installer connection and vetting",
+  "areaServed": { "@type": "AdministrativeArea", "name": "Greater Manchester" },
+  "inLanguage": "en-GB",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Solar Connection Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Solar Connection" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Solar Connection" } }
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "description": "Free connection service. 0% VAT on domestic installs until March 2027; typical households save about £1,890/year."
+  }
+}
+</script>
     
     <!-- Breadcrumbs Schema -->
     <script type="application/ld+json">
@@ -136,32 +137,72 @@
     }
     </script>
     
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
+    <!-- 3. FIX: Complete FAQ Schema - All 7 Questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://manchester.solar/#faq",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "@id": "https://manchester.solar/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do solar panels work in Manchester's climate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Modern panels generate in daylight, not only direct sun. Manchester sees solid year-round output, and typical households save around £1,890 per year."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does Manchester.solar prevent spam?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We route your enquiry to your zone's exclusive, certified local installer. There are no lead auctions and no multiple sales calls."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "Do solar panels work in Manchester's climate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Modern panels generate in daylight, not only direct sun. Manchester sees solid year-round output, and typical households save around £1,890 per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Victorian terraces suitable for solar panels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many Victorian terraces work well for solar, especially south-facing roofs. Our Manchester specialists understand heritage requirements and local planning considerations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Manchester.solar prevent spam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We route your enquiry to your zone's exclusive, certified local installer. There are no lead auctions and no multiple sales calls — one professional contact only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle commercial solar installations in Manchester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We connect businesses with commercial solar specialists experienced in warehouses, offices and industrial properties. Many businesses save £4,200+ annually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need planning permission for solar panels in Manchester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential systems are Permitted Development. Listed buildings, conservation areas, or flats may require approval. Your installer manages any planning needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do solar panels cost in Manchester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical homes pay £4,000–£8,000 for a complete system with 0% VAT until March 2027. Average payback is around 6–8 years with long warranties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the installation process like?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your zone's installer surveys, designs, and handles paperwork. Most home installs take 1–2 days; commercial projects 3–5 days, depending on size. All works are MCS certified."
+      }
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
 <body data-city="manchester">
@@ -588,95 +629,95 @@
     <div class="faq-accordion">
       
       <!-- FAQ 1: Climate -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
-          <span>Do solar panels work in Manchester's climate?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-1" aria-hidden="true">
-          <div class="faq-content">
-            <p>Yes. Modern panels generate in daylight, not only direct sun. Manchester sees solid year-round output with <strong>3.8 peak sun hours daily</strong> and <strong>950 kWh/m² annual irradiance</strong>. Typical households save around <strong>£1,890 per year</strong> despite 140 rainy days annually.</p>
-          </div>
-        </div>
-      </div>
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-1" aria-expanded="false" aria-controls="faq-1">
+    <span>Do solar panels work in Manchester's climate?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-1" role="region" aria-labelledby="q-faq-1" hidden>
+    <div class="faq-content">
+      <p>Yes. Modern panels generate in daylight, not only direct sun. Manchester sees solid year-round output with <strong>3.8 peak sun hours daily</strong>. Typical households save around <strong>£1,890 per year</strong>.</p>
+    </div>
+  </div>
+</div>
 
-      <!-- FAQ 2: Property Types -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
-          <span>Are Victorian terraces suitable for solar panels?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-2" aria-hidden="true">
-          <div class="faq-content">
-            <p>Many Victorian terraces work well for solar, especially those with south-facing slopes. Our Manchester specialists understand heritage property requirements and planning considerations. <strong>Over 800 Victorian properties</strong> in Greater Manchester already have solar installations.</p>
-          </div>
-        </div>
-      </div>
+<!-- FAQ 2: Property Types -->
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-2" aria-expanded="false" aria-controls="faq-2">
+    <span>Are Victorian terraces suitable for solar panels?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-2" role="region" aria-labelledby="q-faq-2" hidden>
+    <div class="faq-content">
+      <p>Many Victorian terraces work well for solar, especially those with south-facing slopes. Our Manchester specialists understand heritage property requirements and planning considerations. <strong>Over 800 Victorian properties</strong> in Greater Manchester already have solar installations.</p>
+    </div>
+  </div>
+</div>
 
-      <!-- FAQ 3: Spam Prevention -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
-          <span>How does Manchester.solar prevent spam?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-3" aria-hidden="true">
-          <div class="faq-content">
-            <p>We route your enquiry to your zone's <strong>exclusive, certified local installer</strong>. There are no lead auctions and no multiple sales calls. Unlike other sites that sell your details to dozens of companies, we guarantee <strong>one professional contact only</strong>.</p>
-          </div>
-        </div>
-      </div>
+<!-- FAQ 3: Spam Prevention -->
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-3" aria-expanded="false" aria-controls="faq-3">
+    <span>How does Manchester.solar prevent spam?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-3" role="region" aria-labelledby="q-faq-3" hidden>
+    <div class="faq-content">
+      <p>We route your enquiry to your zone's <strong>exclusive, certified local installer</strong>. There are no lead auctions and no multiple sales calls. Unlike other sites that sell your details to dozens of companies, we guarantee <strong>one professional contact only</strong>.</p>
+    </div>
+  </div>
+</div>
 
-      <!-- FAQ 4: Commercial Solar -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
-          <span>Do you handle commercial solar installations in Manchester?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-4" aria-hidden="true">
-          <div class="faq-content">
-            <p>Yes. Our network includes commercial solar specialists for Manchester businesses. We connect you with installers experienced in <strong>warehouse rooftops, office buildings, and industrial properties</strong>. Commercial systems typically save businesses <strong>£4,200+ annually</strong> with faster payback periods.</p>
-          </div>
-        </div>
-      </div>
+<!-- FAQ 4: Commercial Solar -->
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-4" aria-expanded="false" aria-controls="faq-4">
+    <span>Do you handle commercial solar installations in Manchester?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-4" role="region" aria-labelledby="q-faq-4" hidden>
+    <div class="faq-content">
+      <p>Yes. Our network includes commercial solar specialists for Manchester businesses. We connect you with installers experienced in <strong>warehouse rooftops, office buildings, and industrial properties</strong>. Commercial systems typically save businesses <strong>£4,200+ annually</strong> with faster payback periods.</p>
+    </div>
+  </div>
+</div>
 
-      <!-- FAQ 5: Planning Permission -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
-          <span>Do I need planning permission for solar panels in Manchester?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-5" aria-hidden="true">
-          <div class="faq-content">
-            <p>Most residential installations fall under <strong>Permitted Development Rights</strong> and don't need planning permission. However, listed buildings, conservation areas, or flats may require approval. Our Manchester installers handle all planning requirements and <strong>Manchester City Council consultation</strong>.</p>
-          </div>
-        </div>
-      </div>
+<!-- FAQ 5: Planning Permission -->
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-5" aria-expanded="false" aria-controls="faq-5">
+    <span>Do I need planning permission for solar panels in Manchester?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-5" role="region" aria-labelledby="q-faq-5" hidden>
+    <div class="faq-content">
+      <p>Most residential installations fall under <strong>Permitted Development Rights</strong> and don't need planning permission. However, listed buildings, conservation areas, or flats may require approval. Our Manchester installers handle all planning requirements and <strong>Manchester City Council consultation</strong>.</p>
+    </div>
+  </div>
+</div>
 
-      <!-- FAQ 6: Costs and VAT -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
-          <span>How much do solar panels cost in Manchester?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-6" aria-hidden="true">
-          <div class="faq-content">
-            <p>Typical Manchester homes pay <strong>£4,000-£8,000</strong> for a complete system with <strong>0% VAT until March 2027</strong>. Average payback is <strong>6.8 years</strong> with 25-year warranties. Commercial systems vary by size but typically show <strong>faster ROI due to higher energy usage</strong>.</p>
-          </div>
-        </div>
-      </div>
+<!-- FAQ 6: Costs and VAT -->
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-6" aria-expanded="false" aria-controls="faq-6">
+    <span>How much do solar panels cost in Manchester?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-6" role="region" aria-labelledby="q-faq-6" hidden>
+    <div class="faq-content">
+      <p>Typical Manchester homes pay <strong>£4,000-£8,000</strong> for a complete system with <strong>0% VAT until March 2027</strong>. Average payback is <strong>6-8 years</strong> with 25-year warranties. Commercial systems vary by size but typically show <strong>faster ROI due to higher energy usage</strong>.</p>
+    </div>
+  </div>
+</div>
 
-      <!-- FAQ 7: Installation Process -->
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
-          <span>What's the installation process like?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" id="faq-7" aria-hidden="true">
-          <div class="faq-content">
-            <p>Your zone's installer will survey your property, design the system, and handle all paperwork. Most Manchester residential installs take <strong>1-2 days</strong> with minimal disruption. Commercial projects take <strong>3-5 days</strong> depending on system size. All work includes <strong>MCS certification and warranties</strong>.</p>
-          </div>
-        </div>
-      </div>
+<!-- FAQ 7: Installation Process -->
+<div class="faq-item">
+  <button class="faq-question" id="q-faq-7" aria-expanded="false" aria-controls="faq-7">
+    <span>What's the installation process like?</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-answer" id="faq-7" role="region" aria-labelledby="q-faq-7" hidden>
+    <div class="faq-content">
+      <p>Your zone's installer will survey your property, design the system, and handle all paperwork. Most Manchester residential installs take <strong>1-2 days</strong> with minimal disruption. Commercial projects take <strong>3-5 days</strong> depending on system size. All work includes <strong>MCS certification and warranties</strong>.</p>
+    </div>
+  </div>
+</div>
 
     </div>
 
@@ -698,28 +739,33 @@
 <!-- FAQ JavaScript - Add before closing </body> tag -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const faqButtons = document.querySelectorAll('.faq-question');
-  
-  faqButtons.forEach(button => {
+  const allButtons = document.querySelectorAll('.faq-question');
+  const allAnswers = document.querySelectorAll('.faq-answer');
+
+  function closeAllFAQs() {
+    allButtons.forEach(button => {
+      button.setAttribute('aria-expanded', 'false');
+    });
+    allAnswers.forEach(answer => {
+      answer.hidden = true;
+    });
+  }
+
+  // Add click handlers to FAQ buttons
+  allButtons.forEach(button => {
     button.addEventListener('click', function() {
-      const expanded = this.getAttribute('aria-expanded') === 'true';
       const answer = document.getElementById(this.getAttribute('aria-controls'));
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
       
-      // Close all other FAQs
-      faqButtons.forEach(otherButton => {
-        if (otherButton !== this) {
-          otherButton.setAttribute('aria-expanded', 'false');
-          const otherAnswer = document.getElementById(otherButton.getAttribute('aria-controls'));
-          otherAnswer.setAttribute('aria-hidden', 'true');
-        }
-      });
+      // Close all other FAQs first
+      closeAllFAQs();
       
       // Toggle current FAQ
-      this.setAttribute('aria-expanded', !expanded);
-      answer.setAttribute('aria-hidden', expanded);
+      this.setAttribute('aria-expanded', String(!isExpanded));
+      answer.hidden = isExpanded;
       
-      // Analytics tracking (optional)
-      if (!expanded && typeof gtag !== 'undefined') {
+      // Analytics tracking (if gtag is available)
+      if (!isExpanded && typeof gtag !== 'undefined') {
         gtag('event', 'faq_toggle', {
           'question_text': this.textContent.trim(),
           'page_location': window.location.href
@@ -727,7 +773,25 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Handle direct linking to FAQs (e.g., #faq-3)
+  if (location.hash) {
+    const targetAnswer = document.querySelector(location.hash);
+    const targetButton = targetAnswer ? 
+      document.querySelector(`[aria-controls="${targetAnswer.id}"]`) : null;
+    
+    if (targetButton && targetAnswer) {
+      closeAllFAQs();
+      targetButton.setAttribute('aria-expanded', 'true');
+      targetAnswer.hidden = false;
+      targetAnswer.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 });
+
 </script>
 
 </body>

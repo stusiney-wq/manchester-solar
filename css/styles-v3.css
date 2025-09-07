@@ -1914,3 +1914,50 @@ strong {
     padding: var(--space-8);
   }
 }
+
+
+/* ============================================ */
+/* GREEN STATS CARDS - Add to styles-v3.css */
+/* ============================================ */
+
+/* Green theme for stats section cards only */
+.stats-section .stat-card {
+  background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+  border-color: var(--solar-green);
+  color: var(--neutral-0);
+}
+
+.stats-section .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: #16a34a;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+/* Stats card content - light colors for green background */
+.stats-section .stat-icon {
+  color: var(--neutral-0);
+}
+
+.stats-section .stat-number {
+  color: var(--neutral-0);
+  font-weight: 900;
+}
+
+.stats-section .stat-label {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.stats-section .stat-description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Stats supporting text styling */
+.stats-section .stats-note {
+  color: var(--neutral-700);
+}
+
+.stats-section .stats-note strong {
+  color: var(--solar-green);
+}

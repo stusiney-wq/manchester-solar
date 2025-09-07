@@ -1914,3 +1914,9 @@ strong {
     padding: var(--space-8);
   }
 }
+
+/* Temporary fix - add to bottom of styles-v3.css */
+.resource-card {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

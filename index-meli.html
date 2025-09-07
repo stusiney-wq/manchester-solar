@@ -967,5 +967,117 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </script>
 
+// Scroll Animations JavaScript - Add before closing </body> tag
+// Modern Intersection Observer approach for performance
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (prefersReducedMotion) {
+    // Skip animations for users who prefer reduced motion
+    return;
+  }
+
+  // Intersection Observer options
+  const observerOptions = {
+    threshold: 0.1,        // Trigger when 10% of element is visible
+    rootMargin: '0px 0px -50px 0px'  // Start animation 50px before element is fully visible
+  };
+
+  // Create intersection observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Stop observing once animated (performance optimization)
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Add animation classes to sections and observe them
+  function addScrollAnimations() {
+    
+    // Stats cards - staggered animation
+    const statCards = document.querySelectorAll('.stat-card');
+    statCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(card);
+    });
+
+    // Benefit cards - staggered animation  
+    const benefitCards = document.querySelectorAll('.benefit-card');
+    benefitCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.15}s`;
+      observer.observe(card);
+    });
+
+    // Trust section - slide in from sides
+    const trustGuarantee = document.querySelector('.trust-guarantee');
+    const trustCredentials = document.querySelector('.trust-credentials');
+    
+    if (trustGuarantee) observer.observe(trustGuarantee);
+    if (trustCredentials) observer.observe(trustCredentials);
+
+    // FAQ items - staggered animation
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item, index) => {
+      item.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(item);
+    });
+
+    // Section headers - fade in from top
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    sectionHeaders.forEach(header => {
+      header.classList.add('fade-in-up');
+      observer.observe(header);
+    });
+
+    // Form sections
+    const formContainer = document.querySelector('.form-container');
+    if (formContainer) {
+      formContainer.classList.add('fade-in-up');
+      observer.observe(formContainer);
+    }
+
+  }
+
+  // Initialize animations
+  addScrollAnimations();
+
+  // Optional: Add entrance animation to hero on page load
+  const heroContent = document.querySelector('.hero-content');
+  const heroImage = document.querySelector('.hero-image');
+  
+  if (heroContent && heroImage) {
+    setTimeout(() => {
+      heroContent.style.opacity = '1';
+      heroContent.style.transform = 'translateY(0)';
+      heroImage.style.opacity = '1';
+      heroImage.style.transform = 'translateY(0)';
+    }, 200);
+    
+    // Set initial state for hero elements
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateY(30px)';
+    heroContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    
+    heroImage.style.opacity = '0';
+    heroImage.style.transform = 'translateY(30px)';
+    heroImage.style.transition = 'opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s';
+  }
+
+});
+
+// Optional: Trigger animations on hash changes (for FAQ links)
+window.addEventListener('hashchange', function() {
+  const target = document.querySelector(location.hash);
+  if (target && target.classList.contains('faq-answer')) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
 </body>
 </html>

@@ -2285,7 +2285,6 @@ strong {
   font-size: var(--font-size-base);
 }
 
-* ============================================ */
 /* STATS SECTION - GLASSMORPHISM (FIXED) */
 /* ============================================ */
 
@@ -3051,3 +3050,185 @@ strong {
   }
 }
 
+/* ============================================ */
+/* STATS SECTION - GLASSMORPHISM FIX */
+/* Add this to the END of your styles-v3.css file */
+/* ============================================ */
+
+/* Base stats section background */
+.stats-section {
+  background: linear-gradient(135deg, var(--neutral-100) 0%, var(--neutral-200) 100%);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+/* Glassmorphism cards - using proper cascading */
+.stats-section .stats-grid .stat-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+}
+
+.stats-section .stats-grid .stat-card:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 16px 50px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Gradient top border effect */
+.stats-section .stats-grid .stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--solar-green) 0%, var(--trust-blue) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stats-section .stats-grid .stat-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon styling */
+.stats-section .stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  height: 64px;
+}
+
+.stats-section .stat-icon-svg {
+  width: 48px;
+  height: 48px;
+  color: var(--neutral-900);
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.8));
+  transition: all 0.3s ease;
+}
+
+.stats-section .stat-card:hover .stat-icon-svg {
+  transform: scale(1.05);
+  color: var(--solar-green);
+}
+
+/* Content container */
+.stats-section .stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Text styling with high contrast */
+.stats-section .stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-2);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  display: block;
+}
+
+.stats-section .stat-label {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.stats-section .stat-description {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-800);
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Supporting text styling */
+.stats-section .stats-supporting {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.stats-section .stats-note {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  line-height: 1.6;
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+}
+
+.stats-section .stats-note strong {
+  color: var(--solar-green);
+  font-weight: 600;
+}
+
+/* Animation delays for staggered reveal */
+.stats-section .stat-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stats-section .stat-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stats-section .stat-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.stats-section .stat-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stats-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .stats-section .stat-card {
+    padding: var(--space-4);
+  }
+  
+  .stats-section .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .stats-section .stat-label {
+    font-size: var(--font-size-sm);
+  }
+  
+  .stats-section .stat-description {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

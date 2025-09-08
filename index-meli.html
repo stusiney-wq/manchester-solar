@@ -553,7 +553,7 @@
       </div>
       
       <!-- Comparison Card 3 - Installation Quality -->
-      <div class="help-card help-card--comparison help-card--quality reveal">
+      <div class="help-card help-card--comparison help-card--quality fade-in-up">
         <div class="comparison-header">
           <h3 class="comparison-title">Installation Quality</h3>
         </div>
@@ -610,6 +610,8 @@
     </div>
   </div>
 </section>
+
+<!-- JavaScript should be added to your main.js or scripts.js file -->
 
 <!-- Benefits Section - Manchester Solar Advantages -->
 <section class="section benefits-section" aria-labelledby="benefits-heading">
@@ -1393,6 +1395,15 @@ window.addEventListener('hashchange', function() {
   if (target && target.classList.contains('faq-answer')) {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+});
+
+// Add this to your existing addScrollAnimations() function:
+
+// Help cards - staggered animation  
+const helpCards = document.querySelectorAll('.help-card');
+helpCards.forEach((card, index) => {
+  card.style.transitionDelay = `${index * 0.15}s`;
+  observer.observe(card);
 });
 
 

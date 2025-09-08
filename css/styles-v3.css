@@ -2928,3 +2928,238 @@ strong {
     transform: none;
   }
 }
+
+/* ============================================ */
+/* CUSTOMER JOURNEYS SECTION */
+/* Solar Domain Empire - Gold Standard v3.1 */
+/* ============================================ */
+
+.customer-journeys-section {
+    background: var(--neutral-0);
+    padding: var(--space-20) 0;
+}
+
+/* Content Layout */
+.customer-journeys-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    max-width: 500px;
+}
+
+/* Header with Icon */
+.section-header-inline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+.icon-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-badge-green {
+    background: var(--solar-green);
+    color: var(--neutral-0);
+}
+
+.section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.section-description {
+    font-size: var(--font-size-lg);
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA Button */
+.cta-container {
+    margin: var(--space-4) 0;
+}
+
+.btn-with-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-with-arrow:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-with-arrow svg {
+    transition: transform 0.2s ease;
+}
+
+.btn-with-arrow:hover svg {
+    transform: translateX(2px);
+}
+
+/* Benefits Checklist */
+.benefits-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--neutral-50);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--neutral-200);
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--solar-green);
+    color: var(--neutral-0);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.benefit-item span {
+    font-size: var(--font-size-base);
+    color: var(--neutral-700);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Visual Preview */
+.customer-journeys-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mockup-container {
+    max-width: 500px;
+    width: 100%;
+}
+
+.mockup-browser {
+    background: var(--neutral-0);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    border: 1px solid var(--neutral-200);
+}
+
+.browser-header {
+    background: var(--neutral-100);
+    padding: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    border-bottom: 1px solid var(--neutral-200);
+}
+
+.browser-dots {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.browser-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    background: var(--neutral-300);
+}
+
+.browser-dots span:first-child {
+    background: #ff5f57;
+}
+
+.browser-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.browser-dots span:last-child {
+    background: #28ca42;
+}
+
+.browser-url {
+    flex: 1;
+    background: var(--neutral-0);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    color: var(--neutral-600);
+    text-align: center;
+    border: 1px solid var(--neutral-200);
+}
+
+.browser-content {
+    padding: 0;
+    background: var(--neutral-50);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.browser-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .customer-journeys-section {
+        padding: var(--space-16) 0;
+    }
+    
+    .grid-reverse-mobile {
+        flex-direction: column-reverse;
+        gap: var(--space-12);
+    }
+    
+    .customer-journeys-content {
+        max-width: none;
+        text-align: center;
+    }
+    
+    .section-header-inline {
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .benefits-checklist {
+        text-align: left;
+    }
+    
+    .benefit-item {
+        align-items: center;
+    }
+    
+    .mockup-container {
+        max-width: 400px;
+    }
+}

@@ -918,6 +918,101 @@
   </div>
 </section>
 
+ <!-- Customer Journeys Section -->
+    <section class="section customer-journeys-section" id="customer-journeys">
+        <div class="container">
+            <div class="grid-2 grid-reverse-mobile align-items-center">
+                
+                <!-- Content Column -->
+                <div class="customer-journeys-content">
+                    <!-- Header -->
+                    <div class="section-header-inline">
+                        <div class="icon-badge icon-badge-green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h2 class="section-title">{{business.customer_journey.title}}</h2>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="section-description">{{business.customer_journey.description}}</p>
+                    
+                    <!-- CTA Button -->
+                    <div class="cta-container">
+                        <a href="{{business.cta_link}}" class="btn btn-primary btn-with-arrow">
+                            <span>{{business.cta_text}}</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Benefits List -->
+                    <div class="benefits-checklist">
+                        <div class="benefit-item">
+                            <div class="check-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>{{business.customer_journey.benefits.integration}}</span>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="check-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>{{business.customer_journey.benefits.payments}}</span>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="check-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>{{business.customer_journey.benefits.documentation}}</span>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="check-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>{{business.customer_journey.benefits.aftercare}}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visual Preview Column -->
+                <div class="customer-journeys-visual">
+                    <div class="mockup-container">
+                        <div class="mockup-browser">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="browser-url">{{business.domain}}</div>
+                            </div>
+                            <div class="browser-content">
+                                <img src="{{business.customer_journey.preview_image}}" 
+                                     alt="Customer journey management system showing {{city.display_name}} solar installation process" 
+                                     loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
 <!-- FAQ Section - Manchester Solar Questions -->
 <section class="section faq-section" aria-labelledby="faq-heading">
   <div class="container">

@@ -2042,8 +2042,8 @@ strong {
   margin-bottom: var(--space-4);
 }
 
-.footer-stat-highlight {
-  color: var(--solar-green);
+.footer-brand-description .footer-stat-highlight {
+  color: var(--solar-green) !important;
   font-weight: 700;
 }
 

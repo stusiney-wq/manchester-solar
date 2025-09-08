@@ -1397,14 +1397,7 @@ window.addEventListener('hashchange', function() {
   }
 });
 
-// Add this to your existing addScrollAnimations() function:
 
-// Help cards - staggered animation  
-const helpCards = document.querySelectorAll('.help-card');
-helpCards.forEach((card, index) => {
-  card.style.transitionDelay = `${index * 0.15}s`;
-  observer.observe(card);
-});
 
 
 

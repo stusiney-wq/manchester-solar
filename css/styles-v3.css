@@ -3260,3 +3260,121 @@ strong {
 .benefits-section .benefit-list li::before {
   color: var(--solar-green) !important;
 }
+
+/* Instant Reassurance Row Styles */
+.reassurance-section {
+  background: var(--neutral-0);
+  border-bottom: 1px solid var(--neutral-200);
+  padding: var(--space-12) 0;
+}
+
+.reassurance-grid {
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.reassurance-item {
+  text-align: center;
+  padding: var(--space-4);
+  transition: all 0.2s ease;
+}
+
+.reassurance-item:hover {
+  transform: translateY(-2px);
+}
+
+.reassurance-icon {
+  margin: 0 auto var(--space-3);
+  width: 64px;
+  height: 64px;
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--solar-green);
+  transition: all 0.2s ease;
+}
+
+.reassurance-item:hover .reassurance-icon {
+  background: rgba(34, 197, 94, 0.15);
+  transform: scale(1.05);
+}
+
+.reassurance-text {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--neutral-700);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reassurance-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .reassurance-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .reassurance-text {
+    font-size: var(--font-size-sm);
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reassurance-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .reassurance-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: var(--space-3);
+  }
+  
+  .reassurance-icon {
+    margin-right: var(--space-4);
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  
+  .reassurance-text {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+/* Animation support */
+.reassurance-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reassurance-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

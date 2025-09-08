@@ -2357,14 +2357,14 @@ strong {
 .stat-icon-svg {
   width: 48px;
   height: 48px;
-  color: var(--solar-green);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  color: var(--neutral-900);
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.8));
   transition: all 0.3s ease;
 }
 
 .stat-card:hover .stat-icon-svg {
   transform: scale(1.05);
-  color: var(--trust-blue);
+  color: var(--solar-green);
 }
 
 /* Content container for structured stats */

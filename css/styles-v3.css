@@ -3244,16 +3244,19 @@ strong {
   transform: translateY(0);
 }
 
-/* Remove glassmorphism from Benefits section for better readability */
-.benefits-section .benefit-card {
-  background: var(--neutral-0) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid var(--neutral-200) !important;
-  box-shadow: var(--shadow-md) !important;
+/* Force proper text colors for Benefits section */
+.benefits-section .benefit-title {
+  color: var(--neutral-900) !important;
 }
 
-.benefits-section .benefit-card:hover {
-  background: var(--neutral-0) !important;
-  box-shadow: var(--shadow-lg) !important;
+.benefits-section .benefit-description {
+  color: var(--neutral-700) !important;
+}
+
+.benefits-section .benefit-list li {
+  color: var(--neutral-600) !important;
+}
+
+.benefits-section .benefit-list li::before {
+  color: var(--solar-green) !important;
 }

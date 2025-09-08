@@ -1274,12 +1274,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Help cards - staggered animation  
-const helpCards = document.querySelectorAll('.help-card');
-helpCards.forEach((card, index) => {
-  card.style.transitionDelay = `${index * 0.15}s`;
-  observer.observe(card);
-});
+
 
 </script>
 
@@ -1345,6 +1340,13 @@ document.addEventListener('DOMContentLoaded', function() {
       item.style.transitionDelay = `${index * 0.1}s`;
       observer.observe(item);
     });
+
+    // Help cards - staggered animation  
+const helpCards = document.querySelectorAll('.help-card');
+helpCards.forEach((card, index) => {
+  card.style.transitionDelay = `${index * 0.15}s`;
+  observer.observe(card);
+});
 
     const resourceCards = document.querySelectorAll('.resource-card');
     resourceCards.forEach((card, index) => {

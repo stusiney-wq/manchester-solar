@@ -2042,6 +2042,11 @@ strong {
   margin-bottom: var(--space-4);
 }
 
+.footer-stat-highlight {
+  color: var(--solar-green);
+  font-weight: 700;
+}
+
 /* Trust Badges - Mobile First */
 .footer-trust-badges {
   display: flex;

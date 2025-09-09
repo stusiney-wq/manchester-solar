@@ -270,6 +270,40 @@ body {
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
+/* Fix white on white text issue */
+.quick-form-title {
+  color: var(--neutral-900);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.quick-form-subtitle {
+  color: var(--neutral-600);
+  font-size: var(--font-size-base);
+  margin-bottom: 24px;
+}
+
+.form-label {
+  color: var(--neutral-900);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-optional {
+  color: var(--neutral-500);
+  font-weight: 400;
+}
+
+.trust-message {
+  color: var(--neutral-600);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: 16px;
+}
+
 .form-step {
   display: none;
 }
@@ -1460,7 +1494,7 @@ body {
             <input type="checkbox" id="consent" name="consent" required class="consent-checkbox">
             <span class="consent-checkmark"></span>
             <span class="consent-text">
-              I consent to Manchester.solar connecting me with <strong>1 MCS certified solar specialist</strong> from our network for the purpose of providing quotes. I understand I can withdraw consent at any time. 
+              I consent to Manchester.solar sharing my details with one MCS-certified installer to provide a quote. I can withdraw consent at any time. 
               <a href="/privacy" target="_blank" class="consent-link">Privacy Policy</a>
             </span>
           </label>

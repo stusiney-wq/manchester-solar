@@ -633,20 +633,19 @@ body {
         </div>
       </div>
 
-      <!-- Stat 4: MCS Installers -->
+      <!-- Stat 4: Response Time -->
       <div class="stat-card card">
         <div class="stat-icon">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon-svg">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="8.5" cy="7" r="4"></circle>
-            <path d="M20 8v6M23 11l-3 3-3-3"></path>
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12,6 12,12 16,14"></polyline>
           </svg>
         </div>
         <div class="stat-content">
-          <div class="stat-number">47</div>
-          <div class="stat-label">MCS Installers</div>
+          <div class="stat-number">24hrs</div>
+          <div class="stat-label">Response Guarantee</div>
           <div class="stat-description">
-            Vetted professionals in our network
+            Professional contact within one day
           </div>
         </div>
       </div>
@@ -1541,8 +1540,50 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeAllFAQs() {
     allButtons.forEach(button => {
       button.setAttribute('aria-expanded', 'false');
+      // ========================================
+  // ANALYTICS TRACKING
+  // ========================================
+  
+  // Track form submission
+  const quoteFormSubmit = document.getElementById('quote-form-submit');
+  if (quoteFormSubmit) {
+    quoteFormSubmit.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quote_form_submit', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
     });
-    allAnswers.forEach(answer => {
+  }
+  
+  // Track email field interaction
+  const emailField = document.querySelector('[data-analytics="email_field_click"]');
+  if (emailField) {
+    emailField.addEventListener('focus', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_field_click', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+  
+  // Track phone field interaction
+  const phoneField = document.querySelector('[data-analytics="phone_field_click"]');
+  if (phoneField) {
+    phoneField.addEventListener('focus', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_field_click', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+
+});    allAnswers.forEach(answer => {
       answer.hidden = true;
     });
   }

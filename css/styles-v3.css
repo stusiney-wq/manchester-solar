@@ -3367,4 +3367,19 @@ strong {
   }
 }
 
+/* Text color fix for Who We Connect section */
+.connect-cards .benefit-title {
+  color: var(--neutral-900) !important;
+}
 
+.connect-cards .benefit-description {
+  color: var(--neutral-700) !important;
+}
+
+.connect-cards .stat-number {
+  color: var(--solar-green) !important;
+}
+
+.connect-cards .stat-label {
+  color: var(--neutral-600) !important;
+}

@@ -3383,3 +3383,15 @@ strong {
 .connect-cards .stat-label {
   color: var(--neutral-600) !important;
 }
+
+/* Animation styles for Who We Connect cards */
+.connect-cards .card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.connect-cards .card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

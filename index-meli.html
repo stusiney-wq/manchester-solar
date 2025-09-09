@@ -426,11 +426,80 @@ body {
   gap: 12px;
 }
 
+.incentive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .incentive-item {
   color: var(--neutral-700);
   font-size: var(--font-size-sm);
-  padding: 8px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--neutral-200);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.incentive-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.incentive-content {
+  flex: 1;
+}
+
+.incentive-title {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.incentive-desc {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+}
+
+@media (max-width: 768px) {
+  .incentive-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Checkbox styling */
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.consent-checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--solar-green);
+  cursor: pointer;
+}
+
+.consent-text {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--neutral-700);
+}
+
+.consent-link {
+  color: var(--solar-green);
+  text-decoration: underline;
+}
+
+.consent-link:hover {
+  color: #16a34a;
 }
 
 .incentive-item:last-child {
@@ -1793,11 +1862,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Trust section - slide in from sides
-      const trustGuarantee = document.querySelector('.trust-guarantee');
-      const trustCredentials = document.querySelector('.trust-credentials');
+      const trustGuarantees = document.querySelectorAll('.trust-guarantee');
       
-      if (trustGuarantee) observer.observe(trustGuarantee);
-      if (trustCredentials) observer.observe(trustCredentials);
+      trustGuarantees.forEach((guarantee, index) => {
+        guarantee.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(guarantee);
+      });
 
       // FAQ items - staggered animation
       const faqItems = document.querySelectorAll('.faq-item');

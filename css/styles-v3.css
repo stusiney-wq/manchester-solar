@@ -3395,3 +3395,178 @@ strong {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* ============================================ */
+/* CONVERSION OPTIMIZATION - QUICK QUOTE */
+/* ============================================ */
+
+/* Quick Quote Section */
+.quick-quote-section {
+  background: linear-gradient(135deg, var(--solar-green) 0%, #16a34a 100%);
+  color: var(--neutral-0);
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-quote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Recent Activity Feed */
+.recent-activity {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.recent-activity h4 {
+  color: var(--neutral-0);
+  margin-bottom: var(--space-4);
+  text-align: center;
+  font-size: var(--font-size-lg);
+}
+
+.activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.activity-item {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--space-2);
+}
+
+/* Quick Form */
+.quick-form-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quick-form-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--neutral-0);
+  margin-bottom: var(--space-4);
+}
+
+.quick-form-subtitle {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-8);
+  line-height: 1.6;
+}
+
+.postcode-input-group {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quick-input {
+  flex: 1;
+  padding: var(--space-4);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--neutral-0);
+  text-align: center;
+  font-weight: 600;
+}
+
+.quick-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.quick-input:focus {
+  outline: none;
+  border-color: var(--neutral-0);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.quick-trust {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-8);
+}
+
+/* Value Stack */
+.value-stack {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.value-stack h4 {
+  color: var(--neutral-0);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-lg);
+}
+
+.value-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+}
+
+.value-price {
+  color: var(--solar-yellow);
+  font-weight: 600;
+}
+
+/* Text color fix for Who We Connect section */
+.connect-cards .benefit-title {
+  color: var(--neutral-900) !important;
+}
+
+.connect-cards .benefit-description {
+  color: var(--neutral-700) !important;
+}
+
+.connect-cards .stat-number {
+  color: var(--solar-green) !important;
+}
+
+.connect-cards .stat-label {
+  color: var(--neutral-600) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .postcode-input-group {
+    flex-direction: column;
+  }
+  
+  .value-items {
+    grid-template-columns: 1fr;
+  }
+}

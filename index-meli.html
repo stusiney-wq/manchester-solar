@@ -1489,10 +1489,89 @@ body {
   </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('JavaScript is running');
+  
+  // FAQ ACCORDION - FIXED
+  const faqButtons = document.querySelectorAll('.faq-question');
+  const faqAnswers = document.querySelectorAll('.faq-answer');
 
+  function closeAllFAQs() {
+    faqButtons.forEach(button => {
+      button.setAttribute('aria-expanded', 'false');
+      const icon = button.querySelector('.faq-icon');
+      if (icon) icon.textContent = '+';
+    });
+    faqAnswers.forEach(answer => {
+      answer.hidden = true;
+      answer.classList.remove('show');
+    });
+  }
+
+  faqButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const answer = document.getElementById(this.getAttribute('aria-controls'));
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      closeAllFAQs();
+      
+      if (!isExpanded) {
+        this.setAttribute('aria-expanded', 'true');
+        const icon = this.querySelector('.faq-icon');
+        if (icon) icon.textContent = '−';
+        answer.hidden = false;
+        answer.classList.add('show');
+      }
+    });
+  });
+
+  // SMOOTH SCROLL - FIXED
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    
+    const href = link.getAttribute('href');
+    if (href === '#' || href === '') return;
+    
+    e.preventDefault();
+    
+    const target = document.querySelector(href);
+    if (!target) return;
+    
+    const headerOffset = 80;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+
+  // FLOATING CTA - FIXED
+  const floatingCTA = document.getElementById('floating-cta');
+  const heroSection = document.querySelector('.hero-section');
+  
+  if (floatingCTA && heroSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          floatingCTA.classList.remove('visible');
+        } else {
+          floatingCTA.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    observer.observe(heroSection);
+  }
+
+});
 </script>
+
 <script src="js/header-loader.js"></script>
 <script src="js/footer-loader.js"></script>
-<script src="js/manchester-scroll-fix.js"></script>
+
 </body>
 </html>

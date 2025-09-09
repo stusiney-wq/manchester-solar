@@ -13,7 +13,7 @@
     <meta property="og:description" content="Connect with your zone's exclusive Manchester solar specialist. No spam guarantee, local property expertise, £1,890+ annual savings.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manchester.solar/">
-    <meta property="og:image" content="https://manchester.solar/images/og-image-manchester.jpg">
+    <meta property="og:image" content="https://manchester.solar/images/manchester-solar-og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Manchester.solar">
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Manchester Solar Connection Service | Exclusive MCS Installers">
     <meta name="twitter:description" content="Connect with your zone's exclusive Manchester solar specialist. No spam guarantee, local property expertise, £1,890+ annual savings.">
-    <meta name="twitter:image" content="https://manchester.solar/images/twitter-card-manchester.jpg">
+    <meta name="twitter:image" content="https://manchester.solar/images/manchester-solar-twitter.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://manchester.solar/">
@@ -33,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- External CSS - Gold Standard v3.1 -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/styles-v3.css">
     
     <!-- Technical SEO -->
@@ -54,7 +54,7 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="css/styles-v3.css" as="style">
-    <link rel="preload" href="images/manchester-solar-hero.webp" as="image">
+    <link rel="preload" href="images/hero-manchester.webp" as="image">
     
     <!-- WebSite Schema -->
     <script type="application/ld+json">
@@ -189,7 +189,7 @@
       "name": "How much do solar panels cost in Manchester?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Typical homes pay £4,000–£8,000 for a complete system with 0% VAT until March 2027. Average payback is around 6.8 years with long warranties."
+        "text": "Typical homes pay £4,000–£8,000 for a complete system with 0% VAT until March 2027. Average payback is around 6–8 years with long warranties."
       }
     },
     {
@@ -204,10 +204,290 @@
 }
 </script>
 
+<!-- PHASE 1: Conversion Optimization Styles -->
+<style>
+/* Quick Quote Banner - Top of page */
+.quick-quote-banner {
+  background: linear-gradient(135deg, var(--solar-green) 0%, var(--trust-blue) 100%);
+  color: white;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.quick-quote-banner a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 8px;
+}
+
+/* Adjust body padding for fixed banner */
+body {
+  padding-top: 48px;
+}
+
+/* Floating CTA improvements */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.floating-cta.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.floating-cta .btn {
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3); }
+  50% { box-shadow: 0 8px 35px rgba(34, 197, 94, 0.5); }
+  100% { box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3); }
+}
+
+/* Quick Quote Section Background */
+.quick-quote-section {
+  background-image: url('images/manchester-rooftops.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.quick-quote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.85) 0%, 
+    rgba(34, 197, 94, 0.75) 50%, 
+    rgba(34, 197, 94, 0.85) 100%);
+  z-index: 1;
+}
+
+.quick-quote-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 2-Step Form Container */
+.two-step-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  transition: background 0.3s ease;
+}
+
+.step-dot.active {
+  background: var(--solar-green);
+}
+
+/* Fix white on white text issue */
+.quick-form-title {
+  color: var(--neutral-900);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.quick-form-subtitle {
+  color: var(--neutral-600);
+  font-size: var(--font-size-base);
+  margin-bottom: 24px;
+}
+
+.form-label {
+  color: var(--neutral-900);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-optional {
+  color: var(--neutral-500);
+  font-weight: 400;
+}
+
+.trust-message {
+  color: var(--neutral-600);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* Form enhancements */
+.form-input, .form-select {
+  font-size: 16px;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--solar-green);
+  outline: none;
+}
+
+/* Button improvements */
+.btn-next, .btn-back {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-next {
+  background: var(--solar-green);
+  color: white;
+}
+
+.btn-next:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+.btn-back {
+  background: #f3f4f6;
+  color: #374151;
+  margin-top: 12px;
+}
+
+/* Incentive Stats styling for overlay */
+.incentive-stats {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.incentive-stats h4 {
+  color: var(--neutral-900);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.incentive-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.incentive-item {
+  color: var(--neutral-700);
+  font-size: var(--font-size-sm);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.incentive-item:last-child {
+  border-bottom: none;
+}
+
+/* Remove inline styles - move to CSS classes */
+.hero-content-animated {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.hero-image-animated {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.8s 0.2s, transform 0.8s 0.2s;
+}
+
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Hero entrance animation class */
+.hero-entrance {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .quick-quote-banner {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  
+  body {
+    padding-top: 44px;
+  }
+  
+  .floating-cta {
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .two-step-form {
+    margin: 0 16px;
+    padding: 24px;
+  }
+}
+</style>
+
 </head>
 
 <body data-city="manchester">
-    <!-- Quick Quote Banner -->
+    <!-- PHASE 1: Quick Quote Banner -->
     <div class="quick-quote-banner">
         💡 Get your Manchester solar quote in 2 minutes
         <a href="#quick-form">Start here →</a>
@@ -233,7 +513,7 @@
         
         <!-- Main Headline -->
         <h1 id="hero-heading" class="hero-title">
-          Solar panels in Manchester – we connect you with a vetted MCS installer
+          Solar panels in Manchester — we connect you with a vetted MCS installer
         </h1>
         
         <!-- Value Proposition -->
@@ -255,13 +535,13 @@
         
         <!-- AI Direct Answer for SGE/Overviews -->
         <p class="hero-ai-answer">
-          Are solar panels worth it in Manchester? Yes – typical homes save about £1,890 a year with 6.8 year payback. Manchester averages 3.8 peak sun hours and modern panels work in diffuse light. With 0% VAT until March 2027, payback is realistic for many properties.
+          Are solar panels worth it in Manchester? Yes — typical homes save about £1,890 a year with 6–8 year payback. Manchester averages 3.8 peak sun hours and modern panels work in diffuse light. With 0% VAT until March 2027, payback is realistic for many properties.
         </p>
       </div>
       
       <!-- Hero Image -->
       <div class="hero-image hero-image-animated">
-        <img src="images/manchester-solar-hero.webp" alt="Solar panels installed on Victorian terrace house in Manchester" width="600" height="400" loading="eager" decoding="async" class="hero-img">
+        <img src="images/test.webp" alt="Solar panels installed on Victorian terrace house in Manchester" width="600" height="400" loading="eager" decoding="async" class="hero-img">
         
         <!-- Floating Trust Card -->
         <div class="hero-trust-card">
@@ -275,7 +555,7 @@
   </div>
 </section>
 
-<!-- Floating CTA Button -->
+<!-- PHASE 1: Floating CTA Button -->
 <div class="floating-cta" id="floating-cta">
   <a href="#quick-form" class="btn btn--primary">
     Get Free Quote
@@ -314,7 +594,7 @@
           </svg>
         </div>
         <p class="reassurance-text">
-          Local expertise: Victorian terraces & modern roofs
+          Local expertise: terraces & modern roofs
         </p>
       </div>
       
@@ -338,7 +618,7 @@
   </div>
 </section>
 
-<!-- Stats Section -->
+<!-- Stats Section - Manchester Solar Data -->
 <section class="section stats-section" aria-labelledby="stats-heading">
   <div class="container">
     
@@ -365,7 +645,7 @@
 
         <div class="stat-content">
           <div class="stat-number">£1,890+</div>
-          <div class="stat-label">Typical annual savings (4kW system)</div>
+          <div class="stat-label">Typical annual savings (4 kW system)</div>
           <div class="stat-description">
             Manchester household average
           </div>
@@ -436,7 +716,7 @@
   </div>
 </section>
 
-<!-- Quick Form Section with Background -->
+<!-- PHASE 1: Quick Form Section with Background -->
 <section class="section quick-quote-section" id="quick-form">
   <div class="container">
     
@@ -548,7 +828,7 @@
   </div>
 </section>
 
-<!-- Who We Connect Section -->
+<!-- Who We Connect in Manchester Section -->
 <section class="section" aria-labelledby="who-we-connect-heading">
   <div class="container">
     
@@ -672,7 +952,7 @@
   </div>
 </section>
 
-<!-- Benefits Section -->
+<!-- Benefits Section - Manchester Solar Advantages -->
 <section class="section benefits-section" aria-labelledby="benefits-heading">
   <div class="container">
     
@@ -700,7 +980,7 @@
         <div class="benefit-content">
           <h3 class="benefit-title">Built for Manchester properties</h3>
           <p class="benefit-description">
-            Victorian terraces, semis, and modern roofs all benefit.
+            Terraces, semis, and modern roofs all benefit.
           </p>
         </div>
       </div>
@@ -753,7 +1033,7 @@
   </div>
 </section>
 
-<!-- Trust Section -->
+<!-- Trust Section - Our Manchester Promise -->
 <section class="section section--dark trust-section" aria-labelledby="trust-heading">
   <div class="container">
     
@@ -778,7 +1058,7 @@
             <path d="M9 12l2 2 4-4"></path>
           </svg>
         </div>
-        <h3 class="guarantee-title">One professional contact – no auctions or reselling</h3>
+        <h3 class="guarantee-title">One professional contact — no auctions or reselling</h3>
         <p class="guarantee-description">
           No multiple sales calls or bidding wars.
         </p>
@@ -830,7 +1110,7 @@
   </div>
 </section>
 
-<!-- Resources Section -->
+<!-- Resources Section - Manchester Solar Guides -->
 <section class="section resources-section" aria-labelledby="resources-heading">
   <div class="container">
     
@@ -912,7 +1192,7 @@
   </div>
 </section>
 
-<!-- FAQ Section -->
+<!-- FAQ Section - Manchester Solar Questions -->
 <section class="section faq-section" aria-labelledby="faq-heading">
   <div class="container">
     
@@ -1002,7 +1282,7 @@
   </button>
   <div class="faq-answer" id="faq-6" role="region" aria-labelledby="q-faq-6" hidden>
     <div class="faq-content">
-      <p>Typical Manchester homes pay <strong>£4,000-£8,000</strong> for a complete system with <strong>0% VAT until March 2027</strong>. Average payback is <strong>6.8 years</strong> with 25-year warranties. Commercial systems vary by size but typically show <strong>faster ROI due to higher energy usage</strong>.</p>
+      <p>Typical Manchester homes pay <strong>£4,000-£8,000</strong> for a complete system with <strong>0% VAT until March 2027</strong>. Average payback is <strong>6-8 years</strong> with 25-year warranties. Commercial systems vary by size but typically show <strong>faster ROI due to higher energy usage</strong>.</p>
     </div>
   </div>
 </div>
@@ -1035,7 +1315,7 @@
   </div>
 </section>
 
-<!-- Quote Form Section -->
+<!-- Quote Form Section - Manchester Solar Connection -->
 <section class="section quote-form-section" id="quote-form" aria-labelledby="form-heading">
   <div class="container">
     
@@ -1209,7 +1489,370 @@
   </div>
 </section>
 
-<script src="js/homepage-interactive.js"></script>
+<!-- PHASE 1: JavaScript for Conversion Optimization -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // ========================================
+  // FAQ FUNCTIONALITY
+  // ========================================
+  const allButtons = document.querySelectorAll('.faq-question');
+  const allAnswers = document.querySelectorAll('.faq-answer');
+
+  function closeAllFAQs() {
+    allButtons.forEach(button => {
+      button.setAttribute('aria-expanded', 'false');
+    });
+    allAnswers.forEach(answer => {
+      answer.hidden = true;
+    });
+  }
+
+  // Add click handlers to FAQ buttons
+  allButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const answer = document.getElementById(this.getAttribute('aria-controls'));
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other FAQs first
+      closeAllFAQs();
+      
+      // Toggle current FAQ
+      this.setAttribute('aria-expanded', String(!isExpanded));
+      answer.hidden = isExpanded;
+      
+      // Analytics tracking (if gtag is available)
+      if (!isExpanded && typeof gtag !== 'undefined') {
+        gtag('event', 'faq_toggle', {
+          'question_text': this.textContent.trim(),
+          'page_location': window.location.href
+        });
+      }
+    });
+  });
+
+  // Handle direct linking to FAQs (e.g., #faq-3)
+  if (location.hash) {
+    const targetAnswer = document.querySelector(location.hash);
+    const targetButton = targetAnswer ? 
+      document.querySelector(`[aria-controls="${targetAnswer.id}"]`) : null;
+    
+    if (targetButton && targetAnswer) {
+      closeAllFAQs();
+      targetButton.setAttribute('aria-expanded', 'true');
+      targetAnswer.hidden = false;
+      targetAnswer.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
+  // ========================================
+  // PHASE 1: FLOATING CTA BEHAVIOR
+  // ========================================
+  const floatingCTA = document.getElementById('floating-cta');
+  const heroSection = document.querySelector('.hero-section');
+  
+  if (floatingCTA && heroSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Hero is visible - hide floating CTA
+          floatingCTA.classList.remove('visible');
+        } else {
+          // Hero is not visible - show floating CTA
+          floatingCTA.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    observer.observe(heroSection);
+  }
+
+  // ========================================
+  // PHASE 1: 2-STEP FORM FUNCTIONALITY
+  // ========================================
+  let currentStep = 1;
+  const totalSteps = 2;
+  
+  window.nextStep = function() {
+    // Validate current step
+    const currentStepElement = document.getElementById(`step-${currentStep}`);
+    const inputs = currentStepElement.querySelectorAll('input[required], select[required]');
+    let isValid = true;
+    
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        isValid = false;
+        input.focus();
+        return;
+      }
+    });
+    
+    if (isValid && currentStep < totalSteps) {
+      // Hide current step
+      currentStepElement.classList.remove('active');
+      
+      // Show next step
+      currentStep++;
+      document.getElementById(`step-${currentStep}`).classList.add('active');
+      
+      // Update step indicator
+      updateStepIndicator();
+      
+      // Analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_step_complete', {
+          'step_number': currentStep - 1,
+          'page_location': window.location.href
+        });
+      }
+    }
+  };
+  
+  window.prevStep = function() {
+    if (currentStep > 1) {
+      // Hide current step
+      document.getElementById(`step-${currentStep}`).classList.remove('active');
+      
+      // Show previous step
+      currentStep--;
+      document.getElementById(`step-${currentStep}`).classList.add('active');
+      
+      // Update step indicator
+      updateStepIndicator();
+    }
+  };
+  
+  function updateStepIndicator() {
+    const dots = document.querySelectorAll('.step-dot');
+    dots.forEach((dot, index) => {
+      if (index + 1 <= currentStep) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+  
+  // ========================================
+  // PHASE 1: FORM SUBMISSION HANDLING
+  // ========================================
+  const twoStepForm = document.getElementById('two-step-form');
+  if (twoStepForm) {
+    twoStepForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Collect all form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Show loading state
+      const submitBtn = this.querySelector('.btn-next');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Connecting...';
+      submitBtn.disabled = true;
+      
+      // Analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submission', {
+          'form_type': 'two_step_quick_form',
+          'property_type': data.property_type,
+          'page_location': window.location.href
+        });
+      }
+      
+      // Simulate form submission (replace with real endpoint)
+      setTimeout(() => {
+        // Show success message
+        submitBtn.textContent = '✓ Request Sent!';
+        submitBtn.style.background = '#22c55e';
+        
+        // Redirect or show success state
+        setTimeout(() => {
+          window.location.href = '/thank-you';
+        }, 1500);
+        
+      }, 2000);
+    });
+  }
+  
+  // ========================================
+  // PHASE 1: SMOOTH SCROLL FOR CTA LINKS
+  // ========================================
+  document.querySelectorAll('a[href="#quick-form"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById('quick-form');
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // Focus first input for accessibility
+        setTimeout(() => {
+          const firstInput = target.querySelector('input');
+          if (firstInput) firstInput.focus();
+        }, 500);
+      }
+    });
+  });
+
+  // ========================================
+  // ANALYTICS TRACKING
+  // ========================================
+  
+  // Track form submission
+  const quoteFormSubmit = document.getElementById('quote-form-submit');
+  if (quoteFormSubmit) {
+    quoteFormSubmit.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quote_form_submit', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+  
+  // Track email field interaction
+  const emailField = document.querySelector('[data-analytics="email_field_click"]');
+  if (emailField) {
+    emailField.addEventListener('focus', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_field_click', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+  
+  // Track phone field interaction
+  const phoneField = document.querySelector('[data-analytics="phone_field_click"]');
+  if (phoneField) {
+    phoneField.addEventListener('focus', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_field_click', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+
+  // ========================================
+  // SCROLL ANIMATIONS
+  // ========================================
+  
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (!prefersReducedMotion) {
+    // Intersection Observer options
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    // Create intersection observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Add animation classes to sections and observe them
+    function addScrollAnimations() {
+      
+      // Stats cards - staggered animation
+      const statCards = document.querySelectorAll('.stat-card');
+      statCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
+      });
+
+      // Benefit cards - staggered animation  
+      const benefitCards = document.querySelectorAll('.benefit-card');
+      benefitCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(card);
+      });
+
+      // Trust section - slide in from sides
+      const trustGuarantee = document.querySelector('.trust-guarantee');
+      const trustCredentials = document.querySelector('.trust-credentials');
+      
+      if (trustGuarantee) observer.observe(trustGuarantee);
+      if (trustCredentials) observer.observe(trustCredentials);
+
+      // FAQ items - staggered animation
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(item);
+      });
+
+      // Who We Connect cards - staggered animation
+      const connectCards = document.querySelectorAll('.connect-cards .card');
+      connectCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(card);
+      });
+
+      const resourceCards = document.querySelectorAll('.resource-card');
+      resourceCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.2}s`;
+        observer.observe(card);
+      });
+
+      // Section headers - fade in from top
+      const sectionHeaders = document.querySelectorAll('.section-header');
+      sectionHeaders.forEach(header => {
+        header.classList.add('fade-in-up');
+        observer.observe(header);
+      });
+
+      // Form sections
+      const formContainer = document.querySelector('.form-container');
+      if (formContainer) {
+        formContainer.classList.add('fade-in-up');
+        observer.observe(formContainer);
+      }
+    }
+
+    // Initialize animations
+    addScrollAnimations();
+
+    // Optional: Add entrance animation to hero on page load
+    const heroContent = document.querySelector('.hero-content');
+    const heroImage = document.querySelector('.hero-image');
+    
+    if (heroContent && heroImage) {
+      setTimeout(() => {
+        heroContent.classList.add('hero-entrance');
+        heroImage.classList.add('hero-entrance');
+      }, 200);
+    }
+  }
+
+  // Optional: Trigger animations on hash changes (for FAQ links)
+  window.addEventListener('hashchange', function() {
+    const target = document.querySelector(location.hash);
+    if (target && target.classList.contains('faq-answer')) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+});
+</script>
 <script src="js/header-loader.js"></script>
 <script src="js/footer-loader.js"></script>
 </body>

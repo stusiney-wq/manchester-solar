@@ -25,11 +25,11 @@
   <meta name="twitter:description" content="One trusted local installer. No spam. Typical savings ~£1,890/yr. 0% VAT until March 2027." />
   <meta name="twitter:image" content="/assets/og-manchester-solar.jpg" />
 
-  <!-- CSS (no inline styles) -->
+  <!-- Assets (no inline CSS) -->
   <link rel="preload" href="/assets/hero-manchester.jpg" as="image" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles-v3.css" />
 
-  <!-- JSON-LD: WebSite + Organization + WebPage + FAQPage (connector positioning, no "zone" wording) -->
+  <!-- JSON-LD: WebSite + Organization + WebPage + FAQPage (connector positioning) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -106,41 +106,44 @@
           <li><a href="#performance">Performance</a></li>
           <li><a href="#quote">Get quote</a></li>
           <li><a href="#resources">Resources</a></li>
-          <li><a class="btn btn-sm btn-primary" href="#quote-form">Get your free quote</a></li>
+          <li><a class="btn btn--sm btn--primary" href="#quote-form">Get your free quote</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="content">
-    <!-- HERO -->
-    <section class="hero hero--connector" aria-labelledby="hero-title">
+    <!-- HERO (mapped to styles-v3.css naming) -->
+    <section class="hero-section" aria-labelledby="hero-title">
       <div class="container hero__inner">
         <div class="hero__content">
-          <ul class="trust-chips" aria-label="Trust markers">
-            <li class="trust-chip glass">MCS-certified network</li>
-            <li class="trust-chip glass">No spam · no reselling</li>
-            <li class="trust-chip glass">0% VAT until March 2027</li>
+          <ul class="hero-badges" aria-label="Trust markers">
+            <li class="badge badge--glass">MCS-certified network</li>
+            <li class="badge badge--glass">No spam · no reselling</li>
+            <li class="badge badge--glass">0% VAT until March 2027</li>
           </ul>
-          <h1 id="hero-title" class="hero__title">Solar panels in Manchester — we connect you with a vetted MCS installer</h1>
-          <p class="hero__sub">One contact. Clear pricing. 24-hour response.</p>
-          <div class="hero__cta">
-            <a href="#quote-form" class="btn btn-primary btn-lg">Get your free Manchester quote</a>
+
+          <h1 id="hero-title" class="hero-title">Solar panels in Manchester — we connect you with a vetted MCS installer</h1>
+          <p class="hero-subtext">One contact. Clear pricing. 24-hour response.</p>
+
+          <div class="hero-cta">
+            <a href="#quote-form" class="btn btn--primary btn--lg">Get your free Manchester quote</a>
             <p class="cta-support">See exactly how much you’ll save • Free assessment • 24-hour response</p>
           </div>
+
           <p class="direct-answer">Are solar panels worth it in Manchester? Yes — typical homes save about £1,890 a year with 6–8 year payback. Manchester averages 3.8 peak sun hours and modern panels work in diffuse light. With 0% VAT until March 2027, payback is realistic for many properties.</p>
         </div>
-        <figure class="hero__visual">
+        <figure class="hero-visual">
           <img src="/assets/hero-manchester.jpg" alt="Solar panels on a Victorian terrace house in Manchester" loading="eager" />
         </figure>
       </div>
     </section>
 
     <!-- INSTANT REASSURANCE -->
-    <section class="section reassurance" id="how" aria-labelledby="reassurance-title">
+    <section class="section reassurance-section" id="how" aria-labelledby="reassurance-title">
       <div class="container">
         <h2 id="reassurance-title" class="visually-hidden">Instant reassurance</h2>
-        <ul class="bullets bullets--icon">
+        <ul class="list list--bullets list--icon">
           <li><strong>Exclusive match, not an auction</strong></li>
           <li><strong>Local expertise: period homes & modern roofs</strong></li>
           <li><strong>Clear, plain‑English savings</strong></li>
@@ -149,36 +152,36 @@
     </section>
 
     <!-- PERFORMANCE PROOF ROW -->
-    <section class="section proof" id="performance" aria-labelledby="performance-title">
+    <section class="section stats-section" id="performance" aria-labelledby="performance-title">
       <div class="container">
-        <h2 id="performance-title">Manchester solar performance</h2>
+        <h2 id="performance-title" class="section-title">Manchester solar performance</h2>
         <p class="section-intro">Real data from local installs across Greater Manchester.</p>
-        <div class="grid grid-4">
-          <div class="card stat" aria-label="Typical annual savings">
-            <div class="stat__value">£1,890+</div>
-            <div class="stat__label">Typical annual savings (4 kW)</div>
+        <div class="grid grid--4">
+          <div class="stat-card" aria-label="Typical annual savings">
+            <div class="stat-card__value">£1,890+</div>
+            <div class="stat-card__label">Typical annual savings (4 kW)</div>
           </div>
-          <div class="card stat" aria-label="Peak sun hours daily average">
-            <div class="stat__value">3.8</div>
-            <div class="stat__label">Peak sun hours daily (avg)</div>
+          <div class="stat-card" aria-label="Peak sun hours daily average">
+            <div class="stat-card__value">3.8</div>
+            <div class="stat-card__label">Peak sun hours daily (avg)</div>
           </div>
-          <div class="card stat" aria-label="Local installations">
-            <div class="stat__value">2,800+</div>
-            <div class="stat__label">Local installations</div>
+          <div class="stat-card" aria-label="Local installations">
+            <div class="stat-card__value">2,800+</div>
+            <div class="stat-card__label">Local installations</div>
           </div>
-          <div class="card stat" aria-label="Vetted MCS installers">
-            <div class="stat__value">47</div>
-            <div class="stat__label">Vetted MCS installers</div>
+          <div class="stat-card" aria-label="Vetted MCS installers">
+            <div class="stat-card__value">47</div>
+            <div class="stat-card__label">Vetted MCS installers</div>
           </div>
         </div>
         <p class="section-footnote">0% VAT ends March 2027 • Average payback ~6.8 years</p>
       </div>
     </section>
 
-    <!-- INCENTIVES -->
-    <section class="section incentives" aria-labelledby="incentives-title">
+    <!-- INCENTIVES / BENEFITS -->
+    <section class="section benefits-section" aria-labelledby="incentives-title">
       <div class="container">
-        <h2 id="incentives-title">Time‑sensitive Manchester incentives</h2>
+        <h2 id="incentives-title" class="section-title">Time‑sensitive Manchester incentives</h2>
         <ul class="list list--benefits">
           <li><strong>0% VAT until March 2027</strong> — Save ~£800–1,600 on installation costs.</li>
           <li><strong>Smart Export Guarantee (SEG)</strong> — Earn from excess energy exported to the grid.</li>
@@ -188,13 +191,13 @@
     </section>
 
     <!-- QUOTE (MICRO FORM) -->
-    <section class="section quote" id="quote" aria-labelledby="quote-title">
+    <section class="section quote-section" id="quote" aria-labelledby="quote-title">
       <div class="container">
-        <h2 id="quote-title">Get your Manchester solar quote</h2>
-        <p>Two simple steps. One trusted installer. No spam.</p>
-        <form name="manchester-solar-quotes" method="POST" data-netlify="true" id="quote-form">
+        <h2 id="quote-title" class="section-title">Get your Manchester solar quote</h2>
+        <p class="section-intro">Two simple steps. One trusted installer. No spam.</p>
+        <form class="quote-form" name="manchester-solar-quotes" method="POST" data-netlify="true" id="quote-form">
           <input type="hidden" name="form-name" value="manchester-solar-quotes" />
-          <div class="grid grid-2">
+          <div class="grid grid--2">
             <label>Manchester Postcode <input name="postcode" required placeholder="M1 1AA" autocomplete="postal-code" /></label>
             <label>Property Type
               <select name="property" required>
@@ -211,7 +214,7 @@
             <label>Email <input name="email" type="email" required autocomplete="email" /></label>
             <label>Phone (optional) <input name="phone" type="tel" placeholder="07XXX XXXXXX" autocomplete="tel" /></label>
           </div>
-          <button class="btn btn-primary">Get your free Manchester quote</button>
+          <button class="btn btn--primary">Get your free Manchester quote</button>
           <p class="form-trust">GDPR‑compliant • One installer only • 24‑hour response</p>
           <p class="form-consent">I consent to Manchester.solar sharing my details with <strong>one</strong> MCS‑certified installer to provide a quote. I can withdraw consent at any time. <a href="/privacy">Privacy Policy</a>.</p>
         </form>
@@ -219,14 +222,14 @@
     </section>
 
     <!-- WHO WE CONNECT -->
-    <section class="section who" aria-labelledby="who-title">
+    <section class="section who-section" aria-labelledby="who-title">
       <div class="container">
-        <h2 id="who-title">Who we connect in Manchester</h2>
-        <div class="grid grid-3">
+        <h2 id="who-title" class="section-title">Who we connect in Manchester</h2>
+        <div class="grid grid--3">
           <article class="card">
             <h3>Manchester homeowners</h3>
             <p>From period terraces and semis to modern builds, bungalows and flats — local installers understand Manchester’s roofs and planning.</p>
-            <ul class="ticks">
+            <ul class="list list--ticks">
               <li>~£1,890 average annual savings</li>
               <li>~6.8‑year typical payback</li>
               <li>Planning guidance included</li>
@@ -235,7 +238,7 @@
           <article class="card">
             <h3>Manchester businesses</h3>
             <p>Warehouses, offices, retail and industrial properties. Reduce operating costs and show climate leadership.</p>
-            <ul class="ticks">
+            <ul class="list list--ticks">
               <li>15–25% typical ROI</li>
               <li>SEG and metering support</li>
               <li>Expert commercial design</li>
@@ -244,7 +247,7 @@
           <article class="card">
             <h3>MCS‑certified installer network</h3>
             <p>47 verified specialists across Greater Manchester (MCS & RECC as standard).</p>
-            <ul class="ticks">
+            <ul class="list list--ticks">
               <li>Local Manchester expertise</li>
               <li>Single‑contact guarantee</li>
               <li>Insurance & warranties as standard</li>
@@ -255,9 +258,9 @@
     </section>
 
     <!-- COVERAGE -->
-    <section class="section coverage" aria-labelledby="coverage-title">
+    <section class="section coverage-section" aria-labelledby="coverage-title">
       <div class="container">
-        <h2 id="coverage-title">Greater Manchester coverage</h2>
+        <h2 id="coverage-title" class="section-title">Greater Manchester coverage</h2>
         <p>We cover all Manchester postcodes (M1–M99). Local specialists understand planning, weather and building styles across the boroughs.</p>
         <ul class="inline-stats">
           <li>2,800+ Manchester installations completed</li>
@@ -268,10 +271,10 @@
     </section>
 
     <!-- WHY SOLAR WORKS LOCALLY -->
-    <section class="section why" aria-labelledby="why-title">
+    <section class="section why-section" aria-labelledby="why-title">
       <div class="container">
-        <h2 id="why-title">Why solar works in Manchester</h2>
-        <div class="grid grid-3">
+        <h2 id="why-title" class="section-title">Why solar works in Manchester</h2>
+        <div class="grid grid--3">
           <div class="card">
             <h3>Built for local properties</h3>
             <p>From period homes to new developments, modern systems are designed for Manchester’s varied roof types and orientations.</p>
@@ -289,10 +292,10 @@
     </section>
 
     <!-- PROMISE / TRUST -->
-    <section class="section promise" aria-labelledby="promise-title">
+    <section class="section trust-section" aria-labelledby="promise-title">
       <div class="container">
-        <h2 id="promise-title">Our Manchester Promise</h2>
-        <div class="grid grid-3">
+        <h2 id="promise-title" class="section-title">Our Manchester Promise</h2>
+        <div class="grid grid--3">
           <div class="card">
             <h3>One contact</h3>
             <p>One professional contact — no auctions or reselling, no multiple sales calls.</p>
@@ -310,10 +313,10 @@
     </section>
 
     <!-- RESOURCES -->
-    <section class="section resources" id="resources" aria-labelledby="resources-title">
+    <section class="section resources-section" id="resources" aria-labelledby="resources-title">
       <div class="container">
-        <h2 id="resources-title">Helpful Manchester solar resources</h2>
-        <div class="grid grid-2">
+        <h2 id="resources-title" class="section-title">Helpful Manchester solar resources</h2>
+        <div class="grid grid--2">
           <article class="card">
             <h3>Complete Manchester Solar Guide 2025</h3>
             <p>Costs, planning, installer vetting and realistic savings, written for Manchester homes and businesses.</p>
@@ -330,26 +333,26 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section faq" aria-labelledby="faq-title">
+    <section class="section faq-section" aria-labelledby="faq-title">
       <div class="container">
-        <h2 id="faq-title">Frequently asked questions</h2>
-        <details>
+        <h2 id="faq-title" class="section-title">Frequently asked questions</h2>
+        <details class="faq-item">
           <summary>Do solar panels work in Manchester’s climate?</summary>
           <p>Yes. Manchester averages ~3.8 peak sun hours per day. Modern panels perform well in diffuse light, so systems generate even on cloudy days. A professional design matched to your roof and usage maximises yield.</p>
         </details>
-        <details>
+        <details class="faq-item">
           <summary>Are period terraces suitable for solar?</summary>
           <p>Usually yes. Period terraces and semis can host discreet, high‑efficiency arrays. Your installer will check roof structure, shading and access, and advise on placement that suits the street scene.</p>
         </details>
-        <details>
+        <details class="faq-item">
           <summary>How do you prevent spam or multiple calls?</summary>
           <p>We connect you with a single vetted local MCS installer. We don’t auction or resell details, so you won’t receive multiple sales calls. One professional contact, clear pricing and a 24‑hour response.</p>
         </details>
-        <details>
+        <details class="faq-item">
           <summary>Do I need planning permission?</summary>
           <p>Most homes fall under Permitted Development. Listed buildings, conservation areas or unusual installations may need permission. Your installer will confirm and handle any application if required.</p>
         </details>
-        <details>
+        <details class="faq-item">
           <summary>How much do solar panels cost in Manchester?</summary>
           <p>Typical residential systems are ~£4,000–£8,000 depending on roof, usage and equipment. With 0% VAT until March 2027 and average savings near £1,890/year, many households see 6–8 year payback.</p>
         </details>
@@ -357,17 +360,17 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="section final-cta" aria-labelledby="final-cta-title">
+    <section class="section final-cta-section" aria-labelledby="final-cta-title">
       <div class="container">
-        <h2 id="final-cta-title">Connect with your Manchester solar specialist</h2>
-        <ul class="trust-chips" aria-label="Reassurance">
-          <li class="trust-chip">No spam</li>
-          <li class="trust-chip">24‑hour response</li>
-          <li class="trust-chip">MCS‑certified network</li>
+        <h2 id="final-cta-title" class="section-title">Connect with your Manchester solar specialist</h2>
+        <ul class="hero-badges" aria-label="Reassurance">
+          <li class="badge">No spam</li>
+          <li class="badge">24‑hour response</li>
+          <li class="badge">MCS‑certified network</li>
         </ul>
-        <form name="manchester-solar-quotes-final" method="POST" data-netlify="true">
+        <form class="quote-form" name="manchester-solar-quotes-final" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="manchester-solar-quotes-final" />
-          <div class="grid grid-2">
+          <div class="grid grid--2">
             <label>Property Type
               <select name="property" required>
                 <option value="">Select your property type</option>
@@ -384,7 +387,7 @@
             <label>Phone (optional) <input name="phone" type="tel" placeholder="07XXX XXXXXX" autocomplete="tel" /></label>
             <label>Manchester Postcode <input name="postcode" required placeholder="M1 1AA" autocomplete="postal-code" /></label>
           </div>
-          <button class="btn btn-primary">Get your free Manchester quote</button>
+          <button class="btn btn--primary">Get your free Manchester quote</button>
           <p class="form-trust">One trusted local installer will contact you within 24 hours to arrange a free, no‑obligation consultation. No auctions. No multiple calls. No spam.</p>
         </form>
       </div>
@@ -395,7 +398,7 @@
     <div class="container">
       <p><strong>Manchester.solar</strong> — ethical connector. One vetted local MCS installer. No auctions, no reselling, no spam.</p>
       <nav aria-label="Footer">
-        <ul>
+        <ul class="footer-nav">
           <li><a href="/about">About</a></li>
           <li><a href="/installers">Installers</a></li>
           <li><a href="/privacy">Privacy</a></li>
@@ -407,7 +410,6 @@
   </footer>
 
   <script>
-    // tiny util: current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

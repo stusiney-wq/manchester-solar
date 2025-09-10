@@ -97,7 +97,7 @@
     }
     </script>
     
-   <!-- 2. FIX: Updated Service Schema with inLanguage -->
+   <!-- Service Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -137,7 +137,7 @@
     }
     </script>
     
-    <!-- 3. FIX: Complete FAQ Schema - All 7 Questions -->
+    <!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -260,6 +260,34 @@ body {
   100% { box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3); }
 }
 
+/* Quick Quote Section Background */
+.quick-quote-section {
+  background-image: url('images/manchester-rooftops.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.quick-quote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.85) 0%, 
+    rgba(34, 197, 94, 0.75) 50%, 
+    rgba(34, 197, 94, 0.85) 100%);
+  z-index: 1;
+}
+
+.quick-quote-section .container {
+  position: relative;
+  z-index: 2;
+}
+
 /* 2-Step Form Container */
 .two-step-form {
   max-width: 500px;
@@ -268,6 +296,8 @@ body {
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .form-step {
@@ -297,9 +327,43 @@ body {
   background: var(--solar-green);
 }
 
+/* Fix white on white text issue */
+.quick-form-title {
+  color: var(--neutral-900);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.quick-form-subtitle {
+  color: var(--neutral-600);
+  font-size: var(--font-size-base);
+  margin-bottom: 24px;
+}
+
+.form-label {
+  color: var(--neutral-900);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-optional {
+  color: var(--neutral-500);
+  font-weight: 400;
+}
+
+.trust-message {
+  color: var(--neutral-600);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: 16px;
+}
+
 /* Form enhancements */
 .form-input, .form-select {
-  font-size: 16px; /* Prevents zoom on iOS */
+  font-size: 16px;
   padding: 16px;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
@@ -339,6 +403,109 @@ body {
   margin-top: 12px;
 }
 
+/* Incentive Stats styling for overlay */
+.incentive-stats {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.incentive-stats h4 {
+  color: var(--neutral-900);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.incentive-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.incentive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.incentive-item {
+  color: var(--neutral-700);
+  font-size: var(--font-size-sm);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--neutral-200);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.incentive-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.incentive-content {
+  flex: 1;
+}
+
+.incentive-title {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.incentive-desc {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+}
+
+@media (max-width: 768px) {
+  .incentive-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Checkbox styling */
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.consent-checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--solar-green);
+  cursor: pointer;
+}
+
+.consent-text {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--neutral-700);
+}
+
+.consent-link {
+  color: var(--solar-green);
+  text-decoration: underline;
+}
+
+.consent-link:hover {
+  color: #16a34a;
+}
+
+.incentive-item:last-child {
+  border-bottom: none;
+}
+
 /* Remove inline styles - move to CSS classes */
 .hero-content-animated {
   opacity: 1;
@@ -355,6 +522,18 @@ body {
 .honeypot-field {
   position: absolute;
   left: -9999px;
+}
+
+/* Hero entrance animation class */
+.hero-entrance {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Button success state */
+.btn-success {
+  background: var(--solar-green) !important;
+  color: white !important;
 }
 
 /* Mobile optimizations */
@@ -409,22 +588,20 @@ body {
         
         <!-- Main Headline -->
         <h1 id="hero-heading" class="hero-title">
-          Solar panels in Manchester – we connect you to a vetted MCS installer
+          Solar panels in Manchester — we connect you with a vetted MCS installer
         </h1>
         
         <!-- Value Proposition -->
         <div class="hero-value-prop">
           <p class="hero-subtext">
-            <strong>Manchester.solar connects you with your area's exclusive, vetted MCS-certified installer.</strong> 
-            From Victorian terraces to modern builds, we make solar simple for Manchester properties.
+            <strong>One contact. Clear pricing. 24-hour response.</strong>
           </p>
         </div>
         
         <!-- Call to Action -->
         <div class="hero-cta">
-         <!-- CHANGE THIS -->
 <a href="#quick-form" class="btn btn--primary btn--large" data-analytics="hero_cta_click">
-  Get My Manchester Solar Savings Quote
+  Get my Manchester solar savings quote
 </a>
 <p class="trust-message">
   See exactly how much you'll save • Free assessment • 24-hour response
@@ -433,13 +610,13 @@ body {
         
         <!-- AI Direct Answer for SGE/Overviews -->
         <p class="hero-ai-answer">
-          Are solar panels worth it in Manchester? Yes – typical homes save £1,890+ yearly with 6-8 year payback periods. Manchester receives 3.8 peak sun hours daily with current 0% VAT making solar more affordable than ever.
+          Are solar panels worth it in Manchester? Yes — typical homes save about £1,890 a year with 6–8 year payback. Manchester averages 3.8 peak sun hours and modern panels work in diffuse light. With 0% VAT until March 2027, payback is realistic for many properties.
         </p>
       </div>
       
       <!-- Hero Image -->
       <div class="hero-image hero-image-animated">
-        <img src="images/test.webp" alt="Solar panels installed on Victorian terrace in Manchester" width="600" height="400" loading="eager" decoding="async" class="hero-img">
+        <img src="images/test.webp" alt="Solar panels installed on Victorian terrace house in Manchester" width="600" height="400" loading="eager" decoding="async" class="hero-img">
         
         <!-- Floating Trust Card -->
         <div class="hero-trust-card">
@@ -456,7 +633,7 @@ body {
 <!-- PHASE 1: Floating CTA Button -->
 <div class="floating-cta" id="floating-cta">
   <a href="#quick-form" class="btn btn--primary">
-    Get My £1,890 Quote
+    Get Free Quote
   </a>
 </div>
 
@@ -468,7 +645,7 @@ body {
     <h2 id="reassurance-heading" class="sr-only">Instant Reassurance</h2>
     
     <!-- Reassurance Grid -->
-    <div class="reassurance-grid grid grid-4">
+    <div class="reassurance-grid grid grid-3">
       
       <!-- Reassurance 1: Exclusive Match -->
       <div class="reassurance-item">
@@ -492,7 +669,7 @@ body {
           </svg>
         </div>
         <p class="reassurance-text">
-          Local expertise for terraces & modern roofs
+          Local expertise: terraces & modern roofs
         </p>
       </div>
       
@@ -508,22 +685,7 @@ body {
           </svg>
         </div>
         <p class="reassurance-text">
-          Typical savings explained in plain English
-        </p>
-      </div>
-      
-      <!-- Reassurance 4: MCS Professional -->
-      <div class="reassurance-item">
-        <div class="reassurance-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="8.5" cy="7" r="4"/>
-            <path d="M20 8v6"/>
-            <path d="M23 11l-3 3-3-3"/>
-          </svg>
-        </div>
-        <p class="reassurance-text">
-          MCS professional, not a sales team
+          Clear, plain-English savings
         </p>
       </div>
       
@@ -558,9 +720,9 @@ body {
 
         <div class="stat-content">
           <div class="stat-number">£1,890+</div>
-          <div class="stat-label">Annual Savings</div>
+          <div class="stat-label">Typical annual savings (4 kW system)</div>
           <div class="stat-description">
-            Typical Manchester household with 4kW system
+            Manchester household average
           </div>
         </div>
       </div>
@@ -575,9 +737,9 @@ body {
         </div>
         <div class="stat-content">
           <div class="stat-number">3.8</div>
-          <div class="stat-label">Peak Sun Hours Daily</div>
+          <div class="stat-label">Peak sun hours daily (avg)</div>
           <div class="stat-description">
-            Manchester's annual average solar irradiance
+            Manchester's solar irradiance
           </div>
         </div>
       </div>
@@ -592,14 +754,14 @@ body {
         </div>
         <div class="stat-content">
           <div class="stat-number">2,800+</div>
-          <div class="stat-label">Local Installations</div>
+          <div class="stat-label">Local installations across Greater Manchester</div>
           <div class="stat-description">
-            Solar systems across Greater Manchester
+            Completed projects
           </div>
         </div>
       </div>
 
-      <!-- Stat 4: MCS Installers -->
+      <!-- Stat 4: Network Size -->
       <div class="stat-card card">
         <div class="stat-icon">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon-svg">
@@ -610,9 +772,9 @@ body {
         </div>
         <div class="stat-content">
           <div class="stat-number">47</div>
-          <div class="stat-label">MCS Installers</div>
+          <div class="stat-label">Vetted MCS installers in our network</div>
           <div class="stat-description">
-            Vetted professionals in our network
+            Across Greater Manchester
           </div>
         </div>
       </div>
@@ -622,33 +784,32 @@ body {
     <!-- Supporting Text -->
     <div class="stats-supporting">
       <p class="stats-note">
-  <strong>0% VAT ends March 2027 - Save £600+ on installation costs</strong> • Average payback: 6.8 years • 
-  <strong>Join 2,800+ Manchester families already saving</strong>
+  <strong>0% VAT ends March 2027</strong> • Average payback ~6.8 years
 </p>
     </div>
 
   </div>
 </section>
 
-<!-- PHASE 1: Quick Form Section - Early in page flow -->
+<!-- PHASE 1: Quick Form Section with Background -->
 <section class="section quick-quote-section" id="quick-form">
   <div class="container">
     
-    <!-- Recent Activity Feed -->
-    <div class="recent-activity">
-      <h4>Recent Manchester Connections</h4>
-      <div class="activity-feed">
-        <div class="activity-item">✓ Sarah from M20 connected with her installer yesterday</div>
-        <div class="activity-item">✓ Mike from M33 received his quote 2 hours ago</div>
-        <div class="activity-item">✓ Jennifer from M21 is saving £2,100 yearly</div>
+    <!-- Time-Sensitive Incentives -->
+    <div class="incentive-stats">
+      <h4>Time-Sensitive Manchester Incentives</h4>
+      <div class="incentive-feed">
+        <div class="incentive-item">⏰ 0% VAT ends March 2027 - Save £800-1,600 on installation costs</div>
+        <div class="incentive-item">💰 SEG payments: Earn from excess energy exported to grid</div>
+        <div class="incentive-item">🏠 Planning permissions: Most homes qualify under Permitted Development</div>
       </div>
     </div>
 
     <!-- 2-Step Form -->
     <div class="two-step-form">
-      <h2 class="quick-form-title">Get Your Manchester Solar Quote</h2>
+      <h2 class="quick-form-title">Get your Manchester solar quote</h2>
       <p class="quick-form-subtitle">
-        Connect with your zone's exclusive MCS installer in 2 simple steps
+        Two simple steps. One trusted installer. No spam.
       </p>
       
       <!-- Step Indicator -->
@@ -698,6 +859,7 @@ body {
               class="form-input" 
               placeholder="your@email.com"
               required
+              data-analytics="email_field_click"
             >
           </div>
           
@@ -711,6 +873,7 @@ body {
               name="phone" 
               class="form-input" 
               placeholder="07XXX XXXXXX"
+              data-analytics="phone_field_click"
             >
           </div>
 
@@ -719,13 +882,13 @@ body {
             <label class="consent-label">
               <input type="checkbox" id="consent" name="consent" required class="consent-checkbox">
               <span class="consent-text">
-                I consent to Manchester.solar connecting me with 1 MCS certified installer for quotes.
+                I consent to Manchester.solar sharing my details with one MCS-certified installer to provide a quote. I can withdraw consent at any time.
               </span>
             </label>
           </div>
           
           <button type="submit" class="btn-next">
-            Connect Me With My Installer
+            Get my quote
           </button>
           
           <button type="button" class="btn-back" onclick="prevStep()">
@@ -734,7 +897,7 @@ body {
         </div>
       </form>
       
-      <p class="trust-message">✓ No spam ✓ One contact only ✓ 24hr response</p>
+      <p class="trust-message">GDPR-compliant • One installer only • 24-hour response</p>
     </div>
 
   </div>
@@ -750,8 +913,7 @@ body {
         Who We Connect in Manchester
       </h2>
       <p class="section-subtitle">
-        We connect Manchester homeowners and businesses with <strong>vetted MCS-certified installers</strong> 
-        who understand local property types – from Victorian terraces to modern builds and commercial rooftops.
+        We connect Manchester homeowners and businesses with <strong>vetted MCS-certified installers</strong>
       </p>
     </div>
 
@@ -767,22 +929,15 @@ body {
           </svg>
         </div>
         <div class="benefit-content">
-          <h3 class="benefit-title">Manchester Homeowners</h3>
+          <h3 class="benefit-title">Manchester homeowners</h3>
           <p class="benefit-description">
-            <strong>All property types welcome:</strong> Victorian terraces, Edwardian semis, 
-            modern builds, bungalows, and flats. Our specialists understand Manchester's unique 
-            architectural mix and planning requirements.
+            Victorian terraces, semis, modern builds, bungalows, flats. Installers understand local planning and roof types.
           </p>
-          <div class="hero-stats">
-            <div class="stat-inline">
-              <span class="stat-number">£1,890</span>
-              <span class="stat-label">Average annual savings</span>
-            </div>
-            <div class="stat-inline">
-              <span class="stat-number">6.8 years</span>
-              <span class="stat-label">Typical payback period</span>
-            </div>
-          </div>
+          <ul class="benefit-list">
+            <li>£1,890 average annual savings</li>
+            <li>~6.8-year typical payback</li>
+            <li>Planning guidance included</li>
+          </ul>
         </div>
       </div>
 
@@ -796,26 +951,19 @@ body {
           </svg>
         </div>
         <div class="benefit-content">
-          <h3 class="benefit-title">Manchester Businesses</h3>
+          <h3 class="benefit-title">Manchester businesses</h3>
           <p class="benefit-description">
-            <strong>Commercial solar specialists:</strong> Warehouses, offices, retail units, 
-            and industrial buildings. Reduce operational costs while demonstrating environmental 
-            leadership in Greater Manchester.
+            Warehouses, offices, retail, industrial. Cut operating costs and show climate leadership.
           </p>
-          <div class="hero-stats">
-            <div class="stat-inline">
-              <span class="stat-number">15-25%</span>
-              <span class="stat-label">Return on investment</span>
-            </div>
-            <div class="stat-inline">
-              <span class="stat-number">70%</span>
-              <span class="stat-label">Cost reduction potential</span>
-            </div>
-          </div>
+          <ul class="benefit-list">
+            <li>15–25% typical ROI</li>
+            <li>SEG and metering support</li>
+            <li>Expert commercial design</li>
+          </ul>
         </div>
       </div>
 
-      <!-- MCS Installers Card -->
+      <!-- MCS Network Card -->
       <div class="card">
         <div class="benefit-icon">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="benefit-icon-svg">
@@ -824,17 +972,14 @@ body {
           </svg>
         </div>
         <div class="benefit-content">
-          <h3 class="benefit-title">MCS-Certified Installers</h3>
+          <h3 class="benefit-title">MCS-certified installers (network)</h3>
           <p class="benefit-description">
-            <strong>47 verified specialists</strong> across Greater Manchester. Each installer 
-            is MCS certified, RECC member, and locally based with proven expertise in 
-            Manchester's diverse property landscape.
+            47 verified specialists across Greater Manchester (MCS, RECC).
           </p>
           <ul class="benefit-list">
-            <li>MCS Certified credentials</li>
-            <li>RECC Member status</li>
             <li>Local Manchester expertise</li>
-            <li>Single contact guarantee</li>
+            <li>Single-contact guarantee</li>
+            <li>Insurance & warranties as standard</li>
           </ul>
         </div>
       </div>
@@ -850,18 +995,8 @@ body {
         <div class="benefit-content">
           <h3 class="benefit-title">Greater Manchester Coverage</h3>
           <p class="benefit-description">
-            <strong>Complete M postcode coverage</strong> with specialists who understand 
-            local planning requirements, weather patterns, and architectural styles across 
-            all Greater Manchester boroughs.
+            We cover all Manchester postcodes (M1–M99). Local specialists understand planning, weather, and building styles across the boroughs.
           </p>
-          <div class="hero-badges">
-            <span class="badge badge--local">Central (M1-M4)</span>
-            <span class="badge badge--local">South (M20-M23)</span>
-            <span class="badge badge--local">Trafford (M33, M41)</span>
-            <span class="badge badge--local">East (M19, M25)</span>
-            <span class="badge badge--local">North (M8-M9)</span>
-            <span class="badge badge--local">West (M26-M28)</span>
-          </div>
         </div>
       </div>
 
@@ -879,8 +1014,8 @@ body {
           <span class="stat-label">Average installer rating</span>
         </div>
         <div class="stat-inline">
-          <span class="stat-number">24hrs</span>
-          <span class="stat-label">Response guarantee</span>
+          <span class="stat-number">24-hour</span>
+          <span class="stat-label">Response commitment</span>
         </div>
       </div>
       <p class="stats-note">
@@ -918,16 +1053,10 @@ body {
           </svg>
         </div>
         <div class="benefit-content">
-          <h3 class="benefit-title">Perfect for Manchester Properties</h3>
+          <h3 class="benefit-title">Built for Manchester properties</h3>
           <p class="benefit-description">
-            Victorian terraces, Edwardian semis, and modern builds all benefit from solar. 
-            Our network understands Manchester's unique architecture and planning requirements.
+            Terraces, semis, and modern roofs all benefit.
           </p>
-          <ul class="benefit-list">
-            <li>Victorian terraces with south-facing slopes</li>
-            <li>Modern builds with optimal roof angles</li>
-            <li>Commercial properties and warehouses</li>
-          </ul>
         </div>
       </div>
 
@@ -940,16 +1069,10 @@ body {
           </svg>
         </div>
         <div class="benefit-content">
-          <h3 class="benefit-title">Strong Manchester Performance</h3>
+          <h3 class="benefit-title">Strong performance</h3>
           <p class="benefit-description">
-            Despite the reputation for rain, Manchester receives <strong>3.8 peak sun hours daily</strong> 
-            with modern panels generating electricity even in cloudy conditions.
+            3.8 peak sun hours; panels work in cloud/diffuse light.
           </p>
-          <ul class="benefit-list">
-            <li>950 kWh/m² annual solar irradiance</li>
-            <li>Panels work efficiently in diffuse light</li>
-            <li>Cool temperatures improve panel efficiency</li>
-          </ul>
         </div>
       </div>
 
@@ -963,16 +1086,10 @@ body {
           </svg>
         </div>
         <div class="benefit-content">
-          <h3 class="benefit-title">Manchester Council Support</h3>
+          <h3 class="benefit-title">Council & incentives</h3>
           <p class="benefit-description">
-            Manchester City Council supports solar adoption with <strong>carbon neutral by 2038</strong> goals, 
-            plus current government incentives make solar more affordable than ever.
+            0% VAT to Mar 2027; SEG; net-zero 2038 goals.
           </p>
-          <ul class="benefit-list">
-            <li>0% VAT until March 2027</li>
-            <li>Smart Export Guarantee payments</li>
-            <li>Planning support for renewable energy</li>
-          </ul>
         </div>
       </div>
 
@@ -984,31 +1101,31 @@ body {
         Ready to see how solar could work for your Manchester property?
       </p>
       <a href="#quick-form" class="btn btn--primary btn--large" data-analytics="benefits_cta_click">
-        Get Your Free Manchester Quote
+        Get your free Manchester quote
       </a>
     </div>
 
   </div>
 </section>
 
-<!-- Trust Section - No Spam Guarantee & Credentials -->
+<!-- Trust Section - Our Manchester Promise -->
 <section class="section section--dark trust-section" aria-labelledby="trust-heading">
   <div class="container">
     
     <!-- Section Header -->
     <div class="section-header">
       <h2 id="trust-heading" class="section-title">
-        Your Zone's Exclusive Solar Specialist
+        Our Manchester Promise
       </h2>
       <p class="section-subtitle">
-        No spam, no auctions, no bidding wars. Just <strong>one vetted MCS installer</strong> per Manchester zone.
+        One contact. One trusted installer. Clear guarantees.
       </p>
     </div>
 
     <!-- Trust Content Grid -->
-    <div class="trust-grid grid grid-2">
+    <div class="trust-grid grid grid-3">
       
-      <!-- Left: No Spam Guarantee -->
+      <!-- Trust Item 1 -->
       <div class="trust-guarantee">
         <div class="guarantee-badge">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="guarantee-icon">
@@ -1016,87 +1133,41 @@ body {
             <path d="M9 12l2 2 4-4"></path>
           </svg>
         </div>
-        <h3 class="guarantee-title">No Spam Guarantee</h3>
+        <h3 class="guarantee-title">One professional contact — no auctions or reselling</h3>
         <p class="guarantee-description">
-          Unlike lead generation sites that sell your details to dozens of companies, 
-          we connect you with <strong>one exclusive installer</strong> for your Manchester zone.
+          No multiple sales calls or bidding wars.
         </p>
-        <ul class="guarantee-list">
-          <li>One professional contact only</li>
-          <li>No multiple sales calls</li>
-          <li>No bidding wars or pressure tactics</li>
-          <li>24-hour response commitment</li>
-        </ul>
       </div>
 
-      <!-- Right: MCS Certification -->
-      <div class="trust-credentials">
-        <div class="credentials-header">
-          <h3 class="credentials-title">MCS Certified Network</h3>
-          <p class="credentials-description">
-            Every installer in our Manchester network is <strong>MCS certified</strong> 
-            and meets our strict quality standards.
-          </p>
+      <!-- Trust Item 2 -->
+      <div class="trust-guarantee">
+        <div class="guarantee-badge">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="guarantee-icon">
+            <path d="M14 9V5a3 3 0 0 0-6 0v4"></path>
+            <rect x="2" y="9" width="20" height="12" rx="2" ry="2"></rect>
+          </svg>
         </div>
-        
-        <div class="credentials-grid">
-          <div class="credential-item">
-            <div class="credential-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 9V5a3 3 0 0 0-6 0v4"></path>
-                <rect x="2" y="9" width="20" height="12" rx="2" ry="2"></rect>
-              </svg>
-            </div>
-            <div class="credential-content">
-              <div class="credential-name">MCS Certification</div>
-              <div class="credential-detail">Government-backed quality assurance</div>
-            </div>
-          </div>
-          
-          <div class="credential-item">
-            <div class="credential-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"></path>
-                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
-                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
-                <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"></path>
-                <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"></path>
-              </svg>
-            </div>
-            <div class="credential-content">
-              <div class="credential-name">Insurance & Warranties</div>
-              <div class="credential-detail">Full coverage and 25-year guarantees</div>
-            </div>
-          </div>
-          
-          <div class="credential-item">
-            <div class="credential-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="8.5" cy="7" r="4"></circle>
-                <path d="M20 8v6"></path>
-                <path d="M23 11l-3 3-3-3"></path>
-              </svg>
-            </div>
-            <div class="credential-content">
-              <div class="credential-name">Local Expertise</div>
-              <div class="credential-detail">Manchester property specialists</div>
-            </div>
-          </div>
-          
-          <div class="credential-item">
-            <div class="credential-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12,6 12,12 16,14"></polyline>
-              </svg>
-            </div>
-            <div class="credential-content">
-              <div class="credential-name">Proven Track Record</div>
-              <div class="credential-detail">2,800+ successful installations</div>
-            </div>
-          </div>
+        <h3 class="guarantee-title">MCS installers only (RECC as standard)</h3>
+        <p class="guarantee-description">
+          Government-backed quality standards.
+        </p>
+      </div>
+
+      <!-- Trust Item 3 -->
+      <div class="trust-guarantee">
+        <div class="guarantee-badge">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="guarantee-icon">
+            <path d="M9 12l2 2 4-4"></path>
+            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
+            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
+            <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"></path>
+            <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"></path>
+          </svg>
         </div>
+        <h3 class="guarantee-title">Insurance & 25-year performance warranties</h3>
+        <p class="guarantee-description">
+          Full coverage and long-term guarantees.
+        </p>
       </div>
 
     </div>
@@ -1104,10 +1175,10 @@ body {
     <!-- Bottom CTA -->
     <div class="trust-cta">
       <p class="trust-cta-text">
-        Ready to connect with your zone's trusted Manchester solar specialist?
+        Ready to connect with a vetted local Manchester solar specialist?
       </p>
       <a href="#quick-form" class="btn btn--primary btn--large" data-analytics="trust_cta_click">
-        Get Connected Today
+        Get connected today
       </a>
     </div>
 
@@ -1142,8 +1213,7 @@ body {
         <div class="resource-content">
           <h3 class="resource-title">Complete Manchester Solar Guide 2025</h3>
           <p class="resource-description">
-            Everything you need to know about solar panels in Manchester - costs, planning permissions, 
-            installer vetting, and realistic savings for Victorian terraces and modern properties.
+            Costs, planning, vetting, realistic savings.
           </p>
           <div class="resource-highlights">
             <span class="resource-highlight">Property-specific advice</span>
@@ -1153,7 +1223,7 @@ body {
         </div>
         <div class="resource-cta">
           <a href="/guides/manchester-solar-2025" class="btn btn--secondary" data-analytics="guide_link_click">
-            Read the Complete Guide
+            Read the complete guide
           </a>
         </div>
       </div>
@@ -1167,10 +1237,9 @@ body {
           </svg>
         </div>
         <div class="resource-content">
-          <h3 class="resource-title">Find Your Manchester Zone</h3>
+          <h3 class="resource-title">Find your local installer</h3>
           <p class="resource-description">
-            Discover your exclusive local installer and get connected with Manchester's solar specialists. 
-            Each zone has one vetted MCS installer - no auctions, no multiple calls.
+            Discover your vetted Manchester specialist (no multiple calls).
           </p>
           <div class="resource-highlights">
             <span class="resource-highlight">Exclusive per zone</span>
@@ -1180,7 +1249,7 @@ body {
         </div>
         <div class="resource-cta">
           <a href="/zones" class="btn btn--secondary" data-analytics="zones_link_click">
-            Find Your Zone
+            Find your local installer
           </a>
         </div>
       </div>
@@ -1244,7 +1313,7 @@ body {
 <!-- FAQ 3: Spam Prevention -->
 <div class="faq-item">
   <button class="faq-question" id="q-faq-3" aria-expanded="false" aria-controls="faq-3">
-    <span>How does Manchester.solar prevent spam?</span>
+    <span>How do you prevent spam / multiple calls?</span>
     <span class="faq-icon" aria-hidden="true">+</span>
   </button>
   <div class="faq-answer" id="faq-3" role="region" aria-labelledby="q-faq-3" hidden>
@@ -1257,7 +1326,7 @@ body {
 <!-- FAQ 4: Commercial Solar -->
 <div class="faq-item">
   <button class="faq-question" id="q-faq-4" aria-expanded="false" aria-controls="faq-4">
-    <span>Do you handle commercial solar installations in Manchester?</span>
+    <span>Do you handle commercial installs?</span>
     <span class="faq-icon" aria-hidden="true">+</span>
   </button>
   <div class="faq-answer" id="faq-4" role="region" aria-labelledby="q-faq-4" hidden>
@@ -1270,7 +1339,7 @@ body {
 <!-- FAQ 5: Planning Permission -->
 <div class="faq-item">
   <button class="faq-question" id="q-faq-5" aria-expanded="false" aria-controls="faq-5">
-    <span>Do I need planning permission for solar panels in Manchester?</span>
+    <span>Do I need planning permission?</span>
     <span class="faq-icon" aria-hidden="true">+</span>
   </button>
   <div class="faq-answer" id="faq-5" role="region" aria-labelledby="q-faq-5" hidden>
@@ -1283,7 +1352,7 @@ body {
 <!-- FAQ 6: Costs and VAT -->
 <div class="faq-item">
   <button class="faq-question" id="q-faq-6" aria-expanded="false" aria-controls="faq-6">
-    <span>How much do solar panels cost in Manchester?</span>
+    <span>How much do solar panels cost?</span>
     <span class="faq-icon" aria-hidden="true">+</span>
   </button>
   <div class="faq-answer" id="faq-6" role="region" aria-labelledby="q-faq-6" hidden>
@@ -1301,7 +1370,7 @@ body {
   </button>
   <div class="faq-answer" id="faq-7" role="region" aria-labelledby="q-faq-7" hidden>
     <div class="faq-content">
-      <p>Your zone's installer will survey your property, design the system, and handle all paperwork. Most Manchester residential installs take <strong>1-2 days</strong> with minimal disruption. Commercial projects take <strong>3-5 days</strong> depending on system size. All work includes <strong>MCS certification and warranties</strong>.</p>
+      <p>Your installer will survey your property, design the system, and handle all paperwork. Most Manchester residential installs take <strong>1-2 days</strong> with minimal disruption. Commercial projects take <strong>3-5 days</strong> depending on system size. All work includes <strong>MCS certification and warranties</strong>.</p>
     </div>
   </div>
 </div>
@@ -1314,7 +1383,7 @@ body {
         Still have questions? Your Manchester solar specialist will answer everything during your free consultation.
       </p>
       <a href="#quick-form" class="btn btn--primary btn--large" data-analytics="faq_cta_click">
-        Get Your Free Consultation
+        Get your free Manchester quote
       </a>
     </div>
 
@@ -1328,10 +1397,10 @@ body {
     <!-- Section Header -->
     <div class="section-header">
       <h2 id="form-heading" class="section-title">
-        Connect With Your Manchester Solar Specialist
+        Connect with your Manchester solar specialist
       </h2>
       <p class="section-subtitle">
-        Get connected to <strong>your zone's exclusive installer</strong> in under 24 hours. No spam, no auctions, no multiple calls.
+        Get connected to <strong>one trusted local installer</strong> in under 24 hours. No spam, no auctions, no multiple calls.
       </p>
     </div>
 
@@ -1345,14 +1414,14 @@ body {
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             <path d="M9 12l2 2 4-4"></path>
           </svg>
-          <span>No Spam Guarantee</span>
+          <span>No spam</span>
         </div>
         <div class="trust-signal">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12,6 12,12 16,14"></polyline>
           </svg>
-          <span>24-Hour Response</span>
+          <span>24-hour response</span>
         </div>
         <div class="trust-signal">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1361,7 +1430,7 @@ body {
             <path d="M20 8v6"></path>
             <path d="M23 11l-3 3-3-3"></path>
           </svg>
-          <span>MCS Certified Network</span>
+          <span>MCS-certified network</span>
         </div>
       </div>
 
@@ -1460,7 +1529,7 @@ body {
             <input type="checkbox" id="consent" name="consent" required class="consent-checkbox">
             <span class="consent-checkmark"></span>
             <span class="consent-text">
-              I consent to Manchester.solar connecting me with <strong>1 MCS certified solar specialist</strong> from our network for the purpose of providing quotes. I understand I can withdraw consent at any time. 
+              I consent to Manchester.solar sharing my details with one MCS-certified installer to provide a quote. I can withdraw consent at any time. 
               <a href="/privacy" target="_blank" class="consent-link">Privacy Policy</a>
             </span>
           </label>
@@ -1472,8 +1541,9 @@ body {
           type="submit" 
           class="btn btn--primary btn--large form-submit"
           data-analytics="form_submit_click"
+          id="quote-form-submit"
         >
-          Connect Me With My Zone's Installer
+          Connect me with a vetted local installer
         </button>
 
         <!-- Form Status -->
@@ -1484,7 +1554,7 @@ body {
       <!-- Additional Trust Information -->
       <div class="form-footer">
         <p class="form-footer-text">
-          <strong>Your zone's exclusive installer</strong> will contact you within 24 hours to arrange a free, no-obligation consultation. 
+          <strong>One trusted local installer</strong> will contact you within 24 hours to arrange a free, no-obligation consultation. 
           No lead auctions, no multiple sales calls, no spam.
         </p>
       </div>
@@ -1708,6 +1778,49 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ========================================
+  // ANALYTICS TRACKING
+  // ========================================
+  
+  // Track form submission
+  const quoteFormSubmit = document.getElementById('quote-form-submit');
+  if (quoteFormSubmit) {
+    quoteFormSubmit.addEventListener('click', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quote_form_submit', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+  
+  // Track email field interaction
+  const emailField = document.querySelector('[data-analytics="email_field_click"]');
+  if (emailField) {
+    emailField.addEventListener('focus', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_field_click', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+  
+  // Track phone field interaction
+  const phoneField = document.querySelector('[data-analytics="phone_field_click"]');
+  if (phoneField) {
+    phoneField.addEventListener('focus', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_field_click', {
+          'form_location': 'main_quote_form',
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
+
+  // ========================================
   // SCROLL ANIMATIONS
   // ========================================
   
@@ -1749,11 +1862,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Trust section - slide in from sides
-      const trustGuarantee = document.querySelector('.trust-guarantee');
-      const trustCredentials = document.querySelector('.trust-credentials');
+      const trustGuarantees = document.querySelectorAll('.trust-guarantee');
       
-      if (trustGuarantee) observer.observe(trustGuarantee);
-      if (trustCredentials) observer.observe(trustCredentials);
+      trustGuarantees.forEach((guarantee, index) => {
+        guarantee.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(guarantee);
+      });
 
       // FAQ items - staggered animation
       const faqItems = document.querySelectorAll('.faq-item');
@@ -1799,20 +1913,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (heroContent && heroImage) {
       setTimeout(() => {
-        heroContent.style.opacity = '1';
-        heroContent.style.transform = 'translateY(0)';
-        heroImage.style.opacity = '1';
-        heroImage.style.transform = 'translateY(0)';
+        heroContent.classList.add('hero-entrance');
+        heroImage.classList.add('hero-entrance');
       }, 200);
-      
-      // Set initial state for hero elements
-      heroContent.style.opacity = '0';
-      heroContent.style.transform = 'translateY(30px)';
-      heroContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-      
-      heroImage.style.opacity = '0';
-      heroImage.style.transform = 'translateY(30px)';
-      heroImage.style.transition = 'opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s';
     }
   }
 

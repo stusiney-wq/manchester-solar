@@ -379,3 +379,37 @@ form{display:grid;gap:var(--spacing-sm);max-width:500px}
 .card--shadow-lg {
   box-shadow: var(--shadow-md);
 }
+
+/* Fix squashed Quote Form */
+#quote-form form { max-width: unset; }              /* remove 500px cap */
+#quote-form .form-grid { gap: var(--spacing-sm); }  /* keep breathing room */
+
+/* Make the form column wider than the copy column */
+@media (min-width: 900px) {
+  #quote-form .form-wrap { 
+    display: grid; 
+    grid-template-columns: 1fr 1.35fr; /* copy : form */
+    gap: var(--spacing-md);
+  }
+}
+@media (min-width: 1200px) {
+  #quote-form .form-wrap { grid-template-columns: 1fr 1.5fr; }
+}
+
+/* Inputs: keep most fields full width on tablet; split pairs only on larger screens */
+@media (min-width: 768px) and (max-width: 899px) {
+  #quote-form .form-grid { grid-template-columns: 1fr; } /* single column on small tablets */
+}
+@media (min-width: 900px) {
+  #quote-form .form-grid { grid-template-columns: repeat(2, 1fr); }
+  /* keep these full-width for readability */
+  #quote-form .form-grid .form-consent,
+  #quote-form .form-grid .form-actions,
+  #quote-form .form-grid .field[style*="grid-column:1/-1"] { grid-column: 1 / -1; }
+}
+
+/* Extra breathing room if sticky CTA overlaps on mobile */
+@media (max-width: 767px) {
+  #quote-form.section { padding-bottom: calc(var(--spacing-lg) + 64px); }
+}
+

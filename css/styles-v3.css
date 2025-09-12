@@ -116,36 +116,36 @@ header .footer-nav{list-style:none;display:flex;flex-wrap:wrap;gap:var(--spacing
 header .footer-nav a{text-decoration:none}
 
 /* HERO */
-#hero{display:grid;gap:var(--spacing-md);align-items:center;text-align:center}
-#hero h1{font-size:2rem;line-height:1.2}
-#hero .direct-answer{font-size:1rem;margin:var(--spacing-sm) 0;max-width:40rem;margin-left:auto;margin-right:auto}
-#hero .btn-primary{margin-top:var(--spacing-sm)}
-#hero .hero-image img{max-width:100%;height:auto;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)}
-@media (min-width:768px){
-  #hero{grid-template-columns:1fr 1fr;text-align:left}
-  #hero h1{font-size:2.5rem}
-  #hero .direct-answer{margin-left:0;margin-right:0}
+#hero {
+  text-align: center; /* centre text by default (mobile/tablet) */
 }
-/* HERO upgrade */
 .hero-wrap {
   display: grid;
   gap: var(--spacing-md);
   align-items: center;
+  justify-items: center; /* centres content horizontally */
 }
-@media (min-width: 900px) {
-  .hero-wrap { grid-template-columns: 1.05fr 1fr; }
+.hero-copy {
+  max-width: 42rem;
+  margin: 0 auto;
 }
-
 .hero-copy h1 {
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: var(--spacing-sm);
 }
 .hero-answer {
   margin: var(--spacing-sm) 0;
 }
-.hero-chips { margin-bottom: var(--spacing-sm); }
-
+.hero-chips {
+  margin-bottom: var(--spacing-sm);
+  justify-content: center;
+}
 .hero-ctas {
-  display: flex; flex-wrap: wrap; gap: var(--spacing-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
 }
 .btn-secondary {
   display: inline-block;
@@ -157,66 +157,51 @@ header .footer-nav a{text-decoration:none}
   font-weight: 600;
   text-decoration: none;
 }
-
-.hero-media { display: grid; gap: var(--spacing-xs); }
+.hero-media {
+  display: grid;
+  gap: var(--spacing-xs);
+}
 .hero-img {
   display: block;
-  width: 100%; height: auto;
+  width: 100%;
+  height: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   object-fit: cover;
 }
 .hero-trust {
-  list-style: none; padding: 0; margin: 0;
-  display: flex; gap: var(--spacing-sm); flex-wrap: wrap;
-  font-size: .95rem; color: #335344;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  font-size: .95rem;
+  color: #335344;
 }
-@media (min-width: 900px) {
-  .hero-trust { font-size: .9rem; opacity: .9; }
+@media (min-width: 768px) {
+  .hero-copy h1 { font-size: 2.5rem; }
 }
-
-/* Keep gradient subtle so text remains readable */
-.u-gradient { background: linear-gradient(135deg, #eaf3ee 0%, #ffffff 70%); }
-
-/* HERO centering */
-#hero {
-  text-align: center; /* centre text by default */
-}
-
-.hero-wrap {
-  display: grid;
-  gap: var(--spacing-md);
-  align-items: center;
-  justify-items: center; /* centres content horizontally */
-}
-
-.hero-copy {
-  max-width: 42rem; /* comfortable line length */
-  margin: 0 auto;
-}
-
-.hero-ctas {
-  justify-content: center;
-}
-.hero-chips {
-  justify-content: center;
-}
-
-/* On larger screens, keep 2-column layout but centre text within copy column */
 @media (min-width: 900px) {
   .hero-wrap {
-    grid-template-columns: 1fr 1fr;
-    text-align: left;        /* left-align text for readability */
+    grid-template-columns: 1fr 1fr; /* 2-column layout */
     justify-items: start;
+    text-align: left; /* left-align text on desktop */
   }
   .hero-copy {
-    margin: 0;               /* remove auto margins in desktop layout */
+    margin: 0; /* no auto centring in desktop layout */
   }
   .hero-ctas,
   .hero-chips {
     justify-content: flex-start;
   }
+  .hero-trust { font-size: .9rem; opacity: .9; }
 }
+/* Gradient background */
+.u-gradient {
+  background: linear-gradient(135deg, #eaf3ee 0%, #ffffff 70%);
+}
+
 
 
 

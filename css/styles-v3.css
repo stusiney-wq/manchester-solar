@@ -351,7 +351,62 @@ p, li { margin-bottom: var(--spacing-sm); }
 /* ... */
 
 /* QUOTE FORM */
-/* ... */
+/* QUOTE FORM */
+#quote-form h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+#quote-form .section-intro {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto var(--spacing-md);
+}
+
+.reassurance-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--spacing-sm);
+}
+.reassurance-list li::before {
+  content: "✔";
+  color: var(--color-primary);
+  margin-right: var(--spacing-xs);
+}
+
+form {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+.form-row {
+  display: grid;
+  gap: 0.25rem;
+}
+.form-consent {
+  margin: var(--spacing-sm) 0;
+}
+.hidden { display: none !important; }
+
+#quote-form .microcopy {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: var(--spacing-xs);
+}
+
+/* Two-column form on larger screens */
+@media (min-width: 768px) {
+  #quote-form form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #quote-form .form-row:nth-child(-n+6) {
+    /* First six rows (Name, Email, Phone, Postcode, Property, Bill) side-by-side over two columns */
+  }
+  #quote-form .form-consent, 
+  #quote-form button[type="submit"], 
+  #quote-form .microcopy {
+    grid-column: 1 / -1; /* full width */
+  }
+}
+
 
 /* RESOURCES */
 /* ... */

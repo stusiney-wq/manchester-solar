@@ -353,6 +353,16 @@
       <button type="submit">Subscribe</button>
     </form>
   </footer>
+
+  <script>
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('[data-scroll-target]');
+    if(!btn) return;
+    const target = document.querySelector(btn.getAttribute('data-scroll-target'));
+    if(target){ target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+</script>
+
 </body>
 </html>
 

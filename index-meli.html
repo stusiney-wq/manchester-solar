@@ -306,72 +306,120 @@
 
     <!-- QUOTE FORM -->
     <section id="quote-form" class="section container" aria-labelledby="quote-form-title">
-      <h2 id="quote-form-title">Get Your Free Manchester Solar Quote</h2>
-      <p class="section-intro">One simple form. We’ll connect you with <strong>one</strong> vetted, MCS-certified local installer — <strong>no auctions, no spam</strong>. Typical homes save £1,890/yr; businesses £4,200+/yr.</p>
-      <div class="grid-2 grid">
-        <div>
-          <ul class="reassurance-list">
-            <li>Single trusted contact (no lead reselling)</li>
-            <li>Response usually within 24 hours</li>
-            <li>MCS &amp; RECC as standard</li>
-            <li>Areas we serve: Manchester, Didsbury, Chorlton, Sale, Altrincham, Stockport, Oldham, Rochdale, Salford</li>
-          </ul>
-          <p class="microcopy">By submitting, you agree to our <a href="/privacy/" rel="noopener">Privacy Policy</a>. We only use your details to arrange your quote.</p>
-        </div>
-        <div>
-          <form name="manchester-solar-quotes" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" aria-describedby="form-help">
-            <input type="hidden" name="form-name" value="manchester-solar-quotes">
-            <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
+  <h2 id="quote-form-title">Get Your Free Manchester Solar Quote</h2>
+  <p class="section-intro">
+    One simple form. We’ll connect you with <strong>one</strong> vetted, MCS-certified local installer — <strong>no auctions, no spam</strong>.
+    <span class="badge-inline">🏠 £1,890+/yr homes</span> <span class="badge-inline">🏢 £4,200+/yr business</span>
+  </p>
 
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="form-row">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
-            </div>
-            <div class="form-row">
-              <label for="postcode">Postcode</label>
-              <input id="postcode" name="postcode" type="text" pattern="[A-Za-z0-9 ]{2,8}" placeholder="e.g. M20 2LT" required>
-            </div>
-            <div class="form-row">
-              <label for="property-type">Property type</label>
-              <select id="property-type" name="property_type" required>
-                <option value="">Select…</option>
-                <option value="Residential">Residential</option>
-                <option value="Commercial">Commercial</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="bill">Monthly energy bill (£)</label>
-              <input id="bill" name="bill" type="number" min="10" step="1" placeholder="e.g. 120" required>
-            </div>
-            <div class="form-row">
-              <label for="roof">Roof direction (if known)</label>
-              <select id="roof" name="roof_direction">
-                <option value="">Not sure</option>
-                <option value="south">South (best)</option>
-                <option value="southwest">South-west</option>
-                <option value="southeast">South-east</option>
-                <option value="east">East</option>
-                <option value="west">West</option>
-                <option value="north">North</option>
-              </select>
-            </div>
-            <div class="form-consent">
-              <label><input type="checkbox" name="consent" required> I agree to be contacted about my quote by Manchester.solar and one vetted local installer.</label>
-            </div>
-            <button type="submit" class="btn-primary" data-analytics="quote_submit">Get My Free Quote</button>
-            <p id="form-help" class="microcopy">GDPR-compliant • No spam • One contact only</p>
-          </form>
-        </div>
+  <div class="form-wrap grid-2 grid">
+    <!-- Reassurance / copy -->
+    <div class="reassurance">
+      <div class="card card--accent">
+        <h3 style="margin-bottom:.25rem;">Why we’re different</h3>
+        <ul class="icon-list" style="margin-top:.5rem;">
+          <li><span class="i i--tick"></span><span>One trusted contact — no lead reselling</span></li>
+          <li><span class="i i--tick"></span><span>MCS &amp; RECC as standard</span></li>
+          <li><span class="i i--bolt"></span><span>Responses usually within 24 hours</span></li>
+          <li><span class="i i--leaf"></span><span>Serving: Manchester, Didsbury, Chorlton, Sale, Altrincham, Stockport, Oldham, Rochdale, Salford</span></li>
+        </ul>
       </div>
-    </section>
+      <div class="callout callout--info" style="margin-top:1rem;">
+        <h4>0% VAT until 2027</h4>
+        <p>Materials & installation are zero-rated — improves payback for most properties.</p>
+      </div>
+      <p class="microcopy" style="margin-top:1rem;">
+        By submitting, you agree to our <a href="/privacy/" rel="noopener">Privacy Policy</a>. We only use your details to arrange your quote.
+      </p>
+    </div>
+
+    <!-- Form -->
+    <div>
+      <form name="manchester-solar-quotes" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" aria-describedby="form-help" class="form-card">
+        <input type="hidden" name="form-name" value="manchester-solar-quotes">
+        <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
+
+        <div class="form-grid">
+
+          <!-- Segmented Property Type -->
+          <div class="field" style="grid-column:1/-1">
+            <label id="prop-type-label">Property type</label>
+            <div class="segment" role="radiogroup" aria-labelledby="prop-type-label">
+              <input type="radio" id="ptype-res" name="property_type" value="Residential" required checked>
+              <label for="ptype-res">Residential</label>
+              <input type="radio" id="ptype-com" name="property_type" value="Commercial" required>
+              <label for="ptype-com">Commercial</label>
+            </div>
+          </div>
+
+          <!-- Name -->
+          <div class="field field--icon">
+            <label for="name">Name</label>
+            <span class="icon">👤</span>
+            <input id="name" name="name" type="text" class="input" autocomplete="name" placeholder="John Smith" required>
+          </div>
+
+          <!-- Email -->
+          <div class="field field--icon">
+            <label for="email">Email</label>
+            <span class="icon">✉️</span>
+            <input id="email" name="email" type="email" class="input" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+
+          <!-- Phone -->
+          <div class="field field--icon">
+            <label for="phone">Phone</label>
+            <span class="icon">📞</span>
+            <input id="phone" name="phone" type="tel" class="input" inputmode="tel" autocomplete="tel" placeholder="07…" required>
+          </div>
+
+          <!-- Postcode -->
+          <div class="field field--icon">
+            <label for="postcode">Postcode</label>
+            <span class="icon">📍</span>
+            <input id="postcode" name="postcode" type="text" class="input" pattern="[A-Za-z0-9 ]{2,8}" placeholder="e.g. M20 2LT" required>
+          </div>
+
+          <!-- Monthly bill -->
+          <div class="field field--icon">
+            <label for="bill">Monthly energy bill (£)</label>
+            <span class="icon">£</span>
+            <input id="bill" name="bill" type="number" min="10" step="1" class="input" placeholder="e.g. 120" required>
+            <div class="hint">Rough figure is fine — helps estimate savings.</div>
+          </div>
+
+          <!-- Roof direction -->
+          <div class="field">
+            <label for="roof">Roof direction (if known)</label>
+            <select id="roof" name="roof_direction" class="select">
+              <option value="">Not sure</option>
+              <option value="south">South (best)</option>
+              <option value="southwest">South-west</option>
+              <option value="southeast">South-east</option>
+              <option value="east">East</option>
+              <option value="west">West</option>
+              <option value="north">North</option>
+            </select>
+          </div>
+
+          <!-- Consent -->
+          <div class="form-consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I agree to be contacted about my quote by Manchester.solar and one vetted local installer.</label>
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" data-analytics="quote_submit">Get My Free Quote</button>
+            <span class="microcopy">GDPR-compliant • No spam • One contact only</span>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
     <!-- RESOURCES / GUIDES -->
     <section id="resources" class="section container" aria-labelledby="resources-title">

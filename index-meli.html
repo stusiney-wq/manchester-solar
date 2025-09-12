@@ -56,36 +56,36 @@
         { "@type": "HowToStep", "position": 3, "name": "Compare quotes", "text": "Get clear, comparable quotes usually within 24 hours." }
       ]
     },
+  {
+  "@type": "FAQPage",
+  "@id": "https://manchester.solar/#faq",
+  "mainEntity": [
     {
-      "@type": "FAQPage",
-      "@id": "https://manchester.solar/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do solar panels work well in Manchester’s climate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! Manchester averages 3.8 peak sun hours daily. Solar panels generate electricity from daylight, not just sunshine, so they work even on cloudy days."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much do solar panels cost in Manchester?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Typical residential systems cost £4,000–£8,000 in Manchester. With 0% VAT until 2027 and £1,890 annual savings, most homes see payback in 6–8 years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do businesses get different incentives?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Commercial installations can benefit from tax relief, larger annual savings of £4,200+, and strong ROI on large roof spaces."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "Do solar panels work well in Manchester’s climate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Solar panels generate from daylight, not only direct sunshine. Manchester averages about 3.8 peak sun hours daily, which supports strong performance even on cloudy days."
+      }
     },
+    {
+      "@type": "Question",
+      "name": "How much do solar panels cost in Manchester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical residential systems cost £4,000–£8,000 depending on roof size and usage. With 0% VAT until 2027 and average savings around £1,890 per year, most homes see payback in 6–8 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need planning permission for solar panels in Manchester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential installations fall under Permitted Development and do not need planning permission. Listed buildings, conservation areas, or special property types may require approval; a vetted MCS installer will confirm and manage any applications."
+      }
+    }
+  ]
+},
     {
       "@type": "BreadcrumbList",
       "@id": "https://manchester.solar/#breadcrumb",
@@ -286,22 +286,54 @@
 </section>
 
 
-    <!-- FAQ -->
-    <section id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <details>
-        <summary>Do solar panels work well in Manchester’s climate?</summary>
-        <p>Yes! Manchester averages 3.8 sun hours daily. Panels generate electricity from daylight, not just sunshine, so they work even on cloudy days.</p>
-      </details>
-      <details>
-        <summary>How much do solar panels cost in Manchester?</summary>
-        <p>Typical residential systems cost £4,000–£8,000. With 0% VAT until 2027 and £1,890 annual savings, payback is 6–8 years.</p>
-      </details>
-      <details>
-        <summary>Do businesses get different incentives?</summary>
-        <p>Yes. Commercial installs can benefit from tax relief, larger savings (£4,200+ annually), and excellent ROI on large roof spaces.</p>
-      </details>
-    </section>
+    <!-- FAQ (AI-ready) -->
+<section id="faq" class="section container" aria-labelledby="faq-title">
+  <h2 id="faq-title">Frequently Asked Questions — Manchester</h2>
+  <p class="section-intro">
+    Clear, local answers based on Manchester conditions (3.8 peak sun hours, 0% VAT to 2027). source
+  </p>
+
+  <!-- Use <details> for native accordion + crawlable content -->
+  <div class="faq-list" role="list">
+    <details class="faq-item" role="listitem">
+      <summary>
+        Do solar panels work well in Manchester’s climate?
+      </summary>
+      <div class="faq-body">
+        <p>
+          Yes. Panels generate from daylight, not just direct sun. Manchester averages
+          <strong>3.8 peak sun hours daily</strong>, which is sufficient for excellent performance even on cloudy days.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item" role="listitem">
+      <summary>
+        How much do solar panels cost in Manchester?
+      </summary>
+      <div class="faq-body">
+        <p>
+          Typical residential systems cost <strong>£4,000–£8,000</strong> depending on roof size and usage.
+          With <strong>0% VAT until 2027</strong> and ~<strong>£1,890/yr</strong> average savings, most homes see
+          <strong>6–8 years</strong> payback.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item" role="listitem">
+      <summary>
+        Do I need planning permission for solar panels in Manchester?
+      </summary>
+      <div class="faq-body">
+        <p>
+          Usually no — most installs are covered by Permitted Development. Listed buildings, conservation areas,
+          and special property types may require approval. Your vetted MCS installer will confirm and handle any applications.
+        </p>
+      </div>
+    </details>
+  </div>
+</section>
+
 
     <!-- QUOTE FORM (Conversion) -->
 <section id="quote-form" class="section container" aria-labelledby="quote-form-title">

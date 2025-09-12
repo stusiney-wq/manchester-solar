@@ -489,6 +489,46 @@ form {
   .trust-item.no-icon { justify-content: flex-end; }
 }
 
+/* FOOTER */
+#site-footer { background: var(--color-bg-alt); padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg); }
+.footer-grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+@media (min-width: 900px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; align-items: start; }
+}
+
+.footer-col { }
+.footer-brand img { display: block; margin-bottom: var(--spacing-sm); }
+.footer-heading { font-size: 1.125rem; margin-bottom: var(--spacing-sm); color: var(--color-primary); }
+.footer-copy { color: #333; }
+.footer-meta { font-size: 0.9rem; color: #666; margin-top: var(--spacing-sm); }
+
+.footer-nav, .footer-links, .legal-links {
+  list-style: none; padding-left: 0; display: grid; gap: 0.5rem;
+}
+.footer-nav a, .footer-links a, .legal-links a { text-decoration: none; color: var(--color-primary); }
+.footer-nav a:hover, .footer-links a:hover, .legal-links a:hover { text-decoration: underline; }
+
+.footer-newsletter {
+  display: grid; gap: var(--spacing-sm);
+}
+.footer-newsletter input[type="email"] {
+  border: 1px solid #ccc; border-radius: var(--radius-sm); padding: var(--spacing-sm);
+}
+.footer-newsletter .microcopy { font-size: 0.85rem; color: #555; }
+
+.footer-legal { margin-top: var(--spacing-md); }
+.legal-links { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+
+.visually-hidden {
+  position: absolute !important; height: 1px; width: 1px; overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+}
+.hidden { display: none !important; }
+
+
 
 /* ========================
    6. UTILITIES (Optional)

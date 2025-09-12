@@ -286,7 +286,66 @@ p, li { margin-bottom: var(--spacing-sm); }
 
 
 /* INSTALLERS */
-/* ... */
+/* INSTALLERS */
+#installers h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+#installers .section-intro {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto var(--spacing-md);
+}
+.installer-grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+@media (min-width: 768px) {
+  .installer-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.installer-card .installer-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+.installer-card .avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.installer-card .rating {
+  font-size: 0.95rem;
+}
+.installer-card .stars {
+  letter-spacing: 2px;
+  display: inline-block;
+  transform: scaleY(0.95);
+}
+.installer-card .rating-score { font-weight: 700; margin-left: 0.25rem; }
+.installer-card .meta { color: #666; margin-left: 0.25rem; }
+
+.installer-meta {
+  list-style: none;
+  padding-left: 0;
+  margin: var(--spacing-sm) 0;
+}
+.installer-meta li + li { margin-top: 0.25rem; }
+
+.installer-cta {
+  margin-top: var(--spacing-sm);
+}
+.installer-cta .microcopy {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: var(--spacing-xs);
+}
+
 
 /* FAQ */
 /* ... */

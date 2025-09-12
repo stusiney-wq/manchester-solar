@@ -222,6 +222,15 @@ header .footer-nav a{text-decoration:none}
 .footer-legal{margin-top:var(--spacing-md)}
 .legal-links{display:flex;flex-wrap:wrap;gap:var(--spacing-sm)}
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+.footer-disclaimer {
+  margin-top: var(--spacing-md);
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+}
+.footer-disclaimer strong { color: var(--color-primary); }
+.footer-disclaimer em { font-style: italic; }
+
 
 /* Sticky mobile CTA */
 #sticky-cta{position:fixed;left:0;right:0;bottom:0;padding:var(--spacing-sm);background:#fff;box-shadow:0 -4px 10px rgba(0,0,0,.06)}

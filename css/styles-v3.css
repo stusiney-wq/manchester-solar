@@ -288,3 +288,7 @@ header .footer-nav a{text-decoration:none}
 
 /* Extra mobile padding so sticky CTA doesn't overlap */
 @media (max-width:767px){#quote-form.section{padding-bottom:calc(var(--spacing-lg) + 64px)}}
+
+
+/* Validation: ensure hints take space even when empty (prevents layout jump) */
+.field .hint { min-height: 1em; }

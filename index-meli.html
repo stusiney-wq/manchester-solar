@@ -22,7 +22,7 @@
       </ul>
     </nav>
 
-    <script type="application/ld+json">
+   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -31,8 +31,8 @@
       "@id": "https://manchester.solar/#website",
       "url": "https://manchester.solar/",
       "name": "Manchester.solar",
-      "description": "Manchester.solar connects homeowners and businesses with vetted, MCS-certified solar installers in Manchester. No spam, no reselling — just clear quotes.",
       "inLanguage": "en-GB",
+      "description": "Manchester.solar connects homeowners and businesses with vetted, MCS-certified local solar installers. No spam, no reselling — just clear quotes.",
       "publisher": { "@id": "https://manchester.solar/#organization" }
     },
     {
@@ -40,62 +40,82 @@
       "@id": "https://manchester.solar/#organization",
       "name": "Manchester.solar",
       "url": "https://manchester.solar/",
-      "logo": "https://manchester.solar/logo.png",
-      "sameAs": [
-        "https://www.manchester.gov.uk"
-      ]
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://manchester.solar/images/logo-manchester-solar.png",
+        "width": 320,
+        "height": 64
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://manchester.solar/#webpage",
+      "url": "https://manchester.solar/",
+      "name": "Solar Panels Manchester — Home & Business Installers You Can Trust",
+      "isPartOf": { "@id": "https://manchester.solar/#website" },
+      "inLanguage": "en-GB",
+      "breadcrumb": { "@id": "https://manchester.solar/#breadcrumb" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://manchester.solar/images/manchester-hero-2000x1200-1.webp",
+        "width": 2000,
+        "height": 1200
+      },
+      "description": "Yes, solar works in Manchester. Homes save £1,890+ per year; businesses £4,200+ annually. With ~3.8 sun hours daily and 0% VAT until 2027, payback is 6–8 years for many properties."
     },
     {
       "@type": "HowTo",
       "@id": "https://manchester.solar/#howto",
       "name": "How to get a solar quote in Manchester",
       "description": "One simple form. We shortlist vetted installers. You compare clear quotes.",
+      "totalTime": "P1D",
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Tell us about your property", "text": "Share details like roof type, bill, postcode (~60 seconds)." },
-        { "@type": "HowToStep", "position": 2, "name": "We shortlist installers", "text": "2–3 vetted MCS-certified local installers matched to your needs." },
-        { "@type": "HowToStep", "position": 3, "name": "Compare quotes", "text": "Get clear, comparable quotes usually within 24 hours." }
+        { "@type": "HowToStep", "position": 1, "name": "Tell us about your property", "text": "Share roof type, monthly bill, and postcode (~60 seconds)." },
+        { "@type": "HowToStep", "position": 2, "name": "We shortlist vetted installers", "text": "2–3 MCS-certified local installers matched to your needs. No auctions, no spam." },
+        { "@type": "HowToStep", "position": 3, "name": "Compare quotes", "text": "Like-for-like quotes with savings estimates. Most responses within 24 hours." }
       ]
     },
-  {
-  "@type": "FAQPage",
-  "@id": "https://manchester.solar/#faq",
-  "mainEntity": [
     {
-      "@type": "Question",
-      "name": "Do solar panels work well in Manchester’s climate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Solar panels generate from daylight, not only direct sunshine. Manchester averages about 3.8 peak sun hours daily, which supports strong performance even on cloudy days."
-      }
+      "@type": "FAQPage",
+      "@id": "https://manchester.solar/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do solar panels work well in Manchester’s climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Solar panels generate from daylight, not only direct sunshine. Manchester averages about 3.8 peak sun hours daily, which supports strong performance even on cloudy days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do solar panels cost in Manchester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical residential systems cost £4,000–£8,000 depending on roof size and usage. With 0% VAT until 2027 and average savings around £1,890 per year, most homes see payback in 6–8 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need planning permission for solar panels in Manchester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential installations fall under Permitted Development and do not need planning permission. Listed buildings, conservation areas, or special property types may require approval; a vetted MCS installer will confirm and manage any applications."
+          }
+        }
+      ]
     },
-    {
-      "@type": "Question",
-      "name": "How much do solar panels cost in Manchester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typical residential systems cost £4,000–£8,000 depending on roof size and usage. With 0% VAT until 2027 and average savings around £1,890 per year, most homes see payback in 6–8 years."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need planning permission for solar panels in Manchester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most residential installations fall under Permitted Development and do not need planning permission. Listed buildings, conservation areas, or special property types may require approval; a vetted MCS installer will confirm and manage any applications."
-      }
-    }
-  ]
-},
     {
       "@type": "BreadcrumbList",
       "@id": "https://manchester.solar/#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://manchester.solar/" },
-        { "@type": "ListItem", "position": 2, "name": "Solar Panels in Manchester", "item": "https://manchester.solar/solar-panels-manchester" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://manchester.solar/" }
       ]
     }
   ]
 }
+
+
 </script>
 
   </header>
@@ -496,24 +516,75 @@
   
   </main>
 
-  <footer>
-    <nav>
-      <ul>
+ <!-- TRUST BAR stays above this -->
+
+<footer role="contentinfo" class="section" id="site-footer" aria-labelledby="footer-title">
+  <div class="container footer-grid">
+    <h2 id="footer-title" class="visually-hidden">Site footer</h2>
+
+    <!-- Brand / promise -->
+    <div class="footer-col">
+      <a href="/" class="footer-brand">
+        <img src="/images/logo-manchester-solar.svg" alt="Manchester.solar" width="160" height="32" loading="lazy">
+      </a>
+      <p class="footer-copy">
+        Manchester.solar connects homes and businesses with vetted, MCS-certified local installers.
+        <strong>Ethical connector</strong> — no spam, no reselling, one trusted contact.
+      </p>
+      <p class="footer-meta">© <span id="year"></span> Manchester.solar • All rights reserved</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="footer-col" aria-label="Footer navigation">
+      <ul class="footer-nav">
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/installers/">Installers</a></li>
         <li><a href="/faqs/">FAQs</a></li>
         <li><a href="/contact/">Contact</a></li>
+        <li><a href="#quote-form">Get Quote</a></li>
       </ul>
     </nav>
-    <p>Manchester.solar connects you with vetted local MCS-certified installers. Ethical connector, not an installer. No spam, no reselling.</p>
-    <form>
-      <label>Subscribe for Manchester Solar Updates
-        <input type="email" name="newsletter" placeholder="Your email">
-      </label>
-      <button type="submit">Subscribe</button>
-    </form>
-  </footer>
+
+    <!-- Helpful links -->
+    <div class="footer-col">
+      <h3 class="footer-heading">Helpful</h3>
+      <ul class="footer-links">
+        <li><a href="/guides/solar-grants-manchester/">Solar grants in Manchester</a></li>
+        <li><a href="/guides/manchester-2038-net-zero/">Manchester’s 2038 net-zero</a></li>
+        <li><a href="/guides/solar-for-victorian-terraces/">Solar for terraces & businesses</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h3 class="footer-heading">Manchester Solar Updates</h3>
+      <p class="footer-copy">Monthly insights on grants, policy changes, and local solar tips. No spam.</p>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field-news" class="footer-newsletter" aria-label="Newsletter signup">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field-news"></label></p>
+        <label class="visually-hidden" for="nl-email">Email address</label>
+        <input id="nl-email" name="email" type="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+        <p class="microcopy">By subscribing you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-legal">
+    <ul class="legal-links">
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/terms/">Terms</a></li>
+      <li><a href="/cookies/">Cookies</a></li>
+      <li><a href="/accessibility/">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
   <script>
   document.addEventListener('click', function(e){

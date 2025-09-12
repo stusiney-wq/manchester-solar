@@ -522,6 +522,32 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Postcode auto-format
+  const postcodeInput = document.getElementById("postcode");
+  if (postcodeInput) {
+    postcodeInput.addEventListener("blur", () => {
+      let val = postcodeInput.value.toUpperCase().replace(/\s+/g, "");
+      if (val.length > 3) {
+        postcodeInput.value = val.slice(0, -3) + " " + val.slice(-3);
+      } else {
+        postcodeInput.value = val;
+      }
+    });
+  }
+
+  // Phone restrict
+  const phoneInput = document.getElementById("phone");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = phoneInput.value.replace(/[^0-9+ ]/g, "");
+    });
+  }
+});
+</script>
+
 </body>
 </html>
 

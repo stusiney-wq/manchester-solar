@@ -223,13 +223,16 @@ header .footer-nav a{text-decoration:none}
 .legal-links{display:flex;flex-wrap:wrap;gap:var(--spacing-sm)}
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 .footer-disclaimer {
-  margin-top: var(--spacing-md);
+  max-width: 42rem;           /* keep it narrow */
+  margin: var(--spacing-md) auto 0; /* centre horizontally */
+  text-align: center;         /* centre the text */
   font-size: 0.85rem;
   color: #555;
   line-height: 1.4;
 }
 .footer-disclaimer strong { color: var(--color-primary); }
 .footer-disclaimer em { font-style: italic; }
+
 
 
 /* Sticky mobile CTA */

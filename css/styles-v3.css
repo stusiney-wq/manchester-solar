@@ -152,7 +152,17 @@ header .footer-nav a{text-decoration:none}
 #quote-form .section-intro{text-align:center;max-width:42rem;margin:0 auto var(--spacing-md)}
 .reassurance-list{list-style:none;padding-left:0;margin-bottom:var(--spacing-sm)}
 .reassurance-list li::before{content:"✔";color:var(--color-primary);margin-right:var(--spacing-xs)}
-form{display:grid;gap:var(--spacing-sm);max-width:500px}
+/* Generic form baseline (no width cap) */
+form {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+/* Newsletter/footer forms can stay narrow */
+.footer-newsletter form {
+  max-width: 500px;
+}
+
 .form-row{display:grid;gap:.25rem}
 .form-consent{margin:var(--spacing-sm) 0}
 .hidden{display:none!important}
@@ -437,6 +447,69 @@ form{display:grid;gap:var(--spacing-sm);max-width:500px}
 /* Small tablets: keep single column to avoid squashed look */
 @media (min-width: 768px) and (max-width: 1199px) {
   #quote-form .form-grid { grid-template-columns: 1fr; }
+}
+
+/* --- FORCE-REMOVE old width cap & widen column --- */
+#quote-form form { 
+  max-width: none !important; 
+  width: 100%;
+}
+#quote-form .form-card { width: 100%; }
+
+/* Give the form more real estate than the copy */
+#quote-form .form-wrap { display: grid; gap: var(--spacing-md); }
+@media (min-width: 900px) {
+  #quote-form .form-wrap { grid-template-columns: 1fr 1.5fr; }
+}
+@media (min-width: 1200px) {
+  #quote-form .form-wrap { grid-template-columns: 1fr 1.65fr; }
+}
+
+/* Large screens: pair Name+Email and Phone+Postcode */
+#quote-form .form-grid { grid-template-columns: 1fr; }
+@media (min-width: 1200px) {
+  #quote-form .form-grid { grid-template-columns: repeat(2, 1fr); column-gap: var(--spacing-md); }
+  #quote-form .form-grid .pair-lg { grid-column: auto; }
+  #quote-form .form-grid .form-consent,
+  #quote-form .form-grid .form-actions,
+  #quote-form .form-grid .field[style*="grid-column:1/-1"] { grid-column: 1 / -1; }
+}
+
+/* Quote Form Layout */
+#quote-form form {
+  max-width: none;
+  width: 100%;
+}
+
+#quote-form .form-wrap {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 900px) {
+  #quote-form .form-wrap {
+    grid-template-columns: 1fr 1.5fr; /* copy : form */
+  }
+}
+@media (min-width: 1200px) {
+  #quote-form .form-wrap {
+    grid-template-columns: 1fr 1.65fr;
+  }
+}
+
+/* Pair Name+Email and Phone+Postcode on large screens */
+#quote-form .form-grid { grid-template-columns: 1fr; }
+@media (min-width: 1200px) {
+  #quote-form .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--spacing-md);
+  }
+  #quote-form .form-grid .pair-lg { grid-column: auto; }
+  #quote-form .form-grid .form-consent,
+  #quote-form .form-grid .form-actions,
+  #quote-form .form-grid .field[style*="grid-column:1/-1"] {
+    grid-column: 1 / -1;
+  }
 }
 
 

@@ -413,3 +413,30 @@ form{display:grid;gap:var(--spacing-sm);max-width:500px}
   #quote-form.section { padding-bottom: calc(var(--spacing-lg) + 64px); }
 }
 
+/* ========== Quote Form Layout Improvements ========== */
+/* Default: everything full-width */
+#quote-form .form-grid { grid-template-columns: 1fr; }
+
+/* Large screens: show pairs (Name+Email, Phone+Postcode) */
+@media (min-width: 1200px) {
+  #quote-form .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--spacing-md);
+  }
+  /* The four 'pair-lg' fields become half width */
+  #quote-form .form-grid .pair-lg { grid-column: auto; }
+
+  /* Always force these to full width */
+  #quote-form .form-grid .form-consent,
+  #quote-form .form-grid .form-actions,
+  #quote-form .form-grid .field[style*="grid-column:1/-1"] {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Small tablets: keep single column to avoid squashed look */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #quote-form .form-grid { grid-template-columns: 1fr; }
+}
+
+

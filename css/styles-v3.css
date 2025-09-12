@@ -453,10 +453,42 @@ form {
 
 
 /* RESOURCES */
-/* ... */
+#resources h2 { text-align: center; margin-bottom: var(--spacing-sm); }
+#resources .section-intro {
+  text-align: center; max-width: 42rem; margin: 0 auto var(--spacing-md);
+}
+.resources-grid .card h3 { margin-bottom: var(--spacing-xs); }
+.resources-grid .card .teaser { margin-bottom: var(--spacing-sm); }
+.resources-grid .card .btn-primary { width: 100%; text-align: center; }
+
 
 /* FOOTER */
-/* ... */
+/* TRUST BAR */
+#trust-bar { padding-top: var(--spacing-md); padding-bottom: var(--spacing-md); }
+#trust-bar .trust-wrap {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+.trust-list {
+  list-style: none;
+  display: grid;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+.trust-item {
+  display: flex; align-items: center; gap: var(--spacing-xs);
+  font-weight: 600; color: var(--color-primary);
+}
+.trust-item img { display: block; height: 32px; width: auto; }
+.trust-item.no-icon { justify-content: center; color: #333; font-weight: 600; }
+
+@media (min-width: 768px) {
+  .trust-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .trust-item.no-icon { justify-content: flex-end; }
+}
+
 
 /* ========================
    6. UTILITIES (Optional)

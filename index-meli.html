@@ -549,6 +549,107 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.forms["manchester-solar-quotes"];
+  if (!form) return;
+
+  // Helpers
+  const ensureHint = (fieldEl) => {
+    let hint = fieldEl.querySelector(".hint");
+    if (!hint) {
+      hint = document.createElement("div");
+      hint.className = "hint";
+      fieldEl.appendChild(hint);
+    }
+    return hint;
+  };
+  const setError = (fieldEl, msg) => {
+    fieldEl.classList.add("error");
+    const hint = ensureHint(fieldEl);
+    hint.textContent = msg;
+    hint.setAttribute("role","alert");
+  };
+  const clearError = (fieldEl) => {
+    fieldEl.classList.remove("error");
+    const hint = fieldEl.querySelector(".hint");
+    if (hint) { hint.textContent = ""; hint.removeAttribute("role"); }
+  };
+
+  // Fields
+  const f = {
+    name: form.querySelector("#name")?.closest(".field"),
+    email: form.querySelector("#email")?.closest(".field"),
+    phone: form.querySelector("#phone")?.closest(".field"),
+    postcode: form.querySelector("#postcode")?.closest(".field"),
+    bill: form.querySelector("#bill")?.closest(".field"),
+  };
+
+  // Simple validators
+  const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const isPhone = (v) => (v.replace(/[^0-9]/g,"").length >= 10); // UK-ish min
+  // UK postcode (accepts with/without space; case-insensitive)
+  const isPostcode = (v) => {
+    const x = v.toUpperCase().replace(/\s+/g,"");
+    return /^([A-Z]{1,2}\d[A-Z\d]?\d[A-Z]{2})$/.test(x);
+  };
+  const isBill = (v) => Number(v) >= 10;
+
+  // Format postcode (you already added a blur formatter; safe to keep)
+  const pcInput = form.querySelector("#postcode");
+  if (pcInput) {
+    pcInput.addEventListener("blur", () => {
+      let val = pcInput.value.toUpperCase().replace(/\s+/g,"");
+      if (val.length > 3) pcInput.value = val.slice(0, -3) + " " + val.slice(-3);
+    });
+  }
+
+  // Sanitize phone to digits/+/space
+  const phoneInput = form.querySelector("#phone");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = phoneInput.value.replace(/[^0-9+ ]/g,"");
+    });
+  }
+
+  // Per-field live checks
+  const bindCheck = (inputSel, fieldRef, fn, msg) => {
+    const input = form.querySelector(inputSel);
+    if (!input || !fieldRef) return;
+    const field = fieldRef;
+    const run = () => {
+      const ok = fn(input.value.trim());
+      if (!ok) setError(field, msg); else clearError(field);
+      return ok;
+    };
+    input.addEventListener("blur", run);
+    input.addEventListener("input", () => { if (field.classList.contains("error")) run(); });
+    return run;
+  };
+
+  const checkName = bindCheck("#name", f.name, v => v.length >= 2, "Please enter your full name.");
+  const checkEmail = bindCheck("#email", f.email, isEmail, "Enter a valid email address.");
+  const checkPhone = bindCheck("#phone", f.phone, isPhone, "Enter a UK phone (10+ digits).");
+  const checkPostcode = bindCheck("#postcode", f.postcode, isPostcode, "Enter a valid UK postcode (e.g., M20 2LT).");
+  const checkBill = bindCheck("#bill", f.bill, isBill, "Monthly bill must be at least £10.");
+
+  // On submit
+  form.addEventListener("submit", (e) => {
+    const okAll = [
+      checkName?.(), checkEmail?.(), checkPhone?.(),
+      checkPostcode?.(), checkBill?.()
+    ].every(Boolean);
+    if (!okAll) {
+      e.preventDefault();
+      // Focus the first error field
+      const firstErr = form.querySelector(".field.error .input, .field.error .select");
+      if (firstErr) firstErr.focus();
+    }
+  });
+});
+</script>
+
+
 </body>
 </html>
 

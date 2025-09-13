@@ -802,6 +802,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 </script>
+<script>
+(function(){
+  const here = location.pathname.replace(/\/+$/, "") || "/";
+  const links = document.querySelectorAll('.nav-list a, .mobile-nav-list a');
+  links.forEach(a => {
+    // normalise trailing slashes
+    const href = a.getAttribute('href') || "";
+    const norm = href.replace(/\/+$/, "") || "/";
+    if (norm === here) a.classList.add('is-active');
+  });
+})();
+</script>
 
 
 </body>

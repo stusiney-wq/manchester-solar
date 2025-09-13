@@ -411,3 +411,14 @@ header .footer-nav a{text-decoration:none}
   border-radius: 8px;
 }
 
+/* Header spacing */
+.header-inner {
+  padding: 1.25rem 0; /* more breathing room top & bottom */
+  transition: padding .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+/* When scrolled, still shrink but not too tight */
+.header.is-scrolled .header-inner {
+  padding: 0.9rem 0;
+}
+

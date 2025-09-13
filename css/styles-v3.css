@@ -404,3 +404,10 @@ header .footer-nav a{text-decoration:none}
 /* Keep header container width consistent with site */
 .header .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-sm); }
 
+/* Active nav link */
+.nav-list a.is-active,
+.mobile-nav-list a.is-active {
+  background: var(--color-bg-alt);
+  border-radius: 8px;
+}
+

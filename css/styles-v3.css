@@ -260,4 +260,110 @@ details summary{cursor:pointer;font-weight:600}
 }
 
 /* Segmented control */
-.segment{display:inline-grid;grid-auto
+.segment{display:inline-grid;grid-auto-flow:column;gap:0;background:var(--color-bg-alt);border-radius:999px;padding:.25rem}
+.segment input{display:none}
+.segment label{padding:.5rem 1rem;border-radius:999px;cursor:pointer;font-weight:700;color:#335344;transition:background .15s,color .15s}
+.segment input:checked+label{background:var(--color-primary);color:#fff;box-shadow:var(--shadow-sm)}
+
+/* Consent + microcopy */
+.form-consent{grid-column:1/-1;display:flex;gap:.5rem;align-items:flex-start;background:#f6fbf8;border:1px solid #e0efe6;border-radius:var(--radius-sm);padding:.75rem 1rem}
+.form-consent input{margin-top:.15rem}
+#quote-form .microcopy{grid-column:1/-1;font-size:.85rem;color:#555}
+
+/* Actions */
+.form-actions{grid-column:1/-1;display:flex;gap:var(--spacing-sm);align-items:center}
+.form-actions .btn-primary{min-height:44px}
+
+/* Hints & errors */
+.field .hint{font-size:.85rem;color:#666;min-height:1em}
+.field.error .input,.field.error .select{border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.12)}
+.field.error .hint{color:#c0392b}
+
+/* Layout: widen form column and pair key fields on large screens */
+#quote-form form{max-width:none;width:100%}
+@media (min-width:900px){#quote-form .form-wrap{grid-template-columns:1fr 1.6fr}}
+@media (min-width:1200px){
+  #quote-form .form-wrap{grid-template-columns:1fr 1.7fr}
+  #quote-form .form-grid{grid-template-columns:repeat(2,1fr);column-gap:var(--spacing-md)}
+  #quote-form .form-grid .pair-lg{grid-column:auto}
+  #quote-form .form-grid .form-consent,
+  #quote-form .form-grid .form-actions,
+  #quote-form .form-grid .field[style*="grid-column:1/-1"]{grid-column:1/-1}
+}
+/* Extra mobile padding so sticky CTA doesn't overlap */
+@media (max-width:767px){#quote-form.section{padding-bottom:calc(var(--spacing-lg) + 64px)}}
+
+/* ===== Header (Microsoft-style) — FINAL ===== */
+.header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.78);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.05);
+  box-shadow:0 2px 6px rgba(0,0,0,.04);
+  transition:box-shadow .2s ease,background .2s ease,border-color .2s ease
+}
+.header-inner{
+  display:grid;align-items:center;gap:var(--spacing-sm);
+  grid-template-columns:auto 1fr auto auto;
+  padding:1.25rem 0
+}
+.brand img{display:block}
+
+.nav{display:none}
+.header-actions{display:none}
+
+.menu-toggle{
+  appearance:none;border:0;background:transparent;cursor:pointer;
+  width:40px;height:40px;border-radius:8px;display:grid;place-items:center
+}
+.menu-toggle:focus{outline:none;box-shadow:0 0 0 3px rgba(28,66,39,.15)}
+.menu-icon{width:22px;height:2px;background:#333;position:relative}
+.menu-icon::before,.menu-icon::after{
+  content:"";position:absolute;left:0;right:0;height:2px;background:#333
+}
+.menu-icon::before{top:-7px}
+.menu-icon::after{top:7px}
+
+/* Desktop nav */
+@media (min-width:900px){
+  .nav{display:block}
+  .nav-list{display:flex;gap:var(--spacing-md);list-style:none;padding:0;margin:0}
+  .nav-list a{text-decoration:none;color:#1a1a1a;font-weight:600;padding:.4rem .25rem;border-radius:8px}
+  .nav-list a:hover{background:var(--color-bg-alt)}
+  .header-actions{display:block}
+  .menu-toggle{display:none}
+}
+
+/* Active link */
+.nav-list a.is-active,.mobile-nav-list a.is-active{
+  background:var(--color-bg-alt);border-radius:8px
+}
+
+/* Scrolled state */
+.header.is-scrolled{
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid rgba(0,0,0,.08);
+  box-shadow:0 6px 18px rgba(0,0,0,.08)
+}
+.header.is-scrolled .header-inner{padding:.9rem 0}
+
+/* Mobile drawer */
+.mobile-nav{display:none;background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
+.mobile-nav.open{display:block}
+.mobile-nav-list{list-style:none;padding:.5rem var(--spacing-sm) var(--spacing-sm);margin:0}
+.mobile-nav-list li{border-bottom:1px solid #eee}
+.mobile-nav-list li:last-child{border-bottom:0}
+.mobile-nav-list a{display:block;padding:.9rem .25rem;text-decoration:none;color:#1a1a1a;font-weight:600}
+.mobile-nav-list a:hover{background:var(--color-bg-alt)}
+.mobile-cta{padding-top:.5rem}
+
+/* Header CTA */
+.header-cta{padding:.55rem 1rem;border-radius:999px}
+
+/* Container alignment */
+.header .container{max-width:1200px;margin:0 auto;padding:0 var(--spacing-sm)}
+
+/* Mobile spacing */
+@media (max-width:768px){
+  .header-inner{padding:1.5rem 0}
+  .header.is-scrolled .header-inner{padding:1.1rem 0}
+}

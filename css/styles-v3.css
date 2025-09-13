@@ -422,3 +422,23 @@ header .footer-nav a{text-decoration:none}
   padding: 0.9rem 0;
 }
 
+/* Header spacing improvements */
+.header-inner {
+  padding: 1.25rem 0; /* desktop/tablet default */
+  transition: padding .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.header.is-scrolled .header-inner {
+  padding: 0.9rem 0;
+}
+
+/* Mobile-only: give even more space */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 1.5rem 0; /* larger tap comfort */
+  }
+  .header.is-scrolled .header-inner {
+    padding: 1.1rem 0;
+  }
+}
+

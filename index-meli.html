@@ -162,18 +162,49 @@
 </head>
 
 <body>
-  <header role="banner" class="section">
-    <nav role="navigation" aria-label="Main navigation" class="container">
-      <ul class="footer-nav">
+  <header id="site-header" class="header" role="banner">
+  <div class="container header-inner">
+    <!-- Brand -->
+    <a href="/" class="brand" aria-label="Manchester.solar home">
+      <img src="/images/logo-manchester-solar.svg" alt="Manchester.solar" width="160" height="32" />
+    </a>
+
+    <!-- Primary nav -->
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/installers/">Installers</a></li>
         <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/guides/">Resources</a></li>
         <li><a href="/contact/">Contact</a></li>
-        <li><a href="#quote-form" class="btn-primary">Get Quote</a></li>
       </ul>
     </nav>
-  </header>
+
+    <!-- Actions (desktop) -->
+    <div class="header-actions">
+      <a href="#quote-form" class="btn-primary header-cta">Get Quote</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+    <ul class="mobile-nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/installers/">Installers</a></li>
+      <li><a href="/faqs/">FAQs</a></li>
+      <li><a href="/guides/">Resources</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li class="mobile-cta"><a href="#quote-form" class="btn-primary">Get Quote</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main role="main">
     <!-- HERO -->
@@ -736,6 +767,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+</script>
+<script>
+  // Sticky shrink
+  (function() {
+    const header = document.getElementById('site-header');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+    onScroll(); // run once
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  // Mobile menu toggle (accessible)
+  (function() {
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      // Lock scroll when open (optional)
+      document.documentElement.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+        document.documentElement.style.overflow = '';
+      }
+    });
+  })();
 </script>
 
 

@@ -367,3 +367,72 @@ details summary{cursor:pointer;font-weight:600}
   .header-inner{padding:1.5rem 0}
   .header.is-scrolled .header-inner{padding:1.1rem 0}
 }
+
+/* === HOW IT WORKS — FINAL POLISH / OVERRIDES === */
+#how-it-works h2 { text-align:center; margin-bottom: var(--spacing-sm); }
+
+#how-it-works .section-intro{
+  text-align:center;
+  max-width:42rem;
+  margin:0 auto var(--spacing-md);
+  color:#333;
+}
+
+/* Grid + reset (works even if <ol>) */
+#how-it-works .how-steps{
+  counter-reset: step;
+  display:grid;
+  gap:var(--spacing-md);
+  list-style:none !important;
+  padding-left:0 !important;
+  margin:0;
+}
+
+/* Card style step */
+#how-it-works .how-steps li{
+  position:relative;
+  background:#fff;
+  border-radius:var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 3rem);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#how-it-works .how-steps li:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Number badge */
+#how-it-works .how-steps li::before{
+  counter-increment: step;
+  content: counter(step);
+  position:absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem; height: 2.25rem; line-height: 2.25rem;
+  text-align:center; border-radius:50%;
+  background: var(--color-primary); color:#fff; font-weight:700;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Headings & copy */
+#how-it-works .how-steps h3{
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+  font-size: 1.125rem;
+}
+#how-it-works .how-steps p{ margin: 0; color:#333; }
+
+/* Responsive layout */
+@media (min-width: 768px){
+  #how-it-works .how-steps{ grid-template-columns: repeat(3, 1fr); }
+  #how-it-works .how-steps li{
+    padding: calc(var(--spacing-md) + 1rem) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  }
+  #how-it-works .how-steps li::before{
+    left: 50%; top: 0; transform: translate(-50%, -50%);
+  }
+  #how-it-works .how-steps h3,
+  #how-it-works .how-steps p{ text-align:center; }
+}

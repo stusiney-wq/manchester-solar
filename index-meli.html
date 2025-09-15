@@ -14,6 +14,12 @@
   <meta property="og:url" content="https://manchester.solar/">
   <meta name="twitter:card" content="summary_large_image">
 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
   <!-- External CSS -->
   <link rel="stylesheet" href="css/styles-v3.css">
 
@@ -479,8 +485,8 @@
       </div>
     </section>
 
-    <!-- QUOTE FORM -->
-    <section id="quote-form" class="section container" aria-labelledby="quote-form-title">
+  <!-- QUOTE FORM -->
+<section id="quote-form" class="section container" aria-labelledby="quote-form-title">
   <h2 id="quote-form-title">Get Your Free Manchester Solar Quote</h2>
   <p class="section-intro">
     One simple form. We’ll connect you with <strong>one</strong> vetted, MCS-certified local installer — <strong>no auctions, no spam</strong>.
@@ -491,25 +497,31 @@
     <!-- Reassurance / copy -->
     <div class="reassurance">
       <div class="card card--accent">
-        <h3 style="margin-bottom:.25rem;">Why we’re different</h3>
-        <ul class="icon-list" style="margin-top:.5rem;">
+        <h3>Why we’re different</h3>
+        <ul class="icon-list icon-list--spaced">
           <li><span class="i i--tick"></span><span>One trusted contact — no lead reselling</span></li>
           <li><span class="i i--tick"></span><span>MCS &amp; RECC as standard</span></li>
           <li><span class="i i--bolt"></span><span>Responses usually within 24 hours</span></li>
           <li><span class="i i--leaf"></span><span>Serving: Manchester, Didsbury, Chorlton, Sale, Altrincham, Stockport, Oldham, Rochdale, Salford</span></li>
         </ul>
       </div>
-      <div class="callout callout--info" style="margin-top:1rem;">
+      <div class="callout callout--info callout--spaced">
         <h4>0% VAT until 2027</h4>
         <p>Materials & installation are zero-rated — improves payback for most properties.</p>
       </div>
-      <p class="microcopy" style="margin-top:1rem;">
+      <p class="microcopy microcopy--spaced">
         By submitting, you agree to our <a href="/privacy/" rel="noopener">Privacy Policy</a>. We only use your details to arrange your quote.
       </p>
     </div>
 
     <!-- Form -->
     <div>
+      <!-- Accessible helper -->
+      <p id="form-help" class="visually-hidden">
+        This form collects your contact and property details so we can connect you with one vetted, MCS-certified installer. 
+        No spam, no reselling.
+      </p>
+
       <form name="manchester-solar-quotes" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" aria-describedby="form-help" class="form-card">
         <input type="hidden" name="form-name" value="manchester-solar-quotes">
         <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
@@ -517,7 +529,7 @@
         <div class="form-grid">
 
           <!-- Segmented Property Type -->
-          <div class="field" style="grid-column:1/-1">
+          <div class="field full-row">
             <label id="prop-type-label">Property type</label>
             <div class="segment" role="radiogroup" aria-labelledby="prop-type-label">
               <input type="radio" id="ptype-res" name="property_type" value="Residential" required checked>
@@ -594,6 +606,7 @@
     </div>
   </div>
 </section>
+
 
 
 

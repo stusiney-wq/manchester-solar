@@ -148,6 +148,136 @@ details summary{cursor:pointer;font-weight:600}
 #benefits ul{list-style:none;padding-left:0}
 #benefits li::before{content:"✔";color:var(--color-primary);margin-right:var(--spacing-xs)}
 
+/* ===== BENEFITS SECTION - EXTERNAL CSS ===== */
+/* Gold Standard v3.1 Compliant - No Inline CSS */
+
+/* Section layout */
+#benefits {
+  background: var(--color-white);
+}
+
+#benefits h2 { 
+  text-align: center; 
+  margin-bottom: var(--spacing-sm); 
+  color: var(--color-primary);
+}
+
+#benefits .section-intro {
+  text-align: center; 
+  max-width: 42rem; 
+  margin: 0 auto var(--spacing-md); 
+  color: #333;
+}
+
+/* Grid layout */
+#benefits .benefits-columns {
+  display: grid; 
+  gap: var(--spacing-md); 
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  #benefits .benefits-columns { 
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+/* Benefit cards */
+#benefits .benefit-card {
+  display: grid; 
+  gap: var(--spacing-sm);
+  background: var(--color-white); 
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm); 
+  padding: var(--spacing-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#benefits .benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+#benefits .benefit-card h3 {
+  margin: 0 0 0.25rem 0; 
+  color: var(--color-primary); 
+  font-size: 1.125rem;
+}
+
+/* Icon lists */
+#benefits .icon-list { 
+  margin: 0 0 0.25rem 0; 
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#benefits .icon-list li {
+  display: grid;
+  grid-template-columns: 1.25rem 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+#benefits .icon-list .i {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#benefits .icon-list .i--tick::before {
+  content: "✓";
+}
+
+/* Chips */
+#benefits .chips { 
+  margin: 0.25rem 0 var(--spacing-sm) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+#benefits .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-bg-alt);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#benefits .chip--primary {
+  background: #e7efe9;
+}
+
+/* CTA buttons */
+#benefits .btn-primary { 
+  justify-self: start;
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+#benefits .btn-primary:hover {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+
+/* Center buttons on mobile for symmetry */
+@media (max-width: 767px) {
+  #benefits .btn-primary { 
+    justify-self: center; 
+  }
+}
+
 /* HOW IT WORKS */
 #how-it-works h2{text-align:center;margin-bottom:var(--spacing-sm)}
 #how-it-works .section-intro{text-align:center;max-width:42rem;margin:0 auto var(--spacing-md)}
@@ -475,45 +605,4 @@ details summary{cursor:pointer;font-weight:600}
 }
 #how-it-works .how-card p { margin: 0; color: #333; }
 
-/* === BENEFITS — FINAL POLISH / OVERRIDES === */
-#benefits h2 { text-align: center; margin-bottom: var(--spacing-sm); }
-#benefits .section-intro {
-  text-align: center;
-  max-width: 42rem;
-  margin: 0 auto var(--spacing-md);
-  color: #333;
-}
 
-/* Grid */
-#benefits .benefits-columns {
-  display: grid;
-  gap: var(--spacing-md);
-  align-items: stretch;
-}
-@media (min-width: 768px) {
-  #benefits .benefits-columns { grid-template-columns: 1fr 1fr; }
-}
-
-/* Cards */
-#benefits .benefit-card {
-  display: grid;
-  gap: var(--spacing-sm);
-  background: #fff;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  padding: var(--spacing-md);
-}
-#benefits .benefit-card h3 {
-  margin-bottom: .25rem;
-  color: var(--color-primary);
-}
-
-/* Lists + chips + CTA */
-#benefits .icon-list { margin-bottom: .25rem; }
-#benefits .chips { margin: .25rem 0 var(--spacing-sm); }
-#benefits .btn-primary { justify-self: start; }
-
-/* Center buttons on mobile for symmetry */
-@media (max-width: 767px) {
-  #benefits .btn-primary { justify-self: center; }
-}

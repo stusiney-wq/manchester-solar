@@ -377,6 +377,47 @@
     <a href="#quote-form" class="btn-primary">Start Your Free Quote</a>
   </div>
 </section>
+<style>
+/* HOW IT WORKS — INLINE TEST */
+body #how-it-works .how-steps{
+  counter-reset: step !important;
+  display:grid !important;
+  gap:var(--spacing-md) !important;
+  list-style:none !important;
+  padding-left:0 !important;
+  margin:0 !important;
+}
+body #how-it-works .how-steps > li{
+  position:relative !important;
+  background:#fff !important;
+  border-radius:var(--radius-md) !important;
+  box-shadow:var(--shadow-sm) !important;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 3rem) !important;
+  transition: transform .15s ease, box-shadow .15s ease !important;
+}
+body #how-it-works .how-steps > li:hover{
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+body #how-it-works .how-steps > li::before{
+  counter-increment: step;
+  content: counter(step);
+  position:absolute; left: var(--spacing-md); top:50%;
+  transform: translateY(-50%);
+  width: 2.25rem; height: 2.25rem; line-height: 2.25rem;
+  text-align:center; border-radius:50%;
+  background: var(--color-primary); color:#fff; font-weight:700;
+  box-shadow: var(--shadow-sm);
+}
+body #how-it-works .how-steps h3{ margin-bottom: var(--spacing-xs) !important; color: var(--color-primary) !important; font-size: 1.125rem !important; }
+body #how-it-works .how-steps p{ margin:0 !important; color:#333 !important; }
+@media (min-width: 768px){
+  body #how-it-works .how-steps{ grid-template-columns: repeat(3, 1fr) !important; }
+  body #how-it-works .how-steps > li{ padding: calc(var(--spacing-md) + 1rem) var(--spacing-md) var(--spacing-md) var(--spacing-md) !important; }
+  body #how-it-works .how-steps > li::before{ left:50%; top:0; transform:translate(-50%,-50%); }
+  body #how-it-works .how-steps h3, body #how-it-works .how-steps p{ text-align:center !important; }
+}
+</style>
 
 
     <!-- INSTALLER SHOWCASE (Hybrid: trust without leaks) -->

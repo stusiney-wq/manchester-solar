@@ -550,3 +550,9 @@ details summary{cursor:pointer;font-weight:600}
 #how-it-works .how-card p { margin: 0; color: #333; }
 
 
+/* Replace inline styles */
+#quote-form .reassurance h3 { margin-bottom: .25rem; }
+#quote-form .icon-list.icon-list--spaced { margin-top: .5rem; }
+#quote-form .callout--spaced { margin-top: 1rem; }
+#quote-form .microcopy--spaced { margin-top: 1rem; }
+#quote-form .form-grid .full-row { grid-column: 1 / -1; }

@@ -304,8 +304,39 @@
 
 
 
-    <!-- BENEFITS -->
-<section id="benefits" class="section container" aria-labelledby="benefits-title">
+    <!-- BENEFITS (self-contained) -->
+<section id="benefits" class="section container benfix" aria-labelledby="benefits-title">
+  <style>
+    /* === BENEFITS — SCOPED & HIGH-SPECIFICITY === */
+    body section#benefits.benfix h2 { text-align:center !important; margin-bottom: var(--spacing-sm) !important; }
+    body section#benefits.benfix .section-intro {
+      text-align:center !important; max-width:42rem !important; margin:0 auto var(--spacing-md) !important; color:#333 !important;
+    }
+    /* Grid */
+    body section#benefits.benfix .benefits-columns {
+      display:grid !important; gap:var(--spacing-md) !important; align-items:stretch !important;
+    }
+    @media (min-width:768px){
+      body section#benefits.benfix .benefits-columns { grid-template-columns: 1fr 1fr !important; }
+    }
+    /* Cards */
+    body section#benefits.benfix .benefit-card {
+      display:grid !important; gap:var(--spacing-sm) !important;
+      background:#fff !important; border-radius:var(--radius-md) !important;
+      box-shadow:var(--shadow-sm) !important; padding:var(--spacing-md) !important;
+    }
+    body section#benefits.benfix .benefit-card h3 {
+      margin:0 0 .25rem 0 !important; color:var(--color-primary) !important; font-size:1.125rem !important;
+    }
+    /* Lists + chips + CTA */
+    body section#benefits.benfix .icon-list { margin:0 0 .25rem 0 !important; }
+    body section#benefits.benfix .chips { margin:.25rem 0 var(--spacing-sm) 0 !important; }
+    body section#benefits.benfix .btn-primary { justify-self:start !important; }
+    @media (max-width:767px){
+      body section#benefits.benfix .btn-primary { justify-self:center !important; }
+    }
+  </style>
+
   <h2 id="benefits-title">Benefits for Homes &amp; Businesses</h2>
   <p class="section-intro">Whether you own a Victorian terrace or manage a commercial roof, solar makes financial sense in Manchester.</p>
 

@@ -429,6 +429,7 @@ a:hover {
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: var(--space-md);
 }
 
@@ -437,6 +438,7 @@ a:hover {
   line-height: 1.2;
   letter-spacing: -0.015em;
   margin: var(--space-1) 0 var(--space-lg);
+  text-align: center;
 }
 
 @media (min-width: 640px) {
@@ -455,6 +457,8 @@ a:hover {
   color: var(--color-muted);
   max-width: 56ch;
   font-size: 1.05rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .hero-cta-wrap {

@@ -419,18 +419,10 @@ a:hover {
 }
 
 .hero-inner {
-  display: grid;
-  gap: var(--space-lg);
-  align-items: center;
-  /* Single column on mobile */
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 960px) {
-  .hero-inner {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: var(--space-3xl);
-  }
+  display: block;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-badges {
@@ -467,18 +459,10 @@ a:hover {
 
 .hero-cta-wrap {
   margin-top: var(--space-lg);
+  text-align: center;
 }
 
-@media (min-width: 960px) {
-  .hero-cta-wrap {
-    text-align: left;
-  }
-}
-
-.hero-media img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-}
+/* No hero media styles needed */
 
 /* ========== Stats (Mobile First) ========== */
 .stats-grid {

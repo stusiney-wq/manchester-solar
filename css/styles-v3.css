@@ -1,25 +1,4 @@
-/* ========== Hero (Mobile First) ========== */
-.hero {
-  position: relative;
-  padding: var(--space-20) 0;
-  background: linear-gradient(135deg, #f8fdf9 0%, #ffffff 100%);
-  overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .hero {
-    padding: clamp(5rem, 8vw, 8rem) 0;
-  }
-}
-
-/* Enhanced ambient background with subtle pattern */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(27, 94, 52, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80/* ========== Root & Reset ========== */
+/* ========== Root & Reset ========== */
 :root {
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
@@ -418,24 +397,25 @@ a:hover {
 /* ========== Hero (Mobile First) ========== */
 .hero {
   position: relative;
-  padding: var(--space-16) 0;
+  padding: var(--space-20) 0;
+  background: linear-gradient(135deg, #f8fdf9 0%, #ffffff 100%);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: clamp(2.5rem, 6vw, 6rem) 0;
+    padding: clamp(5rem, 8vw, 8rem) 0;
   }
 }
 
-/* Ambient background glow */
+/* Enhanced ambient background with subtle pattern */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 60%;
+  inset: 0;
   background: 
-    radial-gradient(1200px 420px at 20% -10%, rgba(27, 94, 52, 0.08), transparent),
-    radial-gradient(900px 320px at 90% -20%, rgba(15, 108, 189, 0.07), transparent);
+    radial-gradient(circle at 20% 20%, rgba(27, 94, 52, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(15, 108, 189, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -529,9 +509,123 @@ a:hover {
   margin-top: var(--space-1);
 }
 
-/* ========== Benefits ========== */
+/* ========== Benefits Section ========== */
+.benefits {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcfa 100%);
+  position: relative;
+}
+
+.benefits::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%);
+}
+
+.benefit {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(27, 94, 52, 0.08);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.benefit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, rgba(27, 94, 52, 0.6) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.08),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(27, 94, 52, 0.15);
+}
+
+.benefit:hover::before {
+  transform: scaleX(1);
+}
+
 .benefit h3 {
   margin-top: 0;
+  margin-bottom: var(--space-md);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  position: relative;
+}
+
+.benefit h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--color-accent);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.benefit:hover h3::after {
+  width: 36px;
+  opacity: 1;
+}
+
+.benefit p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Enhanced section header for benefits */
+.benefits .section-header h2 {
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Icon placeholders for benefits */
+.benefit-weather::before,
+.benefit-savings::before,
+.benefit-environment::before {
+  content: "";
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(27, 94, 52, 0.1) 0%, rgba(27, 94, 52, 0.05) 100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.benefit:hover .benefit-weather::before,
+.benefit:hover .benefit-savings::before,
+.benefit:hover .benefit-environment::before {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* ========== How it works (Mobile First) ========== */

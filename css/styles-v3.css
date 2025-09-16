@@ -1,4 +1,25 @@
-/* ========== Root & Reset ========== */
+/* ========== Hero (Mobile First) ========== */
+.hero {
+  position: relative;
+  padding: var(--space-20) 0;
+  background: linear-gradient(135deg, #f8fdf9 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: clamp(5rem, 8vw, 8rem) 0;
+  }
+}
+
+/* Enhanced ambient background with subtle pattern */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(27, 94, 52, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80/* ========== Root & Reset ========== */
 :root {
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 

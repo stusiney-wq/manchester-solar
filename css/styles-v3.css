@@ -318,4 +318,33 @@ body{ font-size:17px; }
 .footer{
   background: linear-gradient(180deg,#f7f8f7 0%, #f2f6f3 100%);
 }
+/* Hero layout (works with your existing tokens) */
+.hero { position: relative; padding: clamp(2rem, 6vw, 4rem) 0; }
+.hero-inner {
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: var(--spacing-xl); align-items: center;
+}
+.hero-badges { display:flex; gap:.5rem; flex-wrap:wrap; }
+.hero-title { font-size: clamp(2rem, 3.6vw, 3rem); letter-spacing:-0.015em; margin: .4rem 0 var(--spacing-md); }
+.hero-sub { color: var(--color-muted); max-width: 56ch; }
+.hero-cta-wrap { margin-top: var(--spacing-lg); text-align: left; }
+.hero-media img { border-radius: var(--radius); box-shadow: var(--shadow-md); }
+
+@media (max-width: 960px){
+  .hero-inner { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+  .hero-cta-wrap { text-align: left; }
+}
+
+/* Ambient glow for premium feel (subtle) */
+.hero::before{
+  content:""; position:absolute; inset:0 0 auto 0; height:60%;
+  background:
+    radial-gradient(1200px 420px at 20% -10%, rgba(27,94,52,.08), transparent),
+    radial-gradient(900px 320px at 90% -20%, rgba(15,108,189,.07), transparent);
+  pointer-events:none;
+}
+
+/* Trust strip inside hero */
+.hero-trust { padding: var(--spacing-lg) 0 var(--spacing-md); }
+.hero-trust .trust-strip { justify-content: center; }
+.hero-trust .trust-item { background:#fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
 

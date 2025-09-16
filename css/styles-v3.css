@@ -242,4 +242,80 @@ a:hover{text-decoration:underline}
 .skip-link:focus{
   left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:#000; color:#fff; border-radius:8px; z-index:999;
 }
+/* ===== POLISH PACK v1 (non-breaking, override-only) ===== */
+
+/* Tone + depth */
+:root{
+  --color-accent: #1b5e34;           /* slightly richer green */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
+  --shadow-md: 0 12px 30px rgba(0,0,0,.10);
+}
+
+/* Global feel */
+body{ font-size:17px; }
+.section{ padding: clamp(2.5rem,6vw,4rem) 0; }
+.section-header .section-intro{ font-size:1.05rem; }
+
+/* Header + nav */
+.header.is-scrolled{ box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+.nav-list a:hover{ background: var(--color-bg-alt); text-decoration: none; }
+
+/* Hero */
+.hero{ position:relative; }
+.hero-title{ font-size: clamp(2rem,3.8vw,3rem); letter-spacing:-0.015em; }
+.hero-sub{ font-size: 1.05rem; }
+.hero-cta-wrap{ margin-top: var(--spacing-lg); }
+/* Soft ambient glow behind hero to add premium feel */
+.hero::before{
+  content:"";
+  position:absolute; inset:0 0 auto 0; height:60%;
+  background:
+    radial-gradient(1200px 420px at 20% -10%, rgba(27,94,52,.08), transparent),
+    radial-gradient(900px 320px at 90% -20%, rgba(15,108,189,.07), transparent);
+  pointer-events:none;
+}
+
+/* Buttons */
+.btn-primary{
+  background: linear-gradient(180deg,#1c4227 0%, #166136 100%);
+  color:#fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover{ filter: brightness(1.05); transform: translateY(-1px); }
+.btn-primary:active{ transform: translateY(0); }
+
+/* Cards & hover */
+.card{
+  border-color:#dde6de;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* Stats – a touch more “pop” */
+.stats-grid .stat{
+  background: linear-gradient(180deg,#ffffff 0%, #fafcfa 100%);
+}
+.stat-value{ font-size:1.8rem; }
+
+/* Installers */
+.installer .meta{ color: var(--color-muted); font-size:.95rem; }
+
+/* Quote form */
+.form-card{ box-shadow: var(--shadow-sm); }
+.segment label{ transition: background .15s ease, border-color .15s ease; }
+.segment input:checked + label{
+  background: linear-gradient(180deg,#f4faf6 0%, #eef7f1 100%);
+  border-color:#cfe0d5;
+}
+
+/* Trust strip + footer */
+.trust-strip .trust-item{
+  background:#fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.footer{
+  background: linear-gradient(180deg,#f7f8f7 0%, #f2f6f3 100%);
+}
 

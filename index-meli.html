@@ -517,61 +517,232 @@
   </footer>
 
   <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Manchester.solar",
+      "url": "https://manchester.solar",
+      "logo": "https://manchester.solar/assets/logo.png",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "name": "Manchester.solar",
+      "url": "https://manchester.solar",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://manchester.solar/#quote-form",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": [
+        "Residential Solar Installation",
+        "Commercial Solar Installation",
+        "Battery Storage",
+        "EV Charging",
+        "Off-Grid & Hybrid Systems",
+        "Inverter Upgrades"
+      ],
+      "provider": { "@type": "Organization", "name": "Manchester.solar" },
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you cover both residential and commercial solar in Manchester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we serve homes and businesses across Greater Manchester. Our vetted installers handle solar PV panels, battery storage, inverters & upgrades, EV charging, and off-grid/hybrid systems. Typical savings: households ~£1,890+/yr; businesses ~£4,200+/yr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do solar panels work well in Manchester’s climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — panels generate from daylight, not just direct sunshine. Manchester averages ~3.8 peak sun hours, which supports strong performance even on cloudy days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do solar panels cost in Manchester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,890/year, payback is usually 6–8 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need planning permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://manchester.solar/" },
+        { "@type": "ListItem", "position": 2, "name": "Solar Services", "item": "https://manchester.solar/#services" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "Residential Solar Installation",
+      "category": "SolarEnergy",
+      "brand": { "@type": "Organization", "name": "Manchester.solar" },
+      "description": "Design and installation of residential solar PV systems in Greater Manchester — tailored for terraces, semis and detached homes. Typical savings ~£1,890+/yr; 0% VAT until 2027.",
+      "url": "https://manchester.solar/#services",
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://manchester.solar/#quote-form",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Commercial Solar Systems",
+      "category": "SolarEnergy",
+      "brand": { "@type": "Organization", "name": "Manchester.solar" },
+      "description": "Commercial solar PV design and installation for offices, schools, warehouses and retail across Greater Manchester. Typical savings ~£4,200+/yr with strong ROI.",
+      "url": "https://manchester.solar/#services",
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://manchester.solar/#quote-form",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Battery Storage Installation",
+      "category": "EnergyStorage",
+      "brand": { "@type": "Organization", "name": "Manchester.solar" },
+      "description": "Battery storage for homes and businesses — store excess solar to use at night or during peak rates; typical payback 6–8 years with SEG export.",
+      "isAccessoryOrSparePartFor": "Solar PV systems",
+      "url": "https://manchester.solar/#services",
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://manchester.solar/#quote-form",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "EV Charging Installation",
+      "category": "EVCharging",
+      "brand": { "@type": "Organization", "name": "Manchester.solar" },
+      "description": "Home and workplace EV charger installation integrated with solar PV for clean, local vehicle charging.",
+      "url": "https://manchester.solar/#services",
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://manchester.solar/#quote-form",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Inverter Upgrades",
+      "category": "PowerInverters",
+      "brand": { "@type": "Organization", "name": "Manchester.solar" },
+      "description": "Latest high-efficiency inverters with monitoring; upgrade paths for legacy systems to improve performance and reliability.",
+      "isAccessoryOrSparePartFor": "Solar PV systems",
+      "url": "https://manchester.solar/#services",
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://manchester.solar/#quote-form",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Off-Grid & Hybrid Systems",
+      "category": "SolarEnergy",
+      "brand": { "@type": "Organization", "name": "Manchester.solar" },
+      "description": "Custom off-grid and hybrid power systems combining solar, batteries and backup generation for energy resilience.",
+      "url": "https://manchester.solar/#services",
+      "areaServed": "Greater Manchester",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://manchester.solar/#quote-form",
+        "eligibleRegion": "GB-MAN"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://manchester.solar/#how-it-works-schema",
+      "name": "How our Manchester solar quote works",
+      "description": "Three simple steps to get a clear Manchester solar quote from one vetted MCS installer — no auctions, no spam.",
+      "image": "https://manchester.solar/assets/hero-manchester-2000.webp",
+      "totalTime": "P1D",
+      "supply": [
+        { "@type": "HowToSupply", "name": "Basic property details (postcode, roof, monthly bill)" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Online quote form" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Tell us about your property",
+          "text": "60 seconds: choose Residential or Commercial and share postcode, roof direction (if known) and average monthly bill.",
+          "url": "https://manchester.solar/#quote-form"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "We match a vetted installer",
+          "text": "We connect you with one MCS-certified, RECC-member installer who fits your needs — no lead auctions, no spam.",
+          "url": "https://manchester.solar/#installers"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Get a clear, like-for-like quote",
+          "text": "Receive a plain-English quote with savings estimate and payback range. Typical response time is ~24 hours.",
+          "url": "https://manchester.solar/#quote-form"
+        }
+      ],
+      "provider": {
         "@type": "Organization",
         "name": "Manchester.solar",
-        "url": "https://manchester.solar",
-        "logo": "https://manchester.solar/assets/logo.png",
-        "sameAs": []
+        "url": "https://manchester.solar"
       },
-      {
-        "@type": "WebSite",
-        "name": "Manchester.solar",
-        "url": "https://manchester.solar",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://manchester.solar/#quote-form",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Solar PV installation",
-        "provider": { "@type": "Organization", "name": "Manchester.solar" },
-        "areaServed": "Greater Manchester",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "GBP",
-          "eligibleRegion": "GB-MAN"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type":"Question",
-            "name":"Do solar panels work well in Manchester’s climate?",
-            "acceptedAnswer":{"@type":"Answer","text":"Yes — panels generate from daylight, not just direct sunshine. Manchester averages ~3.8 peak sun hours, which supports strong performance even on cloudy days."}
-          },
-          {
-            "@type":"Question",
-            "name":"How much do solar panels cost in Manchester?",
-            "acceptedAnswer":{"@type":"Answer","text":"Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,890/year, payback is usually 6–8 years."}
-          },
-          {
-            "@type":"Question",
-            "name":"Do I need planning permission?",
-            "acceptedAnswer":{"@type":"Answer","text":"Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."}
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+      "areaServed": "Greater Manchester",
+      "url": "https://manchester.solar/#how-it-works"
+    }
+  ]
+}
+</script>
+
 
   <!-- JS: menu toggle + header shrink + year -->
   <script>

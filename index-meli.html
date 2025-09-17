@@ -24,11 +24,6 @@
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-  <!-- Analytics placeholders
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXXXX');</script>
-  -->
-
   <!-- JSON-LD (valid, comment-free, anchors fixed) -->
   <script type="application/ld+json">
   {
@@ -204,41 +199,40 @@
     </ol>
   </section>
 
-  <!-- Services -->
+  <!-- Services with Sector Toggle -->
   <section id="services" class="section">
-    <div class="container">
-      <div class="section-header">
+    <div class="container flow">
+      <header class="section-header">
         <h2>Solar Services for Manchester</h2>
         <div class="section-divider-accent"></div>
         <p class="section-intro">Residential and commercial solar PV, batteries, EV charging, and upgrades — tailored for Manchester properties.</p>
+      </header>
+
+      <!-- Audience toggle -->
+      <div class="sector-toggle" role="tablist" aria-label="Audience">
+        <button id="tab-residential" type="button" data-sector="residential" class="is-active" role="tab" aria-selected="true" aria-controls="panel-residential">Residential</button>
+        <button id="tab-commercial"  type="button" data-sector="commercial"  role="tab" aria-selected="false" aria-controls="panel-commercial">Commercial</button>
       </div>
 
-      <div class="grid grid-3 cards">
-        <article class="card">
-          <h3>Residential Solar</h3>
-          <p>Terraces, semis, detached — designed for Manchester roofs with year-round performance.</p>
-        </article>
-        <article class="card">
-          <h3>Commercial Solar</h3>
-          <p>Warehouses, schools, offices — cut energy costs and improve sustainability reporting.</p>
-        </article>
-        <article class="card">
-          <h3>Battery Storage</h3>
-          <p>Store excess solar for nights and peak rates; typical payback 6–8 years with SEG export.</p>
-        </article>
-        <article class="card">
-          <h3>EV Charging</h3>
-          <p>Home & workplace chargers integrated with solar PV and smart tariffs.</p>
-        </article>
-        <article class="card">
-          <h3>Inverter Upgrades</h3>
-          <p>Higher efficiency & monitoring; upgrade paths for legacy systems.</p>
-        </article>
-        <article class="card">
-          <h3>Off-Grid & Hybrid</h3>
-          <p>Custom systems combining solar, batteries and backup generation.</p>
-        </article>
-      </div>
+      <!-- Residential panel -->
+      <section id="panel-residential" data-sector-panel="residential" class="flow" role="tabpanel" aria-labelledby="tab-residential">
+        <div class="switcher">
+          <article class="card"><h3>Terraces & Semis</h3><p class="muted">Optimised for Manchester roof pitches & diffuse light.</p></article>
+          <article class="card"><h3>Battery Storage</h3><p class="muted">Shift solar to evenings; SEG export lowers payback.</p></article>
+          <article class="card"><h3>EV Charging</h3><p class="muted">Smart, solar-aware home chargers.</p></article>
+        </div>
+        <p><a href="#quote-form" class="btn btn-large">Get My Home Quote</a></p>
+      </section>
+
+      <!-- Commercial panel -->
+      <section id="panel-commercial" data-sector-panel="commercial" class="flow" role="tabpanel" aria-labelledby="tab-commercial" hidden>
+        <div class="switcher">
+          <article class="card"><h3>Rooftop Arrays</h3><p class="muted">Design for large spans & production predictability.</p></article>
+          <article class="card"><h3>Monitoring & ESG</h3><p class="muted">Reporting for Scope 2 reductions.</p></article>
+          <article class="card"><h3>Peak Shaving</h3><p class="muted">Battery-enabled demand reduction.</p></article>
+        </div>
+        <p><a href="#quote-form" class="btn btn-large">Get My Business Quote</a></p>
+      </section>
     </div>
   </section>
 
@@ -368,9 +362,12 @@
     </div>
   </footer>
 
-  <!-- Minimal JS (nav + year) -->
+  <!-- Minimal JS (nav + year + sector tabs) -->
   <script>
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('primary-menu');
     if (toggle && menu) {
@@ -380,6 +377,33 @@
         menu.classList.toggle('open');
       });
     }
+
+    // Sector tabs
+    const sectorButtons = document.querySelectorAll('.sector-toggle [data-sector]');
+    const panels = document.querySelectorAll('[data-sector-panel]');
+    function showSector(target){
+      panels.forEach(p => {
+        const isTarget = p.getAttribute('data-sector-panel') === target;
+        p.hidden = !isTarget;
+      });
+      sectorButtons.forEach(b => {
+        const active = b.dataset.sector === target;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+    }
+    sectorButtons.forEach(btn=>{
+      btn.addEventListener('click', ()=> showSector(btn.dataset.sector));
+      btn.addEventListener('keydown', (e)=>{
+        // Simple left/right keyboard nav
+        if(!['ArrowLeft','ArrowRight'].includes(e.key)) return;
+        const arr = Array.from(sectorButtons);
+        const i = arr.indexOf(btn);
+        const next = e.key === 'ArrowRight' ? (i+1)%arr.length : (i-1+arr.length)%arr.length;
+        arr[next].focus();
+        showSector(arr[next].dataset.sector);
+      });
+    });
   </script>
 </body>
 </html>

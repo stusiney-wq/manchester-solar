@@ -511,6 +511,39 @@
         "query-input": "required name=search_term_string"
       }
     },
+
+    /* ==============================
+       LocalBusiness Placeholder
+       Replace TBC fields once your
+       exclusive installer partner
+       is appointed
+       ============================== */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://manchester.solar/#installer",
+      "name": "Placeholder Installer — Manchester.solar Partner",
+      "description": "This is a placeholder LocalBusiness entity for the future exclusive MCS-certified installer partner in Manchester. It will be updated once a partner is appointed.",
+      "url": "https://manchester.solar",
+      "image": "https://manchester.solar/assets/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "TBC",
+        "addressLocality": "Manchester",
+        "postalCode": "M-- ---",
+        "addressCountry": "GB"
+      },
+      "telephone": "TBC",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "priceRange": "££",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Greater Manchester"
+      },
+      "makesOffer": [
+        { "@id": "https://manchester.solar/#services" }
+      ]
+    },
+
     {
       "@type": "Service",
       "serviceType": [
@@ -529,6 +562,7 @@
         "eligibleRegion": "GB-MAN"
       }
     },
+
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -566,6 +600,7 @@
         }
       ]
     },
+
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -573,6 +608,8 @@
         { "@type": "ListItem", "position": 2, "name": "Solar Services", "item": "https://manchester.solar/#services" }
       ]
     },
+
+    /* === Product/Offer nodes === */
     {
       "@type": "Product",
       "name": "Residential Solar Installation",
@@ -671,6 +708,7 @@
         "eligibleRegion": "GB-MAN"
       }
     },
+
     {
       "@type": "HowTo",
       "@id": "https://manchester.solar/#how-it-works-schema",
@@ -715,7 +753,6 @@
   ]
 }
 </script>
-
 
   <!-- JS: menu toggle + header shrink + year -->
   <script>

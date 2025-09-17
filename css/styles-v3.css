@@ -967,7 +967,77 @@ a:hover {
   gap: var(--space-3);
 }
 
-/* ========== Skip link ========== */
+/* ========== Resources Section ========== */
+.resources-section {
+  background: linear-gradient(180deg, #f9fcfa 0%, #ffffff 100%);
+}
+
+.resource-card {
+  text-align: center;
+  position: relative;
+  padding: var(--space-xl);
+}
+
+.resource-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.resource-card h3 {
+  margin-bottom: var(--space-md);
+  font-size: 1.25rem;
+}
+
+.resource-card p {
+  margin-bottom: var(--space-lg);
+  color: var(--color-muted);
+}
+
+.resource-meta {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin: var(--space-md) 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.resource-type {
+  background: var(--color-bg-alt);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+}
+
+.resource-time {
+  color: var(--color-muted);
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: var(--space-sm);
+  transition: color 0.15s ease;
+}
+
+.resource-link:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.resource-link::after {
+  content: "→";
+  transition: transform 0.15s ease;
+}
+
+.resource-link:hover::after {
+  transform: translateX(2px);
+}
 .skip-link {
   position: absolute;
   left: -9999px;

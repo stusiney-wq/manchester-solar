@@ -393,148 +393,155 @@
 
   <!-- Minimal JS -->
   <script>
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.getElementById('primary-menu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        const open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        menu.classList.toggle('open');
-      });
-    }
-
-    // Sector tabs
-    const sectorButtons = document.querySelectorAll('.sector-toggle [data-sector]');
-    const panels = document.querySelectorAll('[data-sector-panel]');
-    function showSector(target){
-      panels.forEach(p => {
-        const isTarget = p.getAttribute('data-sector-panel') === target;
-        p.hidden = !isTarget;
-      });
-      sectorButtons.forEach(b => {
-        const active = b.dataset.sector === target;
-        b.classList.toggle('is-active', active);
-        b.setAttribute('aria-selected', String(active));
-      });
-    }
-    sectorButtons.forEach(btn=>{
-      btn.addEventListener('click', ()=> showSector(btn.dataset.sector));
-      btn.addEventListener('keydown', (e)=>{
-        if(!['ArrowLeft','ArrowRight'].includes(e.key)) return;
-        const arr = Array.from(sectorButtons);
-        const i = arr.indexOf(btn);
-        const next = e.key === 'ArrowRight' ? (i+1)%arr.length : (i-1+arr.length)%arr.length;
-        arr[next].focus();
-        showSector(arr[next].dataset.sector);
-      });
-    });
-  </script>
-// Scroll Animation System for Norfolk.solar
-// Add this to your HTML before closing </body> tag
-
-// Intersection Observer for scroll animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-      // Optional: stop observing after animation
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-// Initialize animations when page loads
+// Combined Norfolk.solar JavaScript
 document.addEventListener('DOMContentLoaded', () => {
-  // Auto-detect elements to animate
-  const elementsToAnimate = document.querySelectorAll(`
-    .card,
-    .stat,
-    .section-header h2,
-    .section-intro,
-    .section-divider-accent,
-    .hero-badges,
-    .hero-title,
-    .hero-subtext,
-    .btn,
-    .faq details,
-    .note,
-    .installer-credentials
-  `);
-
-  // Add fade-in classes and observe
-  elementsToAnimate.forEach((el, index) => {
-    // Different animation types based on element
-    if (el.matches('.card')) {
-      el.classList.add('fade-in', `delay-${Math.min(index % 6 + 1, 6)}`);
-    } else if (el.matches('.stat')) {
-      el.classList.add('fade-in-fast', `delay-${index % 3 + 1}`);
-    } else if (el.matches('h2')) {
-      el.classList.add('fade-in-fast');
-    } else if (el.matches('.section-divider-accent')) {
-      el.classList.add('fade-in');
-    } else if (el.matches('.hero-title')) {
-      el.classList.add('fade-in-fast');
-      setTimeout(() => el.classList.add('animate'), 300);
-      return; // Don't observe, just animate immediately
-    } else if (el.matches('.hero-subtext, .hero-badges')) {
-      el.classList.add('fade-in');
-      setTimeout(() => el.classList.add('animate'), 500);
-      return; // Don't observe, just animate immediately  
-    } else if (el.matches('.btn')) {
-      el.classList.add('fade-in');
-      setTimeout(() => el.classList.add('animate'), 700);
-      return; // Don't observe, just animate immediately
-    } else {
-      el.classList.add('fade-in');
-    }
-    
-    // Observe element for scroll-triggered animation
-    observer.observe(el);
-  });
-
-  // Special handling for stats numbers (counter effect)
-  const statNumbers = document.querySelectorAll('.stat-number');
-  statNumbers.forEach(stat => {
-    stat.classList.add('fade-in');
-    observer.observe(stat);
-  });
-
-  // Hero elements animate immediately (not on scroll)
-  setTimeout(() => {
-    document.querySelector('.hero-title')?.classList.add('animate');
-  }, 100);
+  console.log('Norfolk.solar loaded!');
   
-  setTimeout(() => {
-    document.querySelector('.hero-subtext')?.classList.add('animate');
-    document.querySelector('.hero-badges')?.classList.add('animate');
-  }, 300);
+  // ========== ORIGINAL FUNCTIONALITY ==========
   
-  setTimeout(() => {
-    document.querySelectorAll('.hero .btn').forEach(btn => {
-      btn.classList.add('animate');
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('primary-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('open');
     });
+  }
+
+  // Sector tabs
+  const sectorButtons = document.querySelectorAll('.sector-toggle [data-sector]');
+  const panels = document.querySelectorAll('[data-sector-panel]');
+  
+  function showSector(target){
+    panels.forEach(p => {
+      const isTarget = p.getAttribute('data-sector-panel') === target;
+      p.hidden = !isTarget;
+    });
+    sectorButtons.forEach(b => {
+      const active = b.dataset.sector === target;
+      b.classList.toggle('is-active', active);
+      b.setAttribute('aria-selected', String(active));
+    });
+  }
+  
+  sectorButtons.forEach(btn=>{
+    btn.addEventListener('click', ()=> showSector(btn.dataset.sector));
+    btn.addEventListener('keydown', (e)=>{
+      if(!['ArrowLeft','ArrowRight'].includes(e.key)) return;
+      const arr = Array.from(sectorButtons);
+      const i = arr.indexOf(btn);
+      const next = e.key === 'ArrowRight' ? (i+1)%arr.length : (i-1+arr.length)%arr.length;
+      arr[next].focus();
+      showSector(arr[next].dataset.sector);
+    });
+  });
+
+  // ========== SCROLL ANIMATIONS ==========
+  
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log('Animating:', entry.target.className);
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Wait for page to settle, then initialize animations
+  setTimeout(() => {
+    console.log('Initializing scroll animations...');
+    
+    const elementsToAnimate = document.querySelectorAll(`
+      .card,
+      .stat,
+      .section-header h2,
+      .section-intro,
+      .section-divider-accent,
+      .hero-badges,
+      .hero-title,
+      .hero-subtext,
+      .btn,
+      .faq details,
+      .note,
+      .installer-credentials
+    `);
+
+    console.log('Found elements to animate:', elementsToAnimate.length);
+
+    elementsToAnimate.forEach((el, index) => {
+      if (el.matches('.card')) {
+        el.classList.add('fade-in', `delay-${Math.min(index % 6 + 1, 6)}`);
+      } else if (el.matches('.stat')) {
+        el.classList.add('fade-in-fast', `delay-${index % 3 + 1}`);
+      } else if (el.matches('h2')) {
+        el.classList.add('fade-in-fast');
+      } else if (el.matches('.section-divider-accent')) {
+        el.classList.add('fade-in');
+      } else if (el.matches('.hero-title')) {
+        el.classList.add('fade-in-fast');
+        setTimeout(() => el.classList.add('animate'), 300);
+        return;
+      } else if (el.matches('.hero-subtext, .hero-badges')) {
+        el.classList.add('fade-in');
+        setTimeout(() => el.classList.add('animate'), 500);
+        return;
+      } else if (el.matches('.btn')) {
+        el.classList.add('fade-in');
+        setTimeout(() => el.classList.add('animate'), 700);
+        return;
+      } else {
+        el.classList.add('fade-in');
+      }
+      
+      observer.observe(el);
+    });
+
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(stat => {
+      stat.classList.add('fade-in');
+      observer.observe(stat);
+    });
+
+    setTimeout(() => {
+      document.querySelector('.hero-title')?.classList.add('animate');
+    }, 100);
+    
+    setTimeout(() => {
+      document.querySelector('.hero-subtext')?.classList.add('animate');
+      document.querySelector('.hero-badges')?.classList.add('animate');
+    }, 300);
+    
+    setTimeout(() => {
+      document.querySelectorAll('.hero .btn').forEach(btn => {
+        btn.classList.add('animate');
+      });
+    }, 500);
+    
   }, 500);
 });
 
-// Optional: Add subtle scroll indicator
+// Scroll effects
 window.addEventListener('scroll', () => {
   const scrolled = window.scrollY;
   const rate = scrolled * -0.5;
   
-  // Subtle parallax on hero background
   const hero = document.querySelector('.hero');
   if (hero && scrolled < hero.offsetHeight) {
     hero.style.transform = `translate3d(0, ${rate}px, 0)`;
   }
 });
+</script>
 </body>
 </html>

@@ -4,14 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-33NBLF3DMD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-33NBLF3DMD');
-  </script>
+  <<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33NBLF3DMD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  // Default consent to denied
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied'
+  });
+  
+  gtag('config', 'G-33NBLF3DMD');
+</script>
 
   <title>Renewable Energy Norfolk – Solar, Batteries & EV Charging | Norfolk.solar</title>
   <meta name="description" content="Complete renewable energy solutions for Norfolk homes and businesses. Solar panels, battery storage, EV charging. AI-powered instant quotes. MCS certified installer. 0% VAT until 2027." />
@@ -295,30 +301,21 @@
         <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Get My Free Home Survey</a></p>
       </section>
 
-      <!-- Commercial panel -->
-      <section id="panel-commercial" data-sector-panel="commercial" class="flow" role="tabpanel" aria-labelledby="tab-commercial" hidden>
-        <div class="switcher">
-          <article class="card"><h3>Agricultural Solar</h3><p class="muted">Large barn and shed roofs ideal for 100kW+ systems. Reduce electricity costs by 60-80%.</p></article>
-          <article class="card"><h3>Industrial & Warehouses</h3><p class="muted">Great Yarmouth and King's Lynn industrial sites. Peak demand reduction and grid independence.</p></article>
-          <article class="card"><h3>Retail & Business Parks</h3><p class="muted">Norwich shopping centers and business parks. Significant cost savings during business hours.</p></article>
-        </div>
-        <div class="switcher">
-          <article class="card"><h3>Schools & Education</h3><p class="muted">Educational facilities across Norfolk. Long-term savings with 25+ year system life.</p></article>
-          <article class="card"><h3>Healthcare Facilities</h3><p class="muted">Hospitals and care homes. Reliable daytime generation matching peak electricity demand.</p></article>
-          <article class="card"><h3>Manufacturing</h3><p class="muted">Food processing and manufacturing plants. Direct energy cost reduction and sustainability credentials.</p></article>
-        </div>
-        <div class="commercial-benefits" style="margin-top: var(--space-6);">
-          <h4>Commercial Solar Benefits:</h4>
-          <ul>
-            <li><strong>Massive Scale:</strong> 50kW-500kW+ systems delivering £5,000-£50,000+ annual savings</li>
-            <li><strong>Fast Payback:</strong> Commercial systems typically pay back in 3-5 years</li>
-            <li><strong>Business Hours Match:</strong> Generate most electricity when you use most electricity</li>
-            <li><strong>Corporate Sustainability:</strong> Demonstrate environmental commitment to customers</li>
-            <li><strong>Enhanced Building Certificate:</strong> Improve EPC ratings and property values</li>
-          </ul>
-        </div>
-        <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Get Free Business Assessment</a></p>
-      </section>
+      <!-- Commercial panel - simplified -->
+<section id="panel-commercial" data-sector-panel="commercial" class="flow" role="tabpanel" aria-labelledby="tab-commercial" hidden>
+  <div class="switcher">
+    <article class="card"><h3>Agricultural Solar</h3><p class="muted">Large barn and shed roofs ideal for 100kW+ systems. Reduce electricity costs by 60-80%.</p></article>
+    <article class="card"><h3>Industrial & Warehouses</h3><p class="muted">Great Yarmouth and King's Lynn industrial sites. Peak demand reduction and grid independence.</p></article>
+    <article class="card"><h3>Commercial Buildings</h3><p class="muted">Schools, healthcare, retail, and manufacturing. £5,000-£50,000+ annual savings with 3-5 year payback.</p></article>
+  </div>
+  
+  <div class="commercial-highlight">
+    <h4>Why Commercial Solar Works in Norfolk:</h4>
+    <p><strong>Massive scale systems (50kW-500kW+)</strong> with daytime generation matching business electricity usage. Fast 3-5 year payback, enhanced EPC ratings, and corporate sustainability credentials.</p>
+  </div>
+  
+  <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Get Free Business Assessment</a></p>
+</section>
     </div>
   </section>
 
@@ -678,6 +675,28 @@ window.addEventListener('scroll', () => {
         'event_label': 'sq1i_quote_button',
         'event_action': 'click_to_quote_system'
       });
+    });
+  });
+});
+
+// Cookie consent management
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  
+  // Show banner if consent not given
+  if (!localStorage.getItem('cookieConsent')) {
+    setTimeout(() => banner.classList.remove('hidden'), 1000);
+  }
+  
+  // Handle accept
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    banner.classList.add('hidden');
+    
+    // Initialize GA4 only after consent
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
     });
   });
 });

@@ -575,6 +575,40 @@
           gtag('consent', 'update', {'analytics_storage': 'granted'});
         });
       }
+
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, observerOptions);
+
+      // Apply fade-in animations to cards and stats
+      setTimeout(() => {
+        const animateElements = document.querySelectorAll('.card, .stat, .step-number, .section-divider-accent');
+        animateElements.forEach((el, index) => {
+          el.classList.add('fade-in');
+          if (index < 6) el.classList.add(`delay-${index + 1}`);
+          observer.observe(el);
+        });
+      }, 500);
+    });
+
+    // Scroll effects for hero
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const rate = scrolled * -0.3;
+      const hero = document.querySelector('.hero');
+      if (hero && scrolled < hero.offsetHeight) {
+        hero.style.transform = `translate3d(0, ${rate}px, 0)`;
+      }
     });
   </script>
 </body>

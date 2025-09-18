@@ -329,6 +329,46 @@ img{ max-width: 100%; height: auto; }
   animation: float 20s ease-in-out infinite;
 }
 
+.hero .container {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 968px) {
+  .hero .container {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-9);
+  }
+}
+
+.hero-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-3);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.02);
+}
+
+@media (min-width: 968px) {
+  .hero-content {
+    text-align: left;
+  }
+  .hero-cta {
+    justify-content: flex-start;
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   33% { transform: translate(-2%, -1%) rotate(1deg); }
@@ -592,6 +632,101 @@ img{ max-width: 100%; height: auto; }
   z-index: -1;
 }
 
+/* Card icons */
+.card-icon {
+  margin-bottom: var(--space-4);
+  display: flex;
+  justify-content: center;
+}
+
+.card-icon img {
+  border-radius: var(--radius-sm);
+  transition: transform 0.2s ease;
+}
+
+.card:hover .card-icon img {
+  transform: scale(1.1);
+}
+
+/* Technology showcase layout */
+.tech-showcase {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 968px) {
+  .tech-showcase {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.tech-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+}
+
+.tech-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.tech-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Services grid layout */
+.services-grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+  grid-template-columns: 1fr;
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.service-image {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Team photo styling */
+.team-photo {
+  margin: var(--space-4) 0;
+  text-align: center;
+}
+
+.team-photo img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  transition: transform 0.2s ease;
+}
+
+.team-photo:hover img {
+  transform: scale(1.02);
+}
+
 /* Enhanced FAQ */
 .faq details{
   background: var(--card); 
@@ -793,10 +928,102 @@ details[open] summary::after{
   font-weight: 800;
 }
 
-/* Installer credentials styling */
+/* Installer grid layout */
+.installer-grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .installer-grid {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+  }
+}
+
+/* Green checkmark list styling */
+.recent-reviews ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+}
+
+.recent-reviews li {
+  position: relative;
+  padding: var(--space-3) 0 var(--space-3) var(--space-6);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.recent-reviews li:last-child {
+  border-bottom: none;
+}
+
+.recent-reviews li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: var(--space-3);
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 1.125rem;
+  width: 20px;
+  height: 20px;
+  background: rgba(22, 163, 74, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
 .installer-credentials {
   margin-bottom: var(--space-6);
 }
+
+.installer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-placeholder {
+  background: var(--gradient-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--brand-ink);
+  font-size: 1.125rem;
+  box-shadow: var(--shadow-1);
+  transition: all 0.2s ease;
+}
+
+.logo-placeholder:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  border-color: var(--brand);
+}
+
+.installer-info h4 {
+  margin: 0 0 var(--space-2);
+  color: var(--brand-ink);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.installer-info .company-tagline {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 .rating-display {
   display: flex;
   align-items: center;
@@ -914,18 +1141,5 @@ details[open] summary::after{
   }
   .installer-credentials .certifications {
     justify-content: flex-start;
-  }
-}
-
-.installer-grid {
-  display: grid;
-  gap: var(--space-8);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-  .installer-grid {
-    grid-template-columns: 1fr 1.2fr;
-    align-items: start;
   }
 }

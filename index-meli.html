@@ -4,6 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-33NBLF3DMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-33NBLF3DMD');
+  </script>
+
   <title>Renewable Energy Norfolk – Solar, Batteries & EV Charging | Norfolk.solar</title>
   <meta name="description" content="Complete renewable energy solutions for Norfolk homes and businesses. Solar panels, battery storage, EV charging. AI-powered instant quotes. MCS certified installer. 0% VAT until 2027." />
 
@@ -658,6 +667,19 @@ window.addEventListener('scroll', () => {
   if (hero && scrolled < hero.offsetHeight) {
     hero.style.transform = `translate3d(0, ${rate}px, 0)`;
   }
+});
+
+  // Track clicks to sq1i quote system
+  const ctaLinks = document.querySelectorAll('a[href*="sq1i.co.uk"]');
+  ctaLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      gtag('event', 'click', {
+        'event_category': 'Lead Generation',
+        'event_label': 'sq1i_quote_button',
+        'event_action': 'click_to_quote_system'
+      });
+    });
+  });
 });
 </script>
 </body>

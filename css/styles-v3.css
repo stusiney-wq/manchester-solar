@@ -259,6 +259,8 @@ img{ max-width: 100%; height: auto; }
   transform: translateY(-2px);
   box-shadow: var(--shadow-2);
   filter: brightness(1.05);
+  color: #fff !important;
+  text-decoration: none;
 }
 
 @media (max-width: 860px){
@@ -277,6 +279,9 @@ img{ max-width: 100%; height: auto; }
     backdrop-filter: blur(12px);
   }
   .menu.open{ display:flex; }
+  .menu .btn-small {
+    margin-top: var(--space-3);
+  }
 }
 
 /* ========== HERO SECTION ========== */

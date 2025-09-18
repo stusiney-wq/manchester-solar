@@ -916,3 +916,16 @@ details[open] summary::after{
     justify-content: flex-start;
   }
 }
+
+.installer-grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .installer-grid {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+  }
+}

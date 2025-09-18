@@ -113,9 +113,11 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" aria-label="Norfolk Solar">
-    <div class="container">
+ 
+<!-- 1. HERO SECTION - Add background or side image -->
+<section class="hero" aria-label="Norfolk Solar">
+  <div class="container">
+    <div class="hero-content">
       <div class="hero-badges">
         <span class="hero-badge">AI-powered quotes</span>
         <span class="hero-badge">0% VAT until 2027</span>
@@ -130,7 +132,20 @@
         <a href="#how-it-works" class="btn btn-ghost">How it works</a>
       </div>
     </div>
-  </section>
+    <!-- Optional hero image -->
+    <div class="hero-image">
+      <img src="/assets/norfolk-solar-panels-farmhouse-800w.webp" 
+           srcset="/assets/norfolk-solar-panels-farmhouse-400w.webp 400w,
+                   /assets/norfolk-solar-panels-farmhouse-800w.webp 800w,
+                   /assets/norfolk-solar-panels-farmhouse-1200w.webp 1200w"
+           sizes="(max-width: 768px) 100vw, 50vw"
+           alt="Solar panels installed on traditional Norfolk farmhouse roof by MCS certified installer"
+           loading="eager"
+           width="800" 
+           height="600">
+    </div>
+  </div>
+</section>
 
   <!-- Proof / Stats -->
   <section class="stats section" aria-label="Local proof">

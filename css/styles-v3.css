@@ -250,21 +250,24 @@ img{ max-width: 100%; height: auto; }
   transform: translateY(-1px);
 }
 
-.btn-small{ 
+/* Specific button styling in menu */
+.menu .btn-small{ 
   padding: var(--space-3) var(--space-4); 
   background: linear-gradient(135deg, var(--brand) 0%, #059669 100%); 
-  color:#fff; 
+  color: #fff; 
   border-radius: var(--radius-sm);
   font-weight: 600;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-1);
+  margin-left: var(--space-3);
 }
-.btn-small:hover{ 
+.menu .btn-small:hover{ 
   transform: translateY(-2px);
   box-shadow: var(--shadow-2);
   filter: brightness(1.05);
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
+  background: linear-gradient(135deg, var(--brand) 0%, #059669 100%);
 }
 
 @media (max-width: 860px){

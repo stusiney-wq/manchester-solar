@@ -1113,3 +1113,195 @@ details[open] summary::after{
     justify-content: flex-start;
   }
 }
+
+<!-- CSS ADDITIONS NEEDED -->
+<style>
+/* Enhanced hero styling */
+.highlight {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.cta-primary {
+  background: linear-gradient(135deg, var(--brand) 0%, #059669 100%);
+  font-size: 1.2rem;
+  padding: var(--space-5) var(--space-8);
+}
+
+.cta-subtext {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: var(--space-3);
+}
+
+/* Enhanced stats */
+.stats-headline {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  color: var(--brand-ink);
+}
+
+.stat-primary {
+  border-left: 4px solid var(--brand);
+}
+
+.stat-detail {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+}
+
+.social-proof-enhanced {
+  text-align: center;
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  gap: var(--space-8);
+}
+
+.testimonial-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-2);
+}
+
+.testimonial-content p {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.author-info strong {
+  color: var(--brand-ink);
+}
+
+.savings-badge {
+  background: var(--brand-light);
+  color: var(--brand-ink);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: var(--space-2);
+  display: inline-block;
+}
+
+/* Process timeline */
+.process-timeline {
+  display: grid;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.process-step {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.step-time {
+  color: var(--brand);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.process-guarantee {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: var(--space-3);
+}
+
+/* Enhanced installer section */
+.installer-hero {
+  background: var(--gradient-hero);
+}
+
+.installer-main {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-3);
+}
+
+.installer-intro {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.installer-intro h2 {
+  color: var(--brand-ink);
+  margin-bottom: var(--space-2);
+}
+
+.installer-tagline {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.benefits-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.benefit-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+}
+
+/* Urgency section */
+.urgency {
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+  border-top: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.urgency-content {
+  text-align: center;
+}
+
+.urgency-grid {
+  display: grid;
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+@media (min-width: 768px) {
+  .urgency-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.urgency-item {
+  background: rgba(255, 255, 255, 0.8);
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.btn-urgent {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.urgency-subtext {
+  color: var(--text-muted);
+  margin-top: var(--space-3);
+}
+</style>

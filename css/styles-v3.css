@@ -1305,3 +1305,17 @@ details[open] summary::after{
   margin-top: var(--space-3);
 }
 </style>
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 150px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150"><path d="M20,30 Q60,10 120,25 Q160,40 180,70 Q170,110 140,130 Q100,140 60,135 Q30,120 20,80 Z" fill="none" stroke="%2316a34a" stroke-width="2" opacity="0.3"/><circle cx="50" cy="60" r="3" fill="%23fbbf24"/><circle cx="80" cy="45" r="3" fill="%23fbbf24"/><circle cx="110" cy="70" r="3" fill="%23fbbf24"/><circle cx="140" cy="55" r="3" fill="%23fbbf24"/><circle cx="90" cy="90" r="3" fill="%23fbbf24"/></svg>') no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  z-index: -1;
+}

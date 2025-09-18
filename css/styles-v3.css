@@ -358,6 +358,7 @@ img{ max-width: 100%; height: auto; }
   flex-wrap: wrap; 
   justify-content: center;
   align-items: center;
+  margin-top: var(--space-7);
 }
 
 .highlight {

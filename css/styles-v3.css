@@ -183,6 +183,14 @@ img{ max-width: 100%; height: auto; }
   background: var(--accent); font-weight: 800; margin-bottom: .5rem;
 }
 
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-1);
+}
+
 /* FAQ */
 .faq details{
   background:#fff; border:1px solid var(--border); border-radius: var(--radius);

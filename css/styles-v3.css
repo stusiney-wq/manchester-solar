@@ -1191,3 +1191,14 @@ details[open] summary::after{
 
 /* Slightly stronger focus outlines (a11y, matches brand) */
 :focus-visible { outline: var(--focus); outline-offset: 2px; }
+
+/* === Spacing improvements for Final CTA section === */
+.final-cta {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.final-cta .btn {
+  margin-bottom: var(--space-3);
+}
+

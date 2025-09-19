@@ -1,4 +1,4 @@
-/* ===============================
+
    Norfolk.solar — Clean V3 Styles
    No inline CSS • Mobile-first • Visual Polish
    =============================== */
@@ -1165,93 +1165,8 @@ details[open] summary::after{
     justify-content: flex-start;
   }
 }
-/* === v3.0.1 additions === */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .hero { transform: none !important; }
-}
 
-/* Footer grid expansion (non-breaking) */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-7);
-}
-@media (min-width: 800px) {
-  .footer-grid { grid-template-columns: 2fr 1fr; }
-}
-.footer-col {}
-.footer-links { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
-.footer a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
-.footer a:hover { opacity: .9; text-decoration: none; }
+.text-center { text-align: center; }
+.mt-lg { margin-top: 2rem; }
 
-/* Credentials grid small fix (keeps your look) */
-.credentials-grid { display: grid; gap: var(--space-4); }
-@media (min-width: 640px) { .credentials-grid { grid-auto-flow: row; } }
-
-/* Slightly stronger focus outlines (a11y, matches brand) */
-:focus-visible { outline: var(--focus); outline-offset: 2px; }
-
-/* === Spacing improvements for Final CTA section === */
-.final-cta {
-  margin-top: var(--space-8);
-  text-align: center;
-}
-
-.final-cta .btn {
-  margin-bottom: var(--space-3);
-}
-
-/* === Installer section refinements === */
-.installer-main.flow > * + * { margin-block-start: var(--space-7); }
-
-.installer-badges { --gap: var(--space-3); }
-.installer-badges .cert-badge { margin: 0; } /* use cluster gap */
-
-.installer-meta {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: var(--space-2);
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.installer-actions { --gap: var(--space-3); }
-.installer-actions .btn-ghost {
-  padding: var(--space-4) var(--space-6);
-  font-weight: 600;
-}
-
-.installer-fineprint { margin-top: var(--space-3); }
-
-/* Slight breathing room inside credentials column */
-.installer-credentials.flow > * + * { margin-block-start: var(--space-5); }
-
-/* Ensure the right column stacks nicely on mobile */
-@media (max-width: 767px) {
-  .installer-actions { justify-content: center; }
-}
-
-/* === CSS additions (append to styles-v3.css) === */
-.included-list {
-list-style: none;
-padding: 0;
-margin: 0;
-display: grid;
-gap: var(--space-3);
-}
-.included-list li { line-height: 1.6; }
-
-
-.trust-pills { --gap: var(--space-3); margin-top: var(--space-5); }
-.verification-links { --gap: var(--space-3); margin-top: var(--space-4); }
-
-/* Trust intro before accreditation pills */
-.trust-intro {
-  margin-bottom: var(--space-3);
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
 

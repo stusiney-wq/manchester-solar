@@ -1234,3 +1234,16 @@ details[open] summary::after{
   .installer-actions { justify-content: center; }
 }
 
+/* === CSS additions (append to styles-v3.css) === */
+.included-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: grid;
+gap: var(--space-3);
+}
+.included-list li { line-height: 1.6; }
+
+
+.trust-pills { --gap: var(--space-3); margin-top: var(--space-5); }
+.verification-links { --gap: var(--space-3); margin-top: var(--space-4); }

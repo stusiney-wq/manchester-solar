@@ -47,174 +47,66 @@ gtag('config', 'G-33NBLF3DMD');
 
 <!-- JSON-LD Schema (complete v3.0.2) -->
 <script type="application/ld+json">
+"@type": "Question",
+"name": "Do solar panels work well in Norfolk's climate?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes — panels generate from daylight, not just direct sun. Norfolk averages ~4.0 peak sun hours, supporting excellent performance even on cloudy days."
+}
+},
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://norfolk.solar/#org",
-      "name": "Norfolk.solar",
-      "url": "https://norfolk.solar",
-      "logo": "https://norfolk.solar/assets/logo.png",
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Find Solar Ltd",
-        "url": "https://find.solar"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://norfolk.solar/#website",
-      "name": "Norfolk.solar",
-      "url": "https://norfolk.solar",
-      "publisher": { "@id": "https://norfolk.solar/#org" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://app.sq1i.co.uk/solar",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://norfolk.solar/#partner-sq1i",
-      "name": "sq1i Solar",
-      "url": "https://www.sq1i.co.uk",
-      "image": "https://norfolk.solar/assets/logo.png",
-      "telephone": "+44 1603 555529",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "42 Curtis Road",
-        "addressLocality": "Norwich",
-        "postalCode": "NR6 6RB",
-        "addressCountry": "GB"
-      },
-      "areaServed": { "@type": "Place", "name": "Norfolk" },
-      "sameAs": ["https://www.sq1i.co.uk"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    },
-    {
-      "@type": "Service",
-      "@id": "https://norfolk.solar/#service-solar",
-      "name": "Solar panel installation in Norfolk",
-      "serviceType": "Solar PV installation, Battery storage, EV charging",
-      "areaServed": { "@type": "AdministrativeArea", "name": "Norfolk" },
-      "provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
-      "broker": { "@id": "https://norfolk.solar/#org" },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "GBP",
-          "minPrice": "4000",
-          "maxPrice": "8000"
-        },
-        "availability": "https://schema.org/InStock",
-        "url": "https://app.sq1i.co.uk/solar"
-      }
-    },
-    {
-      "@type": "HowTo",
-      "@id": "https://norfolk.solar/#how-it-works",
-      "name": "Get Your Norfolk Solar Quote in 3 Steps",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "60-Second AI Analysis",
-          "text": "Satellite & AI measure your roof for instant, accurate pricing.",
-          "url": "https://norfolk.solar/#how-it-works"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Professional Survey (Optional)",
-          "text": "sq1i’s Norfolk team confirms details and finalises the design.",
-          "url": "https://norfolk.solar/#how-it-works"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Professional Installation",
-          "text": "MCS-certified install, permissions and grid connection handled.",
-          "url": "https://norfolk.solar/#how-it-works"
-        }
-      ],
-      "provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "GBP",
-        "value": "4000-8000"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://norfolk.solar/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do solar panels work well in Norfolk's climate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — panels generate from daylight, not just direct sun. Norfolk averages ~4.0 peak sun hours, supporting excellent performance even on cloudy days."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much do solar panels cost in Norfolk?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,950/year, payback is usually 6–8 years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need planning permission?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the payback time for businesses?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Commercial systems (50kW–500kW+) often pay back in 3–5 years due to daytime usage alignment and scale efficiencies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I add a battery later?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Systems can be designed battery-ready so you can add storage later; it typically increases savings by 20–40%."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What’s not included in the price?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard pricing covers installation, DNO application, all parts, and scaffolding. Exclusions may include unusual structural work, major roof repairs, or bespoke ground mounts. These are quoted separately if required."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "AboutPage",
-      "@id": "https://norfolk.solar/#about",
-      "name": "About Norfolk.solar",
-      "url": "https://norfolk.solar/#about",
-      "isPartOf": { "@id": "https://norfolk.solar/#website" },
-      "about": { "@id": "https://norfolk.solar/#org" },
-      "provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
-      "description": "Norfolk.solar is an independent connector operated by Find Solar Ltd. We connect property owners with our exclusive Norfolk partner, sq1i Solar — an MCS-certified local installer."
-    }
-  ]
+"@type": "Question",
+"name": "How much do solar panels cost in Norfolk?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,950/year, payback is usually 6–8 years."
+}
+},
+{
+"@type": "Question",
+"name": "Do I need planning permission?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."
+}
+},
+{
+"@type": "Question",
+"name": "What is the payback time for businesses?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Commercial systems (50kW–500kW+) often pay back in 3–5 years due to daytime usage alignment and scale efficiencies."
+}
+},
+{
+"@type": "Question",
+"name": "Can I add a battery later?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Systems can be designed battery-ready so you can add storage later; it typically increases savings by 20–40%."
+}
+},
+{
+"@type": "Question",
+"name": "What’s not included in the price?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Standard pricing covers installation, DNO application, all parts, and scaffolding. Exclusions may include unusual structural work, major roof repairs, or bespoke ground mounts. These are quoted separately if required."
+}
+}
+]
+},
+{
+"@type": "AboutPage",
+"@id": "https://norfolk.solar/#about",
+"name": "About Norfolk.solar",
+"url": "https://norfolk.solar/#about",
+"isPartOf": { "@id": "https://norfolk.solar/#website" },
+"about": { "@id": "https://norfolk.solar/#org" },
+"provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
+"description": "Norfolk.solar is an independent connector operated by Find Solar Ltd. We connect property owners with our exclusive Norfolk partner, sq1i Ltd (Square1 Installations) — an MCS-certified local installer."
+}
+]
 }
 </script>
 </head>

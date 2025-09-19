@@ -1202,3 +1202,35 @@ details[open] summary::after{
   margin-bottom: var(--space-3);
 }
 
+/* === Installer section refinements === */
+.installer-main.flow > * + * { margin-block-start: var(--space-7); }
+
+.installer-badges { --gap: var(--space-3); }
+.installer-badges .cert-badge { margin: 0; } /* use cluster gap */
+
+.installer-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.installer-actions { --gap: var(--space-3); }
+.installer-actions .btn-ghost {
+  padding: var(--space-4) var(--space-6);
+  font-weight: 600;
+}
+
+.installer-fineprint { margin-top: var(--space-3); }
+
+/* Slight breathing room inside credentials column */
+.installer-credentials.flow > * + * { margin-block-start: var(--space-5); }
+
+/* Ensure the right column stacks nicely on mobile */
+@media (max-width: 767px) {
+  .installer-actions { justify-content: center; }
+}
+

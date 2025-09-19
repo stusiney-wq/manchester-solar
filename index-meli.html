@@ -48,50 +48,174 @@ gtag('config', 'G-33NBLF3DMD');
 <!-- JSON-LD Schema (complete v3.0.2) -->
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@graph": [
-{
-"@type": "Organization",
-"@id": "https://norfolk.solar/#org",
-"name": "Norfolk.solar",
-"url": "https://norfolk.solar",
-"logo": "https://norfolk.solar/assets/logo.png",
-"parentOrganization": {
-"@type": "Organization",
-"name": "Find Solar Ltd",
-"url": "https://find.solar"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://norfolk.solar/#org",
+      "name": "Norfolk.solar",
+      "url": "https://norfolk.solar",
+      "logo": "https://norfolk.solar/assets/logo.png",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Find Solar Ltd",
+        "url": "https://find.solar"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://norfolk.solar/#website",
+      "name": "Norfolk.solar",
+      "url": "https://norfolk.solar",
+      "publisher": { "@id": "https://norfolk.solar/#org" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://app.sq1i.co.uk/solar",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://norfolk.solar/#partner-sq1i",
+      "name": "sq1i Solar",
+      "url": "https://www.sq1i.co.uk",
+      "image": "https://norfolk.solar/assets/logo.png",
+      "telephone": "+44 1603 555529",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Curtis Road",
+        "addressLocality": "Norwich",
+        "postalCode": "NR6 6RB",
+        "addressCountry": "GB"
+      },
+      "areaServed": { "@type": "Place", "name": "Norfolk" },
+      "sameAs": ["https://www.sq1i.co.uk"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://norfolk.solar/#service-solar",
+      "name": "Solar panel installation in Norfolk",
+      "serviceType": "Solar PV installation, Battery storage, EV charging",
+      "areaServed": { "@type": "AdministrativeArea", "name": "Norfolk" },
+      "provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
+      "broker": { "@id": "https://norfolk.solar/#org" },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "GBP",
+          "minPrice": "4000",
+          "maxPrice": "8000"
+        },
+        "availability": "https://schema.org/InStock",
+        "url": "https://app.sq1i.co.uk/solar"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://norfolk.solar/#how-it-works",
+      "name": "Get Your Norfolk Solar Quote in 3 Steps",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "60-Second AI Analysis",
+          "text": "Satellite & AI measure your roof for instant, accurate pricing.",
+          "url": "https://norfolk.solar/#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Professional Survey (Optional)",
+          "text": "sq1i’s Norfolk team confirms details and finalises the design.",
+          "url": "https://norfolk.solar/#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Professional Installation",
+          "text": "MCS-certified install, permissions and grid connection handled.",
+          "url": "https://norfolk.solar/#how-it-works"
+        }
+      ],
+      "provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "GBP",
+        "value": "4000-8000"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://norfolk.solar/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do solar panels work well in Norfolk's climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — panels generate from daylight, not just direct sun. Norfolk averages ~4.0 peak sun hours, supporting excellent performance even on cloudy days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do solar panels cost in Norfolk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,950/year, payback is usually 6–8 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need planning permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the payback time for businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commercial systems (50kW–500kW+) often pay back in 3–5 years due to daytime usage alignment and scale efficiencies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add a battery later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Systems can be designed battery-ready so you can add storage later; it typically increases savings by 20–40%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What’s not included in the price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard pricing covers installation, DNO application, all parts, and scaffolding. Exclusions may include unusual structural work, major roof repairs, or bespoke ground mounts. These are quoted separately if required."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://norfolk.solar/#about",
+      "name": "About Norfolk.solar",
+      "url": "https://norfolk.solar/#about",
+      "isPartOf": { "@id": "https://norfolk.solar/#website" },
+      "about": { "@id": "https://norfolk.solar/#org" },
+      "provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
+      "description": "Norfolk.solar is an independent connector operated by Find Solar Ltd. We connect property owners with our exclusive Norfolk partner, sq1i Solar — an MCS-certified local installer."
+    }
+  ]
 }
-},
-{
-"@type": "WebSite",
-"@id": "https://norfolk.solar/#website",
-"name": "Norfolk.solar",
-"url": "https://norfolk.solar",
-"publisher": { "@id": "https://norfolk.solar/#org" },
-"potentialAction": {
-"@type": "SearchAction",
-"target": "https://app.sq1i.co.uk/solar",
-"query-input": "required name=search_term_string"
-}
-},
-{
-"@type": "LocalBusiness",
-"@id": "https://norfolk.solar/#partner-sq1i",
-"name": "sq1i Solar",
-"url": "https://www.sq1i.co.uk",
-"image": "https://norfolk.solar/assets/logo.png",
-"telephone": "+44 1603 555529",
-"address": {
-"@type": "PostalAddress",
-"streetAddress": "42 Curtis Road",
-"addressLocality": "Norwich",
-"postalCode": "NR6 6RB",
-"addressCountry": "GB"
-},
-"areaServed": { "@type": "Place", "name": "Norfolk" },
-"sameAs": ["https://www.sq1i.co.uk"],
-"aggregateRating": {
-"@type": "AggregateRating",
 </script>
 </head>
 
@@ -378,23 +502,35 @@ gtag('config', 'G-33NBLF3DMD');
 </div>
 </section>
 
-  <!-- Installer Partner (clarified connector role) -->
- <section id="installer-partner" class="section installer-hero">
+  <section id="installer-partner" class="section installer-hero">
   <div class="container">
     <div class="installer-showcase">
       <div class="installer-main flow">
-        <!-- Intro -->
+        <!-- Header + connector clarity -->
         <div class="installer-intro">
-          <h2>Meet sq1i Solar — Norfolk.solar’s Exclusive Installation Partner</h2>
+          <h2>Meet sq1i Ltd (Square1 Installations) — Norfolk.solar’s Exclusive Installation Partner</h2>
           <p class="installer-tagline">We connect you directly with Norfolk’s trusted MCS-certified team</p>
         </div>
 
-        <!-- Grid -->
+        <!-- Accreditations intro -->
+        <div class="trust-intro">
+          <p><strong>sq1i Ltd (also known as Square1 Installations)</strong> hold the following accreditations and partnerships:</p>
+        </div>
+
+        <ul class="trust-pills cluster" aria-label="Partner accreditations">
+          <li class="cert-badge">MCS Certified</li>
+          <li class="cert-badge">RECC Member</li>
+          <li class="cert-badge">TrustMark Registered</li>
+          <li class="cert-badge">NAPIT Approved</li>
+          <li class="cert-badge">Octopus Trusted Partner</li>
+          <li class="cert-badge">Hometree Finance Available</li>
+        </ul>
+
         <div class="installer-grid">
-          <!-- Left: credentials -->
+          <!-- Left: credentials & meta -->
           <div class="installer-credentials flow">
             <div class="installer-logo">
-              <div class="logo-placeholder">sq1i Solar</div>
+              <div class="logo-placeholder">sq1i Ltd</div>
               <div class="installer-info">
                 <h4>sq1i Solar</h4>
                 <p class="company-tagline">Norfolk's #1 Rated Solar Installer</p>
@@ -408,36 +544,34 @@ gtag('config', 'G-33NBLF3DMD');
                 <span class="review-count">(127+ Google Reviews)</span>
               </div>
 
-              <ul class="installer-badges cluster" aria-label="Accreditations">
-                <li class="cert-badge">MCS Certified</li>
-                <li class="cert-badge">RECC Member</li>
-                <li class="cert-badge">TrustMark</li>
-                <li class="cert-badge">NAPIT Approved</li>
-              </ul>
-
               <ul class="installer-meta">
                 <li><strong>200+ Norfolk installs</strong></li>
                 <li><strong>24–48h</strong> typical survey booking</li>
                 <li><strong>Fixed-price</strong> quotes</li>
               </ul>
             </div>
+
+            <!-- Verification links -->
+            <div class="verification-links cluster">
+              <a class="btn btn-ghost" href="https://www.sq1i.co.uk" target="_blank" rel="noopener" data-cta-pos="verify-site">Verify sq1i on their site</a>
+              <a class="btn btn-ghost" href="https://www.google.com/search?q=sq1i+solar+reviews" target="_blank" rel="noopener" data-cta-pos="reviews">See independent reviews</a>
+            </div>
           </div>
 
-          <!-- Right: why choose -->
+          <!-- Right: reasons & actions -->
           <div class="why-choose flow">
-            <h3>Why 200+ Norfolk Customers Choose sq1i Solar</h3>
+            <h3>Why 200+ Norfolk Customers Choose sq1i Ltd</h3>
             <div class="recent-reviews">
               <ul>
-                <li><strong>Local Expertise:</strong> Norfolk specialists who understand Victorian terraces, farm buildings, and local planning</li>
-                <li><strong>AI Quote Technology:</strong> Most accurate quotes in Norfolk using satellite imagery and advanced calculations</li>
-                <li><strong>Complete Service:</strong> From planning permission to final connection — everything handled professionally</li>
+                <li><strong>Local Expertise:</strong> Norfolk specialists for terraces, farm buildings, and local planning</li>
+                <li><strong>AI Quote Technology:</strong> Satellite imagery + advanced calcs for accurate pricing</li>
+                <li><strong>Complete Service:</strong> From permissions to grid connection — handled professionally</li>
               </ul>
             </div>
 
-            <!-- Secondary actions -->
             <div class="installer-actions cluster">
               <a href="https://app.sq1i.co.uk/solar" class="btn btn-large btn-installer" data-cta-pos="installer">Get Quote from sq1i Solar →</a>
-              <a href="https://www.google.com/search?q=sq1i+solar+reviews" class="btn btn-ghost" target="_blank" rel="noopener" data-cta-pos="reviews">View Google Reviews</a>
+              <a href="https://app.sq1i.co.uk/solar" class="btn btn-ghost" data-cta-pos="installer-secondary">Compare options in the planner</a>
             </div>
 
             <p class="installer-fineprint muted">Connected by Norfolk.solar • No lead reselling • One trusted local team</p>

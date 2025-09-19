@@ -578,104 +578,73 @@ gtag('config', 'G-33NBLF3DMD');
 
   <!-- JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Footer year
-      document.getElementById('year').textContent = new Date().getFullYear();
+animateElements.forEach((el, index) => {
+el.classList.add('fade-in');
+if (index < 6) el.classList.add(`delay-${index + 1}`);
+observer.observe(el);
+});
+}, 500);
+});
 
-      // Mobile navigation
-      const toggle = document.querySelector('.nav-toggle');
-      const menu = document.getElementById('primary-menu');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          const open = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', String(!open));
-          toggle.setAttribute('aria-pressed', String(!open));
-          menu.classList.toggle('open');
-        });
-      }
 
-      // Sector tabs
-      const sectorButtons = document.querySelectorAll('.sector-toggle [data-sector]');
-      const panels = document.querySelectorAll('[data-sector-panel]');
-      function showSector(target) {
-        panels.forEach(p => {
-          const isTarget = p.getAttribute('data-sector-panel') === target;
-          p.hidden = !isTarget;
-        });
-        sectorButtons.forEach(b => {
-          const active = b.dataset.sector === target;
-          b.classList.toggle('is-active', active);
-          b.setAttribute('aria-selected', String(active));
-        });
-      }
-      sectorButtons.forEach(btn => {
-        btn.addEventListener('click', () => showSector(btn.dataset.sector));
-      });
+// Parallax-like scroll effect for hero
+(function() {
+const hero = document.querySelector('.hero');
+if (!hero) return;
+let ticking = false;
+function onScroll() {
+if (ticking) return;
+window.requestAnimationFrame(() => {
+const scrolled = window.scrollY || window.pageYOffset;
+const rate = scrolled * -0.3;
+if (scrolled < hero.offsetHeight) {
+hero.style.transform = `translate3d(0, ${rate}px, 0)`;
+}
+ticking = false;
+});
+ticking = true;
+}
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!prefersReduced.matches) {
+window.addEventListener('scroll', onScroll);
+}
+})();
 
-      // Track CTA clicks with granular positions
-      const ctaLinks = document.querySelectorAll('a[href*="sq1i.co.uk"]');
-      ctaLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          const pos = link.getAttribute('data-cta-pos') || 'unknown';
-          gtag('event', 'click', {
-            'event_category': 'Lead Generation',
-            'event_label': `cta_${pos}`,
-            'event_action': 'click_to_quote_system'
-          });
-        });
-      });
 
-      // Cookie consent
-      const banner = document.getElementById('cookie-banner');
-      const acceptBtn = document.getElementById('accept-cookies');
-      if (!localStorage.getItem('cookieConsent') && banner) {
-        setTimeout(() => banner.classList.remove('hidden'), 1000);
-      }
-      if (acceptBtn) {
-        acceptBtn.addEventListener('click', () => {
-          localStorage.setItem('cookieConsent', 'accepted');
-          if (banner) banner.classList.add('hidden');
-          gtag('consent', 'update', {'analytics_storage': 'granted'});
-        });
-      }
+// === Norfolk.solar outbound lead tracking ===
 
-      // Scroll animations (unchanged behaviour, plus safety for reduced motion)
-      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('animate'); });
-      }, observerOptions);
-      setTimeout(() => {
-        const animateElements = document.querySelectorAll('.card, .stat, .step-number, .section-divider-accent');
-        animateElements.forEach((el, index) => {
-          el.classList.add('fade-in');
-          if (index < 6) el.classList.add(`delay-${index + 1}`);
-          observer.observe(el);
-        });
-      }, 500);
-    });
 
-    // Parallax-like scroll effect for hero (throttled + respects reduced motion)
-    (function() {
-      const hero = document.querySelector('.hero');
-      if (!hero) return;
-      let ticking = false;
-      function onScroll() {
-        if (ticking) return; // throttle via rAF
-        window.requestAnimationFrame(() => {
-          const scrolled = window.scrollY || window.pageYOffset;
-          const rate = scrolled * -0.3;
-          if (scrolled < hero.offsetHeight) {
-            hero.style.transform = `translate3d(0, ${rate}px, 0)`;
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-      if (!prefersReduced.matches) {
-        window.addEventListener('scroll', onScroll);
-      }
-    })();
-  </script>
+// 1. Replace all sq1i links with UTM-tagged versions
+(function () {
+const BASE = "https://app.sq1i.co.uk/solar"; // short, stable route
+const links = document.querySelectorAll('a[href*="sq1i.co.uk"][data-cta-pos]');
+links.forEach(a => {
+const pos = a.getAttribute('data-cta-pos') || 'unknown';
+const url = new URL(BASE);
+url.searchParams.set('utm_source', 'norfolk.solar');
+url.searchParams.set('utm_medium', 'cta');
+url.searchParams.set('utm_campaign', 'homepage');
+url.searchParams.set('utm_content', pos);
+a.setAttribute('href', url.toString());
+});
+})();
+
+
+// 2. Fire GA4 event when a quote link is clicked
+const ctaLinks = document.querySelectorAll('a[href*="sq1i.co.uk"]');
+ctaLinks.forEach(link => {
+link.addEventListener('click', () => {
+const pos = link.getAttribute('data-cta-pos') || 'unknown';
+gtag('event', 'outbound_quote_click', {
+event_category: 'Lead Generation',
+event_action: 'click_to_quote_system',
+event_label: `cta_${pos}`,
+cta_pos: pos,
+link_url: link.href,
+page_path: location.pathname
+});
+});
+});
+</script>
 </body>
 </html>

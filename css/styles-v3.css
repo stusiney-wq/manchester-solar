@@ -1247,3 +1247,11 @@ gap: var(--space-3);
 
 .trust-pills { --gap: var(--space-3); margin-top: var(--space-5); }
 .verification-links { --gap: var(--space-3); margin-top: var(--space-4); }
+
+/* Trust intro before accreditation pills */
+.trust-intro {
+  margin-bottom: var(--space-3);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+

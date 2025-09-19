@@ -220,10 +220,17 @@ img{ max-width: 100%; height: auto; }
   padding: var(--space-3) var(--space-4); 
   font-weight: 600;
   transition: all 0.2s ease;
+  display: none; /* Hidden by default on desktop */
 }
 .nav-toggle:hover {
   background: var(--bg-alt);
   transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: block; /* Show on mobile */
+  }
 }
 
 .menu{ 

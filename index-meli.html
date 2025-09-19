@@ -1,112 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="en-GB" data-city="norfolk">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-33NBLF3DMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('consent', 'default', {'analytics_storage': 'denied'});
+    gtag('config', 'G-33NBLF3DMD');
+  </script>
 
-<!-- Performance: preconnect/preload -->
-<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-<link rel="preload" href="/assets/logo.svg" as="image" type="image/svg+xml" fetchpriority="high">
-<link rel="preload" href="/css/styles-v3.css" as="style">
+  <title>Renewable Energy Norfolk – Solar, Batteries & EV Charging | Norfolk.solar</title>
+  <meta name="description" content="Complete renewable energy solutions for Norfolk homes and businesses. Solar panels, battery storage, EV charging. AI-powered instant quotes. MCS certified installer. 0% VAT until 2027." />
 
+  <!-- Canonical & Social -->
+  <link rel="canonical" href="https://norfolk.solar/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solar Panels Norfolk – AI-Powered Instant Quotes">
+  <meta property="og:description" content="Get instant solar pricing using AI and satellite data. Vetted MCS installer. No spam.">
+  <meta property="og:url" content="https://norfolk.solar/">
+  <meta property="og:image" content="https://norfolk.solar/assets/hero-norfolk-1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-33NBLF3DMD"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);};
-gtag('js', new Date());
-gtag('consent', 'default', {'analytics_storage': 'denied'});
-gtag('config', 'G-33NBLF3DMD');
-</script>
+  <!-- CSS -->
+  <link rel="preload" href="/css/styles-v3.css" as="style">
+  <link rel="stylesheet" href="/css/styles-v3.css">
 
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-<title>Renewable Energy Norfolk – Solar, Batteries & EV Charging | Norfolk.solar</title>
-<meta name="description" content="Complete renewable energy solutions for Norfolk homes and businesses. Solar panels, battery storage, EV charging. AI-powered instant quotes. MCS certified installer. 0% VAT until 2027." />
-
-
-<!-- Canonical & Social -->
-<link rel="canonical" href="https://norfolk.solar/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Solar Panels Norfolk – AI-Powered Instant Quotes">
-<meta property="og:description" content="Get instant solar pricing using AI and satellite data. Vetted MCS installer. No spam.">
-<meta property="og:url" content="https://norfolk.solar/">
-<meta property="og:image" content="https://norfolk.solar/assets/hero-norfolk-1200.jpg">
-<meta name="twitter:card" content="summary_large_image">
-
-
-<!-- CSS -->
-<link rel="stylesheet" href="/css/styles-v3.css">
-
-
-<!-- Favicons -->
-<link rel="icon" href="/assets/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-
-
-<!-- JSON-LD Schema (complete v3.0.2) -->
-<script type="application/ld+json">
-"@type": "Question",
-"name": "Do solar panels work well in Norfolk's climate?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes — panels generate from daylight, not just direct sun. Norfolk averages ~4.0 peak sun hours, supporting excellent performance even on cloudy days."
-}
-},
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
 {
-"@type": "Question",
-"name": "How much do solar panels cost in Norfolk?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,950/year, payback is usually 6–8 years."
-}
-},
-{
-"@type": "Question",
-"name": "Do I need planning permission?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."
-}
-},
-{
-"@type": "Question",
-"name": "What is the payback time for businesses?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Commercial systems (50kW–500kW+) often pay back in 3–5 years due to daytime usage alignment and scale efficiencies."
-}
-},
-{
-"@type": "Question",
-"name": "Can I add a battery later?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes. Systems can be designed battery-ready so you can add storage later; it typically increases savings by 20–40%."
-}
-},
-{
-"@type": "Question",
-"name": "What’s not included in the price?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Standard pricing covers installation, DNO application, all parts, and scaffolding. Exclusions may include unusual structural work, major roof repairs, or bespoke ground mounts. These are quoted separately if required."
-}
-}
-]
-},
-{
-"@type": "AboutPage",
-"@id": "https://norfolk.solar/#about",
-"name": "About Norfolk.solar",
-"url": "https://norfolk.solar/#about",
-"isPartOf": { "@id": "https://norfolk.solar/#website" },
-"about": { "@id": "https://norfolk.solar/#org" },
-"provider": { "@id": "https://norfolk.solar/#partner-sq1i" },
-"description": "Norfolk.solar is an independent connector operated by Find Solar Ltd. We connect property owners with our exclusive Norfolk partner, sq1i Ltd (Square1 Installations) — an MCS-certified local installer."
-}
-]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://norfolk.solar/#org",
+      "name": "Norfolk.solar",
+      "url": "https://norfolk.solar",
+      "logo": "https://norfolk.solar/assets/logo.png",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Find Solar Ltd",
+        "url": "https://find.solar"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://norfolk.solar/#website",
+      "name": "Norfolk.solar",
+      "url": "https://norfolk.solar",
+      "publisher": {
+        "@id": "https://norfolk.solar/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://app.sq1i.co.uk/solar",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://norfolk.solar/#partner-sq1i",
+      "name": "sq1i Ltd",
+      "alternateName": "Square1 Installations",
+      "url": "https://www.sq1i.co.uk",
+      "image": "https://norfolk.solar/assets/logo.png",
+      "telephone": "+44 1603 555529",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Curtis Road",
+        "addressLocality": "Norwich",
+        "postalCode": "NR6 6RB",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Norfolk"
+      },
+      "sameAs": [
+        "https://www.sq1i.co.uk"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://norfolk.solar/#service-solar",
+      "name": "Solar panel installation in Norfolk",
+      "serviceType": "Solar PV installation, Battery storage, EV charging",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Norfolk"
+      },
+      "provider": {
+        "@id": "https://norfolk.solar/#partner-sq1i"
+      },
+      "broker": {
+        "@id": "https://norfolk.solar/#org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "GBP",
+          "minPrice": "4000",
+          "maxPrice": "8000"
+        },
+        "availability": "https://schema.org/InStock",
+        "url": "https://app.sq1i.co.uk/solar"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://norfolk.solar/#how-it-works",
+      "name": "Get Your Norfolk Solar Quote in 3 Steps",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "60-Second AI Analysis",
+          "text": "Satellite & AI measure your roof for instant, accurate pricing.",
+          "url": "https://norfolk.solar/#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Professional Survey (Optional)",
+          "text": "sq1i’s Norfolk team confirms details and finalises the design.",
+          "url": "https://norfolk.solar/#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Professional Installation",
+          "text": "MCS-certified install, permissions and grid connection handled.",
+          "url": "https://norfolk.solar/#how-it-works"
+        }
+      ],
+      "provider": {
+        "@id": "https://norfolk.solar/#partner-sq1i"
+      },
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "GBP",
+        "value": "4000-8000"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://norfolk.solar/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do solar panels work well in Norfolk's climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — panels generate from daylight, not just direct sun. Norfolk averages ~4.0 peak sun hours, supporting excellent performance even on cloudy days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do solar panels cost in Norfolk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical residential systems range from £4,000–£8,000 depending on size and spec. With 0% VAT until 2027 and average savings of ~£1,950/year, payback is usually 6–8 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need planning permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most homes fall under Permitted Development. Listed buildings, conservation areas, or flats may need approval — your installer will handle checks and paperwork."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the payback time for businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commercial systems (50kW–500kW+) often pay back in 3–5 years due to daytime usage alignment and scale efficiencies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add a battery later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Systems can be designed battery-ready so you can add storage later; it typically increases savings by 20–40%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What’s not included in the price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard pricing covers installation, DNO application, all parts, and scaffolding. Exclusions may include unusual structural work, major roof repairs, or bespoke ground mounts. These are quoted separately if required."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://norfolk.solar/#about",
+      "name": "About Norfolk.solar",
+      "url": "https://norfolk.solar/#about",
+      "isPartOf": {
+        "@id": "https://norfolk.solar/#website"
+      },
+      "about": {
+        "@id": "https://norfolk.solar/#org"
+      },
+      "provider": {
+        "@id": "https://norfolk.solar/#partner-sq1i"
+      },
+      "description": "Norfolk.solar is an independent connector operated by Find Solar Ltd. We connect property owners with our exclusive Norfolk partner, sq1i Ltd (Square1 Installations) — an MCS-certified local installer."
+    }
+  ]
 }
 </script>
 </head>
@@ -116,16 +237,16 @@ gtag('config', 'G-33NBLF3DMD');
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="logo" href="/" aria-current="page" aria-label="Norfolk.solar home">
-        <img src="/images/NORFOLK.SOLAR.png" alt="Norfolk.solar" width="264" height="56">
+        <img src="/assets/logo.svg" alt="Norfolk.solar" width="132" height="28">
       </a>
       <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation" aria-pressed="false">Menu</button>
-        <ul id="primary-menu" class="menu" role="menubar">
-          <li role="none"><a role="menuitem" href="#how-it-works">How it works</a></li>
-          <li role="none"><a role="menuitem" href="#services">Services</a></li>
-          <li role="none"><a role="menuitem" href="#installer-partner">Our Partner</a></li>
-          <li role="none"><a role="menuitem" href="#faq">FAQ</a></li>
-          <li role="none"><a role="menuitem" class="btn btn-small" data-cta-pos="nav" href="https://app.sq1i.co.uk/solar">Get quote</a></li>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="menu">
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#installer-partner">Our Partner</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="btn btn-small" href="https://app.sq1i.co.uk/solar">Get quote</a></li>
         </ul>
       </nav>
     </div>
@@ -146,7 +267,7 @@ gtag('config', 'G-33NBLF3DMD');
         <span class="highlight">No pushy sales calls, just honest pricing.</span>
       </p>
       <div class="hero-cta">
-        <a href="https://app.sq1i.co.uk/solar" class="btn btn-large cta-primary" data-cta-pos="hero">
+        <a href="https://app.sq1i.co.uk/solar" class="btn btn-large cta-primary">
           Get My 60-Second Quote →
         </a>
         <p class="cta-subtext">Trusted by 200+ Norfolk families • Free, no obligation</p>
@@ -214,7 +335,7 @@ gtag('config', 'G-33NBLF3DMD');
       </div>
       
       <div class="process-cta">
-        <a href="https://app.sq1i.co.uk/solar" class="btn btn-large" data-cta-pos="process">Start My Quote Now →</a>
+        <a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Start My Quote Now →</a>
         <p class="process-guarantee">No obligation • Fixed price guarantee • Professional installation</p>
       </div>
     </div>
@@ -306,7 +427,7 @@ gtag('config', 'G-33NBLF3DMD');
             <p class="muted">Smart, solar-aware home chargers for rural Norfolk properties.</p>
           </article>
         </div>
-        <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large" data-cta-pos="services-resi">Get My Free Home Survey</a></p>
+        <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Get My Free Home Survey</a></p>
       </section>
 
       <!-- Commercial panel -->
@@ -331,154 +452,74 @@ gtag('config', 'G-33NBLF3DMD');
           <p><strong>Massive scale systems (50kW-500kW+)</strong> with daytime generation matching business electricity usage. Fast 3-5 year payback, enhanced EPC ratings, and corporate sustainability credentials.</p>
         </div>
         
-        <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large" data-cta-pos="services-com">Get Free Business Assessment</a></p>
+        <p><a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Get Free Business Assessment</a></p>
       </section>
     </div>
   </section>
 
-  <!-- Pricing Includes Section -->
-<section id="pricing-includes" class="section section-alt">
-<div class="container">
-<div class="section-header">
-<h2>What’s Included in Our Prices</h2>
-<div class="section-divider-accent"></div>
-<p class="section-intro">Transparent pricing — no hidden extras. Everything needed for a safe, professional install.</p>
-</div>
-
-
-<div class="grid grid-2">
-<ul class="included-list">
-<li><strong>MCS-certified installation</strong> by expert installers</li>
-<li><strong>DNO application</strong> — all paperwork handled</li>
-<li><strong>All electrical parts</strong> — cables, accessories & sundries</li>
-<li><strong>Scaffolding access</strong> included as standard (subject to survey)</li>
-</ul>
-
-
-<div class="note">
-<h3>What’s not included</h3>
-<p class="microcopy">Unusual structural work, major roof repairs, or bespoke ground mounts are priced separately if needed.</p>
-<p class="muted">We’ll always confirm in writing before you proceed. <a href="#not-included">See full exclusions</a>.</p>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- Trust Signals Section -->
-<section id="trust-signals" class="section">
-<div class="container">
-<div class="section-header">
-<h2>Why Choose Norfolk.solar</h2>
-<div class="section-divider-accent"></div>
-<p class="section-intro">We’re an ethical connector. Your installation is delivered by our exclusive Norfolk partner, <strong>sq1i Solar</strong>.</p>
-</div>
-
-
-<!-- Text-only accreditations (partner-backed) -->
-<ul class="trust-pills cluster" aria-label="Partner accreditations">
-<li class="cert-badge">MCS Certified — via sq1i Solar</li>
-<li class="cert-badge">RECC Member — via sq1i Solar</li>
-<li class="cert-badge">TrustMark Registered — via sq1i Solar</li>
-<li class="cert-badge">NAPIT Approved — via sq1i Solar</li>
-<li class="cert-badge">Octopus Trusted Partner — via sq1i Solar</li>
-<li class="cert-badge">Hometree Finance Available — via sq1i Solar</li>
-</ul>
-
-
-<!-- Optional verification links -->
-<div class="verification-links cluster">
-<a class="btn btn-ghost" href="https://www.sq1i.co.uk" target="_blank" rel="noopener">Verify sq1i on their site</a>
-<a class="btn btn-ghost" href="https://www.google.com/search?q=sq1i+solar+reviews" target="_blank" rel="noopener">See independent reviews</a>
-</div>
-</div>
-</section>
-
+  <!-- Installer Partner -->
   <section id="installer-partner" class="section installer-hero">
-  <div class="container">
-    <div class="installer-showcase">
-      <div class="installer-main flow">
-        <!-- Header + connector clarity -->
-        <div class="installer-intro">
-          <h2>Meet sq1i Ltd (Square1 Installations) — Norfolk.solar’s Exclusive Installation Partner</h2>
-          <p class="installer-tagline">We connect you directly with Norfolk’s trusted MCS-certified team</p>
-        </div>
-
-        <!-- Accreditations intro -->
-        <div class="trust-intro">
-          <p><strong>sq1i Ltd (also known as Square1 Installations)</strong> hold the following accreditations and partnerships:</p>
-        </div>
-
-        <ul class="trust-pills cluster" aria-label="Partner accreditations">
-          <li class="cert-badge">MCS Certified</li>
-          <li class="cert-badge">RECC Member</li>
-          <li class="cert-badge">TrustMark Registered</li>
-          <li class="cert-badge">NAPIT Approved</li>
-          <li class="cert-badge">Octopus Trusted Partner</li>
-          <li class="cert-badge">Hometree Finance Available</li>
-        </ul>
-
-        <div class="installer-grid">
-          <!-- Left: credentials & meta -->
-          <div class="installer-credentials flow">
-            <div class="installer-logo">
-              <div class="logo-placeholder">sq1i Ltd</div>
-              <div class="installer-info">
-                <h4>sq1i Solar</h4>
-                <p class="company-tagline">Norfolk's #1 Rated Solar Installer</p>
+    <div class="container">
+      <div class="installer-showcase">
+        <div class="installer-main">
+          <div class="installer-intro">
+            <h2>Meet sq1i Solar - Your Norfolk Solar Specialists</h2>
+            <p class="installer-tagline">The only solar installer you'll ever need in Norfolk</p>
+          </div>
+          
+          <div class="installer-grid">
+            <div class="installer-credentials">
+              <div class="installer-logo">
+                <div class="logo-placeholder">sq1i Solar</div>
+                <div class="installer-info">
+                  <h4>sq1i Solar</h4>
+                  <p class="company-tagline">Norfolk's #1 Rated Solar Installer</p>
+                </div>
+              </div>
+              
+              <div class="credentials-grid">
+                <div class="rating-highlight">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span class="rating-number">4.8/5</span>
+                  <span class="review-count">(127+ Google Reviews)</span>
+                </div>
+                <div class="certifications">
+                  <span class="cert-badge">MCS Certified</span>
+                  <span class="cert-badge">RECC Member</span>
+                  <span class="cert-badge">Trustmark</span>
+                  <span class="cert-badge">NAPIT Approved</span>
+                </div>
               </div>
             </div>
-
-            <div class="credentials-grid">
-              <div class="rating-highlight">
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <span class="rating-number">4.8/5</span>
-                <span class="review-count">(127+ Google Reviews)</span>
+            
+            <div class="why-choose">
+              <h3>Why 200+ Norfolk Customers Choose sq1i Solar</h3>
+              <div class="recent-reviews">
+                <ul>
+                  <li><strong>Norfolk Specialists:</strong> Local team who understand Victorian terraces, farm buildings, and Norfolk planning requirements</li>
+                  <li><strong>AI Quote Technology:</strong> Most accurate quotes in Norfolk using satellite imagery and advanced calculations</li>
+                  <li><strong>Complete Service:</strong> From planning permission to final connection - everything handled professionally</li>
+                </ul>
               </div>
-
-              <ul class="installer-meta">
-                <li><strong>200+ Norfolk installs</strong></li>
-                <li><strong>24–48h</strong> typical survey booking</li>
-                <li><strong>Fixed-price</strong> quotes</li>
-              </ul>
-            </div>
-
-            <!-- Verification links -->
-            <div class="verification-links cluster">
-              <a class="btn btn-ghost" href="https://www.sq1i.co.uk" target="_blank" rel="noopener" data-cta-pos="verify-site">Verify sq1i on their site</a>
-              <a class="btn btn-ghost" href="https://www.google.com/search?q=sq1i+solar+reviews" target="_blank" rel="noopener" data-cta-pos="reviews">See independent reviews</a>
             </div>
           </div>
-
-          <!-- Right: reasons & actions -->
-          <div class="why-choose flow">
-            <h3>Why 200+ Norfolk Customers Choose sq1i Ltd</h3>
-            <div class="recent-reviews">
-              <ul>
-                <li><strong>Local Expertise:</strong> Norfolk specialists for terraces, farm buildings, and local planning</li>
-                <li><strong>AI Quote Technology:</strong> Satellite imagery + advanced calcs for accurate pricing</li>
-                <li><strong>Complete Service:</strong> From permissions to grid connection — handled professionally</li>
-              </ul>
-            </div>
-
-            <div class="installer-actions cluster">
-              <a href="https://app.sq1i.co.uk/solar" class="btn btn-large btn-installer" data-cta-pos="installer">Get Quote from sq1i Solar →</a>
-              <a href="https://app.sq1i.co.uk/solar" class="btn btn-ghost" data-cta-pos="installer-secondary">Compare options in the planner</a>
-            </div>
-
-            <p class="installer-fineprint muted">Connected by Norfolk.solar • No lead reselling • One trusted local team</p>
+          
+          <div class="installer-cta">
+            <a href="https://app.sq1i.co.uk/solar" class="btn btn-large btn-installer">
+              Get Quote from sq1i Solar →
+            </a>
+            <p class="installer-guarantee">Norfolk's most trusted installer • Fixed price guarantee • Professional service</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Urgency -->
   <section class="urgency section section-alt">
     <div class="container">
       <div class="urgency-content">
-        <h2>Don't Wait — Prices Are Rising</h2>
+        <h2>Don't Wait - Prices Are Rising</h2>
         <div class="urgency-grid">
           <div class="urgency-item">
             <h3>0% VAT Ends March 2027</h3>
@@ -494,16 +535,14 @@ gtag('config', 'G-33NBLF3DMD');
           </div>
         </div>
         <div class="urgency-cta">
-          <a href="https://app.sq1i.co.uk/solar" class="btn btn-large btn-urgent" data-cta-pos="urgency">
+          <a href="https://app.sq1i.co.uk/solar" class="btn btn-large btn-urgent">
             Secure My Norfolk Installation →
           </a>
-          <p class="urgency-subtext">Get your quote today — installation slots filling up</p>
+          <p class="urgency-subtext">Get your quote today - installation slots filling up</p>
         </div>
       </div>
     </div>
   </section>
-
-  
 
   <!-- FAQ -->
   <section id="faq" class="section">
@@ -539,232 +578,69 @@ gtag('config', 'G-33NBLF3DMD');
         </details>
         <details>
           <summary>How long do solar panels last and do they need maintenance?</summary>
-          <p>Panels last 25+ years with minimal maintenance — just occasional cleaning and annual checks. Inverters may need replacement after 10-15 years. Most systems come with 20-25 year performance warranties.</p>
+          <p>Panels last 25+ years with minimal maintenance - just occasional cleaning and annual checks. Inverters may need replacement after 10-15 years. Most systems come with 20-25 year performance warranties.</p>
         </details>
         <details>
           <summary>What if my roof isn't suitable for solar panels?</summary>
-          <p>Our AI analysis checks roof suitability instantly — age, material, direction, and shading. Most Norfolk roofs work well. South-facing is ideal, but east/west roofs still deliver good returns. Even north-facing commercial roofs can be viable for large systems.</p>
+          <p>Our AI analysis checks roof suitability instantly - age, material, direction, and shading. Most Norfolk roofs work well. South-facing is ideal, but east/west roofs still deliver good returns. Even north-facing commercial roofs can be viable for large systems.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <section id="pricing-includes" class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>What’s Included in Our Prices</h2>
-      <div class="section-divider-accent"></div>
-      <p class="section-intro">Transparent pricing — no hidden extras. Everything needed for a safe, professional install.</p>
-    </div>
-
-    <div class="grid grid-2">
-      <ul class="included-list">
-        <li><strong>MCS-certified installation</strong> by expert installers</li>
-        <li><strong>DNO application</strong> — all paperwork handled</li>
-        <li><strong>All electrical parts</strong> — cables, accessories & sundries</li>
-        <li><strong>Scaffolding access</strong> included as standard (subject to survey)</li>
-      </ul>
-
-      <div class="note">
-        <h3>What’s not included</h3>
-        <p class="microcopy">Unusual structural work, major roof repairs, or bespoke ground mounts are priced separately if needed.</p>
-        <p class="muted">We’ll always confirm in writing before you proceed. <a href="#not-included">See full exclusions</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="trust-signals" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Why Choose Norfolk.solar</h2>
-      <div class="section-divider-accent"></div>
-      <p class="section-intro">We’re an ethical connector. Your installation is delivered by our exclusive Norfolk partner, <strong>sq1i Solar</strong>.</p>
-    </div>
-
-    <!-- Text-only accreditations (partner-backed) -->
-    <ul class="trust-pills cluster" aria-label="Partner accreditations">
-      <li class="cert-badge">MCS Certified — via sq1i Solar</li>
-      <li class="cert-badge">RECC Member — via sq1i Solar</li>
-      <li class="cert-badge">TrustMark Registered — via sq1i Solar</li>
-      <li class="cert-badge">NAPIT Approved — via sq1i Solar</li>
-      <li class="cert-badge">Octopus Trusted Partner — via sq1i Solar</li>
-      <li class="cert-badge">Hometree Finance Available — via sq1i Solar</li>
-    </ul>
-
-    <!-- Optional verification links (text only) -->
-    <div class="verification-links cluster">
-      <a class="btn btn-ghost" href="https://www.sq1i.co.uk" target="_blank" rel="noopener">Verify sq1i on their site</a>
-      <a class="btn btn-ghost" href="https://www.google.com/search?q=sq1i+solar+reviews" target="_blank" rel="noopener">See independent reviews</a>
-    </div>
-  </div>
-</section>
-<!-- Pricing Includes Section -->
-<section id="pricing-includes" class="section section-alt">
-<div class="container">
-<div class="section-header">
-<h2>What’s Included in Our Prices</h2>
-<div class="section-divider-accent"></div>
-<p class="section-intro">Transparent pricing — no hidden extras. Everything needed for a safe, professional install.</p>
-</div>
-
-
-<div class="grid grid-2">
-<ul class="included-list">
-<li><strong>MCS-certified installation</strong> by expert installers</li>
-<li><strong>DNO application</strong> — all paperwork handled</li>
-<li><strong>All electrical parts</strong> — cables, accessories & sundries</li>
-<li><strong>Scaffolding access</strong> included as standard (subject to survey)</li>
-</ul>
-
-
-<div class="note">
-<h3>What’s not included</h3>
-<p class="microcopy">Unusual structural work, major roof repairs, or bespoke ground mounts are priced separately if needed.</p>
-<p class="muted">We’ll always confirm in writing before you proceed. <a href="#not-included">See full exclusions</a>.</p>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- Trust Signals Section -->
-<section id="trust-signals" class="section">
-<div class="container">
-<div class="section-header">
-<h2>Why Choose Norfolk.solar</h2>
-<div class="section-divider-accent"></div>
-<p class="section-intro">We’re an ethical connector. Your installation is delivered by our exclusive Norfolk partner, <strong>sq1i Solar</strong>.</p>
-</div>
-
-
-<!-- Text-only accreditations (partner-backed) -->
-<ul class="trust-pills cluster" aria-label="Partner accreditations">
-<li class="cert-badge">MCS Certified — via sq1i Solar</li>
-<li class="cert-badge">RECC Member — via sq1i Solar</li>
-<li class="cert-badge">TrustMark Registered — via sq1i Solar</li>
-<li class="cert-badge">NAPIT Approved — via sq1i Solar</li>
-<li class="cert-badge">Octopus Trusted Partner — via sq1i Solar</li>
-<li class="cert-badge">Hometree Finance Available — via sq1i Solar</li>
-</ul>
-
-
-<!-- Optional verification links -->
-<div class="verification-links cluster">
-<a class="btn btn-ghost" href="https://www.sq1i.co.uk" target="_blank" rel="noopener">Verify sq1i on their site</a>
-<a class="btn btn-ghost" href="https://www.google.com/search?q=sq1i+solar+reviews" target="_blank" rel="noopener">See independent reviews</a>
-</div>
-</div>
-</section>
-
   <!-- Final CTA -->
   <section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>Get Your AI-Powered Norfolk Solar Quote</h2>
-      <div class="section-divider-accent fade-in animate"></div>
-      <p class="section-intro">
-        Advanced satellite analysis and AI deliver instant, accurate pricing for your exact property.
-      </p>
-    </div>
+    <div class="container">
+      <div class="section-header">
+        <h2>Get Your AI-Powered Norfolk Solar Quote</h2>
+        <div class="section-divider-accent"></div>
+        <p class="section-intro">Advanced satellite analysis and AI deliver instant, accurate pricing for your exact property.</p>
+      </div>
 
-    <!-- Features with natural flow spacing -->
-    <div class="ai-features flow">
-      <div class="grid grid-3">
-        <div class="card fade-in animate">
-          <h4>Instant Results</h4>
-          <p class="muted">Get accurate quotes in minutes, not days</p>
-        </div>
-        <div class="card fade-in animate">
-          <h4>Norfolk Specific</h4>
-          <p class="muted">Optimized for local weather and regulations</p>
-        </div>
-        <div class="card fade-in animate">
-          <h4>MCS Installer</h4>
-          <p class="muted">Professional survey and installation guaranteed</p>
+      <div class="ai-features">
+        <div class="grid grid-3">
+          <div class="card">
+            <h4>Instant Results</h4>
+            <p class="muted">Get accurate quotes in minutes, not days</p>
+          </div>
+          <div class="card">
+            <h4>Norfolk Specific</h4>
+            <p class="muted">Optimized for local weather and regulations</p>
+          </div>
+          <div class="card">
+            <h4>MCS Installer</h4>
+            <p class="muted">Professional survey and installation guaranteed</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Final CTA block -->
-    <div class="final-cta">
-      <a href="https://app.sq1i.co.uk/solar" class="btn btn-large" data-cta-pos="final">
-        Get Free Norfolk Assessment
-      </a>
-      <p class="final-subtext">No obligation • Fixed price guarantee • Book before winter</p>
-    </div>
-  </div>
-</section>
-
-
-  <section id="about" class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>About Norfolk.solar</h2>
-      <div class="section-divider-accent"></div>
-      <p class="section-intro">
-        <strong>Norfolk.solar</strong> is part of the <em>Find Solar</em> network — independent, ethical platforms built to
-        connect property owners with one trusted local installer, not multiple sales calls or lead reselling.
-      </p>
-    </div>
-
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>Our Mission</h3>
-        <p>
-          We created Norfolk.solar to make the solar process simple, transparent, and local. Unlike national
-          “lead farms”, we never sell your details on — you’re connected directly to our exclusive Norfolk
-          partner installer for clear, professional service.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Our Local Partner</h3>
-        <p>
-          We’ve chosen <strong>sq1i Solar</strong> as our onboard trusted expert for Norfolk. They’re an MCS-certified,
-          RECC-member installer with 100+ local installations and excellent customer reviews. Max and the sq1i
-          team handle everything from surveys to installation, ensuring quality at every step.
-        </p>
+      <div class="final-cta">
+        <a href="https://app.sq1i.co.uk/solar" class="btn btn-large">Get Free Norfolk Assessment</a>
+        <p class="final-subtext">No obligation • Fixed price guarantee • Book before winter</p>
       </div>
     </div>
+  </section>
 
-    <p class="muted" style="text-align:center; margin-top:2rem;">
-      Norfolk.solar is operated by <strong>Find Solar Ltd</strong>. We exist to bring <em>quality over volume</em> and
-      <em>trust over tactics</em> to the UK solar industry.
-    </p>
-  </div>
-</section>
-
-  <!-- Footer (expanded) -->
+  <!-- Footer -->
   <footer class="footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <p><strong>Norfolk.solar</strong> connects you with <em>sq1i Solar</em> — Norfolk's MCS-certified installer using advanced AI quote technology. No lead reselling, no spam.</p>
-        <ul class="footer-badges" aria-label="Certifications">
-          <li>MCS</li>
-          <li>RECC</li>
-          <li>GDPR Compliant</li>
-          <li>AI-Powered</li>
-        </ul>
-        <small>&copy; <span id="year"></span> Norfolk.solar — Norfolk, England</small>
-      </div>
-      <nav class="footer-col" aria-label="Footer">
-        <ul class="footer-links">
-          <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#installer-partner">Our Partner</a></li>
-          <li><a href="#faq">FAQs</a></li>
-          <li><a href="/privacy">Privacy</a></li>
-        </ul>
-      </nav>
+    <div class="container">
+      <p><strong>Norfolk.solar</strong> connects you with sq1i Solar – Norfolk's MCS-certified installer using advanced AI quote technology. No lead reselling, no spam.</p>
+      <ul class="footer-badges" aria-label="Certifications">
+        <li>MCS</li>
+        <li>RECC</li>
+        <li>GDPR Compliant</li>
+        <li>AI-Powered</li>
+      </ul>
+      <small>&copy; <span id="year"></span> Norfolk.solar – Norfolk, England</small>
     </div>
   </footer>
 
   <!-- Cookie Banner -->
-  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div id="cookie-banner" class="cookie-banner hidden">
     <div class="cookie-content">
       <p><strong>We use cookies</strong> to analyze site traffic and improve your experience. By continuing to use this site, you consent to our use of cookies.</p>
       <div class="cookie-actions">
-        <button id="accept-cookies" class="btn btn-small" aria-label="Accept cookies">Accept</button>
+        <button id="accept-cookies" class="btn btn-small">Accept</button>
         <a href="/privacy" class="cookie-link">Privacy Policy</a>
       </div>
     </div>
@@ -772,73 +648,103 @@ gtag('config', 'G-33NBLF3DMD');
 
   <!-- JavaScript -->
   <script>
-animateElements.forEach((el, index) => {
-el.classList.add('fade-in');
-if (index < 6) el.classList.add(`delay-${index + 1}`);
-observer.observe(el);
-});
-}, 500);
-});
+    document.addEventListener('DOMContentLoaded', () => {
+      // Footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
 
+      // Mobile navigation
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('primary-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const open = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!open));
+          menu.classList.toggle('open');
+        });
+      }
 
-// Parallax-like scroll effect for hero
-(function() {
-const hero = document.querySelector('.hero');
-if (!hero) return;
-let ticking = false;
-function onScroll() {
-if (ticking) return;
-window.requestAnimationFrame(() => {
-const scrolled = window.scrollY || window.pageYOffset;
-const rate = scrolled * -0.3;
-if (scrolled < hero.offsetHeight) {
-hero.style.transform = `translate3d(0, ${rate}px, 0)`;
-}
-ticking = false;
-});
-ticking = true;
-}
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-if (!prefersReduced.matches) {
-window.addEventListener('scroll', onScroll);
-}
-})();
+      // Sector tabs
+      const sectorButtons = document.querySelectorAll('.sector-toggle [data-sector]');
+      const panels = document.querySelectorAll('[data-sector-panel]');
+      
+      function showSector(target) {
+        panels.forEach(p => {
+          const isTarget = p.getAttribute('data-sector-panel') === target;
+          p.hidden = !isTarget;
+        });
+        sectorButtons.forEach(b => {
+          const active = b.dataset.sector === target;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', String(active));
+        });
+      }
+      
+      sectorButtons.forEach(btn => {
+        btn.addEventListener('click', () => showSector(btn.dataset.sector));
+      });
 
+      // Track CTA clicks
+      const ctaLinks = document.querySelectorAll('a[href*="sq1i.co.uk"]');
+      ctaLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          gtag('event', 'click', {
+            'event_category': 'Lead Generation',
+            'event_label': 'sq1i_quote_button',
+            'event_action': 'click_to_quote_system'
+          });
+        });
+      });
 
-// === Norfolk.solar outbound lead tracking ===
+      // Cookie consent
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      
+      if (!localStorage.getItem('cookieConsent') && banner) {
+        setTimeout(() => banner.classList.remove('hidden'), 1000);
+      }
+      
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+          localStorage.setItem('cookieConsent', 'accepted');
+          if (banner) banner.classList.add('hidden');
+          gtag('consent', 'update', {'analytics_storage': 'granted'});
+        });
+      }
 
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
 
-// 1. Replace all sq1i links with UTM-tagged versions
-(function () {
-const BASE = "https://app.sq1i.co.uk/solar"; // short, stable route
-const links = document.querySelectorAll('a[href*="sq1i.co.uk"][data-cta-pos]');
-links.forEach(a => {
-const pos = a.getAttribute('data-cta-pos') || 'unknown';
-const url = new URL(BASE);
-url.searchParams.set('utm_source', 'norfolk.solar');
-url.searchParams.set('utm_medium', 'cta');
-url.searchParams.set('utm_campaign', 'homepage');
-url.searchParams.set('utm_content', pos);
-a.setAttribute('href', url.toString());
-});
-})();
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, observerOptions);
 
+      // Apply fade-in animations to cards and stats
+      setTimeout(() => {
+        const animateElements = document.querySelectorAll('.card, .stat, .step-number, .section-divider-accent');
+        animateElements.forEach((el, index) => {
+          el.classList.add('fade-in');
+          if (index < 6) el.classList.add(`delay-${index + 1}`);
+          observer.observe(el);
+        });
+      }, 500);
+    });
 
-// 2. Fire GA4 event when a quote link is clicked
-const ctaLinks = document.querySelectorAll('a[href*="sq1i.co.uk"]');
-ctaLinks.forEach(link => {
-link.addEventListener('click', () => {
-const pos = link.getAttribute('data-cta-pos') || 'unknown';
-gtag('event', 'outbound_quote_click', {
-event_category: 'Lead Generation',
-event_action: 'click_to_quote_system',
-event_label: `cta_${pos}`,
-cta_pos: pos,
-link_url: link.href,
-page_path: location.pathname
-});
-});
-});
-</script>
+    // Scroll effects for hero
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const rate = scrolled * -0.3;
+      const hero = document.querySelector('.hero');
+      if (hero && scrolled < hero.offsetHeight) {
+        hero.style.transform = `translate3d(0, ${rate}px, 0)`;
+      }
+    });
+  </script>
 </body>
 </html>
